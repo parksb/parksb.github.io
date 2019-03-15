@@ -1,0 +1,31 @@
+{
+  "name": "parksb.github.io-develop",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ParkSB/parksb.github.io-develop.git"
+  },
+  "author": "",
+  "license": "",
+  "bugs": {
+    "url": "https://github.com/ParkSB/parksb.github.io-develop/issues"
+  },
+  "homepage": "https://github.com/ParkSB/parksb.github.io-develop#readme",
+  "dependencies": {
+    "ejs": "^2.6.1",
+    "highlight.js": "^9.15.6",
+    "markdown-it": "^8.4.2"
+  },
+  "devDependencies": {
+    "eslint": "^5.15.1",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.16.0",
+    "mocha": "^6.0.2",
+    "parcel-bundler": "^1.12.2"
+  }
+}
