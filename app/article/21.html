@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>
+    📡 WSL로 SSH 서버 열기
+  </title>
+
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#F5F5F5">
+
+  <meta property="og:title" content="📡 WSL로 SSH 서버 열기">
+  <meta property="og:image" content="https://parksb.github.io/assets/thumbnail_article.png">
+  <meta property="og:description" content="학교에서 아이패드로 코딩하기">
+
+  <meta name="twitter:title" content="📡 WSL로 SSH 서버 열기">
+  <meta name="twitter:image" content="https://parksb.github.io/assets/thumbnail_article.png">
+  <meta name="twitter:description" content="학교에서 아이패드로 코딩하기">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="../src/css/init.css">
+  <link rel="stylesheet" href="../src/css/article.css">
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113147800-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-113147800-1');
+  </script>
+</head>
+
+<body>
+  <nav id="top-container">
+  </nav>
+
+  <main id="main-container">
+    <article id="article-container">
+      <h1 id="article-title">
+        📡 WSL로 SSH 서버 열기
+      </h1>
+      <h2 id="article-subtitle">
+        학교에서 아이패드로 코딩하기
+      </h2>
+      <time id="article-date">
+        2018.09.08
+      </time>
+
+      <section id="article-content-container">
+        <p>SSH는 원격 접속을 위한 프로토콜로, SSH 서버를 이용하면 외부 터미널에서 서버로 원격 접속을 할 수 있다. 심지어 아이패드로도 데스크탑에 접속할 수 있다는 의미다. 단, SSH 접속은 터미널을 사용해야 하기 때문에 CLI에 익숙해야 한다. 또한 SSH 서버를 통한 개발이 목적이라면 당연히 vim 사용법을 잘 알고 있어야 할 것이다.</p>
+<p>나는 아이패드에 <a href="https://www.termius.com/">termius</a>를 설치하고, 이를 통해 노트북의 WSL에 SSH 접속을 해보기로 했다. 그럼 <strong>WSL Ubuntu 16.04</strong>에서 SSH 서버를 열어보겠다.</p>
+<h1>openssh-server 재설치</h1>
+<p>SSH 서버를 열기위해서는 openssh-server라는 패키지가 필요하다. 우분투에는 기본적으로 openssh-server가 설치되어 있지만, WSL 환경에서는 왠지 제대로 작동하지 않는다. (SSH 서버를 실행하는 명령 <code>sudo service ssh start</code>를 실행해보면 몇가지 에러가 나타날 것이다.)</p>
+<p>재설치해주자:</p>
+<pre class="hljs"><code>$ sudo apt remove openssh-server
+$ sudo apt install openssh-server
+</code></pre>
+<h1>sshd_config 수정</h1>
+<p>sshd_config는 SSH 설정 파일인데, 이 파일의 내용을 약간 수정해줘야 한다. root 권한이 필요하므로, 자신의 계정에 root 권한이 없다면 root 계정으로 전환해주자.</p>
+<pre class="hljs"><code>$ sudo su - root
+</code></pre>
+<p>그리고 vim을 통해 /etc/ssh/sshd_config 파일을 열어준다.</p>
+<pre class="hljs"><code>$ vim /etc/ssh/sshd_config
+</code></pre>
+<p>여기서 바꿔야 할 부분은 2군데다. (우부투 18.04 버전이라면 <code>Port</code> 값만 수정해도 된다.)</p>
+<ul>
+<li><code>Port</code>의 값을 바꿔준다. 디폴트값은 <code>22</code>일텐데, 이는 윈도우에서 이미 사용 중인 포트이기 때문에 WSL에서는 다른 값으로 바꿔줘야 한다. 적당히 <code>2222</code>로 해줬다.</li>
+<li><code>PasswordAuthentication</code>의 값을 <code>yes</code>로 바꿔준다. 패스워드 인증을 사용하도록 설정하는 것이다.</li>
+</ul>
+<p>저장 후 SSH 서버를 재시작해준다:</p>
+<pre class="hljs"><code>$ sudo service ssh --full-restart
+</code></pre>
+<h1>포트포워딩</h1>
+<p>서버 컴퓨터가 공유기에 연결되어 있는 상황에서 외부 터미널로 접속하려면 포트포워딩을 해줘야한다.</p>
+<p>공인 아이피는 공유기에 할당되는데, 공유기에 연결된 노트북이나 휴대폰 등의 디바이스에는 192.168.0.x와 같이 사설 아이피가 할당된다. 따라서 외부에서 공인 아이피를 입력해도 이 컴퓨터로는 접속을 할 수가 없는 것이다.</p>
+<p>ipTIME 라우터를 사용 중이라면 다음 과정을 따르면 된다:</p>
+<ol>
+<li>브라우저에 서버의 공인 아이피 또는 192.168.0.1을 입력한다.</li>
+<li>로그인 후 '고급 설정 &gt; NAT/라우터 관리 &gt; 포트포워드 설정’에 들어간다.</li>
+<li>내부 아이피 주소는 '현재 접속된 PC의 IP 주소로 설정’으로 설정한다.</li>
+<li>프로토콜을 TCP로 설정한다.</li>
+<li>외부 포트는 sshd_config 파일에서 설정한 <code>Port</code> 값으로 설정한다. (2222 ~ 2222)</li>
+<li>내부 포트도 똑같이 설정한다. (2222 ~ 2222)</li>
+<li>규칙 이름은 마음대로 정한다.</li>
+<li>좌측 상단의 '저장’을 클릭한다.</li>
+</ol>
+<p>공유기 포트포워딩은 검색해도 많이 나오고, <a href="https://opentutorials.org/course/3265/20038">생활코딩 강의</a>도 잘 되어있다. 집 밖에서도 내 컴퓨터에 접속하기 위해선 필수다.</p>
+<h1>방화벽 설정</h1>
+<p>방화벽을 잊고 있다가 조금 삽질을 했다.</p>
+<ol>
+<li>'제어판 &gt; 시스템 및 보안 &gt; Windows Defender 방화벽’에 들어가 '고급 설정’을 클릭한다.</li>
+<li>인바운드 규칙을 클릭하고 '새 규칙’을 클릭한다.</li>
+<li>규칙 종류는 '포트’를 선택한다.</li>
+<li>프로토콜은 TCP, '특정 원격 포트’는 앞서 설정한 <code>Port</code> 값으로 설정한다. (2222) 이름은 마음대로 정한다.</li>
+<li>아웃바운드 규칙도 마찬가지로 해준다.</li>
+</ol>
+<h1>SSH 서버 접속</h1>
+<p>WSL bash를 종료하면 SSH 서버도 닫혀버린다. 다시 열고 싶을 때는 다음 명령어를 입력한다:</p>
+<pre class="hljs"><code>$ sudo service ssh start
+</code></pre>
+<p><a href="https://www.putty.org/">putty</a>나 <a href="https://www.termius.com/">termius</a> 같은 프로그램을 이용해 접속 테스트를 해보자. 서버와 같은 컴퓨터에서 접속하는 경우 hostname은 서버의 공인 아이피로, port는 앞서 설정한 2222로 두면 된다.</p>
+<p><img src="https://user-images.githubusercontent.com/6410412/45214415-6067e580-b2d5-11e8-88b6-a39c1ca6b051.PNG" alt=""></p>
+<p>넷북에서 테스트했고, 이후 아이패드에서도 테스트했는데 잘 됐다! 이제 학교에 노트북들고 가지 않고 프로그래밍을 할 수 있게 되었다.</p>
+
+      </section>
+
+      <section id="article-social-container">
+        <div id="fb-like" class="fb-like" data-href="https://parksb.github.io/" data-layout="button_count"
+          data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+        <a href="https://twitter.com/share" class="twitter-share-button" data-show-count="true"></a>
+      </section>
+
+      <section id="article-comments">
+        <script async src="https://utteranc.es/client.js" repo="ParkSB/parksb.github.io-comments" issue-term="pathname" theme="github-light"
+          crossorigin="anonymous">
+          </script>
+      </section>
+    </article>
+  </main>
+
+  <div id="fb-root"></div>
+  <script>
+    (function (d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+  </script>
+  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+  <script src="../src/ts/init.ts"></script>
+  <script src="../src/ts/article.ts"></script>
+</body>

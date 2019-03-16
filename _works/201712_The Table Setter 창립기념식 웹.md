@@ -1,0 +1,17 @@
+---
+title: "The Table Setter 창립기념식"
+subtitle: "청소년과 청년 전문가의 상생을 위한 출발"
+thumbnail: "https://user-images.githubusercontent.com/6410412/46553490-97530a80-c918-11e8-9c8c-c86c213540df.png"
+---
+
+![](https://user-images.githubusercontent.com/6410412/46553490-97530a80-c918-11e8-9c8c-c86c213540df.png)
+
+![](https://user-images.githubusercontent.com/6410412/46553489-96ba7400-c918-11e8-9cbc-e80fa1e84bcd.png)
+
+_**The Table Setter 창립기념식 (2017) http://thetablesetter.org/promotion/**_
+
+비영리단체 The table setter의 창립기념식 프로모션 페이지를 만들었습니다.
+
+BI를 유지하기 위해 이전 작업물의 접시 컨셉을 차용했습니다.
+
+(Web) HTML/CSS, Javascript, jQuery, Bootstrap을 사용했습니다.
