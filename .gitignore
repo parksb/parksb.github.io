@@ -1,5 +1,4 @@
 node_modules
 .cache
 .sass-cache
-_articles
-_works
+server
