@@ -1,0 +1,3 @@
+[submodule "parksb.github.io"]
+	path = parksb.github.io
+	url = https://github.com/ParkSB/parksb.github.io.git
