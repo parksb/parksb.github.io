@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "parcel build ./app/*.html ./app/article/*.html ./app/work/*.html -d ./parksb.github.io",
+    "start": "ts-node ./tools/start.ts",
+    "build": "ts-node ./tools/build.ts",
     "publish": "ts-node ./tools/publish.ts",
     "test": "mocha --require ts-node/register --watch-extensions ts --recursive './test/**/*.test.ts'"
   },
@@ -32,6 +33,7 @@
     "@types/mocha": "^5.2.6",
     "@types/node": "^11.11.3",
     "mocha": "^6.0.2",
+    "node-sass": "^4.11.0",
     "parcel-bundler": "^1.12.2",
     "sass": "^1.17.3",
     "ts-node": "^8.0.3",
