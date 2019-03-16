@@ -4,9 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "parcel build index.html -d ./parksb.github.io",
-    "article": "ts-node ./tools/publish_article.ts",
-    "work": "ts-node ./tools/publish_work.ts",
+    "build": "parcel build ./app/*.html ./app/article/*.html ./app/work/*.html -d ./parksb.github.io",
+    "publish": "ts-node ./tools/publish.ts",
     "test": "mocha --require ts-node/register --watch-extensions ts --recursive './test/**/*.test.ts'"
   },
   "repository": {
@@ -25,6 +24,8 @@
     "markdown-it": "^8.4.2"
   },
   "devDependencies": {
+    "@babel/core": "^7.3.4",
+    "@babel/preset-env": "^7.3.4",
     "@types/ejs": "^2.6.3",
     "@types/highlight.js": "^9.12.3",
     "@types/markdown-it": "0.0.7",
@@ -32,6 +33,7 @@
     "@types/node": "^11.11.3",
     "mocha": "^6.0.2",
     "parcel-bundler": "^1.12.2",
+    "sass": "^1.17.3",
     "ts-node": "^8.0.3",
     "tslint": "^5.14.0",
     "tslint-config-airbnb": "^5.11.1",
