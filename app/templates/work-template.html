@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>
+    <%- title %>
+  </title>
+
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#F5F5F5">
+
+  <meta property="og:title" content="<%- title %>">
+  <meta property="og:image" content="<%- thumbnail %>">
+  <meta property="og:description" content="<%- subtitle %>">
+
+  <meta name="twitter:title" content="<%- title %>">
+  <meta name="twitter:image" content="<%- thumbnail %>">
+  <meta name="twitter:description" content="<%- subtitle %>">
+  <meta name="twitter:card" content="summary_large_image">
+  
+  <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="../src/css/init.css">
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113147800-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-113147800-1');
+  </script>
+</head>
+
+<body>
+  <nav id="top-container">
+  </nav>
+
+  <main id="main-container">
+    <article id="work-container">
+      <h1 id="work-title">
+        <%- title %>
+      </h1>
+      <h2 id="work-subtitle">
+        <%- subtitle %>
+      </h2>
+
+      <section id="work-content-container">
+        <%- content %>
+      </section>
+    </article>
+  </main>
+
+  <script src="../src/ts/init.ts"></script>
+  <script src="../src/ts/work.ts"></script>
+</body>

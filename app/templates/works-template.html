@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Park Seong-beom</title>
+
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#F5F5F5">
+
+  <meta property="og:title" content="Park Seong-beom">
+  <meta property="og:image" content="https://parksb.github.io/assets/thumbnail.png">
+  <meta property="og:description" content="박성범 (Park Seong-beom)">
+
+  <meta name="twitter:title" content="Park Seong-beom">
+  <meta name="twitter:description" content="박성범 (Park Seong-beom)">
+  <meta name="twitter:image" content="https://parksb.github.io/assets/thumbnail.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="./src/css/init.css">
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113147800-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'UA-113147800-1');
+  </script>
+</head>
+
+<body>
+  <nav id="top-container">
+  </nav>
+
+  <main id="main-container">
+    <section id="works-container">
+      <% works.reverse().map((work) => { %>
+      <a href="./work/<%= work.id %>.html">
+        <div class="works-content">
+          <img src="<%= work.thumbnail %>" />
+          <h1><%= work.title %></h1>
+        </div>
+      </a>
+      <% }) %>
+    </section>
+  </main>
+
+  <script src="./src/ts/init.ts"></script>
+  <script src="./src/ts/works.ts"></script>
+</body>
+
+</html>
