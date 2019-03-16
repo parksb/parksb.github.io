@@ -1,0 +1,38 @@
+#about-container {
+  ul,
+  p,
+  table {
+    margin-bottom: 30px;
+  }
+
+  li,
+  p,
+  td {
+    font-size: 14px;
+  }
+
+  ul {
+    list-style: none;
+    list-style-position: inside;
+  }
+
+  li {
+    margin-bottom: 5px;
+  }
+
+  a {
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: none;
+      background-color: black;
+      color: white;
+    }
+  }
+  
+  table {
+    .date {
+      width: 130px;
+    }
+  }
+}
