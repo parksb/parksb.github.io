@@ -1,5 +1,3 @@
-@import './dracula.scss';
-
 /* noto-serif-kr-regular - latin_korean */
 @font-face {
   font-family: 'Noto Serif KR';
@@ -186,3 +184,5 @@
     border: 1px black solid;
   }
 }
+
+@import './dracula.scss';
