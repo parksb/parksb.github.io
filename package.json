@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "ts-node ./tools/start.ts",
-    "build": "ts-node ./tools/build.ts",
+    "start": "bash ./tools/start.sh",
+    "build": "bash ./tools/build.sh",
     "publish": "ts-node ./tools/publish.ts",
     "test": "mocha --require ts-node/register --watch-extensions ts --recursive './test/**/*.test.ts'"
   },
