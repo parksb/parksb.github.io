@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /navigation.*.html
+
+Sitemap: http://parksb.github.io/sitemap.xml
