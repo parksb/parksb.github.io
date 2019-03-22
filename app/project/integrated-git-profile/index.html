@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Integrated Git Profile</title>
+
+    <link href="" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" />
+    <link rel="stylesheet" href="indexStyle.css" />
+  </head>
+  <body>
+    <h1>Integrated Git Profile</h1>
+
+    <form method="GET" action="./profile">
+      <input type="text" name="gh" placeholder="Your GitHub ID" />
+      <input type="text" name="gl" placeholder="Your GitLab ID" />
+      <input type="submit" id="gen-btn" value="Generate!" />
+      <div id="main-profile-git">
+        <input id="main-profile-github" type="radio" checked="checked" name="m" value="gh">
+        <label for="main-profile-github" id="main-profile-gh" class='main-profile-rad'></label>
+
+        <input id="main-profile-gitlab" type="radio" name="m" value="gl">
+        <label for="main-profile-gitlab" id="main-profile-gl" class='main-profile-rad'></label>
+      </div>
+    </form>
+  </body>
+</html>

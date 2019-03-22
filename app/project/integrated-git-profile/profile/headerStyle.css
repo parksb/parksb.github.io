@@ -1,0 +1,65 @@
+a {
+	text-decoration: none;
+}
+
+#header {
+	max-width: 100%;
+	height: 310px;
+}
+
+#background {
+	width: 100%;
+  height: 200px;
+	background-color: #506D7B;
+	box-shadow: 0 2px 5px 0 #999999;
+	padding: 50px 0 50px 0;
+}
+
+#profile-pic {
+	width: 100px;
+	height: 100px;
+	margin: auto;
+	border-radius: 60px;
+	background-size: cover;
+	background-position: 50%;
+	box-shadow: 0 2px 5px 0 #000000;
+}
+
+#background h1, #background h2 {
+  font-family: sans-serif;
+	text-align: center;
+	color: #FFFFFF;
+	font-weight: normal;
+  margin: 0;
+}
+
+#background h1 {
+	margin-top: 10px;
+	font-size: 1.5em;
+}
+
+#background h2 {
+	margin-top: 5px;
+	font-size: 1.0em;
+}
+
+#profile-info {
+	width: 100%;
+	margin: auto;	
+	font-size: 20px;
+}
+
+#info-git {
+	width: 100%;
+	text-align: center;
+	margin: auto;
+	margin-top: 10px;
+}
+
+#info-git a {
+	color: #FFFFFF;
+}
+
+#info-git svg {
+	margin: 5px 5px 0 5px;
+}
