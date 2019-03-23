@@ -88,7 +88,7 @@
 <p>네트워크 어플리케이션에서 엔드 시스템들은 서로 메시지를 교환한다. 메시지는 텍스트, 이미지, 영상 등 무엇이든 담을 수 있다. 메시지를 목적지의 엔드 시스템에 보내면 발신 엔드 시스템은 메시지를 여러 조각으로 작게 나눈다. (이것이 패킷이다.) 발신 엔드 시스템과 수신 엔드 시스템 사이의 각 패킷은 커뮤니케이션 링크와 패킷 스위치(라우터와 링크 레이어 스위치)를 통해 전송된다. 만약 패킷 스위치가 L bits 패킷을 R bits/sec으로 전송하면 패킷이 전송되는 데 걸리는 시간은 L/R 초가 된다.</p>
 <h3>Store-and-Forward Transmission</h3>
 <p>대부분의 패킷 스위치는 저장 후 전달 전송(Store-and-Forward Transmission) 방식을 사용한다. store-and-forward 전송 방식에서 패킷 스위치는 패킷의 첫 비트를 링크에 전송하기 전에 패킷의 모든 비트를 받아야 한다.</p>
-<p><img src="https://user-images.githubusercontent.com/6410412/46904368-097dad80-cf1e-11e8-8a84-69ca43d63627.jpg" alt=""></p>
+<p><img src="https://user-images.githubusercontent.com/6410412/46904368-097dad80-cf1e-11e8-8a84-69ca43d63627.jpg" alt="Source에서 라우터로 보낸 첫 패킷이 대기."></p>
 <p>하나의 라우터에 연결된 두 개의 엔드 시스템을 상상해보자. 만약 한 엔드 시스템에서 패킷을 3개 전송하면, 라우터에 패킷이 순서대로 도착하게 된다.</p>
 <h3>Queuing Delays and Packet Loss</h3>
 <p>각 패킷 스위치네는 여러 개의 링크가 연결되어 있다. 각각의 링크에 대해 패킷 스위치는 출력 버퍼(Output buffer or Output queue)를 가지고 있다. 출력 버퍼는 링크에 보낼 패킷을 담고 있으며, 패킷 교환에 중요한 역할을 한다.</p>
@@ -98,7 +98,7 @@
 <h2>Overview of Delay in Packet-Switched Networks</h2>
 <p>호스트(the source)에서 출발한 패킷은 라우터들을 거쳐 또 다른 호스트(the destination)에서 끝난다. 패킷이 전송될 때 각 노드(호스트나 라우터)에서 일어나는 지연이 발생할 수 있는데, 여기에는 몇 가지 종류가 있다.</p>
 <h3>Types of Delay</h3>
-<p><img src="https://user-images.githubusercontent.com/6410412/46904367-08e51700-cf1e-11e8-8e30-2b7b5bad2c7c.png" alt=""></p>
+<p><img src="https://user-images.githubusercontent.com/6410412/46904367-08e51700-cf1e-11e8-8e30-2b7b5bad2c7c.png" alt="지연 발생 위치. 라우터 전반 Nodal Processing, 라우터 후반 Queueing, 라우터 직후 Transmission, 링크 Propagation."></p>
 <ul>
 <li>처리 지연(Processing Delay): 패킷의 헤더(Header)를 확인하고 패킷이 어디로 가야하는 지 결정할 때 지연되는 것을 말한다. 패킷의 에러를 체크할 때도 프로세싱 지연이 일어날 수 있다. 고속 라우터에서는 프로세싱 지연은 몇 마이크로초 이하로 걸린다. 이 과정 이후 라우터는 패킷을 링크된 라우터의 큐로 보낸다.</li>
 <li>큐 지연(Queuing Delay): 패킷이 큐에서 전송되기를 기다릴 때 발생하는 지연을 말한다. 지연의 길이는 몇 개의 패킷이 이미 큐에 있는지, 링크로 전송될 때까지 얼마나 대기해야 하는지에 따른다. 만약 큐가 비어있고, 어떠한 패킷도 전송되고 있지 않다면 패킷의 지연은 0이다. 반면, 트래픽이 혼잡하고 많은 패킷이 전송되길 기다리고 있다면 지연은 길어질 것이다. 큐 지연은 마이크로초에서 밀리초 정도가 될 수 있다.</li>
@@ -118,8 +118,8 @@
 </ul>
 <h3>Protocol Layering</h3>
 <p>네트워크의 레이어 모델에는 대표적으로 OSI(Open Systems Interconnection) 모델과 TCP/IP 프로토콜 슈트가 있다.</p>
-<p><img src="https://user-images.githubusercontent.com/6410412/46904370-097dad80-cf1e-11e8-8104-16e952be01da.png" alt=""></p>
-<p>OSI 모델은 국제 표준화 기구(ISO)에서 만든 공식적 표준 모델이다. 하지만 계층이 7개나 되기 때문에 지금은 잘 쓰이지 않게 되었다. 인터넷 프로토콜 슈트 중 압도적으로 많이 쓰이는 것은 TCP/IP 프로토콜로, 사실상 표준이라고 볼 수 있다. TCP/IP의 계층은 5개이며, 미국 방위고등연구계획국(DARPA)에서 만들었다.</p>
+<p><img src="https://user-images.githubusercontent.com/6410412/46904370-097dad80-cf1e-11e8-8104-16e952be01da.png" alt="TCP/IP 모델. 어플리케이션, 전송, 인터넷, 네트워크 계층. OSI 모델. 어플리케이션, 표현, 세션, 전송, 네트워크, 데이터 링크, 물리 계층."></p>
+<p>OSI 모델은 국제 표준화 기구(ISO)에서 만든 공식적 표준 모델이다. 하지만 계층이 7개나 되기 때문에 지금은 잘 쓰이지 않게 되었다. 인터넷 프로토콜 슈트 중 압도적으로 많이 쓰이는 것은 TCP/IP 프로토콜로, 사실상 표준이라고 볼 수 있다. TCP/IP의 계층은 4개이며, 미국 방위고등연구계획국(DARPA)에서 만들었다.</p>
 <h3>Application Layer</h3>
 <p>어플리케이션 레이어는 HTTP, SMTP, FTP 등 다양한 프로토콜을 포함하고 있으며, 여러 엔드시스템에 분산되어 다른 엔드 시스템에 패킷을 교환하는 역할을 하는다. 어플리케이션 레이어의 PDU(Protocol Data Unit)는 메시지(Message) 또는 단순히 데이터(Data)라고 한다.</p>
 <h3>Transport Layer</h3>
@@ -131,7 +131,7 @@
 <h3>Physical Layer</h3>
 <p>피지컬 레이어의 역할은 프레임의 각 비트를 다음 노드로 보내는 것이다. 피지컬 레이어의 프로토콜은 링크의 종류에 따라 달라지는데, 가령 이더넷의 경우 구리연선이나 동축 케이블, 단일 모드 광섬유 등 다양한 프로토콜을 가진다. 피지컬 레이어의 PDU는 비트(Bit)다.</p>
 <h2>Encapsulation</h2>
-<p><img src="https://user-images.githubusercontent.com/6410412/46904369-097dad80-cf1e-11e8-9a84-cd8bd2f6e930.png" alt=""></p>
+<p><img src="https://user-images.githubusercontent.com/6410412/46904369-097dad80-cf1e-11e8-9a84-cd8bd2f6e930.png" alt="Source에서 Destination으로 패킷이 전달되는 과정."></p>
 <p>위 그림은 데이터가 전송될 때 어떤 경로를 거치는지 보여준다. 그림에 있는 링크 레이어 스위치와 라우터는 모두 패킷 스위치다. 엔드 시스템과 비슷하게 라우터와 링크 레이어 스위치도 레이어 모델을 취하고 있다. 하지만 모든 레이어가 구현되어 있는 것은 아닌데, 링크 레이어 스위치의 경우 링크 레이어와 피지컬 레이어만있고, 라우터는 네트워크 레이어와 링크 레이어, 피지컬 레이어만 가지고 있다.</p>
 <p>중요한 것은 캡슐화(Encapsulation)이다. 그 과정을 자세히 보자:</p>
 <ol>

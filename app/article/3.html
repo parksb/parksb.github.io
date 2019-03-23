@@ -54,9 +54,9 @@
       <section id="article-content-container">
         <p>컴퓨터는 여러 개의 프로세스를 동시에 돌릴 수 있다. (사실 정확히 '동시에’는 아니다. 자세한 설명은 <a href="https://parksb.github.io/article/5.html">공룡책으로 정리하는 운영체제 Ch.1</a>를 참고.) 그렇다면 하나의 프로그램이 여러 개의 프로세스로 메모리에 로드될 수 있을까? 당연히 된다. 두 개의 프로세스를 동시에 실행시며 하나의 목적을 달성할 수 있다. 리눅스 환경에서 parent 프로세스와 child 프로세스가 통신하는 학생 정보 관리 프로그램을 만들어보았다.</p>
 <h1>프로그램 구조</h1>
-<p><img src="https://user-images.githubusercontent.com/6410412/43831555-7d8fb438-9b3f-11e8-96e0-ccfd782d089d.png" alt="structure"></p>
+<p><img src="https://user-images.githubusercontent.com/6410412/43831555-7d8fb438-9b3f-11e8-96e0-ccfd782d089d.png" alt="프로그램 구조 도식화. 클라이언트와 서버가 파이프로 통신. 서버는 파일에 접근."></p>
 <p>프로그램은 parent와 child로 나뉜다. parent는 클라이언트로서 사용자에게 메뉴를 출력해주고, 값을 입력받는다. child는 서버로서 parent에게 데이터를 전송받아 student.data 파일에 데이터를 쓰거나 읽는다. 전체 실행 흐름을 도식화하면 다음 플로우 차트와 같다.</p>
-<p><img src="https://user-images.githubusercontent.com/6410412/43831554-7d0c6466-9b3f-11e8-8da3-a5c293503a5a.png" alt="flow"></p>
+<p><img src="https://user-images.githubusercontent.com/6410412/43831554-7d0c6466-9b3f-11e8-8da3-a5c293503a5a.png" alt="플로우 차트."></p>
 <p>서버와 클라이언트는 파이프(Pipe)를 통해 데이터를 주고 받는다. 파이프가 무엇인가? 말 그대로 parent와 child 사이에 관을 설치해 데이터를 주고받는 프로세스간 통신 기법을 말한다. <a href="https://parksb.github.io/article/7.html">공룡책으로 정리하는 운영체제 Ch.3</a>에 파이프에 대한 설명이 있다.</p>
 <h1>Child 프로세스 생성</h1>
 <p>처음 프로그램이 실행됐을 때 <code>fork()</code> 시스템콜을 통해 child 프로세스를 만들어야 한다.</p>

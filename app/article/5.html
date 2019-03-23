@@ -63,13 +63,13 @@
 <p>시스템에게 운영체제는 <strong>자원 할당자</strong>(Resource allocator)다. 컴퓨터 시스템은 CPU 시간, 메모리 공간, 파일 저장소 공간, 입출력 장치 등 다양한 문제를 해결해야 한다. 운영체제는 이러한 컴퓨터 자원들을 관리하는 <strong>제어 프로그램</strong>(Control program)으로서 동작한다.</p>
 <h1>Computer-System Organization</h1>
 <p>현대의 일반적인 컴퓨터 시스템은 여러개의 CPU와 장치 컨트롤러(Device controllers)로 구성되어 있다. 그리고 이들은 공통버스(Commmon bus)로 이어져 메모리를 공유한다.</p>
-<p><img src="https://t1.daumcdn.net/cfile/tistory/99DF283A5ABE280904" alt="A modern computer system"></p>
+<p><img src="https://t1.daumcdn.net/cfile/tistory/99DF283A5ABE280904" alt="현대 컴퓨터 시스템. CPU와 장치 컨트롤러들이 버스를 통해 메모리에 연결."></p>
 <h2>Computer Startup</h2>
 <p>컴퓨터를 켜면 <strong>부트스트랩 프로그램</strong>(Bootstrap program)이라는 초기화 프로그램이 실행된다. 이 프로그램을 컴퓨터의 ROM(Read-Only Memory)이나 EEPROM(Electrically Erasable Programmable Read-Only Memory)에 저장되어 있으며, 주로 펌웨어(Firmware)라고 불린다. 부트스트랩 프로그램은 시스템을 초기화하고, 부트로더(Boot loader)를 실행한다. (멀티부팅 컴퓨터의 경우 부트로더가 여러 운영체제를 가리키고 있는데, 이 경우엔 어떤 운영체제를 실행할지 선택해야 한다.) 그리고 부트로더는 최종적으로 운영체제를 실행하게 된다.</p>
 <p>커널이 로드, 실행되면 시스템과 사용자에게 서비스를 제공해야 한다. 이때 일부 서비스는 커널 외부에서 제공되는데, 이들은 부팅할 때 메모리에 로드되는 시스템 프로세스(System processes)나 시스템 데몬(System daemons)이다. UNIX의 경우 첫 시스템 프로세스는 <code>init</code>이며, 이 프로세스는 또 다른 데몬들을 실행시킨다. 데몬은 프로세스로 백그라운드에서 돌면서 시스템 로그는 남기는 등의 여러 작업을 한다. 이러한 과정이 끝나면 시스템이 완전히 부팅되고, 이벤트가 발생하기를 기다리게 된다.</p>
 <h2>Computer-System Operation</h2>
 <p>입출력 장치와 CPU는 동시에 실행될 수 있다. 장치 컨트롤러는 CPU에게 이벤트 발생을 알리는데, 이벤트 발생을 알리는 것을 <strong>인터럽트</strong>(Interrupt)라고 부른다. 인터럽트는 '방해하다’라는 뜻인데, 컴퓨터에서는 신호를 보내 이벤트 발생을 알리는 것을 의미한다. 보통 컴퓨터는 여러 작업을 동시에 처리하는데, 이때 당장 처리해야 하는 일이 생겨서 기존의 작업을 잠시 중단해야 하는 경우 인터럽트 신호를 보낸다. 그러면 커널은 작업을 멈추고 인터럽트를 처리한 뒤 다시 기존 작업으로 돌아온다.</p>
-<p><img src="https://t1.daumcdn.net/cfile/tistory/9966E7455ABE2DFB10" alt="Interrupt timeline for a single process doing output"></p>
+<p><img src="https://t1.daumcdn.net/cfile/tistory/9966E7455ABE2DFB10" alt="싱글 프로세스의 인터럽트 타임라인."></p>
 <p>인터럽트는 하드웨어나 소프트웨어에 의해 발생할 수 있으며, 소프트웨어에 의해 발생하는 인터럽트는 트랩(Trap)이라고 부른다. 하드웨어의 경우 시스템 버스(System bus)를 통해 CPU에 신호를 보냄으로써 인터럽트를 발생시키고, 소프트웨어는 시스템 콜(System call)이라는 특별한 명령으로 인터럽트를 발생시킨다.</p>
 <h2>Common Functions of Interrupts</h2>
 <p>보통 컴퓨터는 여러 작업을 동시에 처리하는데, 만약 CPU가 인터럽트 신호를 받으면, 앞서 말했듯이 하던 일을 잠시 멈추고 메모리의 어떤 고정된 위치(Fixed location)를 찾는다. 이 위치는 <strong>인터럽트 벡터</strong>(Interrupt vector)에 저장되어 있다. 인터럽트 벡터는 인터럽트를 처리할 수 있는 <strong>서비스 루틴</strong>(Service routine)들의 주소를 가지고 있는 공간으로, 파일 읽기/쓰기와 같은 중요한 동작들이 하드코딩되어 있다. 이렇게 인터럽트를 처리하고나면 CPU는 다시 원래 작업으로 돌아온다. 이 과정은 사용자가 눈치채지 못할 정도로 매우 빠르게 일어날 수도 있고, 너무 느려서 오랜 시간을 기다려야 할 수도 있다. 참고로 어떤 값을 0으로 나누는 것(Division by zero)도 인터럽트이며, 이러한 내부 인터럽트(Internal interrupt)는 예외(Exception)라고 부른다.</p>
@@ -86,7 +86,7 @@
 <p>과거에는 장치 데이터를 처리하기 위해 CPU를 거쳐 메모리에 로드하는 방식을 사용했으나, CPU 자원이 너무 많이 소모되기 때문에 이젠 DMA(Direct Memory Access)를 사용한다. <strong>DMA는 장치와 메모리를 직접 연결하는 방식으로, 버스가 지원하는 기능이다.</strong> 메모리의 일정 부분은 DMA에 사용될 영역으로 지정되며, DMA를 제어하는 컨트롤러는 DMA 컨트롤러라고 부른다. 참고로 CPU를 거치는 방식은 PIO(Programmed I/O)라고 부른다. 장치의 데이터는 장치 컨트롤러에 의해 직접 메모리에 전달되며, CPU에서는 데이터 이동이 완료되었다는 인터럽트만 한 번 일어난다. 이렇게 하면 결과적으로 CPU가 하는 일이 줄어드니까 성능이 좋아진다.</p>
 <h1>Computer-System Architecture</h1>
 <p>현대 컴퓨터 시스템은 기본적으로 폰 노이만 구조를 따른다.</p>
-<p><img src="https://t1.daumcdn.net/cfile/tistory/991F994F5ABE663601" alt="How a modern computer system works"></p>
+<p><img src="https://t1.daumcdn.net/cfile/tistory/991F994F5ABE663601" alt="현대 컴퓨터 시스템의 동작 원리. CPU, 메모리, 장치."></p>
 <h2>Single-Processor Systems</h2>
 <p>과거 대부분의 컴퓨터는 싱글 프로세서를 사용했다. 싱글 프로세서 컴퓨터에는 하나의 메인 CPU만 탑재되며, 장치에 따라 특별한 목적을 가진 프로세서가 들어갔다. 가령 디스크 프로세서는 디스크 연산만 수행하고, 키보드 프로세서는 키보드 연산만 수행하는 식이다.</p>
 <h2>Multiprocessor Systems</h2>
@@ -99,11 +99,11 @@
 <p><strong>멀티 프로세서 컴퓨터는 2개 이상의 프로세서를 가지고 있다.</strong> 멀티 프로세서 시스템은 <strong>비대칭 멀티프로세싱</strong>(Asymmetric multiprocessing)과 <strong>대칭 멀티프로세싱</strong>(Symmetric multiprocessing) 두 가지로 나뉜다. <strong>비대칭 멀티프로세싱은 관료주의적인 회사다.</strong> 보스 프로세서(Boss processor)가 시스템을 제어하고, 다른 프로세서들은 보스의 지시를 받게 된다. 이렇게 하면 부하 분산(Loadbalancing)을 효율적으로 할 수 있다. 대신 보스 프로세서가 작동을 멈추면 일꾼 프로세서들도 멈추게 된다. <strong>대칭 멀티프로세싱은 보스가 없는 자유로운 회사다.</strong> 모든 프로세서들은 하나의 메모리를 공유하고, 동일한 작업을 병렬적으로 수행한다. 만약 프로세서에 이상이 생겨 작동을 멈춰야 한다면 자신이 수행하던 작업을 다른 프로세서들에게 나눠주고 자신만 재부팅한다.</p>
 <p>대부분의 컴퓨터 시스템은 대칭 멀티프로세싱을 사용한다. 대칭 멀티프로세싱은 보스가 없는 자유로운 회사다. 모든 프로세서들은 하나의 메모리를 공유하고, 동일한 작업을 병렬적으로 수행한다. 만약 프로세서에 이상이 생겨 작동을 멈춰야 한다면 자신이 수행하던 작업을 다른 프로세서들에게 나눠주고 자신만 재부팅한다. 그리고 재부팅 후 문제가 해결된다면 다시 작업을 나눠 받는다. 비대칭 멀티프로세싱 시스템의 단점을 보완할 수 있는 아키텍처다.</p>
 <p>멀티 프로세서 시스템의 CPU들은 각자의 레지스터와 캐시를 갖고 있다. 만약 CPU가 여러 개라면 돌아가면서 작업을 해야 하는데, 그러면 다른 CPU가 작업을 하는 동안 다른 CPU들은 놀게 된다.</p>
-<p><img src="https://t1.daumcdn.net/cfile/tistory/99BE2C425ABE741E0A" alt="Symmetric multiprocessing architecture"></p>
+<p><img src="https://t1.daumcdn.net/cfile/tistory/99BE2C425ABE741E0A" alt="대칭 멀티프로세싱 아키텍처."></p>
 <h2>A Dual-Core Design</h2>
 <p>CPU가 늘어나면 프로세서간 통신을 하는 데 많은 비용이 들기 때문에 효율이 계속 좋아지지는 않는다. x축을 CPU 수, y축을 성능이라고 하면 그래프는 로그함수 형태로 나타난다. 조별 과제를 생각해보자. 내 아이큐 150, 네 아이큐 150을 합치면 총 300이지만, 머리가 많다고 좋은 것은 아니다. 사람이 늘어날수록 커뮤니케이션의 어려움은 커진다.</p>
 <p><strong>최근 CPU 설계 트렌드는 하나의 칩(Chip)에 코어(Cores)를 늘리는 것이다.</strong> 이러한 멀티 프로세서 시스템을 멀티코어(Multicore)라고 부른다. 코어는 동일한 성능의 CPU 여러 개를 1개의 칩 속에 집접한 것이라고 보면 된다. 칩 내부의 통신(On-chip communication)이 칩 사이의 통신(Between-chip communication)보다 더 빠르기 때문에 여러 개의 칩에 하나의 코어만 두는 시스템보다 더 효율적이다. 뿐만 아니라 하나의 칩에 여러 코어를 담으면 전력을 더 적게 사용한다.</p>
-<p><img src="https://t1.daumcdn.net/cfile/tistory/996247375ABE741502" alt="A dual-core design with two cores placed on the same chip"></p>
+<p><img src="https://t1.daumcdn.net/cfile/tistory/996247375ABE741502" alt="같은 칩에 두 개의 코어가 들어간 듀얼코어 설계."></p>
 <p>위 사진은 듀얼 코어 시스템이다. 각 코어는 자신만의 레지스터와 로컬 캐시를 갖는다. (하나의 캐시를 공유하기도 한다.)</p>
 <h2>Clustered Systems</h2>
 <p>멀티프로세서 시스템의 일종인 클러스터 시스템(Clustered system)은 여러개의 CPU을 모아 놓은 구조다. 클러스터 시스템은 여러개의 개별 시스템(또는 노드)들이 하나로 모여있다는 점에서 앞서 설명한 멀티프로세서 시스템과는 조금 다르다. 멀티프로세서 시스템은 여러CPU가 하나의 시스템을 이루는 것이지만, 클러스터 시스템은 여러 독립적인 시스템이 모여 하나의 시스템을 이루는 것이다. 이런 시스템을 약결합(Loosely coupled)라고 부르며, 각 노드들은 싱글 프로세서 시스템일수도 있고, 멀티코어 시스템일 수도 있다.</p>
@@ -118,7 +118,7 @@
 <p>앞서 언급했듯이 운영체제는 인터럽트 주도적이다. <strong>인터럽트가 없다면 시스템은 조용히 인터럽트를 기다린다.</strong> 만약 사용자의 프로그램이 멋대로 하드웨어에 접근해 인터럽트를 보낸다면 큰 문제가 생기길 것이다. 운영체제와 사용자는 컴퓨터의 하드웨어, 소프트웨어 자원을 공유하기 때문에 사용자 프로그램이 오류를 일으키지 않도록 방지해야 한다.</p>
 <h1>Dual-Mode and Multimode Operation</h1>
 <p>운영체제는 사용자 프로그램이 함부로 시스템에 접근하지 못하도록 모드(Modes)를 나눠둔다. 유저 모드(User mode)와 커널 모드(Kernel mode)가 그것이며, 하드웨어의 모드 비트(Mode bit)가 <code>0</code>은 커널 모드, <code>1</code>은 유저 모드임을 가리킨다.</p>
-<p><img src="https://t1.daumcdn.net/cfile/tistory/99D9DB355AC0E4342A" alt="Transition from user to kernel mode"></p>
+<p><img src="https://t1.daumcdn.net/cfile/tistory/99D9DB355AC0E4342A" alt="사용자 모드에서 커널 모드로 변경되는 과정. 시스템 콜을 이용."></p>
 <p>이러한 이중 모드(Dual-mode) 방식을 사용하면 나쁜 의도를 가진 사용자로부터 운영체제, 하드웨어를 비롯한 시스템과 사용자를 보호할 수 있다. 하드웨어는 커널 모드일 때만 <strong>특권 명령</strong>(Privileged instructions)를 실행한다. 만약 유저 모드에서 특권 명령을 실행하려 한다면 하드웨어는 이 동작을 막고 운영체제에게 트랩을 보낼 것이다. 유저 모드에서 합법적으로(?) 커널 모드의 기능을 호출하고 싶다면 시스템 콜(System call)이라는 인터페이스를 통해야 한다.</p>
 <h1>Timer</h1>
 <p>운영체제는 사용자의 프로그램이 제어권을 운영체제에게 넘겨주지 않는 상황을 방지하기 위해 타이머(Timer)를 사용한다. 타이머는 운영체제에게 제어권을 보장하기 위해 특정 주기에 인터럽트를 발생시킨다. 운영체제는 카운터를 설정하고, 타이머의 시간은 매 틱(Ticks)마다 감소한다. 그렇게 카운터가 0에 도달하면 인터럽트가 발생한다.</p>

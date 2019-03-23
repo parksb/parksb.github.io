@@ -370,7 +370,7 @@ $s3,    4($s3),   8($s3),  ...,  32($s3)
 <p><code>$v0</code>에 <code>$a0 * $v0</code>, 즉 <code>3 * 2</code> 값을 저장하고, <code>$ra</code> 위치로 넘어간다. 이때 <strong><code>$ra</code>는 caller 위치</strong>이며, caller에서 <code>$v0</code>에 접근하면 6을 얻을 수 있을 것이다. <code>factorial</code>이 제대로 동작했다.</p>
 <p>마치 인간 컴퓨터가 된 기분이다.</p>
 <h2>Memory Layout</h2>
-<p><img src="https://user-images.githubusercontent.com/6410412/47010968-8f4a6480-d17b-11e8-8d46-2839b1fa3270.png" alt="computer memory layout"></p>
+<p><img src="https://user-images.githubusercontent.com/6410412/47010968-8f4a6480-d17b-11e8-8d46-2839b1fa3270.png" alt="컴퓨터 메모리 레이아웃. 스택, 힙, 데이터 세그먼트, 코드 세그먼트."></p>
 <p>그림의 Code Segment는 Text라고 불리며, 실제 프로그램 코드가 저장된다. Data Segment는 Static Data라고 불리며, 상수 배열이나 문자열, static 변수가 저장된다. Heap에는 동적할당된 배열 요소나 객체가 저장되며, Stack에는 함수나 메소드, 지역변수 등이 저장된다.</p>
 <p>앞서 스택에 값을 저장하고 불러오는 과정이 위와 같은 메모리 구조를 바탕으로 이뤄진다. 스택은 높은 곳에서 낮은 곳으로 자라기 때문에 <code>addi $sp, $sp, -8</code>처럼 stack poniter를 음의 방향으로 움직여준 것이다. 값을 저장할 때도 <code>sw $ra 4($sp)</code>다음 <code>sw $a0, 0($sp)</code>를 했다. 스택과 달리 heap은 낮은 곳에서 높은 곳으로 자란다.</p>
 <h2>MIPS Instruction Formats</h2>

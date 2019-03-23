@@ -8,7 +8,7 @@ tags: "알고리즘"
 
 quick sort는 말 그대로 빠른 정렬을 의미한다. 큰 문제를 쪼개 작은 문제로 만들어서 정복하는 divide-and-conquer 패러다임에 바탕을 두고 있어 퍼포먼스가 좋다.
 
-![](https://idea-instructions.com/quick-sort.png)
+![퀵 소트 매커니즘. 크게 5단계.](https://idea-instructions.com/quick-sort.png)
 
 기본적인 매커니즘은 그리 어렵지 않다.
 

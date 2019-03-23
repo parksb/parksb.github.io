@@ -53,7 +53,7 @@
 
       <section id="article-content-container">
         <p>Garbage Collection(GC)은 쉽게 말하자면 메모리에 쓸데없이 공간을 차지하고 있는 것들을 정리하는 작업이다. C에선 그런 작업을 개발자가 직접했다.</p>
-<p><img src="https://t1.daumcdn.net/cfile/tistory/9941BD3A5ADF38B808" alt=""></p>
+<p><img src="https://t1.daumcdn.net/cfile/tistory/9941BD3A5ADF38B808" alt="malloc으로 메모리 할당, free로 메모리 해제."></p>
 <p>만약 <code>free()</code>를 통해 메모리를 해제하지 않고 계속 동적할당을 수행시킨다면 메모리가 꽉 차버리고 만다. 그런데 Java 프로그래밍을 할 때는 메모리 해제 작업을 하지 않는다. 아무리 많은 객체를 만들고 지워도 메모리를 해제하는 코드는 어디에도 들어가지 않는다. 메모리 관리에 신경쓰지 않고 개발을 해도 괜찮은걸까? JVM이 GC를 지원하기 때문에 괜찮다.</p>
 <h1>JVM Memory Structure</h1>
 <p>GC를 다루기 전에 먼저 메모리 구조를 살펴봐야 한다. 메모리는 저장하는 데이터의 종류에 따라 크게 네가지 영역으로 나뉜다.</p>
@@ -92,7 +92,7 @@
 <p>대부분의 오브젝트는 생성 이후 금방 garbage가 된다!</p>
 </blockquote>
 <p>그렇다! 오브젝트는 만들어진지 얼마되지 않아 금방 레퍼런스가 사라진다. 이 관찰을 활용해 GC의 효율을 높이기 위해 JVM은 heap의 영역을 세대별로 쪼개 관리한다.</p>
-<p><img src="https://t1.daumcdn.net/cfile/tistory/997B293F5ADF39062D" alt=""></p>
+<p><img src="https://t1.daumcdn.net/cfile/tistory/997B293F5ADF39062D" alt="Eden, S0, S1, Tenured, Permanent 영역."></p>
 <p>eden, S0, S1은 생성된지 얼마되지 않은 오브젝트들이 쌓이는 공간이기 때문에 young generation이라고 부르며, 반대로 tenured와 permanent는 old generation이라고 부른다. 순서대로 살펴보자.</p>
 <ul>
 <li>Eden: 에덴동산할 때 그 에덴이다. 오브젝트가 처음 생성됐을 때 eden에 들어간다.</li>
