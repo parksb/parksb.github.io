@@ -36,8 +36,8 @@
 </head>
 
 <body>
-  <nav id="top-container">
-  </nav>
+  <header id="top-container" role="navigation">
+  </header>
 
   <main id="main-container">
     <article id="article-container">
@@ -51,7 +51,7 @@
         2018.05.03
       </time>
 
-      <section id="article-content-container">
+      <article id="article-content-container">
         <p>챕터1에서 다룬 시스템에 대해 보다 자세히 다루는 챕터인데, 그렇게 어렵지는 않다. 복잡한 내용이 별로 없어서 쉽게 읽을 수 있다.</p>
 <h1>Operating-System Services</h1>
 <p>운영체제는 사용자와 시스템에게 다양한 서비스를 제공한다.</p>
@@ -109,7 +109,7 @@
 <h2>Hybrid Systems</h2>
 <p>스마트폰은 OS 구조의 최신판이라고 할 수 있다. 하이브리드 시스템은 <strong>커널의 핵심만 남기고 나머지는 따로 구현한 시스템이다.</strong> OS X의 경우 BSD가 핵심이지만 나머지는 모두 애플이 자체 구현했다. 안드로이드는 리눅스 커널위에 자체 구현한 라이브러리를 올린 시스템이다.</p>
 
-      </section>
+      </article>
 
       <section id="article-social-container">
         <div id="fb-like" class="fb-like" data-href="https://parksb.github.io/" data-layout="button_count"
@@ -117,11 +117,11 @@
         <a href="https://twitter.com/share" class="twitter-share-button" data-show-count="true"></a>
       </section>
 
-      <section id="article-comments">
+      <article id="article-comments">
         <script async src="https://utteranc.es/client.js" repo="ParkSB/parksb.github.io-comments" issue-term="pathname" theme="github-light"
           crossorigin="anonymous">
           </script>
-      </section>
+      </article>
     </article>
   </main>
 
@@ -137,6 +137,6 @@
   </script>
   <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-  <script src="../src/ts/init.ts"></script>
-  <script src="../src/ts/article.ts"></script>
+  <script defer src="../src/ts/init.ts"></script>
+  <script defer src="../src/ts/article.ts"></script>
 </body>

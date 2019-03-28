@@ -36,8 +36,8 @@
 </head>
 
 <body>
-  <nav id="top-container">
-  </nav>
+  <header id="top-container" role="navigation">
+  </header>
 
   <main id="main-container">
     <article id="article-container">
@@ -51,7 +51,7 @@
         2018.05.03
       </time>
 
-      <section id="article-content-container">
+      <article id="article-content-container">
         <p>본격적으로 프로세스에 대해서 다루기 시작한다. <a href="https://parksb.github.io/article/5.html">Ch.1 Overview</a>에서 나왔듯이 디스크에 있는 것은 프로그램, 메모리에 로드된 것은 프로세스라고 한다. 프로세스는 Stack, Heap, Data, Code로 나뉜다.</p>
 <h1>Process State</h1>
 <p>프로세스가 처음 생성됐을 때는 new, 프로세서에게 할당되기를 기다릴 때는 ready, 프로세서에 할당되어 실행될 때는 running, 실행 중 종료될 때는 terminated, 실행 중 작업이 완료되어 입출력을 기다릴 때는 waiting 상태를 갖는다.</p>
@@ -90,7 +90,7 @@
 <h1>Pipes</h1>
 <p>파이프는 부모 프로세스와 자식 프로세스가 통신할 때 사용하는 방식이다. 말 그대로 프로세스 사이에 파이프를 두고 정보를 주고 받는 건데, <strong>파이프는 단방향 통신만 가능</strong>하기 때문에 양방향으로 정보를 주고 받으려면 두 개의 파이프가 필요하다. (파이프는 파일이다.) 파이프에 이름을 붙인 named pipe를 사용하면 꼭 부모-자식 관계가 아니더라도 파이프를 이용해 통신할 수 있다.</p>
 
-      </section>
+      </article>
 
       <section id="article-social-container">
         <div id="fb-like" class="fb-like" data-href="https://parksb.github.io/" data-layout="button_count"
@@ -98,11 +98,11 @@
         <a href="https://twitter.com/share" class="twitter-share-button" data-show-count="true"></a>
       </section>
 
-      <section id="article-comments">
+      <article id="article-comments">
         <script async src="https://utteranc.es/client.js" repo="ParkSB/parksb.github.io-comments" issue-term="pathname" theme="github-light"
           crossorigin="anonymous">
           </script>
-      </section>
+      </article>
     </article>
   </main>
 
@@ -118,6 +118,6 @@
   </script>
   <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-  <script src="../src/ts/init.ts"></script>
-  <script src="../src/ts/article.ts"></script>
+  <script defer src="../src/ts/init.ts"></script>
+  <script defer src="../src/ts/article.ts"></script>
 </body>

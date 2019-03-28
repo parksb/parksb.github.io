@@ -36,8 +36,8 @@
 </head>
 
 <body>
-  <nav id="top-container">
-  </nav>
+  <header id="top-container" role="navigation">
+  </header>
 
   <main id="main-container">
     <article id="article-container">
@@ -51,7 +51,7 @@
         2018.05.02
       </time>
 
-      <section id="article-content-container">
+      <article id="article-content-container">
         <p>UX디자인이라는 말은 유행처럼 쓰이기 시작하더니 어느 날부터 UI디자인과 비슷한 개념, 또는 UI디자인을 조금 ‘있어 보이게’ 일컫는 말처럼 쓰이게 되었다. 하지만 UX디자인에 관한 수많은 서적과 학술 자료들, 그리고 실제로 일어나고 있는 기업의 투자를 보면 정말로 UX디자인이 UI디자인과 같은 개념이거나 실체가 없는 것이라고 판단하기는 어렵다. 나는 많은 사람들이 UX디자인을 제대로 이해하지 못해서 용어가 오남용되고 있는 것이라고 추측했으며, 나 또한 그 둘을 확실히 구분하지 못하고 있음을 깨닫게 되었다. 따라서 UX디자인과 UI디자인의 차이를 밝힘으로써 UX디자인의 개념을 명확히 알아보고자 한다.</p>
 <p><img src="https://user-images.githubusercontent.com/6410412/50655371-43b59300-0fd3-11e9-95f7-5354e64df78a.png" alt="빠른 비포장 보도는 UX, 돌아가는 포장 보도는 UI에 비유."></p>
 <p>UI디자인과 UX디자인의 차이에 대해 찾아보면 대부분 UI디자인은 ‘예쁘게 하는 것’이고, UX디자인은 ‘편리하게 하는 것’이라는 설명이 많이 보인다. 그러나 UI디자이너도 사용성을 고민하며, UX디자이너도 심미성을 고민한다. (즉, 위 사진의 비유는 잘못되었다!) 또한 UX디자인을 심리학과 같은 선상에 놓는 경우도 있다. 디자인 과정에 ‘사람은 웹 페이지를 F자 형태로 읽는다’와 같은 심리학적인 요소가 접목된다고 UX디자인의 차별점이 생기지는 않는다. 물론 심리학이 UX를 증진시킬 수는 있겠지만, 그것이 UX디자인의 전부라면 UX디자인은 단지 고도화된 UI디자인에 불과할 것이다.</p>
@@ -73,7 +73,7 @@
 <li>DESIGN LOG, <a href="http://www.designlog.org/2512435">http://www.designlog.org/2512435</a>.</li>
 </ul>
 
-      </section>
+      </article>
 
       <section id="article-social-container">
         <div id="fb-like" class="fb-like" data-href="https://parksb.github.io/" data-layout="button_count"
@@ -81,11 +81,11 @@
         <a href="https://twitter.com/share" class="twitter-share-button" data-show-count="true"></a>
       </section>
 
-      <section id="article-comments">
+      <article id="article-comments">
         <script async src="https://utteranc.es/client.js" repo="ParkSB/parksb.github.io-comments" issue-term="pathname" theme="github-light"
           crossorigin="anonymous">
           </script>
-      </section>
+      </article>
     </article>
   </main>
 
@@ -101,6 +101,6 @@
   </script>
   <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-  <script src="../src/ts/init.ts"></script>
-  <script src="../src/ts/article.ts"></script>
+  <script defer src="../src/ts/init.ts"></script>
+  <script defer src="../src/ts/article.ts"></script>
 </body>

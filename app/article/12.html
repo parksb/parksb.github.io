@@ -36,8 +36,8 @@
 </head>
 
 <body>
-  <nav id="top-container">
-  </nav>
+  <header id="top-container" role="navigation">
+  </header>
 
   <main id="main-container">
     <article id="article-container">
@@ -51,7 +51,7 @@
         2018.05.04
       </time>
 
-      <section id="article-content-container">
+      <article id="article-content-container">
         <p>메모리에 로드된 프로세스를 효율적으로 관리하는 방법을 다루는 챕터로, 복잡한 매커니즘과 계산이 나오기 시작해 조금 어려워지는 단계다.</p>
 <h1>Background</h1>
 <p><a href="https://parksb.github.io/article/5.html">Ch.1 Overview</a>에서 언급했듯 메모리는 현대 컴퓨터 시스템의 핵심이다. 프로세스는 독립적인 메모리 공간을 차지하며, 시스템은 프로세스가 자신의 영역 외에는 접근할 수 없도록 막아야 한다.</p>
@@ -118,7 +118,7 @@
 <h2>Inverted Page Tables</h2>
 <p>지금까지 page table은 각 page마다 하나의 항목을 가졌다. inverted page table은 메모리의 frame마다 한 항목씩 할당하는데, 이렇게 하면 physical frame에 대응하는 항목만 저장하면 되기 때문에 메모리를 훨씬 적게 사용하게 된다. 다만 탐색 시간이 오래 걸리기 때문에 대부분의 메모리는 inverted page table과 hased page table을 결합하는 방식으로 구현되어있다.</p>
 
-      </section>
+      </article>
 
       <section id="article-social-container">
         <div id="fb-like" class="fb-like" data-href="https://parksb.github.io/" data-layout="button_count"
@@ -126,11 +126,11 @@
         <a href="https://twitter.com/share" class="twitter-share-button" data-show-count="true"></a>
       </section>
 
-      <section id="article-comments">
+      <article id="article-comments">
         <script async src="https://utteranc.es/client.js" repo="ParkSB/parksb.github.io-comments" issue-term="pathname" theme="github-light"
           crossorigin="anonymous">
           </script>
-      </section>
+      </article>
     </article>
   </main>
 
@@ -146,6 +146,6 @@
   </script>
   <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-  <script src="../src/ts/init.ts"></script>
-  <script src="../src/ts/article.ts"></script>
+  <script defer src="../src/ts/init.ts"></script>
+  <script defer src="../src/ts/article.ts"></script>
 </body>

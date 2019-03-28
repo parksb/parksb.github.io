@@ -36,8 +36,8 @@
 </head>
 
 <body>
-  <nav id="top-container">
-  </nav>
+  <header id="top-container" role="navigation">
+  </header>
 
   <main id="main-container">
     <article id="article-container">
@@ -51,7 +51,7 @@
         2018.06.15
       </time>
 
-      <section id="article-content-container">
+      <article id="article-content-container">
         <p>Singleton 패턴은 하나만 존재해야 하는 오브젝트를 만들 때 유용한 디자인 패턴이다. 간단히 구현해보자.</p>
 <pre class="hljs"><code><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Singleton</span> </span>{
   <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> Singleton instance;
@@ -85,7 +85,7 @@
 </code></pre>
 <p><code>getInstance</code>를 synchronized로 해주면 한 번에 하나의 스레드만 메소드에 접근할 수 있기 때문에 동기화 문제가 해결된다.</p>
 
-      </section>
+      </article>
 
       <section id="article-social-container">
         <div id="fb-like" class="fb-like" data-href="https://parksb.github.io/" data-layout="button_count"
@@ -93,11 +93,11 @@
         <a href="https://twitter.com/share" class="twitter-share-button" data-show-count="true"></a>
       </section>
 
-      <section id="article-comments">
+      <article id="article-comments">
         <script async src="https://utteranc.es/client.js" repo="ParkSB/parksb.github.io-comments" issue-term="pathname" theme="github-light"
           crossorigin="anonymous">
           </script>
-      </section>
+      </article>
     </article>
   </main>
 
@@ -113,6 +113,6 @@
   </script>
   <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-  <script src="../src/ts/init.ts"></script>
-  <script src="../src/ts/article.ts"></script>
+  <script defer src="../src/ts/init.ts"></script>
+  <script defer src="../src/ts/article.ts"></script>
 </body>

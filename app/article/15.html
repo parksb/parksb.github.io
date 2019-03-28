@@ -36,8 +36,8 @@
 </head>
 
 <body>
-  <nav id="top-container">
-  </nav>
+  <header id="top-container" role="navigation">
+  </header>
 
   <main id="main-container">
     <article id="article-container">
@@ -51,7 +51,7 @@
         2018.06.01
       </time>
 
-      <section id="article-content-container">
+      <article id="article-content-container">
         <p>2개월이나 지났지만, 더 시간이 지나면 잊어버릴 것 같아서 <a href="https://harooo.com/harooo/">하루</a> 리뉴얼에 대한 이야기를 해보려 한다. 워낙 충격적이고 힘든 경험이어서 아직도 어땠는지 기억이 난다.</p>
 <p><img src="https://t1.daumcdn.net/cfile/tistory/99A6CE3A5B10311A2F" alt="함꼐해서 더러웠고 다신 만나지 말자."></p>
 <p>결과적으로 더러운(…) 경험이었다. 예상치 못한 오류, 쏟아져 나오는 버그, 개떡같은 코드, 완전 뒤죽박죽이었다. 이하 내용은 약 10개월간 내가 무슨 삽질을 했는지에 관한 회고다.</p>
@@ -118,7 +118,7 @@
 <p>다행히 10개월 간의 삽질을 통해 나름 느낀 점이 있다. 첫 번째는 html, css, javascript, php의 완벽한 분리에 목숨을 걸어야겠다는 것. 두 번째는 쓸모있는 주석을 달아야겠다는 것. 세 번째는 한 번 더 생각하고 코드를 짜야한다는 것. 그리고 마지막으로 현재의 편안함이 나중엔 지옥으로 다가올 수 있다는 것.</p>
 <p>많은 수업에서(특히 객체지향프로그래밍) 교수님들은 &quot;당장은 필요없을지 몰라도 나중에 코드를 관리하기 굉장히 편해집니다.&quot;라고 말하지만, 잘 실감이 나지 않을 때가 있다. 역시 경험으로 배워야 한다…</p>
 
-      </section>
+      </article>
 
       <section id="article-social-container">
         <div id="fb-like" class="fb-like" data-href="https://parksb.github.io/" data-layout="button_count"
@@ -126,11 +126,11 @@
         <a href="https://twitter.com/share" class="twitter-share-button" data-show-count="true"></a>
       </section>
 
-      <section id="article-comments">
+      <article id="article-comments">
         <script async src="https://utteranc.es/client.js" repo="ParkSB/parksb.github.io-comments" issue-term="pathname" theme="github-light"
           crossorigin="anonymous">
           </script>
-      </section>
+      </article>
     </article>
   </main>
 
@@ -146,6 +146,6 @@
   </script>
   <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-  <script src="../src/ts/init.ts"></script>
-  <script src="../src/ts/article.ts"></script>
+  <script defer src="../src/ts/init.ts"></script>
+  <script defer src="../src/ts/article.ts"></script>
 </body>

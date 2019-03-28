@@ -3,17 +3,18 @@
   min-width: 200px;
   margin-top: 10px;
   margin-left: -10px;
-  -webkit-columns: 100px 100;
-  -moz-columns: 100px 100;
-  columns: 100px 100;
+  -webkit-columns: 120px 120;
+  -moz-columns: 120px 120;
+  columns: 120px 120;
 
   .works-content {
-    width: 100px;
+    width: 120px;
     display: inline-block;
     padding: 10px;
     line-height: 12px;
   
-    &:hover {
+    &:hover,
+    &:focus {
       background-color: black;
       color: white;
     }
@@ -28,8 +29,8 @@
 
   h1 {
     display: inline;
-    font-size: 10px;
-    line-height: 13px;
+    font-size: 12px;
+    line-height: 18px;
     font-weight: 400;
   }
 }

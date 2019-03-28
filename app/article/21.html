@@ -36,8 +36,8 @@
 </head>
 
 <body>
-  <nav id="top-container">
-  </nav>
+  <header id="top-container" role="navigation">
+  </header>
 
   <main id="main-container">
     <article id="article-container">
@@ -51,7 +51,7 @@
         2018.09.08
       </time>
 
-      <section id="article-content-container">
+      <article id="article-content-container">
         <p>SSH는 원격 접속을 위한 프로토콜로, SSH 서버를 이용하면 외부 터미널에서 서버로 원격 접속을 할 수 있다. 심지어 아이패드로도 데스크탑에 접속할 수 있다는 의미다. 단, SSH 접속은 터미널을 사용해야 하기 때문에 CLI에 익숙해야 한다. 또한 SSH 서버를 통한 개발이 목적이라면 당연히 vim 사용법을 잘 알고 있어야 할 것이다.</p>
 <p>나는 아이패드에 <a href="https://www.termius.com/">termius</a>를 설치하고, 이를 통해 노트북의 WSL에 SSH 접속을 해보기로 했다. 그럼 <strong>WSL Ubuntu 16.04</strong>에서 SSH 서버를 열어보겠다.</p>
 <h1>openssh-server 재설치</h1>
@@ -107,7 +107,7 @@ $ sudo apt install openssh-server
 <p><img src="https://user-images.githubusercontent.com/6410412/45214415-6067e580-b2d5-11e8-88b6-a39c1ca6b051.PNG" alt="Putty에서 원격 접속."></p>
 <p>넷북에서 테스트했고, 이후 아이패드에서도 테스트했는데 잘 됐다! 이제 학교에 노트북들고 가지 않고 프로그래밍을 할 수 있게 되었다.</p>
 
-      </section>
+      </article>
 
       <section id="article-social-container">
         <div id="fb-like" class="fb-like" data-href="https://parksb.github.io/" data-layout="button_count"
@@ -115,11 +115,11 @@ $ sudo apt install openssh-server
         <a href="https://twitter.com/share" class="twitter-share-button" data-show-count="true"></a>
       </section>
 
-      <section id="article-comments">
+      <article id="article-comments">
         <script async src="https://utteranc.es/client.js" repo="ParkSB/parksb.github.io-comments" issue-term="pathname" theme="github-light"
           crossorigin="anonymous">
           </script>
-      </section>
+      </article>
     </article>
   </main>
 
@@ -135,6 +135,6 @@ $ sudo apt install openssh-server
   </script>
   <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-  <script src="../src/ts/init.ts"></script>
-  <script src="../src/ts/article.ts"></script>
+  <script defer src="../src/ts/init.ts"></script>
+  <script defer src="../src/ts/article.ts"></script>
 </body>

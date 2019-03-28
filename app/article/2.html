@@ -36,8 +36,8 @@
 </head>
 
 <body>
-  <nav id="top-container">
-  </nav>
+  <header id="top-container" role="navigation">
+  </header>
 
   <main id="main-container">
     <article id="article-container">
@@ -51,7 +51,7 @@
         2018.04.23
       </time>
 
-      <section id="article-content-container">
+      <article id="article-content-container">
         <p>Garbage Collection(GC)은 쉽게 말하자면 메모리에 쓸데없이 공간을 차지하고 있는 것들을 정리하는 작업이다. C에선 그런 작업을 개발자가 직접했다.</p>
 <p><img src="https://t1.daumcdn.net/cfile/tistory/9941BD3A5ADF38B808" alt="malloc으로 메모리 할당, free로 메모리 해제."></p>
 <p>만약 <code>free()</code>를 통해 메모리를 해제하지 않고 계속 동적할당을 수행시킨다면 메모리가 꽉 차버리고 만다. 그런데 Java 프로그래밍을 할 때는 메모리 해제 작업을 하지 않는다. 아무리 많은 객체를 만들고 지워도 메모리를 해제하는 코드는 어디에도 들어가지 않는다. 메모리 관리에 신경쓰지 않고 개발을 해도 괜찮은걸까? JVM이 GC를 지원하기 때문에 괜찮다.</p>
@@ -110,7 +110,7 @@
 <p>오브젝트가 살아남아 다음 세대로 넘어가는 것을 promote라고 표현한다. 또한 young generation에서 일어나는 GC를 minor GC라고 부르고, old generation에서 일어나는 GC를 major GC라고 부른다. minor GC는 자주, 빠르게 수행된다. 반대로 major GC는 가끔, 느리게 수행된다.</p>
 <p>이렇게 Java의 GC에 대해서 간단히 알아봤다. 자동으로 수행되는 GC를 믿지 않고 <code>System.gc()</code> 메소드를 호출해 개발자가 강제로 GC를 수행할 수도 있는데, 절대 사용하지 말 것을 추천한다. 성능을 크게 떨어트릴 수 있으며 매우 비효율적인 방법이다. 심지어 위험할 수도 있다. 꼭 명시적으로 메모리를 해제하고 싶다면 차라리 오브젝트에 <code>null</code>을 할당해 레퍼런스를 끊는 것이 더욱 안전하다.</p>
 
-      </section>
+      </article>
 
       <section id="article-social-container">
         <div id="fb-like" class="fb-like" data-href="https://parksb.github.io/" data-layout="button_count"
@@ -118,11 +118,11 @@
         <a href="https://twitter.com/share" class="twitter-share-button" data-show-count="true"></a>
       </section>
 
-      <section id="article-comments">
+      <article id="article-comments">
         <script async src="https://utteranc.es/client.js" repo="ParkSB/parksb.github.io-comments" issue-term="pathname" theme="github-light"
           crossorigin="anonymous">
           </script>
-      </section>
+      </article>
     </article>
   </main>
 
@@ -138,6 +138,6 @@
   </script>
   <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-  <script src="../src/ts/init.ts"></script>
-  <script src="../src/ts/article.ts"></script>
+  <script defer src="../src/ts/init.ts"></script>
+  <script defer src="../src/ts/article.ts"></script>
 </body>

@@ -138,7 +138,8 @@
   a {
     text-decoration: underline;
 
-    &:hover {
+    &:hover,
+    &:focus {
       text-decoration: none;
       background-color: black;
       color: white;

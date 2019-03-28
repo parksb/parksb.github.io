@@ -36,8 +36,8 @@
 </head>
 
 <body>
-  <nav id="top-container">
-  </nav>
+  <header id="top-container" role="navigation">
+  </header>
 
   <main id="main-container">
     <article id="article-container">
@@ -51,7 +51,7 @@
         2018.05.01
       </time>
 
-      <section id="article-content-container">
+      <article id="article-content-container">
         <p>컴퓨터는 여러 개의 프로세스를 동시에 돌릴 수 있다. (사실 정확히 '동시에’는 아니다. 자세한 설명은 <a href="https://parksb.github.io/article/5.html">공룡책으로 정리하는 운영체제 Ch.1</a>를 참고.) 그렇다면 하나의 프로그램이 여러 개의 프로세스로 메모리에 로드될 수 있을까? 당연히 된다. 두 개의 프로세스를 동시에 실행시며 하나의 목적을 달성할 수 있다. 리눅스 환경에서 parent 프로세스와 child 프로세스가 통신하는 학생 정보 관리 프로그램을 만들어보았다.</p>
 <h1>프로그램 구조</h1>
 <p><img src="https://user-images.githubusercontent.com/6410412/43831555-7d8fb438-9b3f-11e8-96e0-ccfd782d089d.png" alt="프로그램 구조 도식화. 클라이언트와 서버가 파이프로 통신. 서버는 파일에 접근."></p>
@@ -182,7 +182,7 @@
 <p>child는 생선된 이후 파이프를 통해 데이터가 전달되기를 기다린다. parent는 사용자에게 <code>cmd</code> 값을 입력받고 쓰기 파이프인 <code>p[1]</code>를 통해 <code>cmd</code> 값을 전송한다. 그리고 수신을 기다리던 child는 <code>p[0]</code>을 통해 전달된 <code>cmd</code> 값을 읽어들인다.</p>
 <p>child 프로세스 생성과 파이프를 통한 두 프로세스의 통신. 핵심적인 부분은 이정도다. 사실 이후 내용은 프로세스를 다루는 것과는 너무 관련이 없어서 제외했다. 전체 코드는 <a href="https://github.com/ParkSB/courses-archive/tree/master/CSE311_Operating-Systems/Student">깃허브 저장소</a>에서 볼 수 있다.</p>
 
-      </section>
+      </article>
 
       <section id="article-social-container">
         <div id="fb-like" class="fb-like" data-href="https://parksb.github.io/" data-layout="button_count"
@@ -190,11 +190,11 @@
         <a href="https://twitter.com/share" class="twitter-share-button" data-show-count="true"></a>
       </section>
 
-      <section id="article-comments">
+      <article id="article-comments">
         <script async src="https://utteranc.es/client.js" repo="ParkSB/parksb.github.io-comments" issue-term="pathname" theme="github-light"
           crossorigin="anonymous">
           </script>
-      </section>
+      </article>
     </article>
   </main>
 
@@ -210,6 +210,6 @@
   </script>
   <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-  <script src="../src/ts/init.ts"></script>
-  <script src="../src/ts/article.ts"></script>
+  <script defer src="../src/ts/init.ts"></script>
+  <script defer src="../src/ts/article.ts"></script>
 </body>

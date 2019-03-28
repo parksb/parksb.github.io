@@ -24,7 +24,9 @@
 
   a {
     &:hover,
-    &:hover li {
+    &:focus,
+    &:hover li,
+    &:focus li {
       background-color: black;
       color: white;
     }

@@ -36,8 +36,8 @@
 </head>
 
 <body>
-  <nav id="top-container">
-  </nav>
+  <header id="top-container" role="navigation">
+  </header>
 
   <main id="main-container">
     <article id="article-container">
@@ -51,7 +51,7 @@
         2018.08.23
       </time>
 
-      <section id="article-content-container">
+      <article id="article-content-container">
         <p>이번에 참여하게 된 프로젝트에서 리액트 네이티브를 이용하게 됐다. 리액트 네이티브는 리액트 아키텍처를 모바일에 적용한 것으로, ES6 문법과 리액트를 이용해 모바일 어플리케이션을 개발할 수 있도록 해주는 프레임워크다. 기존의 웹 프로그래밍 문법을 (거의)그대로 사용할 수 있다는 점과 안드로이드/iOS 버전을 따로 개발할 필요가 없다는 점이 매력적이다.</p>
 <blockquote>
 <p>시작에 앞서, 윈도우 이용자라면 WSL(Windows Subsystem for Linux)을 설치하는 것이 좋다. WSL은 윈도우에 서브시스템으로 리눅스를 탑재하는 것으로, 윈도우에서 리눅스를 다룰 수 있게 된다. WSL 세팅은 <a href="https://parksb.github.io/article/19.html">윈도우에 우분투 돌리기</a>를 참고.</p>
@@ -150,7 +150,7 @@ error: cannot connect to daemon
 <h1>결론</h1>
 <p>맥을 사야겠다.</p>
 
-      </section>
+      </article>
 
       <section id="article-social-container">
         <div id="fb-like" class="fb-like" data-href="https://parksb.github.io/" data-layout="button_count"
@@ -158,11 +158,11 @@ error: cannot connect to daemon
         <a href="https://twitter.com/share" class="twitter-share-button" data-show-count="true"></a>
       </section>
 
-      <section id="article-comments">
+      <article id="article-comments">
         <script async src="https://utteranc.es/client.js" repo="ParkSB/parksb.github.io-comments" issue-term="pathname" theme="github-light"
           crossorigin="anonymous">
           </script>
-      </section>
+      </article>
     </article>
   </main>
 
@@ -178,6 +178,6 @@ error: cannot connect to daemon
   </script>
   <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-  <script src="../src/ts/init.ts"></script>
-  <script src="../src/ts/article.ts"></script>
+  <script defer src="../src/ts/init.ts"></script>
+  <script defer src="../src/ts/article.ts"></script>
 </body>

@@ -36,8 +36,8 @@
 </head>
 
 <body>
-  <nav id="top-container">
-  </nav>
+  <header id="top-container" role="navigation">
+  </header>
 
   <main id="main-container">
     <article id="article-container">
@@ -51,7 +51,7 @@
         2018.04.15
       </time>
 
-      <section id="article-content-container">
+      <article id="article-content-container">
         <p>객체지향 프로그래밍(OOP, Object-Oriented Programming)은 절차지향 프로그래밍(Procedural Programming)과 대비되는 프로그래밍 방법론이다.</p>
 <p>절차지향 프로그래밍 방식 언어로는 대표적으로 C언어가 있다. 일반적으로 C코드는 특정 기능을 수행하는 함수들로 구성되어 있다. C 프로그래머는 프로그램의 각 기능을 구현하고, 이 기능들이 어떤 절차로 수행되는가를 중심으로 개발한다. 객체지향 프로그래밍 방식 언어는 Java가 대표적이다. Java 프로그래머는 프로그램에 필요한 각 객체들의 속성과 동작을 구현하고, 이 객체들이 어떻게 상호작용하는가를 중심으로 개발한다. (절차지향 프로그래밍은 명령을 순차적으로 수행하고, 객체지향은 그렇지 않다는 의미는 아니다. C든 Java든 기본적으로 명령은 순서대로 수행된다.)</p>
 <p>C와 Java를 예시로 들었는데, 절차지향과 객체지향은 방법론이지 언어의 속성은 아니다. Java로도 절차지향 프로그래밍을 할 수 있고, C언어로 객체지향 프로그래밍을 할 수 있다. 다만 C언어는 문법 자체로 객체지향을 지원하지 않기 때문에 매우 비효율적이다. (<a href="https://stackoverflow.com/questions/351733/can-you-write-object-oriented-code-in-c">Can you write object-oriented code in C?</a>) 반면 Java는 언어가 차체적으로 객체지향 프로그래밍을 위한 다양한 문법을 제공하고 있으며, 굳이 자바로 절차지향 프로그래밍을 할 이유는 없다.</p>
@@ -303,7 +303,7 @@ jake.makeNoise(); <span class="hljs-comment">// 'Bark!'</span>
 <p>인터페이스(Interface)는 추상 메소드들의 집합이다. 클래스와는 다르며, 인스턴스 변수를 가질 수 없다. 자바의 경우 인터페이스는 <code>public interface Pet {...}</code>과 같이 만들고, 다른 클래스에서 <code>public class Dog extends Animal implements Pet</code>과 같은 방식으로 구현(Implement)한다. 이 코드에서 Dog 클래스는 Animal 클래스를 상속받고, Pet 인터페이스를 구현한다. 즉, Animal 클래스의 메소드, 인스턴스 변수와 Pet 인터페이스의 추상 메소드들을 가진다.</p>
 <p>인터페이스만 보면 이를 구현하는 클래스가 어떤 동작을 하는지 직관적으로 볼 수 있고, 자바에서는 각 타입별로 새로운 메소드를 오버로딩할 필요가 없어진다. (자바에서의 인터페이스는 <a href="https://wikidocs.net/217">점프 투 자바</a>를 참고.) 매우 편리한 기능이지만, 자바스크립트는 타입이 없는 덕 타이핑(Duck typing) 언어이기 때문에 인터페이스와 같은 문법이 없다. 한편 타입스크립트에는 자바와 유사한 방식으로 인터페이스를 사용할 수 있다.</p>
 
-      </section>
+      </article>
 
       <section id="article-social-container">
         <div id="fb-like" class="fb-like" data-href="https://parksb.github.io/" data-layout="button_count"
@@ -311,11 +311,11 @@ jake.makeNoise(); <span class="hljs-comment">// 'Bark!'</span>
         <a href="https://twitter.com/share" class="twitter-share-button" data-show-count="true"></a>
       </section>
 
-      <section id="article-comments">
+      <article id="article-comments">
         <script async src="https://utteranc.es/client.js" repo="ParkSB/parksb.github.io-comments" issue-term="pathname" theme="github-light"
           crossorigin="anonymous">
           </script>
-      </section>
+      </article>
     </article>
   </main>
 
@@ -331,6 +331,6 @@ jake.makeNoise(); <span class="hljs-comment">// 'Bark!'</span>
   </script>
   <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-  <script src="../src/ts/init.ts"></script>
-  <script src="../src/ts/article.ts"></script>
+  <script defer src="../src/ts/init.ts"></script>
+  <script defer src="../src/ts/article.ts"></script>
 </body>

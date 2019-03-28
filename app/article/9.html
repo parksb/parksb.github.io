@@ -36,8 +36,8 @@
 </head>
 
 <body>
-  <nav id="top-container">
-  </nav>
+  <header id="top-container" role="navigation">
+  </header>
 
   <main id="main-container">
     <article id="article-container">
@@ -51,7 +51,7 @@
         2018.05.03
       </time>
 
-      <section id="article-content-container">
+      <article id="article-content-container">
         <p>운영체제가 어떤 프로세스를 프로세서에 할당할 것인가 정하는 프로세스 스케줄링(Process scheduling)에 대해 다루는 챕터다. FCFS, SJF, RR 등 다양한 프로세스 스케줄링에 대해 소개한다.</p>
 <h1>Scheduling Criteria</h1>
 <p>운영체제가 프로세스를 프로세서에 할당하는 것을 디스패치(Dispatch)라고 한다. (이때 프로세스 상태가 <code>ready</code>에서 <code>running</code>으로 바뀐다.) 그리고 운영체제가 레디 큐(Ready queue)에 있는 프로세스들 중에서 어떤 프로세스를 디스패치할 것인가 정하는 것이 프로세스 스케줄링(Process scheduling)이다.</p>
@@ -347,7 +347,7 @@ Average wating time = (4 + 0 + 9 + 11 + 1) / 5 = 5
 </code></pre>
 <p>우선순위에 따라 프로세스가 할당되었다. 사용자가 자주 사용하는 프로세스의 우선순위를 높게 부여하는 식으로 기준을 만들 수 있다. 다만 특정 프로세스의 우선 순위가 계속 밀려 기아가 발생할 수 있으므로, 시간이 지날 때마다 프로세스의 나이를 증가시켜 오래 대기한 프로세스의 우선순위를 높여주는 조치가 필요하다.</p>
 
-      </section>
+      </article>
 
       <section id="article-social-container">
         <div id="fb-like" class="fb-like" data-href="https://parksb.github.io/" data-layout="button_count"
@@ -355,11 +355,11 @@ Average wating time = (4 + 0 + 9 + 11 + 1) / 5 = 5
         <a href="https://twitter.com/share" class="twitter-share-button" data-show-count="true"></a>
       </section>
 
-      <section id="article-comments">
+      <article id="article-comments">
         <script async src="https://utteranc.es/client.js" repo="ParkSB/parksb.github.io-comments" issue-term="pathname" theme="github-light"
           crossorigin="anonymous">
           </script>
-      </section>
+      </article>
     </article>
   </main>
 
@@ -375,6 +375,6 @@ Average wating time = (4 + 0 + 9 + 11 + 1) / 5 = 5
   </script>
   <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-  <script src="../src/ts/init.ts"></script>
-  <script src="../src/ts/article.ts"></script>
+  <script defer src="../src/ts/init.ts"></script>
+  <script defer src="../src/ts/article.ts"></script>
 </body>

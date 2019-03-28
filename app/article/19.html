@@ -36,8 +36,8 @@
 </head>
 
 <body>
-  <nav id="top-container">
-  </nav>
+  <header id="top-container" role="navigation">
+  </header>
 
   <main id="main-container">
     <article id="article-container">
@@ -51,7 +51,7 @@
         2018.06.27
       </time>
 
-      <section id="article-content-container">
+      <article id="article-content-container">
         <p>윈도우로 개발을 하는 입장에서 터미널을 다루기란 조금 까다롭다. 리눅스나 OSX 환경에 맞춰진 프로젝트에 참여하면 명령이 다르게 동작해 삽질하고, OSX의 패키지 매니저인 <a href="https://brew.sh/">Homebrew</a>같은 것도 없어서 또 삽질을 하곤 한다.</p>
 <p>때문에 윈도우에서 우분투를 가상머신으로 돌리거나 멀티부팅을 하는 등 다양한 방법들을 시도했는데, 역시 번거롭고 불편했다. 그러던 중 WSL을 알게됐다.</p>
 <p>WSL은 Windows Subsystem for Linux의 약자로, 윈도우 서브시스템에 리눅스를 탑재하는 것이다. 마이크로소프트에서 공식적으로 지원하는 것이기 때문에 어느정도 안정성을 보장할 수 있다. 그냥 윈도우 스토어에서 우분투를 설치하면 되기 때문에 방법도 간단하다. <a href="https://docs.microsoft.com/en-us/windows/wsl/install-win10">Windows Subsystem for Linux Installation Guide for Windows 10</a>을 참고.</p>
@@ -115,7 +115,7 @@ $ sudo apt-get install -y nodejs
 </code></pre>
 <p>이제 윈도우에서도 리눅스와 같은 환경에서 작업할 수 있다!</p>
 
-      </section>
+      </article>
 
       <section id="article-social-container">
         <div id="fb-like" class="fb-like" data-href="https://parksb.github.io/" data-layout="button_count"
@@ -123,11 +123,11 @@ $ sudo apt-get install -y nodejs
         <a href="https://twitter.com/share" class="twitter-share-button" data-show-count="true"></a>
       </section>
 
-      <section id="article-comments">
+      <article id="article-comments">
         <script async src="https://utteranc.es/client.js" repo="ParkSB/parksb.github.io-comments" issue-term="pathname" theme="github-light"
           crossorigin="anonymous">
           </script>
-      </section>
+      </article>
     </article>
   </main>
 
@@ -143,6 +143,6 @@ $ sudo apt-get install -y nodejs
   </script>
   <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-  <script src="../src/ts/init.ts"></script>
-  <script src="../src/ts/article.ts"></script>
+  <script defer src="../src/ts/init.ts"></script>
+  <script defer src="../src/ts/article.ts"></script>
 </body>

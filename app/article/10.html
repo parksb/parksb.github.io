@@ -36,8 +36,8 @@
 </head>
 
 <body>
-  <nav id="top-container">
-  </nav>
+  <header id="top-container" role="navigation">
+  </header>
 
   <main id="main-container">
     <article id="article-container">
@@ -51,7 +51,7 @@
         2018.05.04
       </time>
 
-      <section id="article-content-container">
+      <article id="article-content-container">
         <p>프로세스는 동시에 실행될 수 있으며, 여러 개의 프로세스가 협력할 때는 프로세스 사이에 데이터가 동기화되지 않는 문제가 발생할 수 있다.</p>
 <h1>Background</h1>
 <p>만약 두 프로세스가 동시에 어떤 변수의 값을 바꾼다면 프로그래머의 의도와는 다른 결과가 나올 것이다. 이처럼 <strong>프로세스가 어떤 순서로 데이터에 접근하느냐에 따라 결과 값이 달라질 수 있는 상황을 경쟁 상태</strong>(race condition)라고 한다.</p>
@@ -85,7 +85,7 @@
 <h1>Classic Problems of Synchronization</h1>
 <p>데드락에 관한 유명한 비유가 있다. 철학자 5명이 식탁 가운데 음식을 두고 철학자들은 사색과 식사를 반복한다. 포크는 총 5개, 단 음식을 먹으려면 2개의 포크를 사용해야 한다. 즉, 동시에 음식을 먹을 수 있는 사람은 두 명뿐이다. 운이 좋으면 5명의 철학자들이 돌아가면서 사색과 식사를 이어갈 수 있다. 하지만 <strong>모두가 포크를 하나씩 들고 식사를 하려하면 누구도 식사를 할 수 없는 상태</strong>, 다시말해 데드락에 빠져 버린다. 이것이 바로 철학자들의 만찬 문제(Dining-Philosophers Problem)이다.</p>
 
-      </section>
+      </article>
 
       <section id="article-social-container">
         <div id="fb-like" class="fb-like" data-href="https://parksb.github.io/" data-layout="button_count"
@@ -93,11 +93,11 @@
         <a href="https://twitter.com/share" class="twitter-share-button" data-show-count="true"></a>
       </section>
 
-      <section id="article-comments">
+      <article id="article-comments">
         <script async src="https://utteranc.es/client.js" repo="ParkSB/parksb.github.io-comments" issue-term="pathname" theme="github-light"
           crossorigin="anonymous">
           </script>
-      </section>
+      </article>
     </article>
   </main>
 
@@ -113,6 +113,6 @@
   </script>
   <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-  <script src="../src/ts/init.ts"></script>
-  <script src="../src/ts/article.ts"></script>
+  <script defer src="../src/ts/init.ts"></script>
+  <script defer src="../src/ts/article.ts"></script>
 </body>

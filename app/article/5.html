@@ -36,8 +36,8 @@
 </head>
 
 <body>
-  <nav id="top-container">
-  </nav>
+  <header id="top-container" role="navigation">
+  </header>
 
   <main id="main-container">
     <article id="article-container">
@@ -51,7 +51,7 @@
         2018.05.03
       </time>
 
-      <section id="article-content-container">
+      <article id="article-content-container">
         <p>Abraham Silberschatz의 Operating System Concepts는 운영체제의 바이블로 불린다. 이번에 운영체제 수업을 들으면서 Operating System Concepts 9th Edition의 내용을 정리해보기로 했다.</p>
 <p>Ch.1은 책 전체 내용이 담겨있는 가장 중요한 챕터다. 이 부분을 제대로 정독하고 책을 읽으면 훨씬 읽기 수월하다.</p>
 <h1>What Operating Systems Do</h1>
@@ -156,7 +156,7 @@
 <h1>Open-Source Operating Systems</h1>
 <p>세상에는 많은 오픈소스 운영체제들이 있다. 당장 깃허브에서도 <a href="https://github.com/torvalds/linux">리눅스의 코드를 찾아볼 수 있다.</a> 오픈소스 운영체제 개발에는 누구나 참여할 수 있고, 이를 이용해 새로운 운영체제를 만들 수도 있다.</p>
 
-      </section>
+      </article>
 
       <section id="article-social-container">
         <div id="fb-like" class="fb-like" data-href="https://parksb.github.io/" data-layout="button_count"
@@ -164,11 +164,11 @@
         <a href="https://twitter.com/share" class="twitter-share-button" data-show-count="true"></a>
       </section>
 
-      <section id="article-comments">
+      <article id="article-comments">
         <script async src="https://utteranc.es/client.js" repo="ParkSB/parksb.github.io-comments" issue-term="pathname" theme="github-light"
           crossorigin="anonymous">
           </script>
-      </section>
+      </article>
     </article>
   </main>
 
@@ -184,6 +184,6 @@
   </script>
   <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-  <script src="../src/ts/init.ts"></script>
-  <script src="../src/ts/article.ts"></script>
+  <script defer src="../src/ts/init.ts"></script>
+  <script defer src="../src/ts/article.ts"></script>
 </body>

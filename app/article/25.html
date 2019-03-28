@@ -36,8 +36,8 @@
 </head>
 
 <body>
-  <nav id="top-container">
-  </nav>
+  <header id="top-container" role="navigation">
+  </header>
 
   <main id="main-container">
     <article id="article-container">
@@ -51,7 +51,7 @@
         2018.10.16
       </time>
 
-      <section id="article-content-container">
+      <article id="article-content-container">
         <p>지난 학기 <a href="https://parksb.github.io/article/5.html">운영체제</a> 공부를 하면서 더 낮은 레벨은 어떻게 동작하는지 궁금해졌다. David A. Patterson과 John L. Hennessy의 Computer Organization and Design 5th Edition의 전반부를 바탕으로 MIPS instruction set에 대해 정리했다.</p>
 <h1>Computer Abstractions and Technology</h1>
 <p>컴퓨터 아키텍처를 공부한다는 것은 <strong>컴퓨터를 구성하는 하드웨어와 명령어가 어떻게 함께 동작하는지 알아보는 것</strong>이다. 하드웨어를 다루기는 하지만 회로에 대한 부분을 자세히 다루지는 않는다. 회로는 로우레벨 아키텍처이고, 앞으로 다룰 내용은 회로(하드웨어)와 운영체제(소프트웨어) 사이에 있는 ISA(Instruction Set Architecture), microarchitecture와 같은 하이레벨 아키텍처다.</p>
@@ -445,7 +445,7 @@ $s3,    4($s3),   8($s3),  ...,  32($s3)
 <p>위와 같은 매커니즘을 수행하기 위해 어셈블러는 구체적인 instruction을 기계어로 변환하기 전 코드 전체를 스캔해 라벨의 위치를 파악한다. 이후 순서대로 instruction을 읽으며 기계어로 변환하다가 점프해야 하는 부분이 나오면 그 부분의 instruction을 기계어로 변환한다. 이런 식으로 모든 instruction을 순서에 맞춰 기계어로 변환하면 비로소 컴퓨터가 이해할 수 있는 결과물이 나온다.</p>
 <p>여기까지가 MIPS instruction에 대한 기본적인 내용이다. 더 들어가면 프로세서, 메모리의 동작이나 디지털 회로를 이용한 바이너리 연산에 대한 내용도 다룰 수 있을 것 같은데, 일단은 컴퓨터 아키텍처의 개요와 컴퓨터가 코드를 해석하고 실행하는 과정만을 살펴봤다.</p>
 
-      </section>
+      </article>
 
       <section id="article-social-container">
         <div id="fb-like" class="fb-like" data-href="https://parksb.github.io/" data-layout="button_count"
@@ -453,11 +453,11 @@ $s3,    4($s3),   8($s3),  ...,  32($s3)
         <a href="https://twitter.com/share" class="twitter-share-button" data-show-count="true"></a>
       </section>
 
-      <section id="article-comments">
+      <article id="article-comments">
         <script async src="https://utteranc.es/client.js" repo="ParkSB/parksb.github.io-comments" issue-term="pathname" theme="github-light"
           crossorigin="anonymous">
           </script>
-      </section>
+      </article>
     </article>
   </main>
 
@@ -473,6 +473,6 @@ $s3,    4($s3),   8($s3),  ...,  32($s3)
   </script>
   <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-  <script src="../src/ts/init.ts"></script>
-  <script src="../src/ts/article.ts"></script>
+  <script defer src="../src/ts/init.ts"></script>
+  <script defer src="../src/ts/article.ts"></script>
 </body>

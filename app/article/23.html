@@ -36,8 +36,8 @@
 </head>
 
 <body>
-  <nav id="top-container">
-  </nav>
+  <header id="top-container" role="navigation">
+  </header>
 
   <main id="main-container">
     <article id="article-container">
@@ -51,7 +51,7 @@
         2018.09.28
       </time>
 
-      <section id="article-content-container">
+      <article id="article-content-container">
         <p>James F. Kurose, Keith W. Ross의 Computer Networking: A Top-Down Approach는 잘 모르는 책이었는데 의외로 많은 학교에서 교재로 쓰이는 것 같다. 컴퓨터 네트워크 수업을 들으며 Computer Networking: A Top-Down Approach 7th Edition의 첫 챕터를 정리해보기로 했다.</p>
 <p>첫 챕터는 컴퓨터 네트워크의 전반을 둘러보는 챕터다. 언제나 그렇듯 overview 챕터가 책에서 가장 중요하다. 원래 책 전체를 정리하려 했으나 더 이상 책을 번역하는 작업하는 정도의 정리는 무리라고 판단, 개괄적인 내용을 다루는 Ch.1 Computer Networks and the Internet만 정리하기로 했다.</p>
 <h1>What is the Internet?</h1>
@@ -162,7 +162,7 @@
 <h2>The Internet Explosion: The 1990s</h2>
 <p>90년대의 중요한 사건은 WWW(World Wide Web)의 탄생이다. WWW는 CERN의 Tim Berners-Lee가 1989에서 1991년 사이 고안한 인터넷 시스템이다. 이후 수 많은 컴퓨터들이 인터넷에 연결되었고, 구글이나 아마존, 페이스북 같은 어플리케이션들이 만들어졌다.</p>
 
-      </section>
+      </article>
 
       <section id="article-social-container">
         <div id="fb-like" class="fb-like" data-href="https://parksb.github.io/" data-layout="button_count"
@@ -170,11 +170,11 @@
         <a href="https://twitter.com/share" class="twitter-share-button" data-show-count="true"></a>
       </section>
 
-      <section id="article-comments">
+      <article id="article-comments">
         <script async src="https://utteranc.es/client.js" repo="ParkSB/parksb.github.io-comments" issue-term="pathname" theme="github-light"
           crossorigin="anonymous">
           </script>
-      </section>
+      </article>
     </article>
   </main>
 
@@ -190,6 +190,6 @@
   </script>
   <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-  <script src="../src/ts/init.ts"></script>
-  <script src="../src/ts/article.ts"></script>
+  <script defer src="../src/ts/init.ts"></script>
+  <script defer src="../src/ts/article.ts"></script>
 </body>

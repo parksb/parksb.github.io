@@ -36,8 +36,8 @@
 </head>
 
 <body>
-  <nav id="top-container">
-  </nav>
+  <header id="top-container" role="navigation">
+  </header>
 
   <main id="main-container">
     <article id="article-container">
@@ -51,7 +51,7 @@
         2018.10.12
       </time>
 
-      <section id="article-content-container">
+      <article id="article-content-container">
         <p>이미 HTTPS의 중요성은 널리 알려져 있다. 크롬, 파이어폭스와 같은 브라우저는 HTTP 서버에 접속할 때 경고를 띄우니 사용자 경험을 위해서라도 HTTPS는 필수라고 할 수 있다. 내가 <a href="https://parksb.github.io/article/15.html">개떡같은 코드와 함께한 하루 리뉴얼 이야기</a>에서 그렇게 삽질한 이유이기도 하다.</p>
 <p>HTTPS를 사용하면 데이터가 암호화되고, 보안에 좋다는 것은 알았지만, HTTP 접속과 비교하며 실제로 오가는 데이터를 분석해보니 그 사실이 더욱 가깝게 다가왔다. 컴퓨터 네트워크에 대한 배경 지식은 <a href="https://parksb.github.io/article/23.html">Top-Down으로 접근하는 네트워크</a>를 참고.</p>
 <h1>🦈 Wireshark 사용하기</h1>
@@ -97,7 +97,7 @@
 <p>클라이언트와 <a href="https://www.ajou.ac.kr">https://www.ajou.ac.kr</a>가 주고받은 해당 패킷의 콘텐츠 타입이 Application Data라는 것을 제외하고는 정보를 알 수가 없다. HTTP로 접속할 때는 클라이언트가 요청한 리소스, 사용하는 브라우저, 유입 경로 등 패킷을 통해 각종 정보를 볼 수 있었지만, HTTPS로 접속할 때는 패킷이 암호화되어 내용을 알 수 없다.</p>
 <p>만약 어떤 사람이 HTTP 서버에 접속했는데, 악의를 가진 해커가 그 사람의 패킷을 가로챈다면 그 사람이 어느 페이지에서 무엇을 했는지 모두 알아낼 수 있을 것이다.</p>
 
-      </section>
+      </article>
 
       <section id="article-social-container">
         <div id="fb-like" class="fb-like" data-href="https://parksb.github.io/" data-layout="button_count"
@@ -105,11 +105,11 @@
         <a href="https://twitter.com/share" class="twitter-share-button" data-show-count="true"></a>
       </section>
 
-      <section id="article-comments">
+      <article id="article-comments">
         <script async src="https://utteranc.es/client.js" repo="ParkSB/parksb.github.io-comments" issue-term="pathname" theme="github-light"
           crossorigin="anonymous">
           </script>
-      </section>
+      </article>
     </article>
   </main>
 
@@ -125,6 +125,6 @@
   </script>
   <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-  <script src="../src/ts/init.ts"></script>
-  <script src="../src/ts/article.ts"></script>
+  <script defer src="../src/ts/init.ts"></script>
+  <script defer src="../src/ts/article.ts"></script>
 </body>

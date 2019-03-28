@@ -36,8 +36,8 @@
 </head>
 
 <body>
-  <nav id="top-container">
-  </nav>
+  <header id="top-container" role="navigation">
+  </header>
 
   <main id="main-container">
     <article id="article-container">
@@ -51,7 +51,7 @@
         2019.2.17
       </time>
 
-      <section id="article-content-container">
+      <article id="article-content-container">
         <p>깃으로 버전 관리를 하다보면 각종 이슈가 자주 발목을 잡는다. 특히 복잡한 프로젝트의 경우 그 정도가 심한데… 입사 이후 '지금까지 내가 한 건 깃이 아니구나’를 깨닫고 더 공부해 보기로 했다. 그러다보니 매번 비슷한 문제 상황을 마주하게 되는 것 같아서 아래와 같은 케이스들을 정리해보았다.</p>
 <ul>
 <li>파일 스테이징 취소하기</li>
@@ -464,7 +464,7 @@ $ git cherry-pick 4a391fc
 <li>Stackoverflow “<a href="https://stackoverflow.com/questions/tagged/git?sort=votes">Questions tagged ‘git’</a>”</li>
 </ul>
 
-      </section>
+      </article>
 
       <section id="article-social-container">
         <div id="fb-like" class="fb-like" data-href="https://parksb.github.io/" data-layout="button_count"
@@ -472,11 +472,11 @@ $ git cherry-pick 4a391fc
         <a href="https://twitter.com/share" class="twitter-share-button" data-show-count="true"></a>
       </section>
 
-      <section id="article-comments">
+      <article id="article-comments">
         <script async src="https://utteranc.es/client.js" repo="ParkSB/parksb.github.io-comments" issue-term="pathname" theme="github-light"
           crossorigin="anonymous">
           </script>
-      </section>
+      </article>
     </article>
   </main>
 
@@ -492,6 +492,6 @@ $ git cherry-pick 4a391fc
   </script>
   <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-  <script src="../src/ts/init.ts"></script>
-  <script src="../src/ts/article.ts"></script>
+  <script defer src="../src/ts/init.ts"></script>
+  <script defer src="../src/ts/article.ts"></script>
 </body>

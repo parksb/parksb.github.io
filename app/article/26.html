@@ -36,8 +36,8 @@
 </head>
 
 <body>
-  <nav id="top-container">
-  </nav>
+  <header id="top-container" role="navigation">
+  </header>
 
   <main id="main-container">
     <article id="article-container">
@@ -51,7 +51,7 @@
         2018.12.26
       </time>
 
-      <section id="article-content-container">
+      <article id="article-content-container">
         <p><a href="https://parksb.github.io/project/santainc/">Santa Inc.</a>는 초국적 블랙 기업 '산타 주식회사’를 운영하는 방치형 게임(Idle game)이다. 산타의 목적은 오직 선물 생산을 최대로 끌어올리는 것. 산타는 직원을 고용하고, 정책을 채택하며 끝없이 선물을 생산한다.</p>
 <p><img src="https://raw.githubusercontent.com/ParkSB/santa-inc/develop/assets/meta/preview.png" alt="Santa Inc. 세계를 선도하는 글로벌 기업. 루돌프."></p>
 <p>Santa Inc.를 처음 만든 건 2015년 겨울이었다. 웹 프로그래밍을 공부한 후 매년 크리스마스마다 이상한 걸 만들었는데, 이것도 그 일환이었다. 당시엔 크리스마스에 맞춰 런칭하겠다는 욕심으로 학기 중 20일만에 게임을 완성했다. 물론 코드가 엉망진창이었다.</p>
@@ -278,7 +278,7 @@ drawWorkerList(worker: Worker): <span class="hljs-built_in">void</span> {
 <p>평소 게임 개발쪽은 큰 관심이 없음에도 주기적으로 게임을 만들어지고 싶어지는 시기가 온다. 다음에는 아예 (예전에 파다가 관둔) 유니티를 공부해서 만들어볼까한다.</p>
 <p>Santa Inc.의 코드는 <a href="https://github.com/ParkSB/santa-inc">GitHub 저장소</a>에서 살펴볼 수 있다.</p>
 
-      </section>
+      </article>
 
       <section id="article-social-container">
         <div id="fb-like" class="fb-like" data-href="https://parksb.github.io/" data-layout="button_count"
@@ -286,11 +286,11 @@ drawWorkerList(worker: Worker): <span class="hljs-built_in">void</span> {
         <a href="https://twitter.com/share" class="twitter-share-button" data-show-count="true"></a>
       </section>
 
-      <section id="article-comments">
+      <article id="article-comments">
         <script async src="https://utteranc.es/client.js" repo="ParkSB/parksb.github.io-comments" issue-term="pathname" theme="github-light"
           crossorigin="anonymous">
           </script>
-      </section>
+      </article>
     </article>
   </main>
 
@@ -306,6 +306,6 @@ drawWorkerList(worker: Worker): <span class="hljs-built_in">void</span> {
   </script>
   <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-  <script src="../src/ts/init.ts"></script>
-  <script src="../src/ts/article.ts"></script>
+  <script defer src="../src/ts/init.ts"></script>
+  <script defer src="../src/ts/article.ts"></script>
 </body>

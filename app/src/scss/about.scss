@@ -8,7 +8,7 @@
   li,
   p,
   td {
-    font-size: 14px;
+    font-size: 16px;
   }
 
   ul {
@@ -23,7 +23,8 @@
   a {
     text-decoration: underline;
 
-    &:hover {
+    &:hover,
+    &:focus {
       text-decoration: none;
       background-color: black;
       color: white;
