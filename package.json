@@ -7,7 +7,7 @@
     "start": "bash ./tools/start.sh",
     "build": "bash ./tools/build.sh",
     "publish": "ts-node ./tools/publish.ts",
-    "test": "mocha --require ts-node/register --watch-extensions ts --recursive './test/**/*.test.ts'"
+    "test": "mocha --require ts-node/register --watch-extensions ts --recursive ./test/**/*.test.ts"
   },
   "repository": {
     "type": "git",

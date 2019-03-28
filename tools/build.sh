@@ -5,7 +5,6 @@ CYAN="\033[36m"
 GREEN="\033[32m"
 WHITE="\033[0m"
 
-
 echo -e "${CYAN}Start build:\n"
 
 echo -e "${GREEN}Run node-sass...${WHITE}"
@@ -16,7 +15,7 @@ echo -e "\n${GREEN}Reset distribution directory...${WHITE}"
 echo "> rm -r ${DIST}/*"
 rm -r $DIST/*
 
-echo -e "${GREEN}Copy static files to distribution directory...${WHITE}"
+echo -e "\n${GREEN}Copy static files to distribution directory...${WHITE}"
 echo "> cp ./app/static/robots.txt ${DIST}/robots.txt"
 cp ./app/static/robots.txt $DIST/robots.txt
 echo "> cp ./app/static/sitemap.xml ${DIST}/sitemap.xml"
