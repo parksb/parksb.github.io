@@ -7,6 +7,7 @@
     "start": "bash ./tools/start.sh",
     "build": "bash ./tools/build.sh",
     "publish": "ts-node ./tools/publish.ts",
+    "deploy": "bash ./tools/deploy.sh",
     "test": "mocha --require ts-node/register --watch-extensions ts --recursive ./test/**/*.test.ts"
   },
   "repository": {
