@@ -22,6 +22,8 @@ echo "> cp ./app/static/sitemap.xml ${DIST}/sitemap.xml"
 cp ./app/static/sitemap.xml $DIST/sitemap.xml
 echo "> cp ./app/static/naver16dc3632e707d380264984a55bd10171.html ${DIST}/naver16dc3632e707d380264984a55bd10171.html"
 cp ./app/static/naver16dc3632e707d380264984a55bd10171.html $DIST/naver16dc3632e707d380264984a55bd10171.html
+echo "> cp ./app/static/googleb1e5dbcc1d32e7b1.html ${DIST}/googleb1e5dbcc1d32e7b1.html"
+cp ./app/static/googleb1e5dbcc1d32e7b1.html $DIST/googleb1e5dbcc1d32e7b1.html
 echo "> cp -r ./app/project ${DIST}/project"
 cp -r ./app/project $DIST/project
 
