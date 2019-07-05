@@ -165,7 +165,7 @@
 
   blockquote {
     border-left: 3px #DFDFDF solid;
-    padding-left: 10px;
+    padding-left: 15px;
   }
 
   blockquote p {
@@ -187,6 +187,26 @@
 
   sup {
     font-size: 11px;
+  }
+
+  section {
+    margin-bottom: 15px;
+
+    .katex {
+      * {
+        font-size: 19px;
+      }
+    }
+  }
+
+  .katex {
+    * {
+      font-family: 'Times New Roman', serif;
+    }
+
+    .katex-html {
+      display: none;
+    }
   }
 
   .footnotes-sep {

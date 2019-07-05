@@ -1,9 +1,12 @@
 import * as ejs from 'ejs';
 import * as fs from 'fs';
+import * as path from 'path';
+
+import * as katex from 'katex';
 import * as highlightJs from 'highlight.js';
 import * as md from 'markdown-it';
 import * as mdFootnote from 'markdown-it-footnote';
-import * as path from 'path';
+import * as mdTex from 'markdown-it-texmath';
 
 import ArticleListPublisher from './ArticleListPublisher';
 import ArticleMetaInfo from './classes/ArticleMetaInfo';
@@ -29,7 +32,11 @@ class ArticlePublisher {
       }
       return `<pre class="hljs"><code>${ArticlePublisher.md.utils.escapeHtml(str)}</code></pre>`;
     },
-  }).use(mdFootnote);
+  }).use(mdFootnote)
+    .use(mdTex.use(katex), {
+      delimiters: 'gitlab',
+      macros: { '\\RR': '\\mathbb{R}' },
+    });
 
   private static extractContent(text: string): string {
     return text.replace(/(-{3})([\s\S]+?)(\1)/, '');
