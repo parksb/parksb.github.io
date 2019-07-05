@@ -2,6 +2,7 @@ import * as ejs from 'ejs';
 import * as fs from 'fs';
 import * as highlightJs from 'highlight.js';
 import * as md from 'markdown-it';
+import * as mdFootnote from 'markdown-it-footnote';
 import * as path from 'path';
 
 import ArticleListPublisher from './ArticleListPublisher';
@@ -28,7 +29,7 @@ class ArticlePublisher {
       }
       return `<pre class="hljs"><code>${ArticlePublisher.md.utils.escapeHtml(str)}</code></pre>`;
     },
-  });
+  }).use(mdFootnote);
 
   private static extractContent(text: string): string {
     return text.replace(/(-{3})([\s\S]+?)(\1)/, '');
