@@ -17,6 +17,7 @@ class ArticlePublisher {
   static ARTICLE_ORIGIN_PATH: string = path.join(__dirname, '../_articles');
   static ARTICLE_DIST_PATH: string = path.join(__dirname, '../app/article');
   static ARTICLE_TEMPLATE: Buffer = fs.readFileSync(path.join(__dirname, '../app/templates/article-template.html'));
+  static IGNORED_FILES: string[] = ['.DS_Store'];
 
   static md: md = new md({
     html: false,
@@ -66,7 +67,9 @@ class ArticlePublisher {
   }
 
   public static publishAllArticles() {
-    const articleFiles: string[] = fs.readdirSync(this.ARTICLE_ORIGIN_PATH);
+    const articleFiles: string[] = fs.readdirSync(this.ARTICLE_ORIGIN_PATH).filter((file) => {
+      return !this.IGNORED_FILES.includes(file);
+    });
 
     const distArticles: ArticleModel[] = articleFiles.map((articleFile: string) => {
       const mdContent: Buffer = fs.readFileSync(`${this.ARTICLE_ORIGIN_PATH}/${articleFile}`);
@@ -95,7 +98,9 @@ class ArticlePublisher {
   }
 
   public static publishArticle(id: number) {
-    const articleFiles: string[] = fs.readdirSync(this.ARTICLE_ORIGIN_PATH);
+    const articleFiles: string[] = fs.readdirSync(this.ARTICLE_ORIGIN_PATH).filter((file) => {
+      return !this.IGNORED_FILES.includes(file);
+    });
 
     const distArticles: ArticleModel[] = articleFiles.map((articleFile: string) => {
       const mdContent: Buffer = fs.readFileSync(`${this.ARTICLE_ORIGIN_PATH}/${articleFile}`);
