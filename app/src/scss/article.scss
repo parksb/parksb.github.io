@@ -165,7 +165,7 @@
 
   blockquote {
     border-left: 3px #DFDFDF solid;
-    padding-left: 10px;
+    padding-left: 15px;
   }
 
   blockquote p {
@@ -183,6 +183,53 @@
   td {
     padding: 5px 10px 5px 10px;
     border: 1px black solid;
+  }
+
+  sup {
+    font-size: 11px;
+  }
+
+  section {
+    margin-bottom: 15px;
+
+    .katex {
+      * {
+        font-size: 19px;
+      }
+    }
+  }
+
+  .katex {
+    * {
+      font-family: 'Times New Roman', serif;
+    }
+
+    .katex-html {
+      display: none;
+    }
+  }
+
+  .footnotes-sep {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .footnotes {
+    padding-left: 15px;
+
+    > .footnotes-list {
+      font-size: 14px;
+      padding: 0;
+
+      > .footnote-item {
+        list-style-position: inherit;
+  
+        > p {
+          font-size: 14px;
+          margin-bottom: 10px;
+        }
+      }
+    }
   }
 }
 

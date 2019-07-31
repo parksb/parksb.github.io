@@ -1,8 +1,12 @@
 import * as ejs from 'ejs';
 import * as fs from 'fs';
+import * as path from 'path';
+
+import * as katex from 'katex';
 import * as highlightJs from 'highlight.js';
 import * as md from 'markdown-it';
-import * as path from 'path';
+import * as mdFootnote from 'markdown-it-footnote';
+import * as mdTex from 'markdown-it-texmath';
 
 import ArticleListPublisher from './ArticleListPublisher';
 import ArticleMetaInfo from './classes/ArticleMetaInfo';
@@ -13,6 +17,7 @@ class ArticlePublisher {
   static ARTICLE_ORIGIN_PATH: string = path.join(__dirname, '../_articles');
   static ARTICLE_DIST_PATH: string = path.join(__dirname, '../app/article');
   static ARTICLE_TEMPLATE: Buffer = fs.readFileSync(path.join(__dirname, '../app/templates/article-template.html'));
+  static IGNORED_FILES: string[] = ['.DS_Store'];
 
   static md: md = new md({
     html: false,
@@ -28,7 +33,11 @@ class ArticlePublisher {
       }
       return `<pre class="hljs"><code>${ArticlePublisher.md.utils.escapeHtml(str)}</code></pre>`;
     },
-  });
+  }).use(mdFootnote)
+    .use(mdTex.use(katex), {
+      delimiters: 'gitlab',
+      macros: { '\\RR': '\\mathbb{R}' },
+    });
 
   private static extractContent(text: string): string {
     return text.replace(/(-{3})([\s\S]+?)(\1)/, '');
@@ -58,7 +67,9 @@ class ArticlePublisher {
   }
 
   public static publishAllArticles() {
-    const articleFiles: string[] = fs.readdirSync(this.ARTICLE_ORIGIN_PATH);
+    const articleFiles: string[] = fs.readdirSync(this.ARTICLE_ORIGIN_PATH).filter((file) => {
+      return !this.IGNORED_FILES.includes(file);
+    });
 
     const distArticles: ArticleModel[] = articleFiles.map((articleFile: string) => {
       const mdContent: Buffer = fs.readFileSync(`${this.ARTICLE_ORIGIN_PATH}/${articleFile}`);
@@ -87,7 +98,9 @@ class ArticlePublisher {
   }
 
   public static publishArticle(id: number) {
-    const articleFiles: string[] = fs.readdirSync(this.ARTICLE_ORIGIN_PATH);
+    const articleFiles: string[] = fs.readdirSync(this.ARTICLE_ORIGIN_PATH).filter((file) => {
+      return !this.IGNORED_FILES.includes(file);
+    });
 
     const distArticles: ArticleModel[] = articleFiles.map((articleFile: string) => {
       const mdContent: Buffer = fs.readFileSync(`${this.ARTICLE_ORIGIN_PATH}/${articleFile}`);
