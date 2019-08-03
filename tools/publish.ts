@@ -15,7 +15,7 @@ switch (target) {
       console.log('\x1b[36m%s\x1b[0m', 'Done!');
     } else if (!isNaN(Number(mode))) {
       const id = Number(mode);
-      console.log(`Publish article #${id}: ArticlePublisher.publishAllArticles(${id})`);
+      console.log(`Publish article #${id}: ArticlePublisher.publishArticle(${id})`);
       ArticlePublisher.publishArticle(id);
       console.log('\x1b[36m%s\x1b[0m', 'Done!');
     } else {
