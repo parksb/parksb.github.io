@@ -21,13 +21,18 @@ echo -e "> git status -s\n"
 git status -s
 echo ""
 
+DATE=$(date +"%Y-%m-%d %H:%M:%S")
 while true; do
   read -p "Do you wish to commit the staged files? (yes/no) " yn
   case $yn in
-    [Yy]* ) git commit -m "dist: $(date +"%Y-%m-%d %H:%M:%S") 배포"; break;;
+    [Yy]* ) git commit -m "dist: ${DATE} 배포"; break;;
     [Nn]* ) git reset .; exit;;
   esac
 done
+
+echo -e "\n${GREEN}Pull from origin/master...${WHITE}"
+echo "> git pull --rebase origin master"
+git pull --rebase origin master
 
 echo -e "\n${GREEN}Push the committed files...${WHITE}"
 echo "> git push origin master"
@@ -43,7 +48,7 @@ git status -s
 echo ""
 
 echo -e "${GREEN}Commit the submodule file...${WHITE}"
-echo "> git commit -m \"dist: $(date +"%Y-%m-%d %H:%M:%S") 배포\""
-git commit -m "dist: $(date +"%Y-%m-%d %H:%M:%S") 배포"
+echo "> git commit -m \"dist: ${DATE} 배포\""
+git commit -m "dist: ${DATE} 배포"
 
 echo -e "\n${CYAN}Done!"
