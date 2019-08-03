@@ -43,7 +43,7 @@ class ArticlePublisher {
     return text.replace(/(-{3})([\s\S]+?)(\1)/, '');
   }
 
-  private static extractMetaInfo(text: string): ArticleMetaInfo {
+  public static extractMetaInfo(text: string): ArticleMetaInfo {
     const metaInfo: ArticleMetaInfo = new ArticleMetaInfo();
     const metaInfoLines: string[] = text.match(/(-{3})([\s\S]+?)(\1)/)[2]
       .match(/[^\r\n]+/g);
