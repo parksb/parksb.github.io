@@ -28,7 +28,7 @@ for (i = 0; i < 10; i += 1) {
 
 ![페이지 참조 기록. 수평축 실행 시간. 수직축 메모리 주소.](https://user-images.githubusercontent.com/6410412/54877425-e73f7280-4e61-11e9-9526-d33a04c189f3.png)
 
-위 그림은 Operating System Concepts(Abraham Silberschatz 2014 : 420)에 나오는 것으로, 페이지(Page)를 참조한 기록이다. 한 프로세스에도 자주 사용하는 부분과 그렇지 않은 부분이 있기 때문에 운영체제는 프로세스를 페이지라는 단위로 나눠 관리한다. 페이지에 접근할 때도 지역성 원리가 적용된다는 것을 알 수 있다.
+한 프로세스 안에도 자주 사용하는 부분과 그렇지 않은 부분이 있기 때문에 운영체제는 프로세스를 페이지(Page)라는 단위로 나눠 관리하며, 위 그림은 페이지를 참조한 기록이다. 가로 축은 실행 시간이고, 세로 축은 메모리 주소다. 즉, 수평으로 이어진 참조 기록은 긴 시간에 걸쳐 같은 메모리 주소를 참조한 것이고, 수직으로 이어진 참조 기록은 같은 시간에 밀접한 메모리 주소들을 참조한 것이다. 페이지에 접근할 때도 지역성 원리가 적용된다는 것을 알 수 있다.
 
 # Caches
 
@@ -62,9 +62,12 @@ CPU에서 요청한 데이터가 캐시에 존재하는 경우를 캐시 히트(
 
 평균 접근 시간(Average access time)은 다음과 같이 구한다:
 
+```math
+\text{Miss rate} = {\text{Cache misses} \over \text{Cache acesses}}
 ```
-Miss rate = Cache misses / Cache acesses
-Average access time = Hit latency + Miss rate * Miss latency
+
+```math
+\text{Average access time} = \text{Hit latency} + \text{Miss rate} \times \text{Miss latency}
 ```
 
 캐시의 성능을 높이기 위해서는 캐시의 크기를 줄여 히트 레이턴시를 줄이거나, 캐시의 크기를 늘려 미스 비율을 줄이거나, 더 빠른 캐시를 이용해 레이턴시를 줄이는 방법이 있다.
@@ -73,7 +76,7 @@ Average access time = Hit latency + Miss rate * Miss latency
 
 캐시는 반응 속도가 빠른 SRAM(Static Random Access Memory)으로, 주소가 키(Key)로 주어지면 해당 공간에 즉시 접근할 수 있다. 이러한 특성은 DRAM(Dynamic Random Access Meomry)에서도 동일하지만 하드웨어 설계상 DRAM은 SRAM보다 느리다. 통상적으로 '메인 메모리'라고 말할 때는 DRAM을 의미한다.
 
-주소가 키로 주어졌을 때 그 공간에 즉시 접근할 수 있다는 것은 캐시가 하드웨어로 구현한 해시 테이블(Hash table)과 같다는 의미다. 캐시가 빠른 이유는 자주 사용하는 데이터만을 담아두기 때문이기도 하지만, 해시 테이블의 시간 복잡도가 O(1) 정도로 빠르기 때문이기도 하다.
+주소가 키로 주어졌을 때 그 공간에 즉시 접근할 수 있다는 것은 캐시가 하드웨어로 구현한 해시 테이블(Hash table)과 같다는 의미다. 캐시가 빠른 이유는 자주 사용하는 데이터만을 담아두기 때문이기도 하지만, 해시 테이블의 시간 복잡도가 $`O(1)`$ 정도로 빠르기 때문이기도 하다.
 
 캐시는 블록(Block)으로 구성되어 있다. 각각의 블록은 데이터를 담고 있으며, 주소값을 키로써 접근할 수 있다. 블록의 개수(Blocks)와 블록의 크기(Block size)가 캐시의 크기를 결정한다.
 
@@ -83,7 +86,7 @@ Average access time = Hit latency + Miss rate * Miss latency
 
 ![인덱스를 통해 데이터에 접근하는 과정.](https://user-images.githubusercontent.com/6410412/54876163-83f81500-4e4e-11e9-9ff7-605149fc4e1c.png)
 
-전체 주소에서 하위 5비트를 오프셋(Offset)으로 쓰고, 이후 10비트를 인덱스(Index)로 사용하여 블록에 접근했다. 인덱스가 10비트인 이유는 `2^n`개 블록의 모든 인덱스를 표현하기 위해서는 `log_2(blocks)`만큼의 비트가 필요하기 때문이다. 여기에선 블록 개수가 `2^10 = 1024`개이므로, `log_2(1024) = 10`이 되어 10비트가 인덱스 비트로 사용되었다. (오프셋 비트에 대해서는 아래에서 설명하겠다.)
+전체 주소에서 하위 5비트를 오프셋(Offset)으로 쓰고, 이후 10비트를 인덱스(Index)로 사용하여 블록에 접근했다. 인덱스가 10비트인 이유는 $`2^n`$개 블록의 모든 인덱스를 표현하기 위해서는 $`log{_2}\text{blocks}`$만큼의 비트가 필요하기 때문이다. 여기에선 블록 개수가 $`2^{10} = 1024`$개이므로, $`log{_2} 1024 = 10`$이 되어 10비트가 인덱스 비트로 사용되었다. (오프셋 비트에 대해서는 아래에서 설명하겠다.)
 
 그러나 이렇게만 하면 서로 다른 데이터의 인덱스가 중복될 위험이 너무 크다.
 
@@ -104,7 +107,7 @@ Average access time = Hit latency + Miss rate * Miss latency
 
 유효 비트가 `1`이라도 태그가 일치하지 않으면 미스가 발생한다. 이 경우 교체 정책(Replacement policy)에 따라 처리가 달라진다. 먼저 입력된 데이터가 먼저 교체되는 FIFO(First-In First-Out) 정책을 사용한다면 무조건 기존 블록를 교체한다. 태그 배열의 필드를 주소의 태그로 바꾸고, 상위 캐시나 메모리에서 요청한 데이터를 가져와 데이터 필드의 값도 새 데이터로 바꿔준다. (실제로는 요청한 데이터뿐 아니라 그 주변 데이터까지 가져온다.) 기존 데이터는 상위 캐시로 밀려난다.
 
-주소의 상위 15비트가 태그 비트로 사용된 이유는 태그 비트가 `address_bits - (log_2(block_size) + index_bits)`로 결정되기 때문이다. 이 경우 `32 - (5 + 10) = 17` 비트가 태그 비트로 사용되었고, 남은 5비트는 오프셋 비트로 사용되었다. 
+주소의 상위 15비트가 태그 비트로 사용된 이유는 태그 비트가 $`\text{Address bits} - (\log{_2}\text{Block size} + \text{Index bits})`$로 결정되기 때문이다. 이 경우 $`32 - (5 + 10) = 17`$ 비트가 태그 비트로 사용되었고, 남은 5비트는 오프셋 비트로 사용되었다. 
 
 ## Tag Overhead
 
@@ -112,9 +115,12 @@ Average access time = Hit latency + Miss rate * Miss latency
 
 1024개의 32B 블록으로 구성된 32KB 캐시의 태그 오버헤드를 구해보자:
 
+```math
+17 \text{bit tag} + 1 \text{bit valid} = 18 \text{bit}
 ```
-17bit tag + 1bit valid = 18bit
-18bit * 1024 = 18Kb tags = 2.25KB
+
+```math
+18 \text{bit} \times 1024 = 18 \text{Kb tags} = 2.25 \text{KB}
 ```
 
 즉, 7%의 태그 오버헤드가 발생했다.
@@ -151,7 +157,7 @@ direct mapped 캐시와 비교해서 히트 레이턴시를 높이는 대신 충
 
 ![0001을 참조.](https://user-images.githubusercontent.com/6410412/54880531-cd655600-4e88-11e9-86b6-0904fcb6c0a5.png)
 
-메모리 주소 `0001`을 참조하는 명령이 실행되었다. 인덱스 비트는 `log_2(2) = 1`이고, 태그 비트는 `4 - (log_2(2) + 1) = 2`이다. 마지막으로 오프셋 비트는 1이 된다. 따라서 주소 `0001`의 인덱스는 0, 태그는 00이다. 즉, 해당 메모리 공간에 위치한 데이터는 인덱스가 `0`인 두 공간 중 한 곳에 캐싱될 수 있다.
+메모리 주소 `0001`을 참조하는 명령이 실행되었다. 인덱스 비트는 $`\log{_2} 2 = 1`$이고, 태그 비트는 $`4 - (log{_2} 2 + 1) = 2`$이다. 마지막으로 오프셋 비트는 1이 된다. 따라서 주소 `0001`의 인덱스는 0, 태그는 00이다. 즉, 해당 메모리 공간에 위치한 데이터는 인덱스가 `0`인 두 공간 중 한 곳에 캐싱될 수 있다.
 
 ![0001과 0010을 캐시.](https://user-images.githubusercontent.com/6410412/54880533-cdfdec80-4e88-11e9-8893-e21456590d04.png)
 
@@ -250,7 +256,7 @@ for (i = 0; i < len; i += CACHE_SIZE) {
 
 물론 요즘은 컴파일러가 모두 최적화를 해주기 때문에 사용자 어플리케이션 개발자가 이런 부분까지 신경쓸 필요는 없다. '로우 레벨에서 이런 식으로 코드를 최적화할 수 있구나' 정도만 알고 있어도 괜찮을 것 같다.
 
-# 참고자료
+# References
 
 * David Patterson, John Hennenssy, "Computer Organization and Design 5th Ed.", MK, 2014.
 * Abraham Silberschatz, Peter Galvin, Greg Gagne, "Operating System Concepts 9th Ed.", Wiley, 2014.

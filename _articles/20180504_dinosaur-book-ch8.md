@@ -86,11 +86,15 @@ TLB(Translation Look-aside Buffer)는 참조했던 페이지를 담아주는 캐
 
 page number가 TLB에서 발견되는 비율을 hit ratio라고 하며, effective memory-access time을 구하는데 쓸 수 있다.
 
-> effecftive memory-access = hit ratio * memory access time + (1 - hit ratio) * (2 * memory access time)
+```math
+\text{Effecftive memory-access} = \text{Hit ratio} \times \text{Memory access time} + (1 - \text{Hit ratio}) \times (2 \times \text{Memory access time})
+```
 
 만약 hit ratio가 80%이고, 평균 메모리 접근 시간이 100 나노초라면 다음과 같이 계산한다.
 
-> effective memery-access time = 0.8 * 100 + 0.2 * 200 = 120
+```math
+\text{Effective memery-access time} = 0.8 \times 100 + 0.2 \times 200 = 120
+```
 
 ## Protection
 
@@ -110,7 +114,7 @@ hierachical paging은 logical address space를 여러 단계의 page table로 �
 
 ## Hashed Page Tables
 
-말그대로 hash table을 이용해 page table을 관리하는 기법. address space가 32비트보다 커지면 hierachial paging이 비효율적이기 때문에 주로 이 방법을 쓴다. virtual page number를 hashing해 page table을 참조하는 데 사용한다. hashed page table에서는 linked list를 따라가며 page number를 비교하고, 일치하면 그에 대응하는 page frame number를 얻는다. hash table은 검색에 O(1) 시간이 걸려 매우 빠르지만 구현이 어렵다.
+말그대로 hash table을 이용해 page table을 관리하는 기법. address space가 32비트보다 커지면 hierachial paging이 비효율적이기 때문에 주로 이 방법을 쓴다. virtual page number를 hashing해 page table을 참조하는 데 사용한다. hashed page table에서는 linked list를 따라가며 page number를 비교하고, 일치하면 그에 대응하는 page frame number를 얻는다. hash table은 검색에 $`O(1)`$ 시간이 걸려 매우 빠르지만 구현이 어렵다.
 
 ## Inverted Page Tables
 
