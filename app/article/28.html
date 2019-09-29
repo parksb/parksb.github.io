@@ -161,9 +161,10 @@ pick 2ad65fe 하단 버튼 추가
 edit f772ba1 테스트ㅌ 코드 추가
 pick 2ad65fe 하단 버튼 추가
 </code></pre>
-<p>이제 커밋 메시지를 새로 작성해 커밋하고, 리베이스를 진행한다. 마음이 바뀌었다면 리베이스 명령의 <code>--abort</code> 옵션으로 리베이스를 중단할 수 있다.</p>
+<p>이제 커밋 메시지를 새로 작성해 커밋하고, 리베이스를 진행한다. 마음이 바뀌었다면 리베이스 명령의 <code>--abort</code> 옵션으로 리베이스를 중단할 수 있다. 리베이스 이후엔 <code>--force</code> 또는 <code>-f</code> 옵션으로 푸시한다. 이렇게 하면 과거 커밋 이력이 변경되기 때문에 협업을 하는 상황이라면 반드시 사전에 협의를 해야한다.</p>
 <pre class="hljs"><code>$ git commit --amend -m <span class="hljs-string">"테스트 코드 추가"</span>
 $ git rebase --<span class="hljs-built_in">continue</span>
+$ git push -f origin master
 </code></pre>
 <p>좀 더 직관적이고 쉽게 커밋 정보를 변경하고 싶다면 <a href="https://github.com/Elevista/git-amend">git-amend</a>와 같은 유틸을 쓸 수도 있다.</p>
 <h1>커밋을 과거로 되돌리기</h1>
