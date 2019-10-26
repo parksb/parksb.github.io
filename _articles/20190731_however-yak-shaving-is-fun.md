@@ -68,10 +68,10 @@ TeX도 야크의 털을 깎아 태어났다. TeX은 스탠퍼드 대학교 교�
 
 아무튼 야크 털 깎기는 재미있다.
 
-[^1]: [DeadPark, "Ren and Stimpy: The Quest for the Shaven Yak".](http://www.deadpark.com/articles/ren-and-stimpy-the-quest-for-the-shaven-yak/)
-[^2]: [Donavon West, "Yak Shaving: A Short Lesson on Staying Focused", American Express, 2018.](https://americanexpress.io/yak-shaving/)
-[^3]: [KTUG, "KTUGFaq: TeX", 2009.](http://faq.ktug.org/faq/TeX)
-[^4]: [TUG, "History of TeX, 2019.](https://www.tug.org/whatis.html)
-[^5]: [권현우 외 15명, "TeX: 조판, 그 이상의 가능성", _KTS 설립 10주년 기념문집_, 한국텍학회, 경문사, 314쪽, 2017.](http://conf.ktug.org/2017/doc/KTS%EC%84%A4%EB%A6%BD10%EC%A3%BC%EB%85%84%EA%B8%B0%EB%85%90%EB%AC%B8%EC%A7%91_%EC%B5%9C%EC%A2%85%EB%B3%B8_20170213.pdf)
-[^6]: [Florian Gilcher, "Donald Knuth - The Patron Saint of Yak Shaves", 2017.](https://yakshav.es/the-patron-saint-of-yakshaves/)
-[^7]: [item4, "성공적인 Yak Shaving, 실패하는 Yak Shaving", 2015.](https://item4.github.io/2015-07-27/Successful-Yak-Shaving-Unsuccessful-Yak-Shaving/)
+[^1]: DeadPark, "[Ren and Stimpy: The Quest for the Shaven Yak](http://www.deadpark.com/articles/ren-and-stimpy-the-quest-for-the-shaven-yak/)".
+[^2]: Donavon West, "[Yak Shaving: A Short Lesson on Staying Focused](https://americanexpress.io/yak-shaving/)", American Express, 2018.
+[^3]: KTUG, "[KTUGFaq: TeX](http://faq.ktug.org/faq/TeX)", 2009.
+[^4]: TUG, "[History of TeX](https://www.tug.org/whatis.html)", 2019.
+[^5]: 권현우 외 15명, "[TeX: 조판, 그 이상의 가능성](http://conf.ktug.org/2017/doc/KTS%EC%84%A4%EB%A6%BD10%EC%A3%BC%EB%85%84%EA%B8%B0%EB%85%90%EB%AC%B8%EC%A7%91_%EC%B5%9C%EC%A2%85%EB%B3%B8_20170213.pdf)", _KTS 설립 10주년 기념문집_, 한국텍학회, 경문사, 314쪽, 2017.
+[^6]: Florian Gilcher, "[Donald Knuth - The Patron Saint of Yak Shaves](https://yakshav.es/the-patron-saint-of-yakshaves/)", 2017.
+[^7]: item4, "[성공적인 Yak Shaving, 실패하는 Yak Shaving](https://item4.github.io/2015-07-27/Successful-Yak-Shaving-Unsuccessful-Yak-Shaving/)", 2015.
