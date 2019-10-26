@@ -191,21 +191,26 @@
 
   section {
     margin-bottom: 15px;
-
+  
     .katex {
       * {
-        font-size: 19px;
+        font-family: 'Times New Roman', serif;
       }
     }
   }
 
-  .katex {
-    * {
-      font-family: 'Times New Roman', serif;
-    }
+  p {
+    .katex {
+      * { 
+        font-family: 'Times New Roman', serif;
+        font-size: 16px;
+      }
 
-    .katex-html {
-      display: none;
+      .msupsub { 
+        * {
+        font-size: 11px;
+      }
+    }
     }
   }
 
@@ -240,4 +245,5 @@
   }
 }
 
+@import './katex.scss';
 @import './dracula.scss';
