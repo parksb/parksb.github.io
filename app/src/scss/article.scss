@@ -217,18 +217,23 @@
   }
 
   .footnotes {
-    padding-left: 15px;
-
     > .footnotes-list {
-      font-size: 14px;
       padding: 0;
+      font-size: 14px;
+      counter-reset: list;
 
       > .footnote-item {
         list-style-position: inherit;
-  
+        list-style: none;
+
+        &:before {
+          content: "[" counter(list) "] ";
+          counter-increment: list;
+        }
+
         > p {
           font-size: 14px;
-          margin-bottom: 10px;
+          display: inline;
         }
       }
     }
