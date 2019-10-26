@@ -36,7 +36,6 @@ class ArticlePublisher {
   }).use(mdFootnote)
     .use(mdTex.use(katex), {
       delimiters: 'gitlab',
-      macros: { '\\RR': '\\mathbb{R}' },
     });
 
   private static extractContent(text: string): string {
