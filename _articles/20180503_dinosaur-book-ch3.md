@@ -42,7 +42,7 @@ tags: "운영체제, 책"
 
 # Interprocess Communication (IPC)
 
-프로세스는 독집적으로 동작하거나 서로 협력하며 동작할 수 있다. 협력하는 프로세스들은 통신하며 서로에게 영향을 미친다. IPC 모델에는 메시지 패싱(Message passing)과 공유 메모리(Shared memory)가 있다.
+프로세스는 독립적으로 동작하거나 서로 협력하며 동작할 수 있다. 협력하는 프로세스들은 통신하며 서로에게 영향을 미친다. IPC 모델에는 메시지 패싱(Message passing)과 공유 메모리(Shared memory)가 있다.
 
 ## Message Passing
 
