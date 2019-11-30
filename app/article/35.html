@@ -143,7 +143,7 @@
 <span class="hljs-keyword">let</span> two = plus_one(one); <span class="hljs-comment">// Some(2)</span>
 <span class="hljs-keyword">let</span> none = plus_one(<span class="hljs-literal">None</span>); <span class="hljs-comment">// None</span>
 </code></pre>
-<p><code>Option&lt;i32&gt;</code> 타입 파라미터 <code>x</code>가 존재하지 않으면 그대로 <code>None</code>을 반환하고, 값이 존재하면 1을 더한 값을 반환한다. <code>match</code>로 <code>Option</code> 타입을 비교할 때는 반드시 <code>Some</code>과 <code>None</code>에 대한 처리를 모두 해야한다. 또한 <code>Option&lt;T&gt;</code> 타입을 <code>T</code> 타입과 연산하려면 <code>Option&lt;T&gt;</code>를 <code>T</code>로 변환하는 과정을 거쳐야 한다. 이렇게 하면 <code>T</code> 타입과 연산하는 대상이 존재한다는 사실을 보장 할 수 있다. 변수에 단순히 null을 할당해 사용하는 훨씬 안전하다.</p>
+<p><code>Option&lt;i32&gt;</code> 타입 파라미터 <code>x</code>가 존재하지 않으면 그대로 <code>None</code>을 반환하고, 값이 존재하면 1을 더한 값을 반환한다. <code>match</code>로 <code>Option</code> 타입을 비교할 때는 반드시 <code>Some</code>과 <code>None</code>에 대한 처리를 모두 해야한다. 또한 <code>Option&lt;T&gt;</code> 타입을 <code>T</code> 타입과 연산하려면 <code>Option&lt;T&gt;</code>를 <code>T</code>로 변환하는 과정을 거쳐야 한다. 이렇게 하면 <code>T</code> 타입과 연산하는 대상이 존재한다는 사실을 보장 할 수 있다. 변수에 단순히 null을 할당해 사용하는 것보다 훨씬 안전하다.</p>
 <h1>안전한 메모리 관리</h1>
 <p>러스트는 오너십이라는 방식으로 메모리를 관리한다. C에서는 <code>malloc</code>이나 <code>free</code>같은 함수를 이용해 프로그래머가 직접 메모리를 할당, 해제한다. 자바에서는 가비지 컬렉터(Garbage collector)가 돌며 메모리를 정리한다. (<a href="https://parksb.github.io/article/2.html">Java는 어떻게 Garbage Collection을 할까? </a>) 개발자가 직접 메모리를 관리하면 실수할 위험이 너무 크고, 가비지 컬렉터를 이용하면 프로그램 성능이 저하된다. 이런 점에서 오너십이라는 새로운 방식의 메모리 관리 방식은 혁신적이다.</p>
 <p>오너십은 말그대로 값에 대한 변수의 소유권에 관한 것이며, 오너십에는 세 가지 원칙이 있다:</p>
@@ -246,7 +246,7 @@ takes_ownership(s);
     s2.len()
 }
 </code></pre>
-<p>이렇게 하면 <code>get_length</code> 내에서 <code>s</code>의 포인터가 스택의 <code>hello</code>를 가리키고, <code>hello</code>는 힙 메모리의 “hello” 데이터를 가리키게 된다. 함수가 참조만 받았기 때문에 함수 호출 이후에도 <code>hello</code>는 유효하다.</p>
+<p>이렇게 하면 <code>get_length</code> 내에서 <code>s2</code>의 포인터가 <code>s1</code>을 가리키고, <code>s1</code>은 힙 메모리의 “hello” 데이터를 가리키게 된다. 함수가 참조만 받았기 때문에 함수 호출 이후에도 <code>s1</code>은 유효하다.</p>
 <pre class="hljs"><code><span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">main</span></span>() {
     <span class="hljs-keyword">let</span> s1 = <span class="hljs-built_in">String</span>::from(<span class="hljs-string">"hello"</span>);
     <span class="hljs-keyword">let</span> len = get_length(&amp;s1);
@@ -325,7 +325,7 @@ s.push_str(<span class="hljs-string">", world"</span>);
 r1.push_str(<span class="hljs-string">", world"</span>); <span class="hljs-comment">// error[E0499]: cannot borrow `s` as mutable more than once at a time </span>
 </code></pre>
 <p><code>r1</code>에 가변 참조를 빌려준 다음, 바로 <code>r2</code>에 가변 참조를 빌려줬기 때문에 <code>r2</code>가 아닌 <code>r1</code>을 이용해 값을 변경하려 하면 오류가 발생한다.</p>
-<p>이런 제약을 만듦으로써 러스트는 컴타일 타임에 경쟁 조건(Race condition)을 방지할 수 있다. 경쟁 조건은 (1)두 개 이상의 포인터가 동시에 같은 데이터에 접근하며 (2)최소 하나의 포인터가 데이터 변경을 시도하고 (3)데이터를 동기화하는 메커니즘이 없는 경우에 충족된다. 데이터 경쟁은 예상치 못한 문제를 일으키며, 런타임에 알아내기도 힘들다.</p>
+<p>이런 제약을 만듦으로써 러스트는 컴파일 타임에 경쟁 상태(Race condition)를 방지할 수 있다. 경쟁 상태는 (1)두 개 이상의 포인터가 동시에 같은 데이터에 접근하며 (2)최소 하나의 포인터가 데이터 변경을 시도하고 (3)데이터를 동기화하는 메커니즘이 없는 경우에 충족된다. 데이터 경쟁은 예상치 못한 문제를 일으키며, 런타임에 알아내기도 힘들다.</p>
 <p>오너십 모델의 최대 장점이라면 컴파일 타임에 메모리 오류를 잡을 수 있다는 것이라고 생각한다. 다른 프로그래밍 언어를 사용할 때는 잘못된 메모리 공간을 참조해서 런타임 중에 세그먼트 폴트가 일어나고 프로그램이 죽는 일이 허다했다. 하지만 러스트에선 일단 컴파일만 잘 되면 런타임에 프로그램이 예상치 못하게 죽는 일이 거의 없으며, 코드 레벨에서 안전을 보장하기 때문에 런타임 오버헤드 역시 없다. 뿐만 아니라 동시성 프로그래밍에서 일어나는 많은 이슈를 피할 수도 있다.</p>
 <h1>안전을 위한 에러 핸들링</h1>
 <p><code>panic!</code> 매크로는 에러 메시지를 출력하고 프로그램의 스택을 되돌린 뒤 종료시킨다. 이를 이용하면 프로그램을 중단해야 할 정도로 심각한 문제가 예상될 때 의도적으로 에러를 일으킬 수 있다.</p>
