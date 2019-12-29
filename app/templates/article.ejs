@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>
+    <%- title %>
+  </title>
+
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#F5F5F5">
+
+  <meta property="og:title" content="<%- title %>">
+  <meta property="og:image" content="https://user-images.githubusercontent.com/6410412/55271768-bfcf2680-52f5-11e9-9838-c62eca117334.png">
+  <meta property="og:description" content="<%- subtitle %>">
+
+  <meta name="twitter:title" content="<%- title %>">
+  <meta name="twitter:image" content="https://user-images.githubusercontent.com/6410412/55271768-bfcf2680-52f5-11e9-9838-c62eca117334.png">
+  <meta name="twitter:description" content="<%- subtitle %>">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="shortcut icon" href="../../assets/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="../../src/scss/init.scss">
+  <link rel="stylesheet" href="../../src/scss/article.scss">
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113147800-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-113147800-1');
+  </script>
+</head>
+
+<body>
+  <header id="top-container" role="navigation">
+  </header>
+
+  <main id="main-container">
+    <article id="article-container">
+      <h1 id="article-title">
+        <%- title %>
+      </h1>
+      <h2 id="article-subtitle">
+        <%- subtitle %>
+      </h2>
+      <time id="article-date">
+        <%- date %>
+      </time>
+
+      <article id="article-content-container">
+        <%- content %>
+      </article>
+
+      <section id="article-social-container">
+        <div id="fb-like" class="fb-like" data-href="https://parksb.github.io/" data-layout="button_count"
+          data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+        <a href="https://twitter.com/share" class="twitter-share-button" data-show-count="true"></a>
+      </section>
+
+      <article id="article-comments">
+        <script async src="https://utteranc.es/client.js" repo="ParkSB/parksb.github.io-comments" issue-term="pathname" theme="github-light"
+          crossorigin="anonymous">
+          </script>
+      </article>
+    </article>
+  </main>
+
+  <div id="fb-root"></div>
+  <script>
+    (function (d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+  </script>
+  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+  <script defer src="../../src/ts/init.ts"></script>
+</body>
