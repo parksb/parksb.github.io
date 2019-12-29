@@ -9,18 +9,18 @@
     "watch": "ts-node ./tools/watch.ts",
     "publish": "ts-node ./tools/publish.ts",
     "deploy": "bash ./tools/deploy.sh",
-    "test": "mocha --require ts-node/register --watch-extensions ts --recursive ./test/**/*.test.ts"
+    "test": "mocha -r ts-node/register ./services/tests/**/*.test.ts"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ParkSB/parksb.github.io-develop.git"
+    "url": "git+https://github.com/ParkSB/parksb.github.io.git"
   },
-  "author": "",
+  "author": "ParkSB",
   "license": "",
   "bugs": {
-    "url": "https://github.com/ParkSB/parksb.github.io-develop/issues"
+    "url": "https://github.com/ParkSB/parksb.github.io/issues"
   },
-  "homepage": "https://github.com/ParkSB/parksb.github.io-develop#readme",
+  "homepage": "https://github.com/ParkSB/parksb.github.io#readme",
   "dependencies": {
     "ejs": "^2.6.1",
     "highlight.js": "^9.15.6",
@@ -32,18 +32,23 @@
   "devDependencies": {
     "@babel/core": "^7.3.4",
     "@babel/preset-env": "^7.3.4",
+    "@types/chai": "^4.2.7",
     "@types/ejs": "^2.6.3",
     "@types/highlight.js": "^9.12.3",
     "@types/markdown-it": "0.0.7",
     "@types/mocha": "^5.2.6",
     "@types/node": "^11.11.3",
+    "@typescript-eslint/eslint-plugin": "^2.13.0",
+    "@typescript-eslint/parser": "^2.13.0",
+    "chai": "^4.2.0",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-typescript": "^6.3.1",
+    "eslint-plugin-import": "^2.19.1",
     "mocha": "^6.0.2",
     "node-sass": "^4.11.0",
     "parcel-bundler": "^1.12.2",
     "sass": "^1.17.3",
     "ts-node": "^8.0.3",
-    "tslint": "^5.14.0",
-    "tslint-config-airbnb": "^5.11.1",
     "typescript": "^3.3.3333"
   }
 }
