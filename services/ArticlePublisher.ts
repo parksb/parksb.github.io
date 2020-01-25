@@ -85,7 +85,7 @@ class ArticlePublisher {
     return metaInfo;
   }
 
-  public static publishAllArticles() {
+  public static publishArticles(id?: number) {
     const articleFiles: string[] = fs.readdirSync(this.ARTICLE_ORIGIN_PATH)
       .filter((file) => !this.IGNORED_FILES.includes(file));
 
@@ -94,7 +94,23 @@ class ArticlePublisher {
       const nextArticle = articleFiles[index + 1]
         && ArticlePublisher.getArticleByFilename(articleFiles[index + 1]).getArticle();
       const prevArticle = articleFiles[index - 1]
-        && ArticlePublisher.getArticleByFilename(articleFiles[index - 1]).getArticle();
+          && ArticlePublisher.getArticleByFilename(articleFiles[index - 1]).getArticle();
+
+      if (id) {
+        if (article.id === id) {
+          console.log(`* ${article.id}: ${article.title}`);
+          fs.writeFileSync(
+            `${this.ARTICLE_DIST_PATH}/${article.id}.html`,
+            ejs.render(String(this.ARTICLE_TEMPLATE), {
+              article,
+              nextArticle,
+              prevArticle,
+            }),
+          );
+        }
+
+        return article;
+      }
 
       fs.writeFileSync(
         `${this.ARTICLE_DIST_PATH}/${article.id}.html`,
@@ -106,35 +122,6 @@ class ArticlePublisher {
       );
 
       console.log(`* ${article.id}: ${article.title}`);
-      return article;
-    });
-
-    PagePublisher.publishArticles(distArticles);
-  }
-
-  public static publishArticle(id: number) {
-    const articleFiles: string[] = fs.readdirSync(this.ARTICLE_ORIGIN_PATH)
-      .filter((file) => !this.IGNORED_FILES.includes(file));
-
-    const distArticles: ArticleModel[] = articleFiles.map((articleFile: string, index: number) => {
-      const article = ArticlePublisher.getArticleByFilename(articleFile).getArticle();
-      const nextArticle = articleFiles[index + 1]
-          && ArticlePublisher.getArticleByFilename(articleFiles[index + 1]).getArticle();
-      const prevArticle = articleFiles[index - 1]
-          && ArticlePublisher.getArticleByFilename(articleFiles[index - 1]).getArticle();
-
-      if (article.id === id) {
-        console.log(`* ${article.id}: ${article.title}`);
-        fs.writeFileSync(
-          `${this.ARTICLE_DIST_PATH}/${article.id}.html`,
-          ejs.render(String(this.ARTICLE_TEMPLATE), {
-            article,
-            nextArticle,
-            prevArticle,
-          }),
-        );
-      }
-
       return article;
     });
 

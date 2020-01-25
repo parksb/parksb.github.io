@@ -21,7 +21,7 @@ console.log('\x1b[36m%s\x1b[0m', 'The watcher is running:');
 fs.watch(`${__dirname}/../_articles`, (event, filename: string) => {
   const id = getArticleIdByFilename(filename);
   console.log(`${new Date()}: ${filename} #${id}`);
-  ArticlePublisher.publishArticle(id);
+  ArticlePublisher.publishArticles(id);
 });
 
 fs.watch(`${__dirname}/../app/templates`, (event, filename: string) => {
@@ -38,7 +38,7 @@ fs.watch(`${__dirname}/../app/templates`, (event, filename: string) => {
       PagePublisher.publishAbout();
       break;
     case 'articles':
-      ArticlePublisher.publishAllArticles();
+      ArticlePublisher.publishArticles();
       break;
     case 'works':
       WorkPublisher.publishAllWorks();
