@@ -4,20 +4,20 @@
 <head>
   <meta charset="UTF-8" />
   <title>
-    <%- title %>
+    <%- article.title %>
   </title>
 
   <meta name="viewport" content="width=device-width, user-scalable=no">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="theme-color" content="#F5F5F5">
 
-  <meta property="og:title" content="<%- title %>">
+  <meta property="og:title" content="<%- article.title %>">
   <meta property="og:image" content="https://user-images.githubusercontent.com/6410412/55271768-bfcf2680-52f5-11e9-9838-c62eca117334.png">
-  <meta property="og:description" content="<%- subtitle %>">
+  <meta property="og:description" content="<%- article.subtitle %>">
 
-  <meta name="twitter:title" content="<%- title %>">
+  <meta name="twitter:title" content="<%- article.title %>">
   <meta name="twitter:image" content="https://user-images.githubusercontent.com/6410412/55271768-bfcf2680-52f5-11e9-9838-c62eca117334.png">
-  <meta name="twitter:description" content="<%- subtitle %>">
+  <meta name="twitter:description" content="<%- article.subtitle %>">
   <meta name="twitter:card" content="summary_large_image">
 
   <link rel="preload" href="../../src/scss/init.scss" as="style">
@@ -45,18 +45,41 @@
   <main id="main-container">
     <article id="article-container">
       <h1 id="article-title">
-        <%- title %>
+        <%- article.title %>
       </h1>
       <h2 id="article-subtitle">
-        <%- subtitle %>
+        <%- article.subtitle %>
       </h2>
       <time id="article-date">
-        <%- date %>
+        <%- article.date %>
       </time>
 
       <article id="article-content-container">
-        <%- content %>
+        <%- article.content %>
       </article>
+
+      <section id="article-navigation">
+        <% if (nextArticle) { %>
+          <a href="/article/<%- nextArticle.id %>.html">
+            <div class="article-navigation-arrow article-navigation-next">＜</div>
+            <div class="article-navigation-content article-navigation-next">
+              <p class="article-navigation-title"><%- nextArticle.title %></p>
+              <p class="article-navigation-subtitle"><%- nextArticle.subtitle %></p>
+            </div>
+          </a>
+        <% } else { %>
+          <div class="article-navigation-empty"><p></p></div>
+        <% } %>
+        <% if (prevArticle) { %>
+          <a href="/article/<%- prevArticle.id %>.html">
+            <div class="article-navigation-content article-navigation-prev">
+              <p class="article-navigation-title"><%- prevArticle.title %></p>
+              <p class="article-navigation-subtitle"><%- prevArticle.subtitle %></p>
+            </div>
+            <div class="article-navigation-arrow article-navigation-prev">＞</div>
+          </a>
+        <% } %>
+      </section>
 
       <section id="article-social-container">
         <div id="fb-like" class="fb-like" data-href="https://parksb.github.io/" data-layout="button_count"

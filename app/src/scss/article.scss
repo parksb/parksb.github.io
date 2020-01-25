@@ -27,7 +27,7 @@
 }
 
 #article-social-container {
-  margin-top: 40px;
+  margin-top: 50px;
   font-size: 10px;
 
   #fb-like {
@@ -35,12 +35,61 @@
   }
 }
 
-#article-comments {
-  margin-top: 10px;
+#article-navigation  {
+  height: 45px;
+  margin-top: 50px;
 
+  div {
+    float: left;
+  }
+
+  .article-navigation-arrow {
+    width: 3%;
+  }
+
+  .article-navigation-content {
+    width: 47%;
+  }
+
+  .article-navigation-next {
+    text-align: left;
+  }
+
+  .article-navigation-prev {
+    text-align: right;
+  }
+
+  .article-navigation-title {
+    font-weight: 700;
+    font-size: 15px;
+  }
+
+  .article-navigation-subtitle {
+    font-weight: 400;
+    font-size: 14px;
+  }
+
+  .article-navigation-empty {
+    width: 50%;
+
+    p {
+      display: inline-block;
+    }
+  }
+
+  a:hover {
+    div {
+      background-color: black;
+      color: white;
+    }
+  }
+}
+
+#article-comments {
   .utterances {
+    max-width: 100%;
     margin: 0;
-  }  
+  }
 }
 
 #article-content-container {
@@ -60,7 +109,7 @@
     border-bottom: 1px black solid;
     padding-bottom: 5px;
   }
-  
+
   h2 {
     font-size: 20px;
   }
@@ -139,7 +188,7 @@
     border-collapse: collapse;
     width: 100%;
   }
-  
+
   th,
   td {
     padding: 5px 10px 5px 10px;
@@ -152,7 +201,7 @@
 
   section {
     margin-bottom: 15px;
-  
+
     .katex {
       * {
         font-family: 'Times New Roman', serif;
@@ -162,12 +211,12 @@
 
   p {
     .katex {
-      * { 
+      * {
         font-family: 'Times New Roman', serif;
         font-size: 16px;
       }
 
-      .msupsub { 
+      .msupsub {
         * {
         font-size: 11px;
       }
