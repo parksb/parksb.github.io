@@ -60,24 +60,26 @@
 
       <section id="article-navigation">
         <% if (nextArticle) { %>
-          <a href="/article/<%- nextArticle.id %>.html">
-            <div class="article-navigation-arrow article-navigation-next">＜</div>
-            <div class="article-navigation-content article-navigation-next">
-              <p class="article-navigation-title"><%- nextArticle.title %></p>
-              <p class="article-navigation-subtitle"><%- nextArticle.subtitle %></p>
-            </div>
-          </a>
-        <% } else { %>
-          <div class="article-navigation-empty"><p></p></div>
+          <div class="article-navigation-item article-navigation-next">
+            <a href="/article/<%- nextArticle.id %>.html">
+              <div class="article-navigation-arrow article-navigation-next">＜</div>
+              <div class="article-navigation-content article-navigation-next">
+                <p class="article-navigation-title"><%- nextArticle.title %></p>
+                <p class="article-navigation-subtitle"><%- nextArticle.subtitle %></p>
+              </div>
+            </a>
+          </div>
         <% } %>
         <% if (prevArticle) { %>
-          <a href="/article/<%- prevArticle.id %>.html">
-            <div class="article-navigation-content article-navigation-prev">
-              <p class="article-navigation-title"><%- prevArticle.title %></p>
-              <p class="article-navigation-subtitle"><%- prevArticle.subtitle %></p>
-            </div>
-            <div class="article-navigation-arrow article-navigation-prev">＞</div>
-          </a>
+          <div class="article-navigation-item article-navigation-prev">
+            <a href="/article/<%- prevArticle.id %>.html">
+              <div class="article-navigation-arrow article-navigation-prev">＞</div>
+              <div class="article-navigation-content article-navigation-prev">
+                <p class="article-navigation-title"><%- prevArticle.title %></p>
+                <p class="article-navigation-subtitle"><%- prevArticle.subtitle %></p>
+              </div>
+            </a>
+          </div>
         <% } %>
       </section>
 

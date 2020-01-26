@@ -27,7 +27,7 @@
 }
 
 #article-social-container {
-  margin-top: 50px;
+  margin-top: 10px;
   font-size: 10px;
 
   #fb-like {
@@ -36,27 +36,26 @@
 }
 
 #article-navigation  {
-  height: 45px;
-  margin-top: 50px;
+  margin-top: 30px;
+  overflow: hidden;
 
-  div {
-    float: left;
+  .article-navigation-item {
+    margin-bottom: 20px;
   }
 
   .article-navigation-arrow {
-    width: 3%;
-  }
-
-  .article-navigation-content {
-    width: 47%;
+    font-size: 14px;
+    width: 15px;
   }
 
   .article-navigation-next {
     text-align: left;
+    float: left;
   }
 
   .article-navigation-prev {
     text-align: right;
+    float: right;
   }
 
   .article-navigation-title {
@@ -67,14 +66,6 @@
   .article-navigation-subtitle {
     font-weight: 400;
     font-size: 14px;
-  }
-
-  .article-navigation-empty {
-    width: 50%;
-
-    p {
-      display: inline-block;
-    }
   }
 
   a:hover {
