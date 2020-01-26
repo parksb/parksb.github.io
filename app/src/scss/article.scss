@@ -76,6 +76,27 @@
   }
 }
 
+#article-list-button-container {
+  width: 90px;
+  height: 90px;
+  margin: 20px auto auto;
+
+  #article-list-button {
+    display: table-cell;
+    width: 90px;
+    height: 90px;
+    border: 1px black solid;
+    border-radius: 100%;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 20px;
+
+    &:hover {
+      background-color: black;
+    }
+  }
+}
+
 #article-comments {
   .utterances {
     max-width: 100%;
