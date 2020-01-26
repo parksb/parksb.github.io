@@ -54,9 +54,9 @@
         <%- article.date %>
       </time>
 
-      <article id="article-content-container">
+      <section id="article-content-container">
         <%- article.content %>
-      </article>
+      </section>
 
       <section id="article-navigation">
         <% if (nextArticle) { %>
@@ -89,11 +89,11 @@
         <a href="https://twitter.com/share" class="twitter-share-button" data-show-count="true"></a>
       </section>
 
-      <article id="article-comments">
+      <section id="article-comments">
         <script async src="https://utteranc.es/client.js" repo="ParkSB/parksb.github.io-comments" issue-term="pathname" theme="github-light"
           crossorigin="anonymous">
           </script>
-      </article>
+      </section>
 
       <section id="article-list-button-container">
         <a href="/articles.html">
