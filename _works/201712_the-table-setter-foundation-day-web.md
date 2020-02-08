@@ -14,4 +14,4 @@ _**The Table Setter 창립기념식 (2017) http://thetablesetter.org/promotion/*
 
 BI를 유지하기 위해 이전 작업물의 접시 컨셉을 차용했습니다.
 
-(Web) HTML/CSS, Javascript, jQuery, Bootstrap을 사용했습니다.
+(web) html/css, javascript, jquery, bootstrap

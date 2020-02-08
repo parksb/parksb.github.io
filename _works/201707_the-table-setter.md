@@ -16,4 +16,4 @@ The table setter는 청소년과 청년의 상생의 삶을 모색하는 비영�
 
 청년-청소년이 만나 함께 꿈꾸고 배우며 지속가능한 삶의 생태계를 만들어가고자 합니다.
 
-(Web) HTML/CSS, Javascript, PHP, MySQL, jQuery, Vue.js, moment.js, Bootstrap을 사용했습니다.
+(web) html/css, javascript, php, mysql, jquery, vue.js, moment.js, bootstrap

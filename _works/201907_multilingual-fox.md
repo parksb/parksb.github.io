@@ -14,4 +14,4 @@ A simple dictionary extension supporting English-Korean, Chinese-Korean and Japa
 
 To float a tooltip on the page, hold Alt key (Option key on Mac) and select a word for search.
 
-(Web) Typescript, Request, cheerio를 사용했습니다.
+(web) typescript, request, cheerio

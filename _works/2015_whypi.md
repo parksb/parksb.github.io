@@ -18,4 +18,4 @@ _**Whyπ (2014) https://harooo.com/whypi/**_
 
 계속해서 새로운 정보 전달 매체를 고민하면서 성장을 거듭했습니다.
 
-(Web) HTML/CSS, Javascript, PHP, MySQL, jQuery, MDL을 사용했습니다.
+(web) html/css, javascript, php, mysql, jquery, mdl

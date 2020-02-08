@@ -16,4 +16,4 @@ _**이우학교 온라인 석식신청 (2016) https://dinner.2woo.net/**_
 
 학생 페이지는 편의성에 집중해 완전히 새롭게 디자인했고, 교사 페이지는 종이 양식과 유사하게 디자인했습니다.
 
-(Web) HTML/CSS, Javascript, PHP, MySQL, jQuery, moment.js, MDL을 사용했습니다.
+(web) html/css, javascript, php, mysql, jquery, moment.js, mdl

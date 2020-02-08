@@ -18,4 +18,4 @@ _**하루 (2013) https://harooo.com/harooo/**_
 
 2013년 이우중학교 졸업작품으로 출품했고, 언론을 통해 알려졌습니다.
 
-(Web) HTML/CSS, Javascript, PHP, MySQL, jQuery를 사용했습니다.
+(web) html/css, javascript, php, mysql, jquery

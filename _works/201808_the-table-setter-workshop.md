@@ -14,4 +14,4 @@ The table setter와 적정기술 소셜벤처 마이소사이어티와 함께 �
 
 The table setter의 BI 유지를 목적으로, 이미지만 교체하면 차후 같은 포맷의 포스터를 활용할 수 있도록 디자인했습니다.
 
-(Print) 297 x 420 mm
+(print) 297 x 420 mm

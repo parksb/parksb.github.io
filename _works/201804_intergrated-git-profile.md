@@ -12,4 +12,4 @@ _**Intergrated Git Profile (2018) https://github.com/ParkSB/integrated-git-profi
 
 Github 프로필과 Gitlab 프로필을 한 페이지에 보여주는 웹앱을 만들었습니다.
 
-(Web) HTML/CSS, Javascript, jQuery, React, billboard.js, moment.js를 사용했습니다.
+(web) html/css, javascript, jquery, react, billboard.js, moment.js
