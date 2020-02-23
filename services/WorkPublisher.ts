@@ -54,29 +54,37 @@ class WorkPublisher {
     return metaInfo;
   }
 
+  public static getWorkByFilename(id: number, filename: string) {
+    const mdContent: Buffer = fs.readFileSync(`${this.WORK_ORIGIN_PATH}/${filename}`);
+    const htmlContent: string = this.md.render(this.extractContent(String(mdContent)));
+    const metaInfo: WorkMetaInfo = this.extractMetaInfo(String(mdContent));
+
+    return new Work({
+      id,
+      title: metaInfo.getTitle(),
+      subtitle: metaInfo.getSubtitle(),
+      thumbnail: metaInfo.getThumbnail(),
+      content: htmlContent,
+    });
+  }
+
+  public static getWorkMarkdownFiles() {
+    return fs.readdirSync(this.WORK_ORIGIN_PATH);
+  }
+
   public static publishAllWorks() {
-    const workFiles: string[] = fs.readdirSync(this.WORK_ORIGIN_PATH);
+    const workFiles: string[] = WorkPublisher.getWorkMarkdownFiles();
 
     const distWorks: WorkModel[] = workFiles.map((workFile: string, idx: number) => {
-      const mdContent: Buffer = fs.readFileSync(`${this.WORK_ORIGIN_PATH}/${workFile}`);
-      const htmlContent: string = this.md.render(this.extractContent(String(mdContent)));
-      const metaInfo: WorkMetaInfo = this.extractMetaInfo(String(mdContent));
-
-      const work: Work = new Work({
-        id: idx,
-        title: metaInfo.getTitle(),
-        subtitle: metaInfo.getSubtitle(),
-        thumbnail: metaInfo.getThumbnail(),
-        content: htmlContent,
-      });
+      const work = WorkPublisher.getWorkByFilename(idx, workFile).getWork();
 
       fs.writeFileSync(
         `${this.WORK_DIST_PATH}/${idx}.html`,
-        ejs.render(String(this.WORK_TEMPLATE), work.getWork()),
+        ejs.render(String(this.WORK_TEMPLATE), work),
       );
 
-      console.log(`* ${idx}: ${metaInfo.getTitle()}`);
-      return work.getWork();
+      console.log(`* ${idx}: ${work.title}`);
+      return work;
     });
 
     PagePublisher.publishWorks(distWorks);
