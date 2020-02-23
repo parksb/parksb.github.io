@@ -47,7 +47,7 @@ class ArticlePublisher {
     return text.replace(/(-{3})([\s\S]+?)(\1)/, '');
   }
 
-  private static getArticleByFilename(filename: string) {
+  public static getArticleByFilename(filename: string) {
     const mdContent: Buffer = fs.readFileSync(`${this.ARTICLE_ORIGIN_PATH}/${filename}`);
     const htmlContent: string = this.md.render(this.extractContent(String(mdContent)));
     const metaInfo: ArticleMetaInfo = this.extractMetaInfo(String(mdContent));
@@ -85,9 +85,13 @@ class ArticlePublisher {
     return metaInfo;
   }
 
-  public static publishArticles(id?: number) {
-    const articleFiles: string[] = fs.readdirSync(this.ARTICLE_ORIGIN_PATH)
+  public static getArticleMarkdownFiles() {
+    return fs.readdirSync(this.ARTICLE_ORIGIN_PATH)
       .filter((file) => !this.IGNORED_FILES.includes(file));
+  }
+
+  public static publishArticles(id?: number) {
+    const articleFiles: string[] = ArticlePublisher.getArticleMarkdownFiles();
 
     const distArticles: ArticleModel[] = articleFiles.map((articleFile: string, index: number) => {
       const article = ArticlePublisher.getArticleByFilename(articleFile).getArticle();

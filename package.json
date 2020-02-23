@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/ParkSB/parksb.github.io#readme",
   "dependencies": {
+    "dayjs": "^1.8.20",
     "ejs": "^2.6.1",
     "highlight.js": "^9.15.6",
     "katex": "^0.10.2",
