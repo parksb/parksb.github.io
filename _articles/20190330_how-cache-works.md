@@ -196,7 +196,7 @@ direct mapped 캐시와 비교해서 히트 레이턴시를 높이는 대신 충
 ```c
 for (i = 0; i < columns; i += 1) {
   for (j = 0; j < rows; j += 1) {
-    arr[i][j] = pow(arr[i][j]);
+    arr[j][i] = pow(arr[j][i]);
   }
 }
 ```
