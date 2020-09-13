@@ -1,6 +1,6 @@
 ---
 id: 20
-title: "Windows에서 React Native 개발 환경 세팅하기"
+title: "윈도우즈에서 React Native 개발 환경 세팅하기"
 subtitle: "개발 환경 세팅만 사흘"
 date: "2018.08.23"
 tags: "모바일, RN"
