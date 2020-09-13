@@ -9,6 +9,9 @@ import * as katex from 'katex';
 import * as highlightJs from 'highlight.js';
 import * as mdFootnote from 'markdown-it-footnote';
 import * as mdTex from 'markdown-it-texmath';
+import * as mdAnchor from 'markdown-it-anchor';
+import * as mdTableOfContents from 'markdown-it-table-of-contents';
+import * as mdContainer from 'markdown-it-container';
 
 import PagePublisher from './PagePublisher';
 import ArticleMetaInfo from './classes/ArticleMetaInfo';
@@ -41,6 +44,22 @@ class ArticlePublisher {
   }).use(mdFootnote)
     .use(mdTex.use(katex), {
       delimiters: 'gitlab',
+    })
+    .use(mdAnchor)
+    .use(mdTableOfContents, {
+      includeLevel: [1, 2, 3],
+    })
+    .use(mdContainer, 'toggle', {
+      validate(params) {
+        return params.trim().match(/^toggle\((.*)\)$/);
+      },
+      render(tokens, idx) {
+        const content = tokens[idx].info.trim().match(/^toggle\((.*)\)$/);
+        if (tokens[idx].nesting === 1) {
+          return `<details><summary>${ArticlePublisher.md.utils.escapeHtml(content[1])}</summary>\n`;
+        }
+        return '</details>\n';
+      },
     });
 
   private static extractContent(text: string): string {
@@ -49,7 +68,8 @@ class ArticlePublisher {
 
   public static getArticleByFilename(filename: string) {
     const mdContent: Buffer = fs.readFileSync(`${this.ARTICLE_ORIGIN_PATH}/${filename}`);
-    const htmlContent: string = this.md.render(this.extractContent(String(mdContent)));
+    const mdContentWithToc = `::: toggle(Table of Contents)\n[[toc]]\n:::\n${mdContent}`;
+    const htmlContent: string = this.md.render(this.extractContent(mdContentWithToc));
     const metaInfo: ArticleMetaInfo = this.extractMetaInfo(String(mdContent));
 
     return new Article({
