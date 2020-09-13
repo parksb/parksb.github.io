@@ -11,6 +11,8 @@ class ArticleMetaInfo implements ArticleMetaInfoModel {
 
   tags: string | string[];
 
+  filename: string;
+
   setProp(name: string, value: any) {
     switch (name) {
       case 'id':
@@ -21,6 +23,7 @@ class ArticleMetaInfo implements ArticleMetaInfoModel {
       case 'subtitle':
       case 'date':
       case 'tags':
+      case 'filename':
         this[name] = value;
         break;
 
@@ -51,6 +54,10 @@ class ArticleMetaInfo implements ArticleMetaInfoModel {
     }
 
     return this.tags;
+  }
+
+  getFilename(): string {
+    return this.filename;
   }
 }
 
