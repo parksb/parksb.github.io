@@ -9,12 +9,22 @@
     font-size: 15px;
   }
 
-  & > ul {
-    list-style: none;
+  section {
+    h2 {
+      font-size: 15px;
+    }
 
-    li {
+    & > h2 {
       margin-bottom: 5px;
-      line-height: 170%;
+    }
+
+    & > ul {
+      list-style: none;
+
+      li {
+        margin-bottom: 5px;
+        line-height: 170%;
+      }
     }
   }
 
@@ -41,6 +51,10 @@
     summary {
       cursor: pointer;
       font-size: 15px;
+
+      & > h2 {
+        display: inline;
+      }
     }
 
     ul {
