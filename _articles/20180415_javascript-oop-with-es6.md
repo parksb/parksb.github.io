@@ -1,7 +1,7 @@
 ---
 id: 1
 title: "ES6와 함께 JavaScript로 OOP하기"
-subtitle: "자바스크립트의 OOP는 진정한 OOP가 아니야?"
+subtitle: "자바스크립트의 OOP는 진정한 OOP가 아닌가?"
 date: "2018.04.15"
 tags: "프론트엔드, ES6"
 ---
