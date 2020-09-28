@@ -502,7 +502,23 @@ jr $ra
 
 ## Memory Layout
 
-![컴퓨터 메모리 레이아웃. 스택, 힙, 데이터 세그먼트, 코드 세그먼트.](https://user-images.githubusercontent.com/6410412/47010968-8f4a6480-d17b-11e8-8d46-2839b1fa3270.png)
+```
++---------------+ High address
+|     Stack     | 
++-------+-------+
+|       |       |
+|       v       |
+|               |
+|       ^       |
+|       |       |
++-------+-------+
+|     Heap      |
++---------------+
+| Static (Data) |
++---------------+
+|  Text (Code)  |
++---------------+ Low address
+```
 
 그림의 Code Segment는 Text라고 불리며, 실제 프로그램 코드가 저장된다. Data Segment는 Static Data라고 불리며, 상수 배열이나 문자열, static 변수가 저장된다. Heap에는 동적할당된 배열 요소나 객체가 저장되며, Stack에는 함수나 메소드, 지역변수 등이 저장된다.
 
