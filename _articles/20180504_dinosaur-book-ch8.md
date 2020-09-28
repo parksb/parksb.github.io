@@ -50,9 +50,13 @@ CPU는 레지스터를 참조하며 메모리 공간을 보호하며, 레지스�
 
 ## Fragmentation
 
-fragmentation은 메모리 공간을 사용하지 못하게 되는 것을 말한다. ([Java의 garbage collection에도 같은 문제가 생긴다.](http://ferrumdev.tistory.com/15)) 여러 프로세스에 메모리를 할당하는 과정을 거치면 메모리의 모습은 대략 아래 그림과 비슷할 것이다.
+fragmentation은 메모리 공간을 사용하지 못하게 되는 것을 말한다. ([garbage collection에도 같은 문제가 생긴다.](https://parksb.github.io/article/2.html)) 여러 프로세스에 메모리를 할당하는 과정을 거치면 메모리의 모습은 대략 아래 그림과 비슷할 것이다.
 
-![memory alloc](https://t1.daumcdn.net/cfile/tistory/992FB2345ADF38F618)
+```
++---+----------+----+------+---------+
+|   | empty    |    |      | empty   |
++---+----------+----+------+---------+
+```
 
 각 block의 크기를 순서대로 30k, 60k, 20k, 40k, 60k라고 해보자. hole은 60k 두 곳뿐이다. 그런데 만약 70k 프로세스가 들어와야 한다면? **실제 메모리 공간은 120k가 비어있지만 어디에도 70k가 들어갈 수는 없다.** 이것을 external fragmentation이라고 한다.
 
@@ -60,7 +64,11 @@ fragmentation은 메모리 공간을 사용하지 못하게 되는 것을 말한
 
 이런 문제는 할당된 block을 한쪽으로 몰아 큰 block을 생성하는 compaction으로 해결할 수 있다.
 
-![compaction](https://t1.daumcdn.net/cfile/tistory/9997F6455ADF38FF20)
+```
++---+----+------+--------------------+
+|   |    |      | empty              |
++---+----+------+--------------------+
+```
 
 이렇게 하면 70k 프로세스도 들어갈 수 있다. 하지만 프로세스 할당은 정말 자주 일어나는 일이기 때문에 compaction처럼 오버헤드가 큰 작업을 매번 할 수는 없다. 과거에는 이 방법을 썼지만 이젠 다른 방법을 쓴다.
 
