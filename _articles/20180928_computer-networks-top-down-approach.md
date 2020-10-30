@@ -72,7 +72,16 @@ James F. Kurose, Keith W. Ross의 Computer Networking: A Top-Down Approach는 �
 
 대부분의 패킷 스위치는 저장 후 전달 전송(Store-and-Forward Transmission) 방식을 사용한다. store-and-forward 전송 방식에서 패킷 스위치는 패킷의 첫 비트를 링크에 전송하기 전에 패킷의 모든 비트를 받아야 한다.
 
-![Source에서 라우터로 보낸 첫 패킷이 대기.](https://user-images.githubusercontent.com/6410412/46904368-097dad80-cf1e-11e8-8a84-69ca43d63627.jpg)
+```
+                            Router
++--------+ 3 2 1          /--------\            +-------------+
+| Source +-#-#-#---------+-->#      +-----------+ Destination |
++--------+                \--------/            +-------------+
+                             Front of packet 1
+                             stored in router,
+                             awating remaining
+                             bits before forwarding
+```
 
 하나의 라우터에 연결된 두 개의 엔드 시스템을 상상해보자. 만약 한 엔드 시스템에서 패킷을 3개 전송하면, 라우터에 패킷이 순서대로 도착하게 된다.
 
@@ -92,7 +101,22 @@ James F. Kurose, Keith W. Ross의 Computer Networking: A Top-Down Approach는 �
 
 ### Types of Delay
 
-![지연 발생 위치. 라우터 전반 Nodal Processing, 라우터 후반 Queueing, 라우터 직후 Transmission, 링크 Propagation.](https://user-images.githubusercontent.com/6410412/46904367-08e51700-cf1e-11e8-8e30-2b7b5bad2c7c.png)
+```
++------+
+| Node |-#---+      Router A
++------+     |     /--------\            /--------\
+             +--->|      ### #-->-------+ Router B |
++------+     |     \--------/            \--------/
+| Node |-#---+    |-----|---|-|---------|
++------+             |    |  |     |  
+                     |    |  |     Propagation
+                     |    |  |  
+                     |    |  Transmission
+                     |    |
+                     |    Queueing Transmission (waiting for transmission)
+                     |
+                     Nodal processing
+```
 
 - 처리 지연(Processing Delay): 패킷의 헤더(Header)를 확인하고 패킷이 어디로 가야하는 지 결정할 때 지연되는 것을 말한다. 패킷의 에러를 체크할 때도 프로세싱 지연이 일어날 수 있다. 고속 라우터에서는 프로세싱 지연은 몇 마이크로초 이하로 걸린다. 이 과정 이후 라우터는 패킷을 링크된 라우터의 큐로 보낸다.
 - 큐 지연(Queuing Delay): 패킷이 큐에서 전송되기를 기다릴 때 발생하는 지연을 말한다. 지연의 길이는 몇 개의 패킷이 이미 큐에 있는지, 링크로 전송될 때까지 얼마나 대기해야 하는지에 따른다. 만약 큐가 비어있고, 어떠한 패킷도 전송되고 있지 않다면 패킷의 지연은 0이다. 반면, 트래픽이 혼잡하고 많은 패킷이 전송되길 기다리고 있다면 지연은 길어질 것이다. 큐 지연은 마이크로초에서 밀리초 정도가 될 수 있다.
@@ -119,7 +143,24 @@ James F. Kurose, Keith W. Ross의 Computer Networking: A Top-Down Approach는 �
 
 네트워크의 레이어 모델에는 대표적으로 OSI(Open Systems Interconnection) 모델과 TCP/IP 프로토콜 슈트가 있다. 
 
-![TCP/IP 모델. 어플리케이션, 전송, 인터넷, 네트워크 계층. OSI 모델. 어플리케이션, 표현, 세션, 전송, 네트워크, 데이터 링크, 물리 계층.](https://user-images.githubusercontent.com/6410412/46904370-097dad80-cf1e-11e8-8104-16e952be01da.png)
+```
++----------------------+  +--------------------+
+|                      |  | Application Layer  |
+|                      |  +--------------------+
+| Application Layter   |  | Presentation Layer |
+|                      |  +--------------------+
+|                      |  | Session Layer      |
++----------------------+  +--------------------+
+| Transport Layer      |  | Transport Layer    |
++----------------------+  +--------------------+
+| Internet Layer       |  | Network Layer      |
++----------------------+  +--------------------+
+|                      |  | Data Link Layer    |
+| Network Access Layer |  +--------------------+
+|                      |  | Physical Layer     |
++----------------------+  +--------------------+
+         TCP/IP                    OSI
+```
 
 OSI 모델은 국제 표준화 기구(ISO)에서 만든 공식적 표준 모델이다. 하지만 계층이 7개나 되기 때문에 지금은 잘 쓰이지 않게 되었다. 인터넷 프로토콜 슈트 중 압도적으로 많이 쓰이는 것은 TCP/IP 프로토콜로, 사실상 표준이라고 볼 수 있다. TCP/IP의 계층은 4개이며, 미국 방위고등연구계획국(DARPA)에서 만들었다.
 
@@ -145,7 +186,41 @@ OSI 모델은 국제 표준화 기구(ISO)에서 만든 공식적 표준 모델�
 
 ## Encapsulation
 
-![Source에서 Destination으로 패킷이 전달되는 과정.](https://user-images.githubusercontent.com/6410412/46904369-097dad80-cf1e-11e8-9a84-cd8bd2f6e930.png)
+```
+                      <Source>      |
+                      +-------------+-+      
+          Message [M] | Application | |
+                      +-------------+-+
+      Segment [Ht][M] | Transport   | |
+                      +-------------+-+
+ Datagram [Hn][Ht][M] | Network     | |
+                      +-------------+-+
+Frame [Hl][Hn][Ht][M] | Link        | |
+                      +-------------+-+
+                      | Physical    | |                   +----------+
+                      +-------------+-+                   |          |
+                                    |                   +-+----------+-+
+                                    |   [Hl][Hn][Ht][M] | | Link     | | [Hl][Hn][Ht][M]
+                                    |                   |-+----------+-+
+                                    |                   | | Physical | |
+                                    |                   +-+----------+-+ <Link-layer switch>
+                                    |                     |          |
+                                    +---------------------+          |
+                <Destination> ^                                      |
+                +-------------+-+                                    |
+            [M] | Application | |                                    |
+                +-------------+-+                     +----------+   |
+        [Ht][M] | Transport   | |                     |          |   |
+                +-------------+-+                   +-+----------+-+ |
+    [Hn][Ht][M] | Network     | |       [Hn][Ht][M] | | Network  | | |     [Hn][Ht][M]           
+                +-------------+-+                   |-+----------+-+ |
+[Hl][Hn][Ht][M] | Link        | |   [Hl][Hn][Ht][M] | | Link     | | | [Hl][Hn][Ht][M]                
+                +-------------+-+                   |-+----------+-+ |
+                | Physical    | |                   | | Physical | | |
+                +-------------+-+                   +-+----------+-+ | <Router>
+                              |                       |          |   |
+                              +-----------------------+          +---+
+```
 
 위 그림은 데이터가 전송될 때 어떤 경로를 거치는지 보여준다. 그림에 있는 링크 레이어 스위치와 라우터는 모두 패킷 스위치다. 엔드 시스템과 비슷하게 라우터와 링크 레이어 스위치도 레이어 모델을 취하고 있다. 하지만 모든 레이어가 구현되어 있는 것은 아닌데, 링크 레이어 스위치의 경우 링크 레이어와 피지컬 레이어만있고, 라우터는 네트워크 레이어와 링크 레이어, 피지컬 레이어만 가지고 있다.
 
