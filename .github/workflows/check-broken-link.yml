@@ -6,6 +6,7 @@ on:
   push:
     paths:
       - '.github/workflows/check-broken-link.yml'
+      - 'mlc_config.json'
 
 jobs:
   check:

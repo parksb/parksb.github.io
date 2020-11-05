@@ -1,0 +1,6 @@
+{
+  "ignorePatterns": [
+    { "pattern": ".*&quot;" }
+  ],
+  "aliveStatusCodes": [0, 200, 206, 999]
+}
