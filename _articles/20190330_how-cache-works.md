@@ -260,4 +260,4 @@ for (i = 0; i < len; i += CACHE_SIZE) {
 
 * David Patterson, John Hennenssy, "Computer Organization and Design 5th Ed.", MK, 2014.
 * Abraham Silberschatz, Peter Galvin, Greg Gagne, "Operating System Concepts 9th Ed.", Wiley, 2014.
-* K. G. Smitha, "[Para Cache Simulator](http://www.ntu.edu.sg/home/smitha/ParaCache/Paracache/start.html)".
+* K. G. Smitha, "[Para Cache Simulator](https://www3.ntu.edu.sg/home/smitha/ParaCache/Paracache/start.html)".

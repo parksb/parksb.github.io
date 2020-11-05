@@ -248,5 +248,5 @@ $ ln -s ./dotfiles/.vimrc ~/.vimrc
 
 회사에서 쓰는 맥북과 집에서 쓰는 윈도우 노트북의 WSL, 따로 운영 중인 우분투 서버의 설정을 동기화하는 게 문제였는데 잘 해결됐다. 나중을 위해서 프로그램과 플러그인을 설치하는 쉘 스크립트도 작성해뒀다.
 
-[^bluesh]: 오승환, "[Vim을 IDE처럼 사용하기](http://blog.b1ue.sh/2016/10/09/vim-ide/)", 2016.
+[^bluesh]: 오승환, "Vim을 IDE처럼 사용하기", 2016.
 [^edykim]: 김용균, "[tmux 입문자 시리즈 요약](https://edykim.com/ko/post/tmux-introductory-series-summary/)", 2014.

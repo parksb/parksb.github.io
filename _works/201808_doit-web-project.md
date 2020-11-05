@@ -8,7 +8,7 @@ thumbnail: "https://user-images.githubusercontent.com/6410412/46553522-af2a8e80-
 
 ![](https://user-images.githubusercontent.com/6410412/46553524-afc32500-c918-11e8-9176-6b4de15dd988.png)
 
-_**DoiT Web Project Team (2018) https://github.com/AjouDoiT-WebProj**_
+_**DoiT Web Project Team (2018)**_
 
 아주대학교 프로그래밍 중앙동아리 DoiT의 웹 프로젝트 팀에서
 

@@ -6,7 +6,7 @@ date: "2018.05.20"
 tags: "프론트엔드, ES6"
 ---
 
-오늘 [동아리 웹 세미나](https://github.com/AjouDoiT-WebProj/web-dev-101) 중 jQuery를 이용해서 요소를 클릭하면 요소의 내용이 바뀌는 예제를 시연했다.
+동아리 웹 세미나 중 jQuery를 이용해서 요소를 클릭하면 요소의 내용이 바뀌는 예제를 시연했다.
 
 ```js
 $('#el').on('click', function() {

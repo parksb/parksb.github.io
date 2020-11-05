@@ -33,7 +33,7 @@ $ npm start
 
 # Expo
 
-[Expo](https://expo.io/)는 리액트 네이티브 어플리케이션의 빌드를 돕는 툴이다. 네이티브 API에 접근하는 것도 쉽게 만들어주고, 안드로이드와 iOS 버전을 알아서 빌드해준다. 무엇보다 코드를 수정하면 바로 hot reloading 시켜주는 것이 가장 편하다. Expo는 [CLI는 물론 GUI 툴도 제공](https://docs.expo.io/versions/v29.0.0/introduction/installation)하기 때문에 터미널이 익숙치 않아도 쉽게 사용할 수 있다. 
+[Expo](https://expo.io/)는 리액트 네이티브 어플리케이션의 빌드를 돕는 툴이다. 네이티브 API에 접근하는 것도 쉽게 만들어주고, 안드로이드와 iOS 버전을 알아서 빌드해준다. 무엇보다 코드를 수정하면 바로 hot reloading 시켜주는 것이 가장 편하다.
 
 GUI 툴인 Expo XDE를 사용한다면, 우선 Expo를 실행한 뒤 'Open existing project...'버튼을 클릭한다. 그리고 앞서 CRNA로 만든 my-app 폴더를 찾아 선택해주면 my-app을 알아서 빌드해준다.
 

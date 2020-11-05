@@ -10,7 +10,7 @@ thumbnail: "https://user-images.githubusercontent.com/6410412/46553474-8a361b80-
 
 ![](https://user-images.githubusercontent.com/6410412/46553473-8a361b80-c918-11e8-94be-fe306ac87607.png)
 
-_**The Table Setter (2017) http://thetablesetter.org/**_
+_**The Table Setter (2017)**_
 
 The table setter는 청소년과 청년의 상생의 삶을 모색하는 비영리단체입니다.
 

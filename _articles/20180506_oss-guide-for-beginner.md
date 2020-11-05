@@ -8,7 +8,7 @@ tags: "오픈소스"
 
 작년 겨울부터 오픈소스에 관심이 생겨 이곳저곳에 이슈도 올리고 풀 리퀘스트도 보내고 있다. 오픈소스 기여의 가장 큰 장점은 남의 코드를 많이 읽을 수 있다는 점과 기술 트렌드를 계속 확인할 수 있다는 점이다. 그리고 영작 실력도 미세하게 (...) 향상된 것 같다. 처음 오픈소스 활동을 시작할 때 [네이버 오픈소스 가이드](https://naver.github.io/OpenSourceGuide/book/)가 큰 도움이 됐다. 오픈소스에 대한 감은 잡히지만 생각보다 구체적인 내용을 다루진 않는다.
 
-[Git](https://git-scm.com/)이 설치되어 있지 않다면 설치하고, [GitHub](https://github.com/)에 가입되어 있지 않다면 가입하도록 하자. 만약 익숙치 않다면 [깃허브 사용법](https://github.com/tadkim/infra/wiki/GitHub-::-%EA%B9%83%ED%97%88%EB%B8%8C-%EC%82%AC%EC%9A%A9%EB%B2%95-1) 또는 [누구나 쉽게 이해할 수 있는 Git 입문](https://backlog.com/git-tutorial/kr/intro/intro1_1.html)을 얕게라도 읽어보는 것을 추천한다. 깃허브말고 [GitLab](https://gitlab.com/)이나 [BitBucket](https://bitbucket.org/)도 있는데, 역시 깃허브의 규모가 가장 크다.
+[Git](https://git-scm.com/)이 설치되어 있지 않다면 설치하고, [GitHub](https://github.com/)에 가입되어 있지 않다면 가입하도록 하자. 만약 익숙치 않다면 [누구나 쉽게 이해할 수 있는 Git 입문](https://backlog.com/git-tutorial/kr/intro/intro1_1.html)을 얕게라도 읽어보는 것을 추천한다. 깃허브말고 [GitLab](https://gitlab.com/)이나 [BitBucket](https://bitbucket.org/)도 있는데, 역시 깃허브의 규모가 가장 크다.
 
 간단하게 오픈소스 컨트리뷰션과 관련된 용어를 정리하면 이렇다:
 

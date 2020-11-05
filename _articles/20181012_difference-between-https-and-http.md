@@ -38,7 +38,7 @@ ip.addr == 202.39.0.19 && http
 
 ![HTTP 요청 메시지. Host, User-Agent, Referer 등 헤더를 포함.](https://user-images.githubusercontent.com/6410412/46820151-7713c780-cdc0-11e8-9375-c29b9d82addf.png)
 
-[http://www.ajou.ac.kr](http://www.ajou.ac.kr)에게 [/_resources/new/img/index/btn_pop_close.gif](http://www.ajou.ac.kr/_resources/new/img/index/btn_pop_close.gif)를 요청하는 HTTP 메시지이다. HTTP 요청 메시지는 크게 Request line, Header lines, Entity body로 나눌 수 있다. Request line에는 `GET /_resources/new/img/index/btn_pop_close.gif HTTP/1.1\r\n`이 있고, 그 아래 Header lines에는 Host, User-Agent, Accept-Langueage 등 여러 헤더들이 따라온다.
+[http://www.ajou.ac.kr](http://www.ajou.ac.kr)에게 `/_resources/new/img/index/btn_pop_close.gif`를 요청하는 HTTP 메시지이다. HTTP 요청 메시지는 크게 Request line, Header lines, Entity body로 나눌 수 있다. Request line에는 `GET /_resources/new/img/index/btn_pop_close.gif HTTP/1.1\r\n`이 있고, 그 아래 Header lines에는 Host, User-Agent, Accept-Langueage 등 여러 헤더들이 따라온다.
 
 User-Agent 헤더를 통해 클라이언트가 파이어폭스를 사용하고 있다는 점을 알 수 있고, Referer를 통해 클라이언트가 [http://www.ajou.ac.kr/main/index.jsp](http://www.ajou.ac.kr/main/index.jsp)에서 넘어왔다는 것을 알 수 있다. Referer를 보면 블로그의 방문자 유입 경로와 같은 정보를 얻을 수 있다.
 

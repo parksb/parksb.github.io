@@ -8,7 +8,7 @@ thumbnail: "https://user-images.githubusercontent.com/6410412/46553490-97530a80-
 
 ![](https://user-images.githubusercontent.com/6410412/46553489-96ba7400-c918-11e8-9cbc-e80fa1e84bcd.png)
 
-_**The Table Setter 창립기념식 (2017) http://thetablesetter.org/promotion/**_
+_**The Table Setter 창립기념식 (2017)**_
 
 비영리단체 The table setter의 창립기념식 프로모션 페이지를 만들었습니다.
 

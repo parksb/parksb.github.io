@@ -6,7 +6,7 @@ date: "2018.12.26"
 tags: "프로젝트, 회고, ES6, TS"
 ---
 
-[Santa Inc.](https://parksb.github.io/project/santainc/)는 초국적 블랙 기업 '산타 주식회사'를 운영하는 방치형 게임(Idle game)이다. 산타의 목적은 오직 선물 생산을 최대로 끌어올리는 것. 산타는 직원을 고용하고, 정책을 채택하며 끝없이 선물을 생산한다.
+[Santa Inc.](https://parksb.github.io/santa-inc/)는 초국적 블랙 기업 '산타 주식회사'를 운영하는 방치형 게임(Idle game)이다. 산타의 목적은 오직 선물 생산을 최대로 끌어올리는 것. 산타는 직원을 고용하고, 정책을 채택하며 끝없이 선물을 생산한다.
 
 ![Santa Inc. 세계를 선도하는 글로벌 기업. 루돌프.](https://raw.githubusercontent.com/ParkSB/santa-inc/develop/assets/meta/preview.png)
 
