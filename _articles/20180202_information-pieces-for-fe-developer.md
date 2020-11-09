@@ -102,7 +102,7 @@ Progressive rendering은 콘텐츠를 빠르게 화면에 렌더링하는 기법
 
 세 번째로 `float`을 빈 엘리먼트로 클리어링할 수도 있다. `float`이 지정된 요소 뒤에 빈 요소를 추가하고 빈 요소의 `clear` 속성에 `both` 값을 부여하는 것인데, 의미없는 요소를 사용하게 되기 때문에 권장하지 않는다.
 
-마지막으로 `float`을 가상 선택자 `:after`로 클리어링하는 방법이 있다. 가상 선택자는 가상 클래스(pseudo-class)와 가상 요소(pseudo-element)로 나뉜다. 가상 클래스는 특정 요소에 아무런 class를 부여하지 않았지만 마치 class를 변경한 것과 같은 역동적인 효과를 낼 수 있는 것들이다. `:hover`, `:active`, `:focus` 등이 여기에 속한다. 가상 요소는 존재하지 않는 요소를 가상으로 생성하는 선택자다. `:first-line`, `:before`, `:after`가 여기에 속한다. 가상 요소는 HTML 문서에 존재하지 않는 콘텐츠를 출력하기도 한다. 이렇게 가상 요소를 생성한 다음 `display: block; clear: both;` 처리를 하면 깔끔하게 클리어링을 할 수 있다. 가장 권장하는 방법이다. ([참고](http://naradesign.net/wp/2008/05/27/144/))
+마지막으로 `float`을 가상 선택자 `:after`로 클리어링하는 방법이 있다. 가상 선택자는 가상 클래스(pseudo-class)와 가상 요소(pseudo-element)로 나뉜다. 가상 클래스는 특정 요소에 아무런 class를 부여하지 않았지만 마치 class를 변경한 것과 같은 역동적인 효과를 낼 수 있는 것들이다. `:hover`, `:active`, `:focus` 등이 여기에 속한다. 가상 요소는 존재하지 않는 요소를 가상으로 생성하는 선택자다. `:first-line`, `:before`, `:after`가 여기에 속한다. 가상 요소는 HTML 문서에 존재하지 않는 콘텐츠를 출력하기도 한다. 이렇게 가상 요소를 생성한 다음 `display: block; clear: both;` 처리를 하면 깔끔하게 클리어링을 할 수 있다. 가장 권장하는 방법이다.
 
 ## Image Replacement
 

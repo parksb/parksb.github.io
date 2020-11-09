@@ -412,4 +412,5 @@ Google network 172.217.20.0/19                           |
 ## References
 
 * J. K. Kurose, K. W. Ross, "Computer Networking: A Top-Down Approach 7th ed.", Pearson, 2016.
+<!-- markdown-link-check-disable-next-line -->
 * ["What Happens in a TLS Handshake?"](https://www.cloudflare.com/ko-kr/learning/ssl/what-happens-in-a-tls-handshake/), Cloudflare. 

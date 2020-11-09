@@ -109,6 +109,7 @@ tags: "커리어, 회고"
 
 프로젝트에 대해서는 해당 프로젝트에서 내가 한 일, 프로젝트를 진행하며 배운 것, 그리고 성과를 적었다. 프로젝트의 규모나 성과는 모두 구체적인 수치로 나타냈다. 자기PR을 잘하는 성격이 아니라서 성과를 표현하는 게 좀 힘들었다.
 
+<!-- markdown-link-check-disable-next-line -->
 나중에 [로켓펀치](https://www.rocketpunch.com/@parksb)와 [링크드인](https://www.linkedin.com/in/parksb/)에 올린 이력서를 통해 면접 제의가 오기도 했다. 그중 한 곳은 정말 큰 회사라서 깜짝 놀랐다. 아쉽게도 이미 다른 회사 전형이 막바지여서 바로 확답할 수 없었다.
 
 ## 두근두근 입사 지원
@@ -168,6 +169,7 @@ B회사의 입사일이 먼저 결정되어 C회사는 어쩔 수 없이 전형 
 모든 게 처음이라 낯설기만 했다. 나와 비슷한 상황에 놓인 분들에게 도움이 되면 좋겠다:
 
 * 권희정, 박도연님 "[Tech Interview](https://github.com/WeareSoft/tech-interview)"
+<!-- markdown-link-check-disable-next-line -->
 * 너굴너굴님 "[좋은 면접자/지원자가 되는 방법](https://repo.yona.io/doortts/blog/post/292)"
 * 원티드 "[원티드와 함께하는 개발자 커리어 터치](https://www.notion.so/parksb/8a5fb590ae204295adf8117b5f58e32e)"
 * 원티드 "[인사담당자가 직접 말하는, 서류 통과가 잘 되는 이력서](https://brunch.co.kr/@wantedlab/29)"
