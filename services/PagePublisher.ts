@@ -7,12 +7,12 @@ import WorkModel from './models/WorkModel';
 class PagePublisher {
   static config = JSON.parse(fs.readFileSync(path.join(__dirname, 'config.json')).toString());
 
-  public static publishIndex() {
+  public static publishIndex(articles: ArticleModel[]) {
     const TEMPLATE: Buffer = fs.readFileSync(path.join(__dirname, '../app/templates/index.ejs'));
     const DIST_PATH: string = path.join(__dirname, '../app/public/index.html');
     const { blogTitle } = PagePublisher.config;
 
-    fs.writeFileSync(DIST_PATH, ejs.render(String(TEMPLATE), { blogTitle }));
+    fs.writeFileSync(DIST_PATH, ejs.render(String(TEMPLATE), { blogTitle, articles }));
   }
 
   public static publishNavigation() {

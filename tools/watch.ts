@@ -28,9 +28,6 @@ fs.watch(`${__dirname}/../app/templates`, (event, filename: string) => {
   console.log(`${new Date()}: ${filename}`);
 
   switch (path.parse(filename).name) {
-    case 'index':
-      PagePublisher.publishIndex();
-      break;
     case 'navigation':
       PagePublisher.publishNavigation();
       break;

@@ -2,3 +2,28 @@
   width: 100%;
   max-width: 800px;
 }
+
+#articles-container {
+  margin-top: 30px;
+
+  h2 {
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  h3 {
+    display: inline;
+    font-size: 18px;
+    font-weight: 400;
+  }
+
+  h4 {
+    display: inline;
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  ul {
+    margin-top: 30px;
+  }
+}
