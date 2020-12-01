@@ -12,6 +12,7 @@ import * as mdTex from 'markdown-it-texmath';
 import * as mdAnchor from 'markdown-it-anchor';
 import * as mdTableOfContents from 'markdown-it-table-of-contents';
 import * as mdContainer from 'markdown-it-container';
+import * as mdInlineComment from 'markdown-it-inline-comments';
 
 import PagePublisher from './PagePublisher';
 import ArticleMetaInfo from './classes/ArticleMetaInfo';
@@ -46,6 +47,7 @@ class ArticlePublisher {
       return `<pre class="hljs"><code>${ArticlePublisher.md.utils.escapeHtml(str)}</code></pre>`;
     },
   }).use(mdFootnote)
+    .use(mdInlineComment)
     .use(mdTex.use(katex), {
       delimiters: 'gitlab',
     })

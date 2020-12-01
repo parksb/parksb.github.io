@@ -30,6 +30,7 @@
     "markdown-it-anchor": "^5.3.0",
     "markdown-it-container": "^3.0.0",
     "markdown-it-footnote": "^3.0.1",
+    "markdown-it-inline-comments": "^1.0.1",
     "markdown-it-table-of-contents": "^0.4.4",
     "markdown-it-texmath": "^0.5.5"
   },
