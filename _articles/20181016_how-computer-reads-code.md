@@ -50,7 +50,7 @@ main:
 
 ## Operations of the Computer Hardware
 
-ISA에는 여러 종류가 있는데, 대표적으로 Intel과 AMD에서 만든 'x86'이 있는데, CPU 아키텍처가 CISC(Complex Instruction Set Computer) 기반이기 때문에 굉장히 복잡하다. 한편 'ARM Architecture'는 스마트폰이나 태블릿과 같은 모바일 기기에 사용된다. 우리가 사용할 ISA는 MIPS(Microprocessor without Interlocked Pipeline Stages)이며, 시스템이 간단해 컴퓨터 아키텍처를 공부하는 목적으로 적합하다. 실제로는 블루레이 기기나 플레이스테이션과 같은 디지털 홈, 네트워킹 장비에 사용된다.
+여러 종류의 ISA가 있다. 대표적으로 Intel과 AMD에서 만든 x86, AMD64가 있는데, 이들의 CPU 아키텍처는 CISC(Complex Instruction Set Computer) 구조이기 때문에 굉장히 복잡하다. 한편 RISC(Reduced Instruction Set Computer) 구조는 보다 간소하다. RISC 구조인 ARM 아키텍처는 스마트폰이나 태블릿과 같은 모바일 기기에 사용되고 있으며, 2020년에 출시된 M1 맥북도 ARM을 기반으로한 CPU를 사용한다. 우리가 사용할 MIPS(Microprocessor without Interlocked Pipeline Stages)도 RISC 구조 아키텍처다. MIPS는 명령어 세트가 깔끔해 컴퓨터 아키텍처를 공부하는 목적으로 적합하며, 실제로는 블루레이 기기나 플레이스테이션과 같은 디지털 홈, 네트워킹 장비에 사용되었다.
 
 # MIPS Instructions
 
