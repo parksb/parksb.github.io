@@ -13,6 +13,7 @@ import * as mdAnchor from 'markdown-it-anchor';
 import * as mdTableOfContents from 'markdown-it-table-of-contents';
 import * as mdContainer from 'markdown-it-container';
 import * as mdInlineComment from 'markdown-it-inline-comments';
+import mdMermaid from 'markdown-it-mermaid';
 
 import PagePublisher from './PagePublisher';
 import ArticleMetaInfo from './classes/ArticleMetaInfo';
@@ -48,6 +49,7 @@ class ArticlePublisher {
     },
   }).use(mdFootnote)
     .use(mdInlineComment)
+    .use(mdMermaid)
     .use(mdTex.use(katex), {
       delimiters: 'gitlab',
     })
