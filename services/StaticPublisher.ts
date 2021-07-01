@@ -36,9 +36,9 @@ ${articleUrls.join('\n')}
   public static publishRSS() {
     const header = `<rss version="2.0">
 <channel>
-<title>Park Seong-beom</title>
+<title>Simon Park</title>
 <link>https://parksb.github.io/</link>
-<description>Recently published articles written by Park Seong-beom</description>
+<description>Recently published articles written by Simon Park</description>
 <language>ko-kr</language>
 <lastBuildDate>${dayjs().format('ddd, D MMM YYYY HH:mm:ss')} +0900</lastBuildDate>
 `;
