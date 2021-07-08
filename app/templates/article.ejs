@@ -13,11 +13,11 @@
   <link rel="canonical" href="https://parksb.github.io/article/<%- article.id %>.html" />
 
   <meta property="og:title" content="<%- article.title %><% if (article.subtitle) { %>: <%- article.subtitle %> <% } %>">
-  <meta property="og:image" content="https://og-image-parksb.vercel.app/<%- article.encodedTitle %>.png?subtitle=<%- article.encodedSubtitle %>&theme=light&md=1&fontSize=95px">
+  <meta property="og:image" content="https://og-image-parksb.vercel.app/<%- article.encodedTitle %>.png?subtitle=<%- article.encodedSubtitle %>&date=<%- article.date %>&theme=light&md=1&fontSize=95px">
   <meta property="og:description" content="<%- article.summary %>">
 
   <meta name="twitter:title" content="<%- article.title %><% if (article.subtitle) { %>: <%- article.subtitle %> <% } %>">
-  <meta name="twitter:image" content="https://og-image-parksb.vercel.app/<%- article.encodedTitle %>.png?subtitle=<%- article.encodedSubtitle %>&theme=light&md=1&fontSize=95px">
+  <meta name="twitter:image" content="https://og-image-parksb.vercel.app/<%- article.encodedTitle %>.png?subtitle=<%- article.encodedSubtitle %>&date=<%- article.date %>&theme=light&md=1&fontSize=95px">
   <meta name="twitter:description" content="<%- article.summary %>">
   <meta name="twitter:card" content="summary_large_image">
 
