@@ -4,6 +4,7 @@ import * as fs from 'fs';
 
 import WorkPublisher from './WorkPublisher';
 import ArticlePublisher from './ArticlePublisher';
+import escapeHTML from './utils/escapeHTML';
 
 class StaticPublisher {
   public static publishSitemap() {
@@ -54,7 +55,7 @@ ${articleUrls.join('\n')}
       ArticlePublisher.getArticleByFilename(file).getArticle()
     ));
     const items = articles.slice(-ITEM_LIMIT_COUNT).reverse().map((article) => {
-      const description = `${StaticPublisher.escapeHTML(article.content).slice(0, DESCRIPTION_LENGTH)}...`;
+      const description = `${escapeHTML(article.content).slice(0, DESCRIPTION_LENGTH)}...`;
       const pubDate = `${dayjs(article.date.replace('.', '-')).format('ddd, D MMM YYYY HH:mm:ss')} +0900`;
 
       return `<item>
@@ -68,15 +69,6 @@ ${articleUrls.join('\n')}
 
     const RSS_PATH: string = path.join(__dirname, '../app/static/feed.xml');
     fs.writeFileSync(RSS_PATH, `${header}${items}${footer}`);
-  }
-
-  private static escapeHTML(html: string) {
-    return html.replace(/^<details><summary>Table\sof\sContents<\/summary>(.|\n)*<\/details>/, '')
-      .replace(/<[^>]*>?|\n/gm, '')
-      .replace(/&/g, '&amp;')
-      .replace(/>/g, '&gt;')
-      .replace(/</g, '&lt;')
-      .replace(/"/g, '&quot;');
   }
 }
 

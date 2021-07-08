@@ -1,4 +1,5 @@
 /* eslint-disable no-console */
+/* eslint-disable import/no-extraneous-dependencies */
 
 import * as ejs from 'ejs';
 import * as fs from 'fs';
@@ -80,15 +81,15 @@ class ArticlePublisher {
     const htmlContent: string = this.md.render(this.extractContent(mdContentWithToc));
     const metaInfo: ArticleMetaInfo = this.extractMetaInfo(String(mdContent));
 
-    return new Article({
-      id: metaInfo.getId(),
-      title: metaInfo.getTitle(),
-      subtitle: metaInfo.getSubtitle(),
-      date: metaInfo.getDate(),
-      tags: metaInfo.getTags(),
-      content: htmlContent,
+    return new Article(
+      metaInfo.getId(),
+      metaInfo.getTitle(),
+      metaInfo.getSubtitle(),
+      metaInfo.getTags(),
+      metaInfo.getDate(),
+      htmlContent,
       filename,
-    });
+    );
   }
 
   public static extractMetaInfo(text: string): ArticleMetaInfo {

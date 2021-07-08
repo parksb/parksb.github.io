@@ -1,4 +1,5 @@
 /* eslint-disable no-console */
+/* eslint-disable import/no-extraneous-dependencies */
 
 import * as MarkdownIt from 'markdown-it';
 import * as ejs from 'ejs';

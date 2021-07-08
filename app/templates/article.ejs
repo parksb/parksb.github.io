@@ -12,13 +12,13 @@
   <meta name="theme-color" content="#F5F5F5">
   <link rel="canonical" href="https://parksb.github.io/article/<%- article.id %>.html" />
 
-  <meta property="og:title" content="<%- article.title %>">
-  <meta property="og:image" content="https://user-images.githubusercontent.com/6410412/123942654-522f6a80-d9d6-11eb-82c5-02da0c05ebd3.png">
-  <meta property="og:description" content="<%- article.subtitle %>">
+  <meta property="og:title" content="<%- article.title %><% if (article.subtitle) { %>: <%- article.subtitle %> <% } %>">
+  <meta property="og:image" content="https://og-image-parksb.vercel.app/<%- article.encodedTitle %>.png?subtitle=<%- article.encodedSubtitle %>&theme=light&md=1&fontSize=90px">
+  <meta property="og:description" content="<%- article.summary %>">
 
-  <meta name="twitter:title" content="<%- article.title %>">
-  <meta name="twitter:image" content="https://user-images.githubusercontent.com/6410412/123942654-522f6a80-d9d6-11eb-82c5-02da0c05ebd3.png">
-  <meta name="twitter:description" content="<%- article.subtitle %>">
+  <meta name="twitter:title" content="<%- article.title %><% if (article.subtitle) { %>: <%- article.subtitle %> <% } %>">
+  <meta name="twitter:image" content="https://og-image-parksb.vercel.app/<%- article.encodedTitle %>.png?subtitle=<%- article.encodedSubtitle %>&theme=light&md=1&fontSize=90px">
+  <meta name="twitter:description" content="<%- article.summary %>">
   <meta name="twitter:card" content="summary_large_image">
 
   <link rel="preload" href="../../src/scss/init.scss" as="style">
