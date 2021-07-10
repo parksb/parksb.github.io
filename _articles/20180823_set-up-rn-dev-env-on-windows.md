@@ -41,7 +41,7 @@ CLI 툴을 이용하려면 먼저 `npm install -g expo-cli`로 expo-cli를 설�
 
 # Genymotion
 
-[Genymotion](https://www.genymotion.com/)은 안드로이드 가상 머신을 구동하기 위한 도구다. [다운로드](https://docs.genymotion.com/latest/Content/01_Get_Started/Installation.htm)하고, 가상 머신을 하나 만들면 준비가 끝난다.
+[Genymotion](https://www.genymotion.com/)은 안드로이드 가상 머신을 구동하기 위한 도구다. [다운로드](https://docs.genymotion.com/desktop/latest/01_Get_started.html#installation)하고, 가상 머신을 하나 만들면 준비가 끝난다.
 
 # 실행
 
