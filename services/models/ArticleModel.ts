@@ -8,6 +8,8 @@ interface ArticleModel extends ArticleMetaInfoModel {
   encodedTitle: string;
 
   encodedSubtitle?: string;
+
+  encodedDescription?: string;
 }
 
 export default ArticleModel;
