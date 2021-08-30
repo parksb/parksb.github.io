@@ -41,7 +41,7 @@ cake.makeNoise(); // 'Meow!'
 
 다른 객체지향 언어를 사용해 본 사람이라면 일반적인 객체지향 언어와 굉장히 다르다는 것을 알 수 있다. 객체지향하면 떠오르는 클래스없이 그냥 함수가 쓰였고, 심지어 메소드는 그 함수 밖에서 정의되었다. 자바스크립트 OOP에 생소한 사람에게는 '이건 뭔가 잘못됐어'하는 생각이 들 수 있다.
 
-ES6에는 여러 객체지향 문법이 추가되면서 자바나 C++같은 다른 객체지향 언어들과 비슷한 방식으로, 보다 간결하게 객체지향 프로그래밍을 할 수 있게 되었다. (예전 방식의 OOP는 MDN의 [객체지향 자바스크립트 소개](https://developer.mozilla.org/ko/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript)를 참고하자.)
+ES6에는 여러 객체지향 문법이 추가되면서 자바나 C++같은 다른 객체지향 언어들과 비슷한 방식으로, 보다 간결하게 객체지향 프로그래밍을 할 수 있게 되었다. (예전 방식의 OOP는 MDN의 [Object-oriented JavaScript for beginners](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object-oriented_JS)를 참고하자.)
 
 # Class
 
