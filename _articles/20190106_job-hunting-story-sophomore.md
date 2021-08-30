@@ -172,7 +172,7 @@ B회사의 입사일이 먼저 결정되어 C회사는 어쩔 수 없이 전형 
 <!-- markdown-link-check-disable-next-line -->
 * 너굴너굴님 "[좋은 면접자/지원자가 되는 방법](https://repo.yona.io/doortts/blog/post/292)"
 * 원티드 "[원티드와 함께하는 개발자 커리어 터치](https://www.notion.so/parksb/8a5fb590ae204295adf8117b5f58e32e)"
-* 원티드 "[인사담당자가 직접 말하는, 서류 통과가 잘 되는 이력서](https://brunch.co.kr/@wantedlab/29)"
+* 원티드 "[인사담당자가 직접 말하는, 서류 통과가 잘 되는 이력서](https://m.blog.naver.com/wantedlab/221100604211)"
 * 이동욱님 "[주니어 개발자를 위한 취업 정보](https://github.com/jojoldu/junior-recruit-scheduler)"
 * 이민석 교수님 "[자기소개서 쓰는 법](http://hl1itj.tistory.com/90)"
 * 이수진님 "[신입 소프트웨어 엔지니어의 영문 이력서 작성하기](https://sujinlee.me/entry-level-en-resume/)"
