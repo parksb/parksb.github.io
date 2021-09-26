@@ -4,7 +4,7 @@
 <link>https://parksb.github.io/</link>
 <description>Recently published articles written by Simon Park</description>
 <language>ko-kr</language>
-<lastBuildDate>Fri, 9 Jul 2021 17:57:48 +0900</lastBuildDate>
+<lastBuildDate>Sun, 26 Sep 2021 12:30:12 +0900</lastBuildDate>
 <item>
 <title>🧱 Server Driven UI 설계를 통한 UI 유연화</title>
 <link>https://parksb.github.io/article/38.html</link>
@@ -54,9 +54,9 @@
 <pubDate>Sat, 1 Jun 2019 02:00:00 +0900</pubDate>
 </item>
 <item>
-<title>하나의 함수로 강아지와 고양이 분류하기</title>
+<title>하나의 타입에 강아지와 고양이 담기</title>
 <link>https://parksb.github.io/article/30.html</link>
-<description>여기 강아지와 고양이가 있다.class Dog {  name: string;  age: number;}class Cat {  name: string;  color: string;}const dogs: Dog[] = [...];const cats: Cat[] = [...];이때 5살 미만의 강아지나 검은색 고양이를 골라내려...</description>
+<description>여기 강아지와 고양이가 있다.data class Dog(val name: String)data class Cat(val name: String)identity 함수는 항상 파라미터를 그대로 반환하는 항등 함수다. identity(dog: Dog) 함수는 Dog 타입 인자를 받아 반환하며, identity(cat: Cat)...</description>
 <pubDate>Wed, 1 May 2019 12:00:00 +0900</pubDate>
 </item>
 <item>
