@@ -2,5 +2,6 @@ User-agent: *
 Allow: /
 Disallow: /navigation.*.html
 Disallow: /magic-conch-shell/
+Disallow: /cv/
 
 Sitemap: http://parksb.github.io/sitemap.xml
