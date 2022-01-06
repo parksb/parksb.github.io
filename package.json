@@ -25,7 +25,7 @@
     "dayjs": "^1.8.20",
     "highlight.js": "^10.5.0",
     "katex": "^0.10.2",
-    "mermaid": "^8.10.2"
+    "mermaid": "^8.13.8"
   },
   "devDependencies": {
     "@babel/core": "^7.3.4",
