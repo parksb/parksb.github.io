@@ -103,7 +103,7 @@ device                |   |            |                |  |       |
 
 ```
 CPU (*N)                                                                        Memory
-+------------------------------+-------+<-insruction execution cycle->+--------------+
++------------------------------+-------+<-instruction execution cycle->+--------------+
 | thread of execution          | cache |                              |              |
 +---+--------------------------+-------+<--------data movement------->|              |
     |           ^        ^                                            |              |
