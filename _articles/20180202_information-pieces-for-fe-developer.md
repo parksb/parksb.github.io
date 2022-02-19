@@ -3,7 +3,6 @@ id: 0
 title: "📋 프론트엔드 개발자를 위한 토막상식"
 subtitle: ""
 date: "2018.02.02"
-tags: "프론트엔드"
 ---
 
 프로젝트하면서 알게 된 것들과 코딩테스트를 통해 배운 것들, 자바스크립트&제이쿼리: 인터랙티브 프론트엔드 웹 개발 교과서(Jon Duckett)와 JavaScript: The Good Parts(Douglas Crockford)를 통해 공부한 것들, 그리고 [Front-end Job Interview Questions](https://github.com/h5bp/Front-end-Developer-Interview-Questions)에 나와있는 질문들에 대한 대답을 간략하게 정리했다.

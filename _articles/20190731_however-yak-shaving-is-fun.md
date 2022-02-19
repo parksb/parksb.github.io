@@ -3,7 +3,6 @@ id: 32
 title: "하지만, 야크 털 깎기는 재미있다"
 subtitle: "밑바닥부터 만드는 즐거움"
 date: "2019.7.31"
-tags: "개발방법론"
 ---
 
 ![야크.](https://user-images.githubusercontent.com/6410412/60662976-d78bed00-9e98-11e9-9832-908c731a6989.jpg)

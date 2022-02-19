@@ -3,7 +3,6 @@ id: 9
 title: "🦕 공룡책으로 정리하는 운영체제 Ch.5"
 subtitle: "Process Scheduling"
 date: "2018.05.03"
-tags: "운영체제, 책"
 ---
 
 운영체제가 어떤 프로세스를 프로세서에 할당할 것인가 정하는 프로세스 스케줄링(Process scheduling)에 대해 다루는 챕터다. FCFS, SJF, RR 등 다양한 프로세스 스케줄링에 대해 소개한다.

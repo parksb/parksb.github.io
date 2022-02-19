@@ -3,7 +3,6 @@ id: 16
 title: "Race condition 발생시키고 Mutex lock으로 해결하기"
 subtitle: ""
 date: "2018.06.11"
-tags: "운영체제"
 ---
 
 race condition은 두 개 이상의 프로세스나 스레드가 하나의 데이터를 공유할 때 데이터가 동기화되지 않는 상황을 말한다. ([공룡책으로 정리하는 운영체제 Ch.6](https://parksb.github.io/article/10.html)에 정리했다.) 그리고 코드에서 이러한 문제가 발생할 수 있는 부분을 critical section이라고 하며, 이 문제를 해결하기 위해 한 번에 하나의 스레드만 critical section에 진입할 수 있도록 제어하는 기법을 mutex lock이라고 한다.

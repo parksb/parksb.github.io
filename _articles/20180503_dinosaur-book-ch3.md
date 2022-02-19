@@ -3,7 +3,6 @@ id: 7
 title: "🦕 공룡책으로 정리하는 운영체제 Ch.3"
 subtitle: "Process Concept"
 date: "2018.05.03"
-tags: "운영체제, 책"
 ---
 
 본격적으로 프로세스에 대해서 다루기 시작한다. [Ch.1 Overview](https://parksb.github.io/article/5.html)에서 나왔듯이 디스크에 있는 것은 프로그램, 메모리에 로드된 것은 프로세스라고 한다. 프로세스는 Stack, Heap, Data, Code로 나뉜다.

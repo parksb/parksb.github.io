@@ -3,7 +3,6 @@ id: 11
 title: "🦕 공룡책으로 정리하는 운영체제 Ch.7"
 subtitle: "Deadlocks"
 date: "2018.05.04"
-tags: "운영체제, 책"
 ---
 
 # Operating System Concepts Ch.7 Deadlocks

@@ -85,7 +85,6 @@ class ArticlePublisher {
       metaInfo.getId(),
       metaInfo.getTitle(),
       metaInfo.getSubtitle(),
-      metaInfo.getTags(),
       metaInfo.getDate(),
       htmlContent,
       filename,

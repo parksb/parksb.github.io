@@ -3,7 +3,6 @@ id: 23
 title: "🌐 Top-Down으로 접근하는 네트워크"
 subtitle: "Computer Networks and the Internet"
 date: "2018.09.28"
-tags: "네트워크, 책"
 ---
 
 James F. Kurose, Keith W. Ross의 Computer Networking: A Top-Down Approach는 잘 모르는 책이었는데 의외로 많은 학교에서 교재로 쓰이는 것 같다. 컴퓨터 네트워크 수업을 들으며 Computer Networking: A Top-Down Approach 7th Edition의 첫 챕터를 정리해보기로 했다.

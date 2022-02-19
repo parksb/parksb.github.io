@@ -3,7 +3,6 @@ id: 17
 title: "Java Design Pattern: Singleton"
 subtitle: ""
 date: "2018.06.15"
-tags: "자바, 디자인패턴"
 ---
 
 Singleton 패턴은 하나만 존재해야 하는 오브젝트를 만들 때 유용한 디자인 패턴이다. 간단히 구현해보자.

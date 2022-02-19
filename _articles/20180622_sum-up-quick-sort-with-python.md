@@ -3,7 +3,6 @@ id: 18
 title: "📊 파이썬으로 정리하는 Quick-Sort"
 subtitle: ""
 date: "2018.06.22"
-tags: "알고리즘"
 ---
 
 quick sort는 말 그대로 빠른 정렬을 의미한다. 큰 문제를 쪼개 작은 문제로 만들어서 정복하는 divide-and-conquer 패러다임에 바탕을 두고 있어 퍼포먼스가 좋다.

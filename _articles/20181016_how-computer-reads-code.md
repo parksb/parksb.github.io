@@ -3,7 +3,6 @@ id: 25
 title: "🤖 컴퓨터가 코드를 읽는 아주 구체적인 원리"
 subtitle: "MIPS 어셈블리어 훑어보기"
 date: "2018.10.16"
-tags: "아키텍처"
 ---
 
 지난 학기 [운영체제](https://parksb.github.io/article/5.html) 공부를 하면서 더 낮은 레벨은 어떻게 동작하는지 궁금해졌다. David A. Patterson과 John L. Hennessy의 Computer Organization and Design 5th Edition의 전반부를 바탕으로 MIPS instruction set에 대해 정리했다.

@@ -9,8 +9,6 @@ class ArticleMetaInfo implements ArticleMetaInfoModel {
 
   date: string;
 
-  tags: string | string[];
-
   filename: string;
 
   setProp(name: string, value: any) {
@@ -22,7 +20,6 @@ class ArticleMetaInfo implements ArticleMetaInfoModel {
       case 'title':
       case 'subtitle':
       case 'date':
-      case 'tags':
       case 'filename':
         this[name] = value;
         break;
@@ -46,14 +43,6 @@ class ArticleMetaInfo implements ArticleMetaInfoModel {
 
   getDate(): string {
     return this.date;
-  }
-
-  getTags(): string[] {
-    if (typeof this.tags === 'string') {
-      this.tags = this.tags.split(',');
-    }
-
-    return this.tags;
   }
 
   getFilename(): string {

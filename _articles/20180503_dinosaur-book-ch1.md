@@ -3,7 +3,6 @@ id: 5
 title: "🦕 공룡책으로 정리하는 운영체제 Ch.1"
 subtitle: "Overview"
 date: "2018.05.03"
-tags: "운영체제, 책"
 ---
 
 Abraham Silberschatz의 Operating System Concepts는 운영체제의 바이블로 불린다. 이번에 운영체제 수업을 들으면서 Operating System Concepts 9th Edition의 내용을 정리해보기로 했다.

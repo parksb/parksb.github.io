@@ -43,11 +43,6 @@
                 <h3><%= article.subtitle %></h3>
               <% } %>
               <time><%= article.date %></time>
-              <ul class="articles-tags">
-                <% article.tags.map((tag) => { %>
-                  <li>#<%= tag.trim() %></li>
-                <% }) %>
-              </ul>
             </a>
           </li>
         <% }) %>
