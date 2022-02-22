@@ -335,7 +335,7 @@ class GridViewComponent implements Component {
 
 ![Home, Sign in 화면 스크린샷.](https://user-images.githubusercontent.com/6410412/124346021-6a41fc80-dc17-11eb-8bf1-ef446ae0dfca.png)
 
-실제 동작하는 코드는 [github.com/parksb/server-driven-ui](https://github.com/parksb/server-driven-ui)에서 확인할 수 있다. 동작 방식이나 개념은 이 글에서 설명한 것과 동일하지만, 컴포넌트 종류나 구체적인 필드는 다소 차이가 있다.
+실제 동작하는 코드는 [github.com/parksb/server-driven-ui](https://github.com/parksb/server-driven-ui)에서 확인할 수 있다. 동작 방식이나 개념은 이 글에서 설명한 것과 동일하지만, 컴포넌트 종류나 구체적인 필드는 다소 차이가 있다. 또한 카카오스타일에서도 Server Driven UI 설계를 적극적으로 사용하고 있는데, [카카오스타일 기술 블로그](https://devblog.croquis.com/ko/2021-12-16-1-server-driven-ui)에서 자세히 볼 수 있다.
 
 ## References
 
