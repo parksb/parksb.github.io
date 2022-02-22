@@ -4,7 +4,13 @@
 <link>https://parksb.github.io/</link>
 <description>Recently published articles written by Simon Park</description>
 <language>ko-kr</language>
-<lastBuildDate>Sun, 26 Sep 2021 12:30:12 +0900</lastBuildDate>
+<lastBuildDate>Tue, 22 Feb 2022 17:05:20 +0900</lastBuildDate>
+<item>
+<title>철도 시간표가 유닉스 시간이 되기까지</title>
+<link>https://parksb.github.io/article/39.html</link>
+<description>컴퓨터 공학에서 시간을 다루는 것은 꽤나 고달픈 일이다. 특히 우리가 일상에서 직관적으로 이해하는 시간 체계와 일상에서 의식하지 못하는 시간 체계의 괴리로 인해 소프트웨어 엔지니어들은 고통받는다. 이 글에서는 태양시, 원자시 등 시간 체계에 대해 알아보고, 컴퓨터에서 어떻게 시간을 다루는지 설명하고자 한다.태양의 시간St...</description>
+<pubDate>Tue, 1 Feb 2022 22:00:00 +0900</pubDate>
+</item>
 <item>
 <title>🧱 Server Driven UI 설계를 통한 UI 유연화</title>
 <link>https://parksb.github.io/article/38.html</link>
@@ -58,12 +64,6 @@
 <link>https://parksb.github.io/article/30.html</link>
 <description>여기 강아지와 고양이가 있다.data class Dog(val name: String)data class Cat(val name: String)identity 함수는 항상 파라미터를 그대로 반환하는 항등 함수다. identity(dog: Dog) 함수는 Dog 타입 인자를 받아 반환하며, identity(cat: Cat)...</description>
 <pubDate>Wed, 1 May 2019 12:00:00 +0900</pubDate>
-</item>
-<item>
-<title>💵 캐시가 동작하는 아주 구체적인 원리</title>
-<link>https://parksb.github.io/article/29.html</link>
-<description>기술의 발전으로 프로세서 속도는 빠르게 증가해온 반면, 메모리의 속도는 이를 따라가지 못했다. 프로세서가 아무리 빨라도 메모리의 처리 속도가 느리면 결과적으로 전체 시스템 속도는 느려진다. 이를 개선하기 위한 장치가 바로 캐시(Cache)다.캐시는 CPU 칩 안에 들어가는 작고 빠른 메모리다. (그리고 비싸다.) 프로세서...</description>
-<pubDate>Sat, 2 Mar 2019 06:00:00 +0900</pubDate>
 </item>
 </channel>
 </rss>
