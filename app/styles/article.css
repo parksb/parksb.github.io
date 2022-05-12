@@ -240,7 +240,6 @@
   cursor: pointer;
 }
 
-
 #article-content-container .table-of-contents {
   font-size: 15px;
   margin-bottom: 30px;
@@ -267,16 +266,16 @@
   overflow: auto;
 }
 
-#article-content-container section .katex {
+#article-content-container section .katex * {
   font-family: 'Times New Roman', serif;
 }
 
-#article-content-container p .katex {
+#article-content-container p .katex * {
   font-family: 'Times New Roman', serif;
   font-size: 16px;
 }
 
-#article-content-container p .katex .msupsub {
+#article-content-container p .katex .msupsub * {
   font-size: 11px;
 }
 
