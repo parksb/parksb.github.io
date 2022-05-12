@@ -7,13 +7,14 @@ import * as path from 'path';
 
 import * as MarkdownIt from 'markdown-it';
 import * as katex from 'katex';
-import * as highlightJs from 'highlight.js';
+import highlightJs from 'highlight.js';
 import * as mdFootnote from 'markdown-it-footnote';
 import * as mdTex from 'markdown-it-texmath';
-import * as mdAnchor from 'markdown-it-anchor';
+import mdAnchor from 'markdown-it-anchor';
 import * as mdTableOfContents from 'markdown-it-table-of-contents';
 import * as mdContainer from 'markdown-it-container';
 import * as mdInlineComment from 'markdown-it-inline-comments';
+import * as mdLazyImage from 'markdown-it-image-lazy-loading';
 import mdMermaid from 'markdown-it-mermaid';
 
 import PagePublisher from './PagePublisher';
@@ -42,9 +43,9 @@ class ArticlePublisher {
     linkify: true,
     typographer: true,
     quotes: '“”‘’',
-    highlight: (str, lang) => {
-      if (lang && highlightJs.getLanguage(lang)) {
-        return `<pre class="hljs"><code>${highlightJs.highlight(lang, str, true).value}</code></pre>`;
+    highlight: (str, language) => {
+      if (language && highlightJs.getLanguage(language)) {
+        return `<pre class="hljs"><code>${highlightJs.highlight(str, { language }).value}</code></pre>`;
       }
       return `<pre class="hljs"><code>${ArticlePublisher.md.utils.escapeHtml(str)}</code></pre>`;
     },
@@ -69,7 +70,8 @@ class ArticlePublisher {
         }
         return '</details>\n';
       },
-    });
+    })
+    .use(mdLazyImage, { decoding: true });
 
   private static extractContent(text: string): string {
     return text.replace(/(-{3})([\s\S]+?)(\1)/, '');

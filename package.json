@@ -13,19 +13,19 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ParkSB/parksb.github.io.git"
+    "url": "git+https://github.com/parksb/parksb.github.io.git"
   },
-  "author": "ParkSB",
-  "license": "",
+  "author": "parksb",
+  "license": "CC BY-NC 4.0",
   "bugs": {
-    "url": "https://github.com/ParkSB/parksb.github.io/issues"
+    "url": "https://github.com/parksb/parksb.github.io/issues"
   },
-  "homepage": "https://github.com/ParkSB/parksb.github.io#readme",
+  "homepage": "https://github.com/parksb/parksb.github.io#readme",
   "dependencies": {
-    "dayjs": "^1.8.20",
-    "highlight.js": "^10.5.0",
-    "katex": "^0.10.2",
-    "mermaid": "^8.10.2"
+    "dayjs": "^1.11",
+    "highlight.js": "^11.5",
+    "katex": "^0.15",
+    "mermaid": "^9.1"
   },
   "devDependencies": {
     "@babel/core": "^7.3.4",
@@ -33,28 +33,29 @@
     "@types/chai": "^4.2.7",
     "@types/ejs": "^2.6.3",
     "@types/highlight.js": "^9.12.3",
-    "@types/markdown-it": "0.0.7",
+    "@types/markdown-it": "12.2",
     "@types/mocha": "^5.2.6",
     "@types/node": "^11.11.3",
     "@typescript-eslint/eslint-plugin": "^2.13.0",
     "@typescript-eslint/parser": "^2.13.0",
     "chai": "^4.2.0",
+    "ejs": "^2.6.1",
     "eslint": "^6.8.0",
     "eslint-config-airbnb-typescript": "^6.3.1",
     "eslint-plugin-import": "^2.19.1",
+    "markdown-it": "^13.0",
+    "markdown-it-anchor": "^8.6",
+    "markdown-it-container": "^3.0",
+    "markdown-it-footnote": "^3.0",
+    "markdown-it-image-lazy-loading": "^1.2.0",
+    "markdown-it-inline-comments": "^1.0",
+    "markdown-it-mermaid": "^0.2",
+    "markdown-it-table-of-contents": "^0.6",
+    "markdown-it-texmath": "^0.9",
     "mocha": "^6.0.2",
     "parcel-bundler": "^1.12.4",
     "sass": "^1.17.3",
     "ts-node": "^8.0.3",
-    "typescript": "^3.3.3333",
-    "ejs": "^2.6.1",
-    "markdown-it": "^8.4.2",
-    "markdown-it-anchor": "^5.3.0",
-    "markdown-it-container": "^3.0.0",
-    "markdown-it-footnote": "^3.0.1",
-    "markdown-it-inline-comments": "^1.0.1",
-    "markdown-it-mermaid": "^0.2.5",
-    "markdown-it-table-of-contents": "^0.4.4",
-    "markdown-it-texmath": "^0.5.5"
+    "typescript": "^3.3.3333"
   }
 }
