@@ -8,7 +8,7 @@ thumbnail: "https://user-images.githubusercontent.com/6410412/46553443-75f21e80-
 
 ![](https://user-images.githubusercontent.com/6410412/46553442-75598800-c918-11e8-859b-35d70b56d9de.png)
 
-_**하루 (2013) https://harooo.com/harooo/**_
+_**하루 (2013) [harooo.com](https://harooo.com/harooo/)**_
 
 온라인 대화와 오프라인 대화의 가장 큰 차이는 무엇일까요?
 

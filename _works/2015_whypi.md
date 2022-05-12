@@ -10,7 +10,7 @@ thumbnail: "https://user-images.githubusercontent.com/6410412/46553450-7c809600-
 
 ![](https://user-images.githubusercontent.com/6410412/46553452-7d192c80-c918-11e8-8446-da60e40b017c.png)
 
-_**Whyπ (2014) https://harooo.com/whypi/**_
+_**Whyπ (2014)**_
 
 와이파이는 청소년의 시각으로 사회 문제를 다루는 언론입니다.
 

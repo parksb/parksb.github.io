@@ -6,7 +6,7 @@ thumbnail: "https://user-images.githubusercontent.com/6410412/46553496-9de18200-
 
 ![](https://user-images.githubusercontent.com/6410412/46553496-9de18200-c918-11e8-9ecb-05d560306e5d.png)
 
-_**Airbnb JavaScript Style Guide: 한국어 (2018) https://github.com/ParkSB/javascript-style-guide**_
+_**Airbnb JavaScript Style Guide: 한국어 (2018) [github.com/parksb/javascript-style-guide](https://github.com/parksb/javascript-style-guide)**_
 
 에어비앤비의 자바스크립트 스타일 가이드 전문을 번역했습니다.
 

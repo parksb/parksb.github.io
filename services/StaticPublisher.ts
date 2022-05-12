@@ -1,5 +1,5 @@
 import * as path from 'path';
-import * as dayjs from 'dayjs';
+import dayjs from 'dayjs';
 import * as fs from 'fs';
 
 import WorkPublisher from './WorkPublisher';

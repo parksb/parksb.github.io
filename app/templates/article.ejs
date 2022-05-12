@@ -21,16 +21,21 @@
   <meta name="twitter:description" content="<%- article.summary %>">
   <meta name="twitter:card" content="summary_large_image">
 
-  <link rel="preload" href="../../src/scss/init.scss" as="style">
-  <link rel="preload" href="../../src/scss/article.scss" as="style">
+  <link rel="preload" href="../styles/init.css" as="style">
+  <link rel="preload" href="../styles/article.css" as="style">
+  <link rel="preload" href="../styles/dracula.css" as="style">
+  <link rel="preload" href="../styles/katex.css" as="style">
 
-  <link rel="shortcut icon" href="../../assets/favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="../../src/scss/init.scss">
-  <link rel="stylesheet" href="../../src/scss/article.scss">
+  <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="../styles/init.css">
+  <link rel="stylesheet" href="../styles/article.css">
+  <link rel="stylesheet" href="../styles/dracula.css">
+  <link rel="stylesheet" href="../styles/katex.css">
 </head>
 
 <body>
   <header id="top-container" role="navigation">
+    <%- include(process.cwd() + '/app/templates/navigation'); %>
   </header>
 
   <main id="main-container">
@@ -59,7 +64,7 @@
       <section id="article-navigation">
         <% if (nextArticle) { %>
           <div class="article-navigation-item article-navigation-next">
-            <a href="/article/<%- nextArticle.id %>.html">
+            <a href="<%- nextArticle.id %>.html">
               <div class="article-navigation-arrow article-navigation-next">＜</div>
               <div class="article-navigation-content article-navigation-next">
                 <p class="article-navigation-title"><%- nextArticle.title %></p>
@@ -70,7 +75,7 @@
         <% } %>
         <% if (prevArticle) { %>
           <div class="article-navigation-item article-navigation-prev">
-            <a href="/article/<%- prevArticle.id %>.html">
+            <a href="<%- prevArticle.id %>.html">
               <div class="article-navigation-arrow article-navigation-prev">＞</div>
               <div class="article-navigation-content article-navigation-prev">
                 <p class="article-navigation-title"><%- prevArticle.title %></p>
@@ -94,7 +99,7 @@
       </section>
 
       <section id="article-list-button-container">
-        <a href="/articles.html">
+        <a href="../articles.html">
           <div id="article-list-button">📚</div>
         </a>
       </section>
@@ -105,8 +110,6 @@
   <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0"></script>
   <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-  <script defer src="../../src/ts/init.ts"></script>
-  <script defer src="../../src/ts/article.ts"></script>
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113147800-1"></script>
   <script>

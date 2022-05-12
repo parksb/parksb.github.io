@@ -8,7 +8,7 @@ thumbnail: "https://user-images.githubusercontent.com/6410412/46553527-b3ef4280-
 
 ![](https://user-images.githubusercontent.com/6410412/46553529-b3ef4280-c918-11e8-832b-04c459ad7eb7.png)
 
-_**Intergrated Git Profile (2018) https://github.com/ParkSB/integrated-git-profile**_
+_**Intergrated Git Profile (2018) [github.com/parksb/integrated-git-profile](https://github.com/parksb/integrated-git-profile)**_
 
 Github 프로필과 Gitlab 프로필을 한 페이지에 보여주는 웹앱을 만들었습니다.
 

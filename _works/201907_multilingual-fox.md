@@ -8,7 +8,7 @@ thumbnail: "https://user-images.githubusercontent.com/6410412/61639214-00ecab80-
 
 ![](https://user-images.githubusercontent.com/6410412/61590282-982c0300-abf1-11e9-9845-04e6bd174230.gif)
 
-_**Multilingual Fox (2019) https://github.com/ParkSB/multilingual-fox**_
+_**Multilingual Fox (2019) [github.com/parksb/multilingual-fox](https://github.com/parksb/multilingual-fox)**_
 
 A simple dictionary extension supporting English-Korean, Chinese-Korean and Japanese-Korean for Firefox browser.
 

@@ -19,16 +19,17 @@
   <meta name="twitter:description" content="박성범 Simon Park ― About">
   <meta name="twitter:card" content="summary_large_image">
 
-  <link rel="preload" href="../src/scss/init.scss" as="style">
-  <link rel="preload" href="../src/scss/about.scss" as="style">
+  <link rel="preload" href="./styles/init.css" as="style">
+  <link rel="preload" href="./styles/about.css" as="style">
 
-  <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="../src/scss/init.scss">
-  <link rel="stylesheet" href="../src/scss/about.scss">
+  <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="./styles/init.css">
+  <link rel="stylesheet" href="./styles/about.css">
 </head>
 
 <body>
   <header id="top-container" role="navigation">
+    <%- include(process.cwd() + '/app/templates/navigation'); %>
   </header>
 
   <main id="main-container">
@@ -136,7 +137,6 @@
     </section>
   </main>
 
-  <script defer src="../src/ts/init.ts"></script>
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113147800-1"></script>
   <script>

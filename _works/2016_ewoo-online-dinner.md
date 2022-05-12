@@ -10,7 +10,7 @@ thumbnail: "https://user-images.githubusercontent.com/6410412/46553464-83a7a400-
 
 ![](https://user-images.githubusercontent.com/6410412/46553463-83a7a400-c918-11e8-9db7-833b64cb3701.png)
 
-_**이우학교 온라인 석식신청 (2016) https://dinner.2woo.net/**_
+_**이우학교 온라인 석식신청 (2016)**_
 
 종이 신청서를 돌려 저녁 급식을 신청받던 기존의 방식을 바꾸기 위해 온라인 석식신청 서비스를 만들었습니다.
 

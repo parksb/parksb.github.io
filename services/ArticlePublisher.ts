@@ -5,16 +5,16 @@ import * as ejs from 'ejs';
 import * as fs from 'fs';
 import * as path from 'path';
 
-import * as MarkdownIt from 'markdown-it';
+import MarkdownIt from 'markdown-it';
 import * as katex from 'katex';
 import highlightJs from 'highlight.js';
-import * as mdFootnote from 'markdown-it-footnote';
-import * as mdTex from 'markdown-it-texmath';
+import mdFootnote from 'markdown-it-footnote';
+import mdTex from 'markdown-it-texmath';
 import mdAnchor from 'markdown-it-anchor';
-import * as mdTableOfContents from 'markdown-it-table-of-contents';
-import * as mdContainer from 'markdown-it-container';
-import * as mdInlineComment from 'markdown-it-inline-comments';
-import * as mdLazyImage from 'markdown-it-image-lazy-loading';
+import mdTableOfContents from 'markdown-it-table-of-contents';
+import mdContainer from 'markdown-it-container';
+import mdInlineComment from 'markdown-it-inline-comments';
+import mdLazyImage from 'markdown-it-image-lazy-loading';
 import mdMermaid from 'markdown-it-mermaid';
 
 import PagePublisher from './PagePublisher';

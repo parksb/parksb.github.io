@@ -62,9 +62,6 @@ switch (target) {
 
     console.log('Publish all pages: PagePublisher.publishAbout()');
     PagePublisher.publishAbout();
-
-    console.log('Publish all pages: PagePublisher.publishNavigation()');
-    PagePublisher.publishNavigation();
     break;
 
   default:
