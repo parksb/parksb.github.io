@@ -5,7 +5,7 @@
 }
 
 #about-container ul,
-#about-container p {
+#about-container section.intro {
   margin-bottom: 25px;
   font-size: 15px;
   line-height: 1.6;
@@ -54,12 +54,13 @@
   margin-top: 10px;
 }
 
-#about-container[open=""] > summary {
+#about-container details[open] > summary {
   background-color: black;
   color: white;
 }
 
 #about-container summary {
+  width: fit-content;
   cursor: pointer;
   font-size: 15px;
 }
