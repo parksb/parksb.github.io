@@ -1,3 +1,7 @@
+@import 'init.css';
+@import 'dracula.css';
+@import 'katex.css';
+
 #main-container {
   max-width: 800px;
   margin: auto;
