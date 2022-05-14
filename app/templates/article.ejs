@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
   <meta charset="UTF-8" />
   <title>
@@ -24,13 +23,21 @@
   <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon">
   <link rel="preload" href="../styles/article.css" as="style">
   <link rel="stylesheet" href="../styles/article.css">
-</head>
 
+  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113147800-1"></script>
+  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v13.0"></script>
+  <script async>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'UA-113147800-1');
+  </script>
+</head>
 <body>
   <header id="top-container" role="navigation">
     <%- include(process.cwd() + '/app/templates/navigation'); %>
   </header>
-
   <main id="main-container">
     <article id="article-container">
       <h1 id="article-title">
@@ -49,11 +56,9 @@
           (history)
         </a>
       </small>
-
       <section id="article-content-container">
         <%- article.content %>
       </section>
-
       <section id="article-navigation">
         <% if (nextArticle) { %>
           <div class="article-navigation-item article-navigation-next">
@@ -78,19 +83,15 @@
           </div>
         <% } %>
       </section>
-
       <section id="article-social-container">
+        <div id="fb-root"></div>
         <div id="fb-like" class="fb-like" data-href="https://parksb.github.io/article/<%- article.id %>.html"
           data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
         <a href="https://twitter.com/share" class="twitter-share-button" data-show-count="true"></a>
       </section>
-
       <section id="article-comments">
-        <script async src="https://utteranc.es/client.js" repo="parksb/parksb.github.io-comments" issue-term="pathname" theme="github-light"
-          crossorigin="anonymous">
-          </script>
+        <script async src="https://utteranc.es/client.js" repo="parksb/parksb.github.io-comments" issue-term="pathname" theme="github-light" crossorigin="anonymous"></script>
       </section>
-
       <section id="article-list-button-container">
         <a href="../articles.html">
           <div id="article-list-button">📚</div>
@@ -98,18 +99,5 @@
       </section>
     </article>
   </main>
-
-  <div id="fb-root"></div>
-  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0"></script>
-  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113147800-1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-
-    gtag('config', 'UA-113147800-1');
-  </script>
 </body>
+</html>

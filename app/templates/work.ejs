@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
   <meta charset="UTF-8" />
   <title>
@@ -24,13 +23,20 @@
   <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon">
   <link rel="preload" href="../styles/work.css" as="style">
   <link rel="stylesheet" href="../styles/work.css">
-</head>
 
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113147800-1"></script>
+  <script async>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-113147800-1');
+  </script>
+</head>
 <body>
   <header id="top-container" role="navigation">
     <%- include(process.cwd() + '/app/templates/navigation'); %>
   </header>
-
   <main id="main-container">
     <article id="work-container">
       <h1 id="work-title">
@@ -39,20 +45,10 @@
       <h2 id="work-subtitle">
         <%- subtitle %>
       </h2>
-
       <section id="work-content-container">
         <%- content %>
       </section>
     </article>
   </main>
-
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113147800-1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-
-    gtag('config', 'UA-113147800-1');
-  </script>
 </body>
+</html>

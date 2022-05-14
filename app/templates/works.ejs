@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
   <meta charset="UTF-8" />
   <title>Simon Park</title>
@@ -22,13 +21,19 @@
   <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
   <link rel="preload" href="./styles/works.css" as="style">
   <link rel="stylesheet" href="./styles/works.css">
-</head>
 
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113147800-1"></script>
+  <script async>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'UA-113147800-1');
+  </script>
+</head>
 <body>
   <header id="top-container" role="navigation">
     <%- include(process.cwd() + '/app/templates/navigation'); %>
   </header>
-
   <main id="main-container">
     <section id="works-container">
       <% works.reverse().map((work) => { %>
@@ -41,15 +46,5 @@
       <% }) %>
     </section>
   </main>
-
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113147800-1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'UA-113147800-1');
-  </script>
 </body>
-
 </html>
