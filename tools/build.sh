@@ -51,7 +51,9 @@ echo "> cp -r ./app/assets/* ${DIST}/assets/"
 cp -r ./app/assets/* $DIST/assets/
 
 echo -e "\n${GREEN}Minify css files...${WHITE}"
-echo "> cleancss --batch --batch-suffix '' ${DIST}/styles/*.css"
 cleancss --batch --batch-suffix '' $DIST/styles/*.css
+
+echo -e "\n${GREEN}Minify html files...${WHITE}"
+html-minifier --input-dir $DIST --output-dir $DIST --file-ext html --remove-comments --remove-optional-tags --remove-redundant-attributes --remove-script-type-attributes --remove-tag-whitespace --use-short-doctype
 
 echo -e "\n${CYAN}Done!${WHITE}"
