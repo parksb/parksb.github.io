@@ -32,10 +32,8 @@
 }
 
 .articles-list-item {
-  display: block;
   width: fit-content;
   margin-bottom: 15px;
-  border-bottom: 1px solid #9f9f9f;
   padding-bottom: 12px;
 }
 
