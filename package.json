@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start":  "http-server ./dist -p 1234",
     "publish": "ts-node ./tools/publish.ts",
     "build": "bash ./tools/build.sh",
     "deploy": "bash ./tools/deploy.sh"
@@ -37,6 +38,7 @@
     "eslint-config-airbnb-typescript": "^17.0",
     "eslint-plugin-import": "^2.26",
     "html-minifier": "^4.0.0",
+    "http-server": "^14.1.0",
     "markdown-it": "^13.0",
     "markdown-it-anchor": "^8.6",
     "markdown-it-container": "^3.0",
