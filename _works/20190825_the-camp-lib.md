@@ -1,10 +1,10 @@
 ---
 title: "THE CAMP Library"
 subtitle: "Unofficial library for THE CAMP, an army communication service"
-thumbnail: "/_images/74082458-7fa40d00-4a9d-11ea-9df0-1528eaafc793.png"
+thumbnail: "/images/74082458-7fa40d00-4a9d-11ea-9df0-1528eaafc793.png"
 ---
 
-![](/_images/74082458-7fa40d00-4a9d-11ea-9df0-1528eaafc793.png)
+![](/images/74082458-7fa40d00-4a9d-11ea-9df0-1528eaafc793.png)
 
 _**THE CAMP Library (2019) [github.com/parksb/the-camp-lib](https://github.com/parksb/the-camp-lib)**_
 

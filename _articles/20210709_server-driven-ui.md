@@ -23,7 +23,7 @@ GET /screen/home
 
 이 API는 홈 화면을 구성하는 UI 요소 리스트를 JSON 포맷으로 응답한다. 따라서 클라이언트는 응답의 `data` 리스트를 순회하며 각각의 `type`에 해당하는 UI 요소를 화면에 그려주면 된다.
 
-![앱바, 텍스트 버튼 2개가 배치된 화면.](/_images/124375746-bf951100-dcde-11eb-8b50-9362fbf46ff9.png)
+![앱바, 텍스트 버튼 2개가 배치된 화면.](/images/124375746-bf951100-dcde-11eb-8b50-9362fbf46ff9.png)
 
 이렇게 하면 클라이언트를 새로 배포하지 않아도 서버에서 `data` 리스트의 요소를 변경함으로써 클라이언트가 유연한 UI를 제공할 수 있을 것이다. 이처럼 UI에 대한 정보를 서버에서 관리, 제공하는 것이 Server Driven UI 설계의 기본 개념이다.
 
@@ -197,7 +197,7 @@ fn home_components() -> Vec<Component> {
 
 플러터(Flutter)의 [머티리얼 라이브러리(Material Library)](https://api.flutter.dev/flutter/material/material-library.html)는 구글의 머티리얼 디자인 시스템을 높은 수준으로 구현하고 있어 Server Driven UI를 바로 적용할 수 있다.
 
-![플러터 머티리얼 컴포넌트 위젯 목록: Appbar, BottomNavigationBar, Drawer.](/_images/123917302-995d3180-d9bd-11eb-8c4f-706ee9e92565.png)
+![플러터 머티리얼 컴포넌트 위젯 목록: Appbar, BottomNavigationBar, Drawer.](/images/123917302-995d3180-d9bd-11eb-8c4f-706ee9e92565.png)
 
 ### 프래그먼트-컴포넌트-위젯 대응
 
@@ -261,7 +261,7 @@ class Registry {
 
 앞서 살펴본 레지스트리를 이용해 서버에서 응답하는 모든 컴포넌트를 위젯으로 변환하고, 각 화면에 맞는 위젯을 구성할 수 있게 되었다. 지금까지의 흐름을 서버, API 응답, 클라이언트로 정리하면 아래와 같다. 
 
-![서버, GraphQL 응답, 클라이언트 흐름 도식.](/_images/124376806-afcbfb80-dce3-11eb-8661-6cebf1f787c5.png)
+![서버, GraphQL 응답, 클라이언트 흐름 도식.](/images/124376806-afcbfb80-dce3-11eb-8661-6cebf1f787c5.png)
 
 플러터 위젯 중 [`Container`](https://api.flutter.dev/flutter/widgets/Container-class.html)이나 [`Column`](https://api.flutter.dev/flutter/widgets/Column-class.html)과 같이 다른 위젯을 `child` 또는 `children`으로 담는 위젯도 같은 방식으로 만들 수 있다. 일종의 '컴포넌트의 컴포넌트'인 셈이다. 예를 들어 [`GridView`](https://api.flutter.dev/flutter/widgets/GridView-class.html) 위젯을 생각해보자. 그리드 뷰는 격자 셀이 반복되는 레이아웃으로, 각 셀에는 다른 위젯을 배치시킬 수 있다. 그리드의 열 개수와 각 셀에 넣을 컴포넌트를 서버에서 관리하고자 한다면 아래와 같이 스키마를 구성할 수 있을 것이다.
 
@@ -333,7 +333,7 @@ class GridViewComponent implements Component {
 
 이제 서버에서 `GridView`의 `children` 필드에 `TextButton` 두 개를 응답하면 클라이언트에서는 그대로 두 개의 셀에 `TextButton`이 담긴 화면을 구성한다. 그리드의 열 개수나 각 셀의 내용은 서버 응답을 수정하는 것만으로 언제든 변경할 수 있다. 
 
-![Home, Sign in 화면 스크린샷.](/_images/124346021-6a41fc80-dc17-11eb-8bf1-ef446ae0dfca.png)
+![Home, Sign in 화면 스크린샷.](/images/124346021-6a41fc80-dc17-11eb-8bf1-ef446ae0dfca.png)
 
 실제 동작하는 코드는 [github.com/parksb/server-driven-ui](https://github.com/parksb/server-driven-ui)에서 확인할 수 있다. 동작 방식이나 개념은 이 글에서 설명한 것과 동일하지만, 컴포넌트 종류나 구체적인 필드는 다소 차이가 있다. 또한 카카오스타일에서도 Server Driven UI 설계를 적극적으로 사용하고 있는데, [카카오스타일 기술 블로그](https://devblog.croquis.com/ko/2021-12-16-1-server-driven-ui)에서 자세히 볼 수 있다.
 

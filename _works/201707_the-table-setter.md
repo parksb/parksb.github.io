@@ -1,14 +1,14 @@
 ---
 title: "The Table Setter"
 subtitle: "청소년과 청년 전문가들의 상생과 공존을 추구하는 교육 플랫폼"
-thumbnail: "/_images/46553474-8a361b80-c918-11e8-9386-faadced7f6ec.png"
+thumbnail: "/images/46553474-8a361b80-c918-11e8-9386-faadced7f6ec.png"
 ---
 
-![](/_images/46553474-8a361b80-c918-11e8-9386-faadced7f6ec.png)
+![](/images/46553474-8a361b80-c918-11e8-9386-faadced7f6ec.png)
 
-![](/_images/46553475-8a361b80-c918-11e8-89e5-ad218114b0d1.png)
+![](/images/46553475-8a361b80-c918-11e8-89e5-ad218114b0d1.png)
 
-![](/_images/46553473-8a361b80-c918-11e8-94be-fe306ac87607.png)
+![](/images/46553473-8a361b80-c918-11e8-94be-fe306ac87607.png)
 
 _**The Table Setter (2017)**_
 
