@@ -1,7 +1,7 @@
 ---
 title: "하루"
 subtitle: "24시간이 지나면 글이 사라지는 SNS"
-thumbnail: "/images/46553443-75f21e80-c918-11e8-8b8c-20db91cbb87e.png"
+thumbnail: "/images/9950C1455B214D5B27.png"
 ---
 
 ![](/images/9950C1455B214D5B27.png)
