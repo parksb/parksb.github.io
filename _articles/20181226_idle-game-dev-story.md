@@ -7,7 +7,7 @@ date: "2018.12.26"
 
 [Santa Inc.](https://parksb.github.io/santa-inc/)는 초국적 블랙 기업 '산타 주식회사'를 운영하는 방치형 게임(Idle game)이다. 산타의 목적은 오직 선물 생산을 최대로 끌어올리는 것. 산타는 직원을 고용하고, 정책을 채택하며 끝없이 선물을 생산한다.
 
-![Santa Inc. 세계를 선도하는 글로벌 기업. 루돌프.](https://raw.githubusercontent.com/ParkSB/santa-inc/develop/assets/meta/preview.png)
+![Santa Inc. 세계를 선도하는 글로벌 기업. 루돌프.](/_images/169650971-29af61d4-94a0-47f9-8f08-edb34eb996f5.png)
 
 Santa Inc.를 처음 만든 건 2015년 겨울이었다. 웹 프로그래밍을 공부한 후 매년 크리스마스마다 이상한 걸 만들었는데, 이것도 그 일환이었다. 당시엔 크리스마스에 맞춰 런칭하겠다는 욕심으로 학기 중 20일만에 게임을 완성했다. 물론 코드가 엉망진창이었다. 
 
@@ -228,7 +228,7 @@ export default Worker;
 
 ## 마우스로 도트찍기
 
-![알바요정.](https://raw.githubusercontent.com/ParkSB/santa-inc/develop/assets/parttimeElf.gif)
+![알바요정.](/_images/169650973-688ef6f9-c55c-437a-8b19-3a6d1d4b33f8.gif)
 
 도트그래픽 외에는 선택지가 없었다. 다행인 것은 내가 도트그래픽을 좋아하고, 도트를 찍는 것도 좋아한다는 것이었다. 마우스로 열심히 도트를 찍어 프레임 포함 30개 정도의 어셋을 만들었다. 이 중에는 인게임에 적용된 것도 있고, 안타깝게 적용되지 못한 것도 있다. 빈 교실에서 눈오는 창밖을 보며 도트찍던(...) 그때가 생각난다.
 

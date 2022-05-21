@@ -1,12 +1,12 @@
 ---
 title: "DoiT 신입회원 모집"
 subtitle: "전공과 실력에 상관없이 개발을 하고 싶다면"
-thumbnail: "https://user-images.githubusercontent.com/6410412/46553508-a46ff980-c918-11e8-9f5f-db5d4c198ae3.png"
+thumbnail: "/_images/46553508-a46ff980-c918-11e8-9f5f-db5d4c198ae3.png"
 ---
 
-![](https://user-images.githubusercontent.com/6410412/46553508-a46ff980-c918-11e8-9f5f-db5d4c198ae3.png)
+![](/_images/46553508-a46ff980-c918-11e8-9f5f-db5d4c198ae3.png)
 
-![](https://user-images.githubusercontent.com/6410412/46553510-a46ff980-c918-11e8-8793-ea781e49d2f7.png)
+![](/_images/46553510-a46ff980-c918-11e8-8793-ea781e49d2f7.png)
 
 _**DoiT 신입회원 모집 (2018)**_
 

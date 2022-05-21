@@ -1,12 +1,12 @@
 ---
 title: "Intergrated Git Profile"
 subtitle: "Github와 Gitlab 프로필을 한 페이지에서"
-thumbnail: "https://user-images.githubusercontent.com/6410412/46553527-b3ef4280-c918-11e8-985a-da537d1e37fc.png"
+thumbnail: "/_images/46553527-b3ef4280-c918-11e8-985a-da537d1e37fc.png"
 ---
 
-![](https://user-images.githubusercontent.com/6410412/46553527-b3ef4280-c918-11e8-985a-da537d1e37fc.png)
+![](/_images/46553527-b3ef4280-c918-11e8-985a-da537d1e37fc.png)
 
-![](https://user-images.githubusercontent.com/6410412/46553529-b3ef4280-c918-11e8-832b-04c459ad7eb7.png)
+![](/_images/46553529-b3ef4280-c918-11e8-832b-04c459ad7eb7.jpg)
 
 _**Intergrated Git Profile (2018) [github.com/parksb/integrated-git-profile](https://github.com/parksb/integrated-git-profile)**_
 

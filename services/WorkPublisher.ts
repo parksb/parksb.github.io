@@ -2,6 +2,7 @@
 /* eslint-disable import/no-extraneous-dependencies */
 
 import MarkdownIt from 'markdown-it';
+import mdLazyImage from 'markdown-it-image-lazy-loading';
 import * as ejs from 'ejs';
 import * as fs from 'fs';
 import * as path from 'path';
@@ -26,6 +27,10 @@ class WorkPublisher {
     linkify: true,
     typographer: true,
     quotes: '“”‘’',
+  }).use(mdLazyImage, {
+    decoding: true,
+    image_size: true,
+    base_path: path.join(__dirname, '../'),
   });
 
   private static extractContent(text: string): string {

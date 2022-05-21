@@ -1,12 +1,12 @@
 ---
 title: "과학기술로 세상을 바꾸고 싶은 사람들"
 subtitle: "The table setter & 마이소사이어티 과학기술 워크숍"
-thumbnail: "https://user-images.githubusercontent.com/6410412/46553536-b8b3f680-c918-11e8-8e0b-e41c0103c8de.png"
+thumbnail: "/_images/46553536-b8b3f680-c918-11e8-8e0b-e41c0103c8de.png"
 ---
 
-![](https://user-images.githubusercontent.com/6410412/46553536-b8b3f680-c918-11e8-8e0b-e41c0103c8de.png)
+![](/_images/46553536-b8b3f680-c918-11e8-8e0b-e41c0103c8de.png)
 
-![](https://user-images.githubusercontent.com/6410412/46553537-b8b3f680-c918-11e8-92c4-1eb1479a4a15.png)
+![](/_images/46553537-b8b3f680-c918-11e8-92c4-1eb1479a4a15.png)
 
 _**과학기술로 세상을 바꾸고 싶은 사람들 (2018)**_
 

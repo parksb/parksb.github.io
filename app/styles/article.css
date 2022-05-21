@@ -4,8 +4,7 @@
 
 #main-container {
   max-width: 800px;
-  margin: auto;
-  margin-top: 90px;
+  margin: 90px auto auto;
 }
 
 #article-title {
@@ -22,7 +21,7 @@
 
 #article-date {
   font-size: 12px;
-  color: #C0C0C0;
+  color: #767676;
 }
 
 #article-history {
@@ -30,7 +29,7 @@
 }
 
 #article-history a {
-  color: #C0C0C0;
+  color: #767676;
   text-decoration: underline;
 }
 
@@ -152,6 +151,7 @@
 #article-content-container img {
   max-width: 100%;
   margin-top: 10px;
+  height: auto;
 }
 
 #article-content-container img + em {

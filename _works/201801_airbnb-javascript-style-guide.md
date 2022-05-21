@@ -1,10 +1,10 @@
 ---
 title: "Airbnb JavaScript Style Guide: 한국어"
 subtitle: "대체로 합리적인 자바스크립트 접근 방법"
-thumbnail: "https://user-images.githubusercontent.com/6410412/46553496-9de18200-c918-11e8-9ecb-05d560306e5d.png"
+thumbnail: "/_images/46553496-9de18200-c918-11e8-9ecb-05d560306e5d.png"
 ---
 
-![](https://user-images.githubusercontent.com/6410412/46553496-9de18200-c918-11e8-9ecb-05d560306e5d.png)
+![](/_images/46553496-9de18200-c918-11e8-9ecb-05d560306e5d.png)
 
 _**Airbnb JavaScript Style Guide: 한국어 (2018) [github.com/parksb/javascript-style-guide](https://github.com/parksb/javascript-style-guide)**_
 

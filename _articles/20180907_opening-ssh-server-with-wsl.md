@@ -75,6 +75,4 @@ $ sudo service ssh start
 
 [Putty](https://www.putty.org/)나 [Termius](https://www.termius.com/) 같은 프로그램을 이용해 접속 테스트를 해보자. 서버와 같은 컴퓨터에서 접속하는 경우 `hostname`은 서버의 공인 아이피로, `port`는 앞서 설정한 `2222`로 두면 된다.
 
-![Putty에서 원격 접속.](https://user-images.githubusercontent.com/6410412/45214415-6067e580-b2d5-11e8-88b6-a39c1ca6b051.PNG)
-
 이어서 외부망의 넷북에서 테스트했고, 이후 아이패드에서도 테스트했는데 잘 됐다! 이제 학교에 노트북들고 가지 않고 프로그래밍을 할 수 있게 되었다.

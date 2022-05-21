@@ -71,7 +71,11 @@ class ArticlePublisher {
         return '</details>\n';
       },
     })
-    .use(mdLazyImage, { decoding: true });
+    .use(mdLazyImage, {
+      decoding: true,
+      image_size: true,
+      base_path: path.join(__dirname, '../'),
+    });
 
   private static extractContent(text: string): string {
     return text.replace(/(-{3})([\s\S]+?)(\1)/, '');

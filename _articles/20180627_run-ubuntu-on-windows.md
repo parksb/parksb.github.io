@@ -13,8 +13,6 @@ WSL은 Windows Subsystem for Linux의 약자로, 윈도우 서브시스템에 �
 
 설치한 우분투를 실행하여 UNIX 아이디와 패스워드를 설정하고 나면 아래와 같은 화면이 나타난다. 이제 윈도우에서 우분투 bash를 사용할 수 있다!
 
-![비주얼스튜디오 코드에서 bash를 실행.](https://t1.daumcdn.net/cfile/tistory/99E2073D5B32F34C15)
-
 # 작업 디렉토리 링크하기
 
 `~` 경로는 home 디렉토리를 의미하며, 처음 계정을 생성하면 기본적으로 `/home/{ID}`가 home 디렉토리로 설정된다. 어디서든 `cd` 명령어를 통해 이곳으로 이동할 수 있다. 하지만 주로 작업하는 디렉토리는 이곳이 아니므로, 설정이 필요하다.
@@ -39,11 +37,7 @@ $ ln -s /mnt/c/Bitnami/wampstack/apache2/htdocs /home/parksb/htdocs
 
 # Git branch 보여주기
 
-git bash를 사용하면 bash에 git branch가 나타난다.
-
-![비주얼스튜디오 코드에서 git bash를 실행.](https://t1.daumcdn.net/cfile/tistory/99AA0C4D5B32F3192E)
-
-하지만 wsl bash에서는 git branch가 나타나지 않으므로 따로 설정을 해줘야 한다. 먼저 vim으로 `.bashrc` 파일을 열어서 bash 설정을 변경해주자. 나는 vim으로 수정했는데, vim이 익숙하지 않다면 [vim 사용법](http://www.morenice.kr/25)을 참고해보자. [절대로 리눅스 파일을 윈도우 툴로 수정해서는 안 된다!](https://blogs.msdn.microsoft.com/commandline/2016/11/17/do-not-change-linux-files-using-windows-apps-and-tools/) 위험한 결과를 초래할 수 있으니 cli 에디터를 사용하지 못하겠다면 차라리 우분투를 gui로 사용하는 것을 권한다.
+git bash를 사용하면 bash에 git branch가 나타난다. 하지만 wsl bash에서는 git branch가 나타나지 않으므로 따로 설정을 해줘야 한다. 먼저 vim으로 `.bashrc` 파일을 열어서 bash 설정을 변경해주자. 나는 vim으로 수정했는데, vim이 익숙하지 않다면 [vim 사용법](http://www.morenice.kr/25)을 참고해보자. [절대로 리눅스 파일을 윈도우 툴로 수정해서는 안 된다!](https://blogs.msdn.microsoft.com/commandline/2016/11/17/do-not-change-linux-files-using-windows-apps-and-tools/) 위험한 결과를 초래할 수 있으니 cli 에디터를 사용하지 못하겠다면 차라리 우분투를 gui로 사용하는 것을 권한다.
 
 ```bash
 $ vim ~/.bashrc
@@ -65,10 +59,6 @@ export PS1='\\[\\033[0;32m\\]\\[\\033[0m\\033[0;32m\\]\\u@\\h:\\[\\033[0;36m\\]\
 ```bash
 $ source ~/.bashrc
 ```
-
-그리고 결과는:
-
-![터미널에 현재 브랜치 이름 출력.](https://t1.daumcdn.net/cfile/tistory/99B55A3F5B32F9BB04)
 
 git init이 안 된 곳에는 branch가 나오지 않고, init이 된 곳에는 나타난다.
 
