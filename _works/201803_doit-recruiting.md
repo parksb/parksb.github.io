@@ -1,7 +1,7 @@
 ---
 title: "DoiT 신입회원 모집"
 subtitle: "전공과 실력에 상관없이 개발을 하고 싶다면"
-thumbnail: "/images/46553508-a46ff980-c918-11e8-9f5f-db5d4c198ae3.png"
+thumbnail: "/images/46553508-a46ff980-c918-11e8-9f5f-db5d4c198ae3.webp"
 ---
 
 ![](/images/46553508-a46ff980-c918-11e8-9f5f-db5d4c198ae3.webp)

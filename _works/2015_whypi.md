@@ -1,7 +1,7 @@
 ---
 title: "Whyπ"
 subtitle: "청소년이 만드는 디지털 저널리즘"
-thumbnail: "/images/46553450-7c809600-c918-11e8-85d5-6f18f5bec225.png"
+thumbnail: "/images/46553450-7c809600-c918-11e8-85d5-6f18f5bec225.webp"
 ---
 
 ![](/images/46553450-7c809600-c918-11e8-85d5-6f18f5bec225.webp)

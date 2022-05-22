@@ -1,7 +1,7 @@
 ---
 title: "THE CAMP Library"
 subtitle: "Unofficial library for THE CAMP, an army communication service"
-thumbnail: "/images/74082458-7fa40d00-4a9d-11ea-9df0-1528eaafc793.png"
+thumbnail: "/images/74082458-7fa40d00-4a9d-11ea-9df0-1528eaafc793.webp"
 ---
 
 ![](/images/74082458-7fa40d00-4a9d-11ea-9df0-1528eaafc793.webp)

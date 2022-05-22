@@ -1,7 +1,7 @@
 ---
 title: "Airbnb JavaScript Style Guide: 한국어"
 subtitle: "대체로 합리적인 자바스크립트 접근 방법"
-thumbnail: "/images/46553496-9de18200-c918-11e8-9ecb-05d560306e5d.png"
+thumbnail: "/images/46553496-9de18200-c918-11e8-9ecb-05d560306e5d.webp"
 ---
 
 ![](/images/46553496-9de18200-c918-11e8-9ecb-05d560306e5d.webp)

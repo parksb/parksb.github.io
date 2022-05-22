@@ -1,7 +1,7 @@
 ---
 title: "Multilingual Fox"
 subtitle: "A simple dictionary extension for Firefox"
-thumbnail: "/images/61639214-00ecab80-acd6-11e9-970a-b4f5970b7497.png"
+thumbnail: "/images/61639214-00ecab80-acd6-11e9-970a-b4f5970b7497.webp"
 ---
 
 ![](/images/61639214-00ecab80-acd6-11e9-970a-b4f5970b7497.webp)

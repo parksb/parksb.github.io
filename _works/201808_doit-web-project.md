@@ -1,7 +1,7 @@
 ---
 title: "DoiT Web Project Team"
 subtitle: "프로그래밍 동아리 웹 개발 워크숍"
-thumbnail: "/images/46553522-af2a8e80-c918-11e8-8dce-111bb08c4fc1.png"
+thumbnail: "/images/46553522-af2a8e80-c918-11e8-8dce-111bb08c4fc1.webp"
 ---
 
 ![](/images/46553523-afc32500-c918-11e8-82e4-b04d95fae4ba.webp)
