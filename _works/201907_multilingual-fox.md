@@ -4,7 +4,7 @@ subtitle: "A simple dictionary extension for Firefox"
 thumbnail: "/images/61639214-00ecab80-acd6-11e9-970a-b4f5970b7497.png"
 ---
 
-![](/images/61639214-00ecab80-acd6-11e9-970a-b4f5970b7497.png)
+![](/images/61639214-00ecab80-acd6-11e9-970a-b4f5970b7497.webp)
 
 ![](/images/61590282-982c0300-abf1-11e9-9845-04e6bd174230.gif)
 

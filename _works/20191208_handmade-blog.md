@@ -4,9 +4,9 @@ subtitle: "A static blog generator for people who want to start a blog quickly"
 thumbnail: "/images/70389251-36353400-1a00-11ea-91af-42a12b06c383.png"
 ---
 
-![](/images/74082599-132a0d80-4a9f-11ea-92f8-3b8da0a86004.png)
+![](/images/74082599-132a0d80-4a9f-11ea-92f8-3b8da0a86004.webp)
 
-![](/images/70389251-36353400-1a00-11ea-91af-42a12b06c383.png)
+![](/images/70389251-36353400-1a00-11ea-91af-42a12b06c383.webp)
 
 _**Handmade Blog (2019) [github.com/parksb/handmade-blog](https://github.com/parksb/handmade-blog)**_
 

@@ -4,7 +4,7 @@ subtitle: "Github와 Gitlab 프로필을 한 페이지에서"
 thumbnail: "/images/46553527-b3ef4280-c918-11e8-985a-da537d1e37fc.png"
 ---
 
-![](/images/46553527-b3ef4280-c918-11e8-985a-da537d1e37fc.png)
+![](/images/46553527-b3ef4280-c918-11e8-985a-da537d1e37fc.webp)
 
 ![](/images/46553529-b3ef4280-c918-11e8-832b-04c459ad7eb7.jpg)
 
