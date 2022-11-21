@@ -4,7 +4,13 @@
 <link>https://parksb.github.io/</link>
 <description>Recently published articles written by Simon Park</description>
 <language>ko-kr</language>
-<lastBuildDate>Sun, 22 May 2022 14:01:33 +0900</lastBuildDate>
+<lastBuildDate>Mon, 21 Nov 2022 14:36:23 +0900</lastBuildDate>
+<item>
+<title>함수형 프로그래밍의 설득력</title>
+<link>https://parksb.github.io/article/40.html</link>
+<description>이제 함수형 프로그래밍은 확실히 주류라고 할 만하다. 이미 많은 프로그래밍 언어가 함수형 프로그래밍의 핵심 개념을 차용했고, 그린랩스와 같은 회사들이 엔터프라이즈 규모에서 함수형 프로그래밍의 성공적인 사례를 만들어내고 있다. 함수형 프로그래밍에 관해 설명하는 도서나 자료도 쉽게 찾아볼 수 있다. 최근에는 프로그래밍 입문자...</description>
+<pubDate>Tue, 1 Nov 2022 00:00:00 +0900</pubDate>
+</item>
 <item>
 <title>철도 시간표가 유닉스 시간이 되기까지</title>
 <link>https://parksb.github.io/article/39.html</link>
@@ -58,12 +64,6 @@
 <link>https://parksb.github.io/article/31.html</link>
 <description>지난 5월 인텔 CPU의 새로운 보안 취약점이 보고됐다. MDS(Microarchitectural Data Sampling)라고 불리는 이 취약점은 2018년 초 보고된 멜트다운(Meltdown), 스펙터(Spectre) 취약점과 달리 CPU 내부 3개의 버퍼(Line Fill Buffers, Load Ports, Sto...</description>
 <pubDate>Sat, 1 Jun 2019 00:00:00 +0900</pubDate>
-</item>
-<item>
-<title>하나의 타입에 강아지와 고양이 담기</title>
-<link>https://parksb.github.io/article/30.html</link>
-<description>여기 강아지와 고양이가 있다.data class Dog(val name: String)data class Cat(val name: String)identity 함수는 항상 파라미터를 그대로 반환하는 항등 함수다. identity(dog: Dog) 함수는 Dog 타입 인자를 받아 반환하며, identity(cat: Cat)...</description>
-<pubDate>Wed, 1 May 2019 00:00:00 +0900</pubDate>
 </item>
 </channel>
 </rss>
