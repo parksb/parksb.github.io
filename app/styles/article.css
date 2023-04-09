@@ -124,21 +124,19 @@
   font-weight: 700;
 }
 
-#article-content-container h1 {
-  font-size: 22px;
-  border-bottom: 1px black solid;
-  padding-bottom: 5px;
-}
-
 #article-content-container h2 {
-  font-size: 20px;
+  font-size: 22px;
 }
 
 #article-content-container h3 {
-  font-size: 18px;
+  font-size: 20px;
 }
 
 #article-content-container h4 {
+  font-size: 18px;
+}
+
+#article-content-container h5 {
   font-size: 16px;
 }
 
