@@ -9,7 +9,7 @@ date: "2018.10.12"
 
 HTTPS를 사용하면 데이터가 암호화되고, 보안에 좋다는 것은 알았지만, HTTP 접속과 비교하며 실제로 오가는 데이터를 분석해보니 그 사실이 더욱 가깝게 다가왔다. 컴퓨터 네트워크에 대한 배경 지식은 [Top-Down으로 접근하는 네트워크](https://parksb.github.io/article/23.html)를 참고.
 
-# 🦈 Wireshark 사용하기
+## 🦈 Wireshark 사용하기
 
 [Wireshark](https://www.wireshark.org/)는 오픈소스 패킷 분석 프로그램이다. (패킷은 네트워크에서 오가는 데이터 조각을 말한다.) Wireshark를 사용하면 네트워크 상에서 이동하는 패킷을 캡쳐해 그 내용을 볼 수 있다. PCAP은 트래픽을 캡쳐하기 위한 인터페이스이기 때문에 Wireshark를 설치할 때 꼭 같이 설치해야 한다.
 
@@ -19,7 +19,7 @@ HTTPS를 사용하면 데이터가 암호화되고, 보안에 좋다는 것은 �
 
 필터를 설정하지 않으면 해당 인터페이스의 모든 패킷이 잡힌다. 그 양이 상상 이상으로 많고, 속도도 빠르기 때문에 필터를 잘 설정해 원하는 데이터만 골라서 보는 것이 중요하다. 상단 'Apply a display filter'에 필터 조건을 입력하면 해당 조건에 맞는 패킷만 골라서 보여준다.
 
-# 🔌 HTTP 접속
+## 🔌 HTTP 접속
 
 이후 HTTP 접속과 HTTPS 접속을 비교해야 하므로 HTTP 주소에 접속해도 HTTPS로 리다이렉트되지 않는 사이트를 먼저 찾아야 했다. 예상대로(?) 학교 홈페이지는 [http://www.ajou.ac.kr](http://www.ajou.ac.kr)도 접속이 가능하고, [https://www.ajou.ac.kr](https://www.ajou.ac.kr)도 접속이 가능했다.
 
@@ -33,7 +33,7 @@ ip.addr == 202.39.0.19 && http
 
 브라우저에서 [http://www.ajou.ac.kr](http://www.ajou.ac.kr)을 새로고침하니 패킷이 쭉 나왔다. 그 중 하나를 선택해 내용을 살펴봤다.
 
-## HTTP Request Message
+### HTTP Request Message
 
 ![HTTP 요청 메시지. Host, User-Agent, Referer 등 헤더를 포함.](/images/46820151-7713c780-cdc0-11e8-9375-c29b9d82addf.webp)
 
@@ -43,7 +43,7 @@ User-Agent 헤더를 통해 클라이언트가 파이어폭스를 사용하고 �
 
 그리고 쿠키도 보이는데, 여기서는 `PHAROS_VISITOR`와 `JSESSIONID`라는 쿠키가 사용되었다. `JSESSIONID`는 톰캣 서버에서 JSP를 실행할 때 세션ID를 구분하려는 목적으로 만들어진 쿠키다. `PHAROS_VISITOR`는 어떤 목적으로 쓰이는지 알 수 없었다.
 
-## HTTP Response Message
+### HTTP Response Message
 
 ![HTTP 응답 메시지. Date, Last-Modified, Content-Type 등 헤더를 포함.](/images/46820158-7844f480-cdc0-11e8-9c0a-952badf7662b.webp)
 
@@ -53,9 +53,9 @@ User-Agent 헤더를 통해 클라이언트가 파이어폭스를 사용하고 �
 
 마지막으로 Body에는 GIF 파일이 담겨있다.
 
-## Conditional GET
+### Conditional GET
 
-사실 클라이언트는 오리진 서버에게 바로 요청 메시지를 보내지 않고, 중간에 있는 프록시 서버에게 메시지를 보내 요청하는 오브젝트가 캐시되어 있는지 확인한다. 이때, 프록시 서버로 하여금 오리진 서버에게 캐시된 파일이 변경됐는지 확인하도록 하는 것이 conditional GET이다.  
+사실 클라이언트는 오리진 서버에게 바로 요청 메시지를 보내지 않고, 중간에 있는 프록시 서버에게 메시지를 보내 요청하는 오브젝트가 캐시되어 있는지 확인한다. 이때, 프록시 서버로 하여금 오리진 서버에게 캐시된 파일이 변경됐는지 확인하도록 하는 것이 conditional GET이다.
 
 ![HTTP 요청 메시지. If-Modified-Since 헤더를 포함.](/images/46820153-77ac5e00-cdc0-11e8-946c-6d07497e4e6f.webp)
 
@@ -65,7 +65,7 @@ conditional GET의 동작을 보기 위해 또 다른 패킷을 살펴봤다. HT
 
 `304 Not Modified` 응답이 왔다. 파일이 변경되지 않았다는 의미로, 그냥 프록시 서버에 캐시된 리소스를 사용했다.
 
-# 🔌 HTTPS 접속
+## 🔌 HTTPS 접속
 
 HTTPS는 HTTP 프로토콜에 SSL 프로토콜을 더해 보안을 강화한 것이다. 즉, 새로운 프로토콜이 아니다. 더 엄밀히 말하자면 SSL 프로토콜은 과거에 사용되었고, 지금은 SSL을 발전시킨 TLS를 사용한다. 하지만 대체로 SSL과 TLS를 섞어서 말한다.
 

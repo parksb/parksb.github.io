@@ -23,13 +23,13 @@ free(ptr); // 메모리 해제
 
 만약 `free()`를 통해 메모리를 해제하지 않고 계속 동적할당을 수행한다면 사용할 수 있는 메모리가 꽉 차버리고 만다. 그런데 자바 프로그래밍을 할 때는 이러한 메모리 해제 작업을 직접 하지 않는다. 아무리 많은 객체를 만들고 지워도 메모리를 해제하는 코드는 어디에도 들어가지 않는다. 메모리 관리에 신경쓰지 않고 개발을 해도 괜찮은걸까? JVM이 Garbage Collection(GC)을 지원하기 때문에 괜찮다.
 
-# Memory Structure
+## Memory Structure
 
 GC는 더 이상 메모리를 차지하고 있지 않아도 되는 데이터들을 메모리에서 정리하는 작업이다. GC를 다루기 전에 먼저 메모리 구조를 살펴봐야 한다. 메모리는 저장하는 데이터의 종류에 따라 크게 네가지 영역으로 나뉜다.
 
 ```
 +---------------+ High address
-|     Stack     | 
+|     Stack     |
 +-------+-------+
 |       |       |
 |       v       |
@@ -77,11 +77,11 @@ public void do() {
 
 메모리의 스택 영역에서 `do()`가 나가며 `Dog1` 오브젝트를 가리키는 지역 변수 `jake`가 사라져버렸다. 더 이상 `Dog1` 오브젝트에 접근할 수 있는 방법이 없다. 이렇게 스택의 지역 변수로 레퍼런스가 이어지지 않는 오브젝트는 garbage가 된다. 이렇게 레퍼런스가 소멸해서 사용할 수 없어진 오브젝트를 메모리에서 제거하는 것이 바로 garbage collector가 하는 일이다.
 
-# Garbage Collection Algorithms
+## Garbage Collection Algorithms
 
 그럼 본격적으로 GC가 작동하는 방법에 대해 알아보자. 가장 먼저 드는 생각은 단순히 메서드 실행이 끝날 때마다 GC를 수행하면 될 것 같다. 하지만 그렇게 하려면 collector가 계속 메모리를 모니터링해야 하고, 수시로 GC가 일어날 수 있기 때문에 프로그램의 성능을 크게 떨어뜨리는 문제가 있다. 그래서 몇가지 효율적인 방법이 고안되었다.
 
-## Reference Counting
+### Reference Counting
 
 레퍼런스 카운팅은 주기적으로 GC를 수행할 때 오브젝트에 몇 개의 레퍼런스가 연결되어 있는지 체크하는 방법이다.
 
@@ -187,9 +187,9 @@ public class Cat {
 +---+----+------+--------------------+
 ```
 
-따라서 이미 할당된 메모리 공간을 한쪽으로 모아주는 compacting 작업을 해줘야 한다. 이것도 GC과정에서 수행된다. tracing은 'mark-and-sweep'이라고도 부르며, mark-and-sweep과 compacting이 순서대로 수행되기 때문에 MSC(Mark, Sweep, Compact)라고 줄여부른다. 
+따라서 이미 할당된 메모리 공간을 한쪽으로 모아주는 compacting 작업을 해줘야 한다. 이것도 GC과정에서 수행된다. tracing은 'mark-and-sweep'이라고도 부르며, mark-and-sweep과 compacting이 순서대로 수행되기 때문에 MSC(Mark, Sweep, Compact)라고 줄여부른다.
 
-# Generational GC
+## Generational GC
 
 JVM은 GC를 더 효율적으로 수행하기 위해 힙 메모리 구조를 보다 세밀하게 분류한다. GC는 기본적으로 오버헤드가 매우 큰 작업이다. GC가 시작될 때마다 JVM이 stop-the-world를 발생시켜 프로그램의 스레드를 모두 멈추고 앞서 설명한 MSC를 수행한다. 따라서 GC의 주기가 잦고, 규모가 클수록 오버헤트가 커진다.
 
@@ -221,6 +221,6 @@ eden, S0, S1은 생성된지 얼마되지 않은 오브젝트들이 쌓이는 �
 
 자동으로 수행되는 GC를 믿지 않고 `System.gc()` 메소드를 호출해 개발자가 GC를 강제할 수도 있는데, 성능을 크게 떨어뜨리는 매우 비효율적인 방법이기 때문에 절대 사용해서는 안 된다. (심지어 위험할 수도 있다.) 꼭 명시적으로 메모리를 해제하고 싶다면 차라리 오브젝트에 `null`을 할당해 레퍼런스를 끊는 것이 안전하다.
 
-# References
+## References
 
 * [Oracle Help Center, "HotSpot Virtual Machine Garbage Collection Tuning Guide"](https://docs.oracle.com/en/java/javase/15/gctuning/introduction-garbage-collection-tuning.html#GUID-326EB4CF-8C8C-4267-8355-21AB04F0D304).

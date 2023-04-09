@@ -1,13 +1,13 @@
 ---
-id: 33 
+id: 33
 title: "해피 터미널 라이프"
 subtitle: "dotfiles 세팅해 광명찾기"
 date: "2018.08.28"
 ---
 
-6년간 써온 윈도우 노트북을 포맷하고 다시 WSL 환경을 세팅했다. 포맷을 하도 오랜만에 해서 그런지 설정에 의외로 손이 많이 갔다. 모든 걸 완벽하게 자동화할 겸 세팅을 정리해보기로 했다. 
+6년간 써온 윈도우 노트북을 포맷하고 다시 WSL 환경을 세팅했다. 포맷을 하도 오랜만에 해서 그런지 설정에 의외로 손이 많이 갔다. 모든 걸 완벽하게 자동화할 겸 세팅을 정리해보기로 했다.
 
-# Git
+## Git
 
 우선 [git](https://git-scm.com/)을 설치한다. 자신의 프로젝트에 git을 사용하지 않더라도 (웬만하면 써보자) 다른 프로그램을 설치할 때 필요하다.
 
@@ -30,7 +30,7 @@ $ git config --global user.email = jake@email.com
 
 로그인에 2FA를 사용하고 있다면 `git clone`을 실행해 올바른 로그인 정보를 입력해도 인증에 실패하는 문제가 생긴다. 이 경우 액세스 토큰을 발급받아 비밀번호 대신 사용하면 된다.
 
-## Alias
+### Alias
 
 alias를 설정하면 긴 명령을 축약할 수 있다. 가령 `git status` 대신 `git s`를 사용하게 만드는 것이 가능하다. git에 관련된 설정을 하기 위해서는 .gitconfig 파일을 수정하면 된다.
 
@@ -47,7 +47,7 @@ $ vim ~/.gitconfig
 
 이제 `git l`은 `git log --reflog --graph --oneline --decorate`와 동일하다. 기계인간님의 [편리한 git alias 설정하기](https://johngrib.github.io/wiki/git-alias/)를 참고하면 극한의 편리를 추구할 수도 있다.
 
-# ZSH & Oh My ZSH 
+## ZSH & Oh My ZSH
 
 zsh(Z shell)은 터미널을 더 편리하게 만들어주는 유닉스 셸이다. 기본 셸인 bash 보다 환경 설정이나 플러그인 설치 등이 쉽다. [oh-my-zsh](https://ohmyz.sh/)은 zsh 설정을 관리하기 위한 프레임워크로, 각종 테마와 플러그인을 제공한다.
 
@@ -81,7 +81,7 @@ $ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/m
 $ sh -c "$(wget -O- https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 ```
 
-## Theme
+### Theme
 
 테마가 마음에 들지 않다면 .zshrc 파일을 수정해 바꿀 수 있다. .zshrc 파일을 통해 테마 뿐 아니라 플러그인이나 alias 등 zsh의 모든 것을 설정할 수 있다.
 
@@ -101,7 +101,7 @@ powerlevel10k 테마 설치 후 `p10k` 명령을 이용해 테마 설정을 시�
 $ p10k configure
 ```
 
-## Plugin
+### Plugin
 
 플러그인도 쉽게 설치할 수 있다. [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)을 사용하면 명령에 하이라이팅을 줄 수 있는데, 유효한 명령은 녹색, 유효하지 않은 명령은 빨간색으로 보여줘서 편리하다.
 
@@ -127,7 +127,7 @@ plugins=(
 )
 ```
 
-# Vim
+## Vim
 
 터미널에서 [vim](https://github.com/vim/vim)을 자주 사용할 예정이라면 직접 설정을 해두는 것이 좋다. vim은 기본으로 설치되어 있어서 바로 사용할 수 있다. 시스템 vim은 최신 버전이 아닐 수 있으니 `vim --version` 명령으로 버전을 확인해보고 업데이트하는 것을 권장한다.
 
@@ -139,7 +139,7 @@ $ vim ~/.vimrc
 
 줄번호 표시 여부, 문법 하이라이팅 여부, 들여쓰기 등 일반적인 설정을 할 수 있는데, [기본 설정](https://github.com/vim/vim/blob/master/runtime/defaults.vim)을 그대로 쓰기만해도 무난히 사용할 수 있다. 구체적인 설정 방법은 [simple-vim-guide](https://github.com/johngrib/simple_vim_guide/blob/master/md/vimrc.md)에 잘 나와있다.
 
-## Plugin
+### Plugin
 
 vim에는 다양한 플러그인들이 있다. 플러그인 매니저 중 하나인 [vim-plug](https://github.com/junegunn/vim-plug)를 사용하면 쉽게 플러그인을 설치, 적용하여 사용할 수 있다. 원래 [vundle](https://github.com/VundleVim/Vundle.vim)을 사용했는데, [최준건님](https://junegunn.kr/)이 만든 vim-plug가 더 가볍고 빠른 것 같다.
 
@@ -163,9 +163,9 @@ call plug#end()
 
 하단에 상태바를 보여주는 [vim-airline/vim-airline](https://github.com/vim-airline/vim-airline)과 git 변경 사항을 보여주는 [airblade/vim-gitgutter](https://github.com/airblade/vim-gitgutter), 코드의 문법 오류를 체크해주는 [scrooloose/syntastic](https://github.com/vim-syntastic/syntastic) 등 다양한 플러그인으로 vim을 IDE처럼 만들 수도 있다.[^bluesh]
 
-더 많은 vim 플러그인은 [Vim Awesome](https://vimawesome.com/)에서 찾아볼 수 있다. 
+더 많은 vim 플러그인은 [Vim Awesome](https://vimawesome.com/)에서 찾아볼 수 있다.
 
-# TMUX
+## TMUX
 
 [tmux(Termial Multiplexor)](https://github.com/tmux/tmux)는 터미널의 세션과 창을 분할 관리하기 위한 도구로, 다양한 플러그인을 제공한다. 기본으로 설치되어 있는 screen과 거의 비슷한데, tmux가 더 편리하다는 평이 많은 듯하다. 백그라운드에서 세션을 유지하거나 ssh 접속할 일이 많다면 필요하지만, 그럴 일이 없다면 사용하지 않아도 불편함은 없다.
 
@@ -187,7 +187,7 @@ $ tmux
 
 tmux는 세션(Session), 윈도우(Window), 팬(Pane)으로 구성된다. 세션은 가장 큰 단위이며, 윈도우는 세션 내에서 탭처럼 사용할 수 있는 화면이다. 팬은 한 윈도우 내에서의 화면 분할을 의미한다.[^edykim] tmux는 기본 prefix 키인 `Ctrl + b`를 누르고 명령 키를 입력하여 조작할 수 있다. 가령 윈도우를 수평 분할하는 키는 `%` 키이기 때문에 `Ctrl + b + %`를 입력하면 윈도우가 수평 분할된다.
 
-## Configuration
+### Configuration
 
 tmux를 설정하기 위한 .tmux.conf 파일을 홈 디렉토리에 만든다.
 
@@ -211,7 +211,7 @@ set-option -g mouse on
 
 파일을 저장하고 `tmux source ~/.tmux.conf`를 실행해 적용한다.
 
-## Plugin
+### Plugin
 
 tmux 플러그인을 쉽게 관리하기 위해 [tpm](https://github.com/tmux-plugins/tpm)을 먼저 설치한다.
 
@@ -226,11 +226,11 @@ set -g @plugin 'tmux-plugins/tpm'
 run -b '~/.tmux/plugins/tpm/tpm'
 ```
 
-`run -b '~/.tmux/plugins/tpm/tpm'`은 tpm을 초기화하기 위한 라인이므로 항상 설정 파일의 맨 아래에 위치해야 한다. tpm으로 관리되는 다른 플러그인도 설치하고 싶으면 같은 방식으로 `set -g @plugin 'user-name/plugin-name'`을 추가한다. 이제 파일을 저장하고 `prefix + I`를 입력하면 플러그인이 설치된다. 
+`run -b '~/.tmux/plugins/tpm/tpm'`은 tpm을 초기화하기 위한 라인이므로 항상 설정 파일의 맨 아래에 위치해야 한다. tpm으로 관리되는 다른 플러그인도 설치하고 싶으면 같은 방식으로 `set -g @plugin 'user-name/plugin-name'`을 추가한다. 이제 파일을 저장하고 `prefix + I`를 입력하면 플러그인이 설치된다.
 
 하단에 상태바를 보여주는 [tmux-powerline](https://github.com/erikw/tmux-powerline), 세션과 윈도우, 팬 레이아웃 등 환경을 저장할 수 있도록 해주는 [tmux-resurrect](https://github.com/tmux-plugins/tmux-resurrect) 등의 플러그인이 있다.
 
-# Dotfiles
+## Dotfiles
 
 이렇게 많은 설정 파일들을 관리하기 위해 dotfiles 저장소를 만들었다. 여기에 .zshrc나 .vimrc 등의 파일들을 올려두고 클론받아서 사용한다.
 

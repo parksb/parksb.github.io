@@ -35,7 +35,7 @@ date: "2019.2.17"
 
 포크(Fork)나 풀 리퀘스트(Pull request) 등 깃허브에 관한 내용은 [오픈소스 입문을 위한 아주 구체적인 가이드](https://parksb.github.io/article/13.html)에서 소개했다.
 
-# 파일 스테이징 취소하기
+## 파일 스테이징 취소하기
 
 * Alice는 `git add main.js` 명령으로 파일을 스테이징했다.
 * `main.js`를 언스테이징(Unstaging)하고자 한다.
@@ -48,7 +48,7 @@ $ git reset main.js
 
 파일명을 명시하지 않으면 스테이지된 모든 파일을 언스테이징한다.
 
-# 마지막 커밋 취소하기
+## 마지막 커밋 취소하기
 
 * Alice는 방금 `lib.js` 파일을 빠뜨리고 커밋했다.
 * 커밋을 취소하고 파일을 추가해 새로 커밋하고자 한다.
@@ -66,7 +66,7 @@ $ git add lib.js
 $ git commit -m "자바스크립트 파일 추가"
 ```
 
-# 마지막 커밋 메시지 수정하기
+## 마지막 커밋 메시지 수정하기
 
 * Alice는 방금 커밋한 커밋 메시지 "테스트ㅌ 코드 추가"에 오타가 있는 것을 발견했다.
 * 직전 커밋의 메시지를 "테스트 코드 추가"로 수정하고자 한다.
@@ -77,7 +77,7 @@ $ git commit -m "자바스크립트 파일 추가"
 $ git commit --amend -m "테스트 코드 추가"
 ```
 
-# 이미 푸시한 커밋 메시지 수정하기
+## 이미 푸시한 커밋 메시지 수정하기
 
 * Alice는 과거 커밋 메시지 "테스트ㅌ 코드 추가"에 오타가 있는 것을 발견했다.
 * 해당 커밋 메시지를 "테스트 코드 추가"로 수정하고자 한다.
@@ -111,7 +111,7 @@ $ git push -f origin master
 
 좀 더 직관적이고 쉽게 커밋 정보를 변경하고 싶다면 [git-amend](https://github.com/Elevista/git-amend)와 같은 유틸을 쓸 수도 있다.
 
-# 커밋을 과거로 되돌리기
+## 커밋을 과거로 되돌리기
 
 * Alice는 버튼의 색깔을 바꾸는 작업들을 커밋했으나 모든 게 잘못됐다는 것을 깨달았다.
 * 모든 버튼의 색깔을 똑같이 만들기 위해 과거 버전으로 돌아가 코드를 다시 작성하고자 한다.
@@ -140,7 +140,7 @@ $ git commit -m "모든 버튼 색깔을 노란색으로 변경"
 
 이 방법을 사용하면 되돌린 커밋 히스토리가 모두 사라진다. 커밋이후 `--force`으로 푸시하면 이미 푸시한 커밋까지 되돌릴 수도 있지만, 권장하는 방법은 아니다.
 
-# 푸시한 커밋을 과거로 되돌리기
+## 푸시한 커밋을 과거로 되돌리기
 
 * Alice는 버튼의 색깔을 바꾸는 작업들을 커밋, 푸시했으나 모든 게 잘못됐다는 것을 깨달았다.
 * 모든 버튼의 색깔을 똑같이 만들기 위해 과거 버전으로 돌아가 코드를 다시 작성하고자 한다.
@@ -181,7 +181,7 @@ b2c409f HEAD@{1}: commit: Revert "가운데 버튼 색깔을 초록색으로 변
 21929f8 HEAD@{5}: commit: 왼쪽 버튼 색깔을 빨간색으로 변경
 ```
 
-# 푸시한 파일 삭제하기
+## 푸시한 파일 삭제하기
 
 * Alice는 공유할 필요가 없는 파일을 원격 저장소에 푸시했다.
 * 실수로 푸시한 파일 `setting.txt`를 원격 저장소에서 삭제하고자 한다.
@@ -201,7 +201,7 @@ $ git push orgin master
 
 히스토리가 그대로 남기 때문에 민감한 파일의 경우 이 방법으로 지워선 안 된다. 커밋에서 제외할 파일은 미리 `.gitignore` 파일에 명시하도록 하자.
 
-# 푸시한 파일 흔적없이 삭제하기
+## 푸시한 파일 흔적없이 삭제하기
 
 * Alice는 절대 공개해서는 안되는 파일을 원격 저장소에 푸시했다.
 * 실수로 푸시한 파일 `password.txt`를 원격 저장소에서 삭제하고자 한다.
@@ -219,7 +219,7 @@ $ git filter-branch -f --prune-empty HEAD
 $ git push -f origin master
 ```
 
-# 원격 저장소에서 업데이트 받아오기
+## 원격 저장소에서 업데이트 받아오기
 
 * Alice는 오랜만에 로컬 저장소의 master 브랜치를 업데이트하려 한다.
 * 며칠전 Bob이 원본 원격 저장소 alice/project에 3개의 커밋을 추가했다.
@@ -244,7 +244,7 @@ $ git merge origin/master
 $ git pull origin master
 ```
 
-# 병합 커밋없이 풀하기
+## 병합 커밋없이 풀하기
 
 * Bob은 alice/project 저장소의 master 브랜치에 main.js를 수정하고 커밋, 푸시했다.
 * Alice는 master 브랜치에서 index.html 파일을 수정하고 커밋했다.
@@ -274,7 +274,7 @@ $ git pull --rebase
         └────M1 (master)
 ```
 
-# 포크한 로컬 저장소를 최신으로 유지하기
+## 포크한 로컬 저장소를 최신으로 유지하기
 
 * Alice는 bob/project 저장소를 포크해서 alice/project 저장소를 만들었다.
 * 그 사이 bob/project 저장소에는 3개의 커밋이 추가되었다.
@@ -302,7 +302,7 @@ $ git checkout master
 $ git merge upstream/master
 ```
 
-# 작업 내용을 백업하고 다른 브랜치 체크아웃하기
+## 작업 내용을 백업하고 다른 브랜치 체크아웃하기
 
 * Alice와 Bob은 각각 featA, featB 브랜치에서 index.js를 수정했다.
 * Alice는 featA 브랜치에서 작업하던 중 Bob이 작업하고 있는 featB 브랜치를 확인할 일이 생겼다.
@@ -347,7 +347,7 @@ stash@{0}: On featA: ADD_INDEX_JS
 $ git stash pop stash@{0}
 ```
 
-# 풀 리퀘스트에서 Squash and Merge된 커밋 제외하기
+## 풀 리퀘스트에서 Squash and Merge된 커밋 제외하기
 
 ```
 ───M1───M2───S1───M3 (master)
@@ -380,7 +380,7 @@ $ git push -f origin featB
              └───B1───B2 [abandoned]
 ```
 
-# 병합 충돌 해결하고 풀 리퀘스트 보내기
+## 병합 충돌 해결하고 풀 리퀘스트 보내기
 
 * Alice는 bob/project 저장소의 코드를 수정하고 bob/project의 master 브랜치에 풀 리퀘스트를 보냈다.
 * 그 사이 Carol이 Alice와 같은 코드를 수정했고, Carol의 풀 리퀘스트가 먼저 master에 병합되었다.
@@ -477,7 +477,7 @@ $ git push -f origin alice-branch
 
 `--force` 옵션으로 푸시하지 않으면 먼저 원격 저장소의 alice-branch를 풀해야 하는데, 그러면 로컬 저장소에서 리베이스한 커밋과 원격 저장소의 커밋이 중복되어 동일한 내용의 커밋이 생겨버린다.
 
-# 다른 브랜치에서 특정 커밋 복사해오기
+## 다른 브랜치에서 특정 커밋 복사해오기
 
 * Alice는 featA 브랜치에서 `index.js`를 리팩토링해 커밋했다.
 * 이 커밋을 featB 브랜치로 복사하고자 한다.
@@ -499,7 +499,7 @@ $ git checkout featB
 $ git cherry-pick 4a391fc
 ```
 
-# 브랜치 이름 수정하기
+## 브랜치 이름 수정하기
 
 * Alice는 feattA 브랜치에 오타가 있는 것을 발견했다.
 * feattA 브랜치의 이름을 featA로 수정하고자 한다.
@@ -510,7 +510,7 @@ $ git cherry-pick 4a391fc
 $ git branch -m feattA featA
 ```
 
-# Git 명령어 축약하기
+## Git 명령어 축약하기
 
 * Alice는 [김지현님](https://hyeon.me/) 덕분에 `git log --reflog --graph --oneline --decorate` 명령을 쓰면 로그를 더 편하게 볼 수 있다는 사실을 알게됐다.
 * 하지만 명령이 너무 길어 축약해 사용하고자 한다.
@@ -540,7 +540,7 @@ $ git lg
 
 기계인간님의 [편리한 git alias 설정하기](https://johngrib.github.io/wiki/git-alias/)를 참고하면 극한의 편리를 추구할 수도 있다.
 
-# 참고자료
+## 참고자료
 
 * 생활코딩 "[지옥에서 온 Git](https://opentutorials.org/course/2708)"
 * 진유림님 "[초심자를 위한 Github 협업 튜토리얼](https://milooy.wordpress.com/2017/06/21/working-together-with-github-tutorial/)"

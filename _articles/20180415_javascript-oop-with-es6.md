@@ -42,12 +42,12 @@ cake.makeNoise(); // 'Meow!'
 
 ES6에는 클래스 기반 객체지향 프로그래밍 문법이 추가되면서 자바나 C++같은 다른 객체지향 언어들과 비슷한 방식으로, 보다 간결하게 객체지향 프로그래밍을 할 수 있게 되었다. (프로토타입 기반 OOP는 MDN의 [Object-oriented JavaScript for beginners](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object-oriented_JS)를 참고하자.)
 
-# Class
+## Class
 
 ```js
 // Animal.js
 class Animal {
-    
+
 }
 
 export default Animal;
@@ -66,13 +66,13 @@ let anim = new Animal();
 
 다른 파일에서 Animal 클래스에 접근하려면 우선 Animal 클래스를 import해야 한다. (앞서 `export default Animal` 라인을 작성한 이유다.) `anim` 변수를 만들고 `new` 키워드를 통해 Animal을 생성할 수 있다. 여기서 `anim`은 Animal 클래스를 가리키는 레퍼런스 변수(Reference variable)이며, 인스턴스(Instance)라고 부른다. 그리고 이것이 바로 클래스라는 설계도를 이용해 인스턴스라는 개체를 생성하는 과정이다.
 
-# Constructor
+## Constructor
 
 ```js
 // Animal.js
 class Animal {
     constructor(name) {
-    
+
     }
 }
 
@@ -81,7 +81,7 @@ export default Animal;
 
 클래스는 하나의 constructor를 가질 수 있다. constructor는 `new Animal();` 명령을 통해 실행되어 인스턴스를 초기화하는 역할을 한다. 또한 constructor에는 `name`처럼 매개변수를 둘 수도 있다. 만약 constructor를 명시하지 않는다면 비어있는 default constructor가 만들어진다. 굳이 빈 constructor를 만들 필요는 없다.
 
-# Instance variable
+## Instance variable
 
 ```js
 // Animal.js
@@ -105,7 +105,7 @@ let anim = new Animal('Jake');
 
 인스턴스를 생성할 때 매개변수를 넘겨줄 수 있다. `anim` 인스턴스의 프로퍼티 `name`의 값은 'Jake'다.
 
-# Method
+## Method
 
 ```js
 // Animal.js
@@ -113,7 +113,7 @@ class Animal {
     constructor(name) {
         this.name = name;
     }
-    
+
     getName() {
         return this.name;
     }
@@ -135,7 +135,7 @@ console.log(anim.getName()); // 'Jake'
 
 호출 역시 직관적이다.
 
-# Static Method
+## Static Method
 
 ```js
 // Animal.js
@@ -143,11 +143,11 @@ class Animal {
     constructor(name) {
         this.name = name;
     }
-    
+
     getName() {
         return this.name;
     }
-    
+
     static sleep() {
         console.log('Zzz');
     }
@@ -170,7 +170,7 @@ anim.sleep(); // Uncaught TypeError: anim.sleep is not a function
 
 인스턴스를 통해 static 메소드를 호출하면 TypeError가 발생한다.
 
-# Information Hiding
+## Information Hiding
 
 자바스크립트에는 은닉된 프로퍼티라는 개념이 없다. 자바에는 private, protected, public과 같은 접근제어자가 있어서 외부에서 인스턴스 멤버에 접근하는 것을 통제할 수 있지만, 자바스크립트는 클래스의 모든 프로퍼티가 public이다.
 
@@ -184,7 +184,7 @@ class Animal {
     constructor(name) {
         let name = name;
 
-        this.getName = () => { 
+        this.getName = () => {
             return name;
         };
 
@@ -196,10 +196,10 @@ class Animal {
 
 export default Animal;
 ```
-  
+
 변수는 해당 블록 안에만 존재하기 때문에 해당 블록을 벗어나서 접근하면 undefined가 된다. (단, 블록 스코프를 갖는 `let`, `const`와 달리 `var`는 함수 스코프를 갖는다.) 따라서 constructor 안에 변수를 선언하면 외부에서 `name`에 직접 접근할 수 없다. 더불어 `name`을 가져오는 프로퍼티와 `name`을 설정하는 프로퍼티를 두면 외부에서 `getName`과 `setName`을 통해 `name`에 간접적으로 접근할 수 있다.
 
-# Inheritance & Polymorphism
+## Inheritance & Polymorphism
 
 ```js
 // Animal.js
@@ -207,7 +207,7 @@ class Animal {
     constructor(name) {
         this.name = name;
     }
-    
+
     getName() {
         return this.name;
     }
@@ -248,7 +248,7 @@ console.log(jake.getName()); // 'Jake'
 
 이런 식으로 사용한다. Dog 인스턴스 `jake`가 Animal 클래스의 `getName()`을 호출한다.
 
-# Overriding
+## Overriding
 
 ```js
 // Animal.js
@@ -256,11 +256,11 @@ class Animal {
     constructor(name) {
         this.name = name;
     }
-    
+
     getName() {
         return this.name;
     }
-    
+
     makeNoise() {
         console.log('It makes a noise');
     }
@@ -279,7 +279,7 @@ class Dog extends Animal {
     constructor(name) {
         super(name);
     }
-    
+
     // Override
     makeNoise() {
         console.log('Bark!');
@@ -303,11 +303,11 @@ jake.makeNoise(); // 'Bark!'
 
 Animal 클래스의 `makeNoise()`가 Dog 클래스의 `makeNoise()`로 오버라이드된 것을 볼 수 있다.
 
-# Overloading
+## Overloading
 
 오버로딩(Overloading)은 같은 이름, 다른 매개변수를 가진 메소드가 여러 개 존재하는 것을 말한다. 매개변수가 다르면 다른 메소드임을 알 수 있기 때문에 가능한 기능인데, 자바스크립트에서는 기본적으로 불가능하다. (대신 [매개변수의 존재 여부에 따라 분기를 나누는 방식](https://stackoverflow.com/questions/456177/function-overloading-in-javascript-best-practices)으로 구현할 수는 있다.) 한 클래스 안에 같은 이름을 가진 메소드가 여러 개 존재할 수 없으며, constructor도 반드시 하나만 있어야 한다.
 
-# Abstract
+## Abstract
 
 Animal 클래스가 분명 존재하지만, 단순히 '동물'을 만든다는 것은 조금 이상한 일이다. 동물은 추상적인 개념이기 때문에 Animal 객체를 생성하는 일이 있어서는 안 된다. 이럴 때 추상화(Abstraction)를 통해 `new Animal(...);`과 같은 명령을 미연에 방지할 수 있다. Java의 경우 `public abstract class Animal {...}`과 같은 방식으로 추상 클래스를 만들 수 있다. 아쉽지만 자바스크립트에서는 추상 클래스나 메소드를 만들 수 없다. 다만 추상 메소드를 직접 구현하는 방법은 있다.
 
@@ -317,11 +317,11 @@ class Animal {
     constructor(name) {
         this.name = name;
     }
-    
+
     getName() {
         return this.name;
     }
-    
+
     // Abstract
     makeNoise() {
         throw new Error('makeNoise() must be implement.');
@@ -335,7 +335,7 @@ export default Animal;
 
 추상 클래스를 만드는 것을 조금 더 번거롭다. 직접 Abstract 클래스를 만들어 상속시키는 방식인데, 스택오버플로우의 [Does ECMAScript 6 have a convention for abstract classes?](https://stackoverflow.com/questions/29480569/does-ecmascript-6-have-a-convention-for-abstract-classes)를 참고해보자.
 
-# Interface
+## Interface
 
 인터페이스(Interface)는 추상 메소드들의 집합이다. 클래스와는 다르며, 인스턴스 변수를 가질 수 없다. 자바의 경우 인터페이스는 `public interface Pet {...}`과 같이 만들고, 다른 클래스에서 `public class Dog extends Animal implements Pet`과 같은 방식으로 구현(Implement)한다. 이 코드에서 Dog 클래스는 Animal 클래스를 상속받고, Pet 인터페이스를 구현한다. 즉, Animal 클래스의 메소드, 인스턴스 변수와 Pet 인터페이스의 추상 메소드들을 가진다.
 

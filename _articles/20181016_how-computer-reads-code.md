@@ -7,17 +7,17 @@ date: "2018.10.16"
 
 지난 학기 [운영체제](https://parksb.github.io/article/5.html) 공부를 하면서 더 낮은 레벨은 어떻게 동작하는지 궁금해졌다. David A. Patterson과 John L. Hennessy의 Computer Organization and Design 5th Edition의 전반부를 바탕으로 MIPS instruction set에 대해 정리했다.
 
-# Computer Abstractions and Technology
+## Computer Abstractions and Technology
 
 컴퓨터 아키텍처를 공부한다는 것은 **컴퓨터를 구성하는 하드웨어와 명령어가 어떻게 함께 동작하는지 알아보는 것**이다. 하드웨어를 다루기는 하지만 회로에 대한 부분을 자세히 다루지는 않는다. 회로는 로우레벨 아키텍처이고, 앞으로 다룰 내용은 회로(하드웨어)와 운영체제(소프트웨어) 사이에 있는 ISA(Instruction Set Architecture), microarchitecture와 같은 하이레벨 아키텍처다.
 
-## Instructions: Language of the Computer
+### Instructions: Language of the Computer
 
 **ISA는 `add`, `load`와 같은 명령의 집합**으로, 하드웨어와 소프트웨어 사이의 인터페이스를 정의한다. **microarchitecture는 ISA의 구현체**로, 프로세서와 입출력 subsystem의 조직이다. 파이프라인의 깊이나 캐시 사이즈가 microarchitecture라고 할 수 있다.
 
 머신 설계에는 두 가지 중요한 원칙이 있다. 첫째는 컴퓨터는 모든 것을 bit로 이해하기 때문에 **instruction과 데이터를 구분하지 못한다**는 것이고, 둘째는 **프로그램도 데이터와 똑같이 메모리에 저장된다**는 것이다. 메모리를 여러 구획으로 구분한 것은 인간의 입장이지, 컴퓨터는 결국 바이너리로 받아들인다.
 
-## From a High-Level Language to the Language of Hardware
+### From a High-Level Language to the Language of Hardware
 
 ```c
 int main(int argc, char *argv[]) {
@@ -36,7 +36,7 @@ main:
   add $s0, $s1, $s2
 ```
 
-**어셈블리어**는 컴퓨터의 구체적인 동작을 텍스트로 표현한 것으로, instruction의 집합이라고 할 수 있다. 이 단계에서 하이레벨 코드는 명령줄 사이의 점프 수준까지 내려간다. 어셈블리어는 어셈블러에 의해 기계어로 변환된다. 
+**어셈블리어**는 컴퓨터의 구체적인 동작을 텍스트로 표현한 것으로, instruction의 집합이라고 할 수 있다. 이 단계에서 하이레벨 코드는 명령줄 사이의 점프 수준까지 내려간다. 어셈블리어는 어셈블러에 의해 기계어로 변환된다.
 
 ```binary
 00000000000000000000000000000100
@@ -47,17 +47,17 @@ main:
 **기계어**는 컴퓨터가 이해할 수 있는 바이너리 숫자만으로 구성되어 있다. 컴퓨터는 메모리에 올라간 바이너리 코드를 CPU로 가져와 instruction을 수행한다.
 
 
-## Operations of the Computer Hardware
+### Operations of the Computer Hardware
 
 여러 종류의 ISA가 있다. 대표적으로 Intel과 AMD에서 만든 x86, AMD64가 있는데, 이들의 CPU 아키텍처는 CISC(Complex Instruction Set Computer) 구조이기 때문에 굉장히 복잡하다. 한편 RISC(Reduced Instruction Set Computer) 구조는 보다 간소하다. RISC 구조인 ARM 아키텍처는 스마트폰이나 태블릿과 같은 모바일 기기에 사용되고 있으며, 2020년에 출시된 M1 맥북도 ARM을 기반으로한 CPU를 사용한다. 우리가 사용할 MIPS(Microprocessor without Interlocked Pipeline Stages)도 RISC 구조 아키텍처다. MIPS는 명령어 세트가 깔끔해 컴퓨터 아키텍처를 공부하는 목적으로 적합하며, 실제로는 블루레이 기기나 플레이스테이션과 같은 디지털 홈, 네트워킹 장비에 사용되었다.
 
-# MIPS Instructions
+## MIPS Instructions
 
 앞서 하이레벨 언어가 어셈블리어로, 어셈블리어가 최종적으로 기계어로 변환된다는 것을 보았다. 하이레벨 언어는 알고 있다는 가정하에, 실제 MIPS에서 instruction이 어떻게 작성되는지, 그 instruction이 어떤 규칙에 따라 기계어로 변환되는 지 알아보자.
 
 먼저 CPU가 매번 메인메모리에서 값을 읽어오는 것은 오버헤드가 큰 일이기 때문에 CPU는 **레지스터라는 작고 빠른 메모리**를 가지고 있다. 크기는 작지만 속도가 빨라서 레지스터에 데이터를 두면 instruction을 빠르게 수행할 수 있다. MIPS의 연산은 32x32bit 레지스터를 사용하며, **32bit 데이터를 word라고 부른다.** 레지스터의 일부에는 미리 이름을 붙여 놓았는데, `$t0`부터 `$t9`까지는 임시 레지스터(temporary register)를 의미하며, `$s0`부터 `$s7`까지는 계속 사용되는 레지스터(saved register)를 의미한다.
 
-### Arithmetic Operations
+#### Arithmetic Operations
 
 산술 연산은 그리 복잡하지 않다.
 
@@ -75,9 +75,9 @@ sub $s0, $t0, $t1 # $s0 = $t0 - $t1
 
 `add`는 값을 덧셈을, `sub`는 뺄셈을 수행한다.
 
-### Memory Operations
+#### Memory Operations
 
-MIPS의 메모리 연산은 메모리에서 레지스터로, 레지스터에서 메모리로 데이터를 옮기는 일을 한다. 
+MIPS의 메모리 연산은 메모리에서 레지스터로, 레지스터에서 메모리로 데이터를 옮기는 일을 한다.
 
 ```c
 a = b + A[8]
@@ -114,7 +114,7 @@ sw $t0, 48($s3) # A[12] = $t0
 
 `sw`는 레지스터에서 메모리로 데이터를 옮긴다. 위에서는 `lw`로 메모리에서 `32($s3)` 값을 가져와 레지스터의 `$t0`에 저장했고, 아래에서는 `$t0`의 값을 메모리의 `48($s3)` 위치에 저장했다.
 
-### Immediate Instructions
+#### Immediate Instructions
 
 상수를 더할 때는 `addi`를 사용한다.
 
@@ -125,7 +125,7 @@ addi $s2, $s2, -1 # $s2 = $s2 + (-1)
 
 상수에 대한 뺄셈 연산은 따로 없기 때문에 음수를 더해주면 된다.
 
-### Constant
+#### Constant
 
 MIPS 레지스터 `$zero`는 상수 0을 의미한다.
 
@@ -135,7 +135,7 @@ add $t0, $s1, $zero # $t0 = $s1 + 0
 
 위 처럼 다른 레지스터로 값을 그대로 대입할 때 사용할 수 있다.
 
-### Conditional Statement
+#### Conditional Statement
 
 ```c
 if (i == j) {
@@ -159,7 +159,7 @@ Exit:
 
 `bne`는 두 레지스터 값이 같은지 비교해 같다면 다음 구문을, 다르다면 지정된 라벨로 점프한다. 위에서는 `bne`를 통해 `$s3`와 `$s4`가 같은지 비교한 뒤, 다르다면 `Else` 라벨로 점프해 `sub $s0, $s1, $s2`를 실행하도록 했다. 라벨 이름은 개발자가 임의로 정할 수 있다. 꼭 `Else`나 `Exit`라는 이름일 필요는 없다는 것이다. 또한 라벨의 위치는 어셈블러가 계산한다.
 
-### Loop
+#### Loop
 
 ```c
 while (save[i] == k) {
@@ -185,11 +185,11 @@ Exit:
 
 `sll` 자체는 control flow에 중요한 instruction이 아니고, 단순히 값을 left shift하는 기능을 한다. `$s3`의 값을 2만큼 left shift하면 4를 곱하는 것과 같다. 이는 `$s3` 값이 1증가할 때마다 4를 곱함으로써 `$s6`에 접근하는 주소값을 4bytes씩 옮기기 위한 코드다. right shift를 하기 위해서는 `srl`을 사용한다.
 
-## MIPS Procedure
+### MIPS Procedure
 
 procedure는 함수를 의미한다. 어셈블리 레벨에서 함수를 만들고 호출하는 것은 하이레벨 언어에서 하던 것과는 많이 다르다. 여기서 가장 중요한 것은 레지스터의 백업과 점프다.
 
-### Leaf Procedure
+#### Leaf Procedure
 
 호출된 함수에서 다른 함수를 호출하지 않는 함수, 즉 **leaf procedure**를 가정해보자:
 
@@ -275,7 +275,7 @@ jr $ra # $ra 위치로 점프
 
 여기서는 `$t1`과 `$t0`도 백업을 했는데, 사실 이럴 필요는 없다. `$t` 레지스터는 temporary register이기 때문에 언제나 임시 값만 저장하도록 약속되어있다. 따라서 `$t` 레지스터에는 값이 덮어씌워져도 문제가 없도록 코드를 짜야한다.
 
-### Non-Leaf Procedure
+#### Non-Leaf Procedure
 
 함수 안에서 다른 함수를 호출하는 non-leaf procedure는 어떨까? 이렇게 호출이 중첩된 경우에는 `$ra`에 저장된 callr의 위치가 덮어 씌워져 무한 루프에 빠질 위험이 있다. 일단 하이레벨 코드를 보자:
 
@@ -311,7 +311,7 @@ L1:
   jr $ra
 ```
 
-굉장히 복잡해보이지만, 하나씩 뜯어보면... 진짜 복잡하다. 작동 방식은 대략 재귀적으로 함수를 호출하면서 stack pointer를 밀어내며 값을 백업하다가, 이후 다시 stack pointer를 당기며 값을 가져와 결과를 내는 식이다. `$a0`가 3이라고 가정하고 모든 instruction 단계를 step by step으로 한 단계 한 단계 살펴보자. 
+굉장히 복잡해보이지만, 하나씩 뜯어보면... 진짜 복잡하다. 작동 방식은 대략 재귀적으로 함수를 호출하면서 stack pointer를 밀어내며 값을 백업하다가, 이후 다시 stack pointer를 당기며 값을 가져와 결과를 내는 식이다. `$a0`가 3이라고 가정하고 모든 instruction 단계를 step by step으로 한 단계 한 단계 살펴보자.
 
 ```mips
 factorial:
@@ -499,11 +499,11 @@ jr $ra
 
 마치 인간 컴퓨터가 된 기분이다.
 
-## Memory Layout
+### Memory Layout
 
 ```
 +---------------+ High address
-|     Stack     | 
+|     Stack     |
 +-------+-------+
 |       |       |
 |       v       |
@@ -523,17 +523,17 @@ jr $ra
 
 앞서 스택에 값을 저장하고 불러오는 과정이 위와 같은 메모리 구조를 바탕으로 이뤄진다. 스택은 높은 곳에서 낮은 곳으로 자라기 때문에 `addi $sp, $sp, -8`처럼 stack poniter를 음의 방향으로 움직여준 것이다. 값을 저장할 때도 `sw $ra 4($sp)`다음 `sw $a0, 0($sp)`를 했다. 스택과 달리 heap은 낮은 곳에서 높은 곳으로 자란다.
 
-## MIPS Instruction Formats
+### MIPS Instruction Formats
 
 MIPS에서 어셈블러가 한 줄씩 instruction을 읽고 이를 기계어로 변환할 때, 기계어를 표현하는 세가지 형식 R(Register), I(Immediate), J(Jump)가 있다.
 
-### R-format
+#### R-format
 
 R-format은 레지스터를 이용해 연산하는 instruction을 담는 형식이다.
 
 ```
 +----+----+----+----+-------+-------+
-| op | rs | rt | rd | shamt | funct | 
+| op | rs | rt | rd | shamt | funct |
 +----+----+----+----+-------+-------+
 ```
 
@@ -554,7 +554,7 @@ add $t0, $s1, $s2
 
 ```
 +---------+-----+-----+-----+---+-----+
-| special | $s1 | $s2 | $t0 | 0 | add | 
+| special | $s1 | $s2 | $t0 | 0 | add |
 +---------+-----+-----+-----+---+-----+
 ```
 
@@ -562,7 +562,7 @@ register table에 따라 이것을 10진수로 변환하면:
 
 ```
 +---+----+----+---+---+----+
-| 0 | 17 | 18 | 8 | 0 | 32 | 
+| 0 | 17 | 18 | 8 | 0 | 32 |
 +---+----+----+---+---+----+
 ```
 
@@ -576,13 +576,13 @@ register table에 따라 이것을 10진수로 변환하면:
 
 이렇게 보면 바로 funct를 확인하면 되니까 op가 필요하지 않을 것 같다. 사실 32bit 시스템에서 쉽게 instruction을 읽기 위해 32비트를 맞추는 것이 복잡도를 줄이는 데 도움이 되기 때문에 메모리 손해를 감안한 것이다.
 
-### I-format
+#### I-format
 
 I-format은 상수 연산과 메모리 연산을 위해 사용된다.
 
 ```
 +----+----+----+-----+
-| op | rs | rt | IMM |  
+| op | rs | rt | IMM |
 +----+----+----+-----+
 ```
 
@@ -590,7 +590,7 @@ I-format은 상수 연산과 메모리 연산을 위해 사용된다.
 * rs(5bits), rt(5bits): source or destination register number
 * IMM(16bits): constant나 address가 담긴다. constant의 경우 -215부터 215 - 1까지의 상수를 저장할 수 있다. address의 경우 rs의 base address에 offset으로 기능하거나 점프해야 하는 instruction까지의 거리를 저장한다.
 
-### J-format
+#### J-format
 
 J-format은 다른 위치로 점프할 때 사용되는 포맷이다.
 
@@ -603,7 +603,7 @@ J-format은 다른 위치로 점프할 때 사용되는 포맷이다.
 * op(6bits): 포맷과 동작을 구분하는 필드.
 * pseudo-address(26bits): 점프할 instruction의 변환된 주소가 담기는 필드.
 
-## MIPS Addressing for 32-bit Immediates and Addresses
+### MIPS Addressing for 32-bit Immediates and Addresses
 
 MIPS instruction format 중 I-format은 `bne $t0, $s5, Exit`와 같은 구문을 표현할 때도 사용된다. 그런데 I-foramt의 마지막 필드인 constant or address는 16bits밖에 되지 않아 `Exit`에서 수행될 동작 전체를 담는 것은 불가능하다. 따라서 이곳에는 `Exit`가 몇 줄 떨어져 있는지를 저장한다. 앞서 활용한 Loop 코드를 다시 보자:
 

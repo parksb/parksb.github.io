@@ -42,7 +42,7 @@ identity(fox) // None of the following functions can be called with the argument
 
 새로운 타입이 추가될 때마다 인자의 타입만 다르고 똑같은 동작을 하는 `identity` 함수를 만드는 것은 효율적이지 않다. 이때 다형성(Polymorphism)으로 문제를 해결할 수 있다.
 
-# 파라미터의 다형성
+## 파라미터의 다형성
 
 다형성은 하나의 엔티티를 여러 타입으로 사용할 수 있게 해준다. 다형성에는 다양한 종류가 있지만, 여기서는 파라미터의 다형성(Parametric polymorphism)에 대해서만 다룬다.
 
@@ -67,9 +67,9 @@ val num = 10
 identity(10) // 10
 ```
 
-# 제네릭으로 인한 성능 저하
+## 제네릭으로 인한 성능 저하
 
-타입 파라미터를 사용할 때마다 타입 캐스팅이 발생한다면 런타임 성능을 우려할 수도 있다. JVM은 타입 소거(Type erasure)를 통해 런타임에 타입 정보를 제거함으로써 제네릭을 구현한다. 모든 타입 파라미터는 `Object`로 취급되며, 타입 파라미터 `T`의 구체적인 타입을 런타임에 알 수 없다. 이렇게 JVM은 제네릭이 없던 시절에 작성된 코드에 대한 하위호환성을 보장하는 동시에 제네릭의 런타임 오버헤드를 해소한다. 
+타입 파라미터를 사용할 때마다 타입 캐스팅이 발생한다면 런타임 성능을 우려할 수도 있다. JVM은 타입 소거(Type erasure)를 통해 런타임에 타입 정보를 제거함으로써 제네릭을 구현한다. 모든 타입 파라미터는 `Object`로 취급되며, 타입 파라미터 `T`의 구체적인 타입을 런타임에 알 수 없다. 이렇게 JVM은 제네릭이 없던 시절에 작성된 코드에 대한 하위호환성을 보장하는 동시에 제네릭의 런타임 오버헤드를 해소한다.
 
 ```kotlin
 fun <T> Any.isT() = this is T // Cannot check for instance of erased type: T
@@ -114,7 +114,7 @@ fn main() {
 }
 ```
 
-# References
+## References
 
 * 조재용, 우명인, "코틀린으로 배우는 함수형 프로그래밍", 인사이트, 2019.
 * [Jaemin Hong, Sukyoung Ryu, "Introduction to Programming Languages", 2021.](https://hjaem.info/itpl)

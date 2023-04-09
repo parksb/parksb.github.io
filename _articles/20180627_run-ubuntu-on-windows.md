@@ -13,7 +13,7 @@ WSL은 Windows Subsystem for Linux의 약자로, 윈도우 서브시스템에 �
 
 설치한 우분투를 실행하여 UNIX 아이디와 패스워드를 설정하고 나면 아래와 같은 화면이 나타난다. 이제 윈도우에서 우분투 bash를 사용할 수 있다!
 
-# 작업 디렉토리 링크하기
+## 작업 디렉토리 링크하기
 
 `~` 경로는 home 디렉토리를 의미하며, 처음 계정을 생성하면 기본적으로 `/home/{ID}`가 home 디렉토리로 설정된다. 어디서든 `cd` 명령어를 통해 이곳으로 이동할 수 있다. 하지만 주로 작업하는 디렉토리는 이곳이 아니므로, 설정이 필요하다.
 
@@ -35,7 +35,7 @@ $ ln -s /mnt/c/Bitnami/wampstack/apache2/htdocs /home/parksb/htdocs
 
 이렇게 하면 `/home/parksb`에 `/mnt/c/Bitnami/wampstack/apache2/htdocs` 디렉토리를 링크한 `htdocs` 파일이 만들어진다. 따라서 `cd ~/htdocs`를 하면 `/mnt/c/Bitnami/wampstack/apache2/htdocs`로 이동하는 것과 같아진다. `-s` 옵션은 symbolic link 파일을 만들겠다는 의미다. 만약 hard link 파일을 만든다면 아무런 옵션을 주지 않아도 된다.
 
-# Git branch 보여주기
+## Git branch 보여주기
 
 git bash를 사용하면 bash에 git branch가 나타난다. 하지만 wsl bash에서는 git branch가 나타나지 않으므로 따로 설정을 해줘야 한다. 먼저 vim으로 `.bashrc` 파일을 열어서 bash 설정을 변경해주자. 나는 vim으로 수정했는데, vim이 익숙하지 않다면 [vim 사용법](http://www.morenice.kr/25)을 참고해보자. [절대로 리눅스 파일을 윈도우 툴로 수정해서는 안 된다!](https://blogs.msdn.microsoft.com/commandline/2016/11/17/do-not-change-linux-files-using-windows-apps-and-tools/) 위험한 결과를 초래할 수 있으니 cli 에디터를 사용하지 못하겠다면 차라리 우분투를 gui로 사용하는 것을 권한다.
 
@@ -62,7 +62,7 @@ $ source ~/.bashrc
 
 git init이 안 된 곳에는 branch가 나오지 않고, init이 된 곳에는 나타난다.
 
-# npm 사용하기
+## npm 사용하기
 
 가장 먼저 터진 이슈는 vscode의 통합 터미널에서 `npm`이 안 먹히는 것이었다.
 

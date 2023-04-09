@@ -1,5 +1,5 @@
 ---
-id: 34 
+id: 34
 title: "🗞️ 훈련소에서 매일 뉴스 받아보기"
 subtitle: "고립된 훈련병을 위한 종합 뉴스"
 date: "2019.09.30"
@@ -9,7 +9,7 @@ date: "2019.09.30"
 
 그러던 중 나에게도 군사교육 소집 통지서가 왔고, 4주간의 고립은 역시 중대한 문제였다. 그렇게 입소를 앞둔 일요일, 매일 인터넷 편지로 뉴스를 보내주는 프로그램을 만들게 됐다.
 
-# 더 캠프 라이브러리
+## 더 캠프 라이브러리
 
 훈련병에게 편지를 보내려면 반드시 더 캠프를 거쳐야 한다. 더 캠프가 오픈 API를 지원하면 참 좋겠지만 안타깝게도 그렇지 않았다. 결국 클라이언트에서 HTTP 요청을 구성해 직접 더 캠프 서버로 보내는 방식으로 구현했다.
 
@@ -17,7 +17,7 @@ date: "2019.09.30"
 
 ```
 .
-+- examples 
++- examples
 +- src
 |  +- models
 |  +- services
@@ -111,7 +111,7 @@ interface GroupResponse {
 
 이렇게 [the-camp-lib](https://github.com/ParkSB/the-camp-lib)를 '소기의 목적 달성을 위한 최소한의 수준'까지 만들어 npm 패키지로 배포했다.
 
-# 훈련병을 위한 데일리 뉴스
+## 훈련병을 위한 데일리 뉴스
 
 인터넷 편지 내용은 다음뉴스의 RSS를 이용해 구성했다. 인터넷 편지의 글자 제한이 2000자이기 때문에 최대한 경제적으로 내용을 구성해야 했다. 먼저 기사의 첫 문장만 잘라냈다.
 
@@ -126,7 +126,7 @@ content = content.replace(/^(\*그림\d\*)?(\(|\[|【)\s?.*=.*\s?(\)|\]|】)\s?/
   .replace(/^[가-힣]{2,4}\s(기자|특파원)\s=\s/, '');
 ```
 
-`npm install the-camp-lib`으로 앞서 만든 패키지를 설치하고, 실제 편지를 보내는 코드를 작성했다. 
+`npm install the-camp-lib`으로 앞서 만든 패키지를 설치하고, 실제 편지를 보내는 코드를 작성했다.
 
 ```ts
 async function setMessage() {
@@ -138,15 +138,15 @@ async function setMessage() {
 
   const cookie = await thecamp.login(id, password);
   const [group] = await thecamp.fetchGroups(cookie, unitName, enterDate);
- 
+
   const trainee = {
-  
+
     traineeName,
     unitCode: group.unitCode,
     groupId: group.groupId,
     relationship: thecamp.Relationship.FATHER,
   };
- 
+
   const date = new Date();
   const message = {
     title: `${date.getMonth()}월 ${date.getDate()}일 (${date.getHours()}시 ${date.getMinutes()}분) - 다음뉴스 종합`,
@@ -170,7 +170,7 @@ async function setMessage() {
 
 [daily-news-for-trainee](https://github.com/ParkSB/daily-news-for-trainee)까지 완성하며 훈련소에 들어가기 전 할 수 있는 일은 모두 끝마쳤다.
 
-# 실행
+## 실행
 
 8월 29일 논산 육군훈련소에 입소했다. 프로그램에 문제가 있어도 고칠 수 없는 상황이다보니 뉴스가 안 올까봐 불안해하며 일주일을 보냈다. 일주일 뒤 인사담당 훈련병들이 인터넷 편지를 나눠주기 시작했고, 성공적으로 뉴스가 도착했다!
 
@@ -184,6 +184,6 @@ async function setMessage() {
 
 결정적으로 매일오는 뉴스보다 사람이 보낸 편지가 훨씬 좋았다. 편지를 받았는데 뉴스면 실망감이 더 크다.
 
-그래도 극도로 제한적인 환경에서 나의 문제를 해결해본 경험이 꽤 재밌었다. 개발할 수 있는 시간이 많지 않아서 더 재밌던 것 같기도 하다. 이번에 직접 찾아낸 문제들을 개선해 나중에 입대하는 친구에겐 더 나은 뉴스를 보내줘야겠다. 
+그래도 극도로 제한적인 환경에서 나의 문제를 해결해본 경험이 꽤 재밌었다. 개발할 수 있는 시간이 많지 않아서 더 재밌던 것 같기도 하다. 이번에 직접 찾아낸 문제들을 개선해 나중에 입대하는 친구에겐 더 나은 뉴스를 보내줘야겠다.
 
 [^mdn]: MDN web docs, "[An overview of HTTP](https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview#HTTP_is_stateless_but_not_sessionless)", 2019.
