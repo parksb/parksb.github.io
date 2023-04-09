@@ -4,7 +4,7 @@ subtitle: "Unofficial library for THE CAMP, an army communication service"
 thumbnail: "/images/74082458-7fa40d00-4a9d-11ea-9df0-1528eaafc793.webp"
 ---
 
-![](/images/74082458-7fa40d00-4a9d-11ea-9df0-1528eaafc793.webp)
+![라이브러리 GitHub 캡쳐 이미지.](/images/74082458-7fa40d00-4a9d-11ea-9df0-1528eaafc793.webp)
 
 _**THE CAMP Library (2019) [github.com/parksb/the-camp-lib](https://github.com/parksb/the-camp-lib)**_
 
