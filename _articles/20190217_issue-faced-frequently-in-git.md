@@ -20,20 +20,20 @@ date: "2019.2.17"
 1. Alice는 깃허브에서 'project'라는 이름의 **원격 저장소**를 만들었다.
    * **원격 저장소(Remote repository)**: 일반적으로 [GitHub](https://github.com/), [GitLab](https://gitlab.com/) 또는 [BitBucket](https://bitbucket.org/)과 같은 호스팅 서비스에서 호스팅된 저장소.
 1. 이 원격 저장소를 `git clone https://github.com/alice/project.git` 명령으로 자신의 컴퓨터에 복사해 **로컬 저장소**를 만들었다.
-   * **로컬 저장소(Local repository)**: 컴퓨터의 로컬 환경에 위치한 저장소. 
+   * **로컬 저장소(Local repository)**: 컴퓨터의 로컬 환경에 위치한 저장소.
 1. 그리고 **작업 디렉토리**에서 `index.html` 파일을 작성했다.
    * **작업 디렉토리(Working directory)**: 실제 파일이 위치한 디렉토리.
 1. 이 파일을 `git add index.html` 명령으로 변경된(Modified) 파일들을 **스테이징**해 **인덱스** 영역에 등록했다.
-   * **스테이징(Staging)**: 확정할 변경 사항을 준비시키는 것. 
+   * **스테이징(Staging)**: 확정할 변경 사항을 준비시키는 것.
    * **인덱스(Index)**: 확정할 준비가 된 변경 사항들이 모인 영역.
 1. 이어서 `git commit -m "index.html 추가"` 명령으로 스테이징된(Staged) 변경 사항을 **커밋**해 로컬 저장소에 등록했다.
-   * **커밋(Commit)**: 인덱스의 변경 사항들을 확정하는 것. 여기까지는 로컬 저장소에서 일어나는 일이며, 아직 다른 사람에게는 변경 사항이 공개되지 않은 상태다. 
-   * **헤드(HEAD)**: 작업 중인 브랜치의 선두를 가리키는 포인터. 헤드 이하의 커밋들을 확정된 것으로 취급하며, 필요에 따라 특정 커밋이나 브랜치를 가리키도록 헤드를 움직여 작업 디렉토리의 상태를 바꿀 수 있다.  
+   * **커밋(Commit)**: 인덱스의 변경 사항들을 확정하는 것. 여기까지는 로컬 저장소에서 일어나는 일이며, 아직 다른 사람에게는 변경 사항이 공개되지 않은 상태다.
+   * **헤드(HEAD)**: 작업 중인 브랜치의 선두를 가리키는 포인터. 헤드 이하의 커밋들을 확정된 것으로 취급하며, 필요에 따라 특정 커밋이나 브랜치를 가리키도록 헤드를 움직여 작업 디렉토리의 상태를 바꿀 수 있다.
 1. 마지막으로 `git push origin master` 명령으로 **푸시**해 커밋된(Committed) 변경 사항을 원격 저장소에 게시했다.
    * **푸시(Push)**: 확정된 변경 사항을 원격 저장소에 게시하는 것. 드디어 변경 사항이 공개된다.
    * **`origin`**: 로컬 저장소의 원본 원격 저장소. `clone` 과정에서 자동으로 등록된다. `clone`으로 로컬 저장소를 만든 것이 아니라면 따로 추가해야 한다.
 
-포크(Fork)나 풀 리퀘스트(Pull request) 등 깃허브에 관한 내용은 [오픈소스 입문을 위한 아주 구체적인 가이드](http://parksb.github.io/article/13.html)에서 소개했다.
+포크(Fork)나 풀 리퀘스트(Pull request) 등 깃허브에 관한 내용은 [오픈소스 입문을 위한 아주 구체적인 가이드](https://parksb.github.io/article/13.html)에서 소개했다.
 
 # 파일 스테이징 취소하기
 
@@ -120,8 +120,8 @@ $ git push -f origin master
 
 ```bash
 $ git reflog
-28ca4ca HEAD@{0}: commit: 오른쪽 버튼 색깔을 파란색으로 변경 
-8eefd4a HEAD@{1}: commit: 가운데 버튼 색깔을 초록색으로 변경 
+28ca4ca HEAD@{0}: commit: 오른쪽 버튼 색깔을 파란색으로 변경
+8eefd4a HEAD@{1}: commit: 가운데 버튼 색깔을 초록색으로 변경
 21929f8 HEAD@{2}: commit: 왼쪽 버튼 색깔을 빨간색으로 변경
 ```
 
@@ -149,9 +149,9 @@ $ git commit -m "모든 버튼 색깔을 노란색으로 변경"
 
 ```bash
 $ git reflog
-28ca4ca HEAD@{0}: commit: 오른쪽 버튼 색깔을 파란색으로 변경 
-8eefd4a HEAD@{1}: commit: 가운데 버튼 색깔을 초록색으로 변경 
-21929f8 HEAD@{2}: commit: 왼쪽 버튼 색깔을 빨간색으로 변경 
+28ca4ca HEAD@{0}: commit: 오른쪽 버튼 색깔을 파란색으로 변경
+8eefd4a HEAD@{1}: commit: 가운데 버튼 색깔을 초록색으로 변경
+21929f8 HEAD@{2}: commit: 왼쪽 버튼 색깔을 빨간색으로 변경
 ```
 
 그리고 되돌리고 싶은 커밋의 범위를 지정해 `revert`를 실행하고, 에디터에서 커밋 메시지를 작성한다. 만약 특정 하나의 커밋만 되돌리고 싶다면 커밋 해시를 하나만 입력해도 된다.
@@ -307,7 +307,7 @@ $ git merge upstream/master
 * Alice와 Bob은 각각 featA, featB 브랜치에서 index.js를 수정했다.
 * Alice는 featA 브랜치에서 작업하던 중 Bob이 작업하고 있는 featB 브랜치를 확인할 일이 생겼다.
 * featA의 작업 내용을 백업하고 featB 브랜치를 체크아웃하고자 한다.
- 
+
 featA 브랜치에 커밋되지 않은 변경 사항을 남겨두고 `git checkout featB`를 실행해 featB 브랜치로 넘어가려하면 파일이 덮어쓰기 될 수 있다는 에러가 나온다.
 
 ```bash
@@ -383,7 +383,7 @@ $ git push -f origin featB
 # 병합 충돌 해결하고 풀 리퀘스트 보내기
 
 * Alice는 bob/project 저장소의 코드를 수정하고 bob/project의 master 브랜치에 풀 리퀘스트를 보냈다.
-* 그 사이 Carol이 Alice와 같은 코드를 수정했고, Carol의 풀 리퀘스트가 먼저 master에 병합되었다. 
+* 그 사이 Carol이 Alice와 같은 코드를 수정했고, Carol의 풀 리퀘스트가 먼저 master에 병합되었다.
 * Alice의 풀 리퀘스트에 병합 충돌(Merge conflicts) 위험이 생겨 이를 해결하고자 한다.
 
 Alice와 Carol이 같은 부분을 수정했기 때문에 병합 충돌이 발생했다. 이때는 master에 Alice의 변경 사항을 반영할지, Carol의 작업을 유지할지 수동으로 결정해줘야 한다.
@@ -468,7 +468,7 @@ $ git rebase --continue
 
 M3 커밋에서 충돌이 있었으므로 그 다음 커밋인 M4에서도 같은 충돌이 발생한다. 앞선 방식과 똑같이 충돌을 해결하고, 리베이스를 마친 뒤 `--force` 또는 `-f` 옵션으로 푸시한다.
 
-리베이스 방식을 사용할 때는 병합 충돌이 있는 모든 커밋들에 대해 충돌을 일일이 해결해줘야 한다. 즉, 충돌난 커밋이 너무 많을 때는 리베이스보다는 단순 병합하는 첫 번재 방법이 더 낫다. 할만할 것 같아서 시작했으나 도중에 무리라고 판단되면 `git rebase --abort`로 리베이스를 중단할 수 있다. 
+리베이스 방식을 사용할 때는 병합 충돌이 있는 모든 커밋들에 대해 충돌을 일일이 해결해줘야 한다. 즉, 충돌난 커밋이 너무 많을 때는 리베이스보다는 단순 병합하는 첫 번재 방법이 더 낫다. 할만할 것 같아서 시작했으나 도중에 무리라고 판단되면 `git rebase --abort`로 리베이스를 중단할 수 있다.
 
 ```
 $ git rebase --continue
@@ -487,8 +487,8 @@ $ git push -f origin alice-branch
 ```bash
 $ git checkout featA
 $ git reflog
-183d9ba HEAD@{0}: commit: 버튼 동작 구현 
-4a391fc HEAD@{1}: commit: index.js 리팩토링 
+183d9ba HEAD@{0}: commit: 버튼 동작 구현
+4a391fc HEAD@{1}: commit: index.js 리팩토링
 b51bf86 HEAD@{2}: commit: index.js 추가
 ```
 
