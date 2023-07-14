@@ -1,54 +1,56 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-  <meta charset="UTF-8" />
-  <title>Simon Park</title>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Simon Park</title>
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="theme-color" content="#F5F5F5">
-  <meta name="description" content="박성범 Simon Park ― Articles">
-  <link rel="canonical" href="https://parksb.github.io/articles.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#F5F5F5">
+    <meta name="description" content="박성범 Simon Park ― Articles">
+    <link rel="canonical" href="https://parksb.github.io/articles.html" />
 
-  <meta property="og:title" content="Simon Park">
-  <meta property="og:image" content="https://og-image-parksb.vercel.app/%F0%9F%93%9A%20**%EB%B0%95%EC%84%B1%EB%B2%94**%20Simon%20Park.png?subtitle=%E2%80%95%20Articles">
-  <meta property="og:description" content="박성범 Simon Park ― Articles">
+    <meta property="og:title" content="Simon Park">
+    <meta property="og:image" content="https://og-image-parksb.vercel.app/%F0%9F%93%9A%20**%EB%B0%95%EC%84%B1%EB%B2%94**%20Simon%20Park.png?subtitle=%E2%80%95%20Articles">
+    <meta property="og:description" content="박성범 Simon Park ― Articles">
 
-  <meta name="twitter:title" content="Simon Park">
-  <meta name="twitter:image" content="https://og-image-parksb.vercel.app/%F0%9F%93%9A%20**%EB%B0%95%EC%84%B1%EB%B2%94**%20Simon%20Park.png?subtitle=%E2%80%95%20Articles">
-  <meta name="twitter:description" content="박성범 Simon Park ― Articles">
-  <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Simon Park">
+    <meta name="twitter:image" content="https://og-image-parksb.vercel.app/%F0%9F%93%9A%20**%EB%B0%95%EC%84%B1%EB%B2%94**%20Simon%20Park.png?subtitle=%E2%80%95%20Articles">
+    <meta name="twitter:description" content="박성범 Simon Park ― Articles">
+    <meta name="twitter:card" content="summary_large_image">
 
-  <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
-  <link rel="preload" href="./styles/articles.css" as="style">
-  <link rel="stylesheet" href="./styles/articles.css">
+    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
+    <link rel="preload" href="./styles/articles.css" as="style">
+    <link rel="stylesheet" href="./styles/articles.css">
 
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-X88XDLB5FS"></script>
-  <script async>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-X88XDLB5FS"></script>
+    <script async>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-X88XDLB5FS');
-  </script>
-</head>
-<body>
-  <header id="top-container" role="navigation">
+    </script>
+  </head>
+  <body>
     <%- include(process.cwd() + '/app/templates/navigation'); %>
-  </header>
-  <main id="main-container">
-    <section id="articles-container">
+    <main id="main-container">
       <ul>
-        <% articles.reverse().map((article) => { %>
-          <li class="articles-list-item">
+        <li><a href="/">About <span class="symbol">↘</span></a></li>
+        <li><a href="works.html">Works <span class="symbol">↘</span></a></li>
+        <li class="selected">Articles</li>
+        <ul id="articles-container" class="selected-container">
+          <% articles.reverse().map((article) => { %>
+          <li>
             <a href="./article/<%= article.id %>.html">
-              <h1><%= article.title %></h1><br/>
-              <% if (article.subtitle) { %><h2><%= article.subtitle %></h2><% } %>
-              <time><%= article.date %></time>
+              <span class="heading"><%= article.title %><% if (article.subtitle) { %>:<% } %></span>
+              <% if (article.subtitle) { %><span class="subheading"><%= article.subtitle %></span><% } %>
+              <time>(<%= article.date %>)</time>
             </a>
           </li>
-        <% }) %>
+          <% }) %>
+        </ul>
       </ul>
-    </section>
-  </main>
-</body>
+    </main>
+    <%- include(process.cwd() + '/app/templates/footer'); %>
+  </body>
 </html>

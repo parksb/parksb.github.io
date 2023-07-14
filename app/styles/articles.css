@@ -1,42 +1,25 @@
 @import 'init.css';
+@import 'list.css';
 
-#articles-container h1 {
-  display: inline;
-  font-size: 18px;
+ul#articles-container {
+  list-style: none;
+}
+
+ul#articles-container > li span.heading {
+  font-size: 1em;
   font-weight: 700;
 }
 
-#articles-container h2 {
-  display: inline;
-  font-size: 14px;
+ul#articles-container > li span.subheading {
   font-weight: 400;
 }
 
-#articles-container time {
-  font-size: 12px;
-  color: #767676;
+ul#articles-container > li time {
+  font-size: 0.8em;
   font-weight: 400;
 }
 
-#articles-container ul {
-  list-style: none;
-  margin-top: 20px;
-}
-
-#articles-container a:hover,
-#articles-container a:focus,
-#articles-container a:hover li,
-#articles-container a:focus li {
-  background-color: black;
-  color: white;
-}
-
-.articles-list-item {
+ul#articles-container > li {
   width: fit-content;
-  margin-bottom: 15px;
-  padding-bottom: 12px;
-}
-
-.articles-list-item:last-child {
-  border-bottom: 0;
+  margin-bottom: 7px;
 }

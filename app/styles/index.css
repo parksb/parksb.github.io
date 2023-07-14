@@ -1,22 +1,14 @@
 @import 'init.css';
-@import 'articles.css';
+@import 'list.css';
 
-#articles-container {
-  margin-top: 30px;
+section#index-container a {
+  color: #0366d6;
 }
 
-#articles-container h2 {
-  display: inline;
-  font-size: 18px;
-  font-weight: 700;
+section#index-container a:hover {
+  text-decoration: underline;
 }
 
-#articles-container h3 {
-  display: inline;
-  font-size: 14px;
-  font-weight: 400;
-}
-
-#articles-container ul {
-  margin-top: 30px;
+section#index-container p {
+  margin-bottom: 1em;
 }

@@ -1,42 +1,46 @@
 @import 'init.css';
 
-#work-container {
-  margin-top: 90px;
-}
-
-#work-title {
+#work-container #work-title {
   width: auto;
-  font-size: 22px;
+  font-size: 1.5em;
   font-weight: 700;
 }
 
-#work-subtitle {
-  font-size: 20px;
-  margin-bottom: 30px;
+#work-container #work-subtitle {
+  font-size: 1.2em;
   word-break: keep-all;
   font-weight: 400;
-}
-
-#work-container a {
-  text-decoration: underline;
-}
-
-#work-container a:hover,
-#work-container a:focus {
-  color: white;
-  background-color: black;
 }
 
 #work-container img {
   display: block;
   max-width: 500px;
   width: 100%;
-  margin-bottom: 15px;
+  margin-bottom: 1em;
   border: 1px solid black;
   height: auto;
 }
 
+#work-container #work-content-container {
+  margin-top: 30px;
+}
+
 #work-container p {
-  font-size: 16px;
-  line-height: 200%;
+  font-size: 1em;
+  line-height: 1.7em;
+  margin-bottom: 1em;
+}
+
+#work-container div.back-to-work-list {
+  font-size: 1em;
+  margin-bottom: 1em;
+}
+
+#work-content-container a {
+  color: #0366d6;
+}
+
+#work-content-container a:hover,
+#work-content-container a:focus {
+  text-decoration: underline;
 }

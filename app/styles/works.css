@@ -1,38 +1,29 @@
 @import 'init.css';
+@import 'list.css';
 
-#works-container {
-  max-width: 900px;
-  min-width: 200px;
-  margin-top: 10px;
-  margin-left: -10px;
+section#works-container {
+  max-width: 650px;
   -webkit-columns: 120px 5;
   -moz-columns: 120px 5;
   columns: 150px 5;
 }
 
-#works-container .works-content {
+section#works-container .works-content {
   width: 150px;
   display: inline-block;
-  padding: 10px;
-  line-height: 12px;
+  line-height: 0;
+  margin-bottom: 15px;
 }
 
-#works-container .works-content:hover,
-#works-container .works-content:focus {
-  background-color: black;
-  color: white;
-}
-
-#works-container .works-content img {
+section#works-container div.works-content > img {
   width: 100%;
   height: 100%;
   border: 1px solid black;
-  margin-bottom: 5px;
+  margin-bottom: 3px;
 }
 
-#works-container h1 {
-  display: inline;
-  font-size: 12px;
-  line-height: 18px;
-  font-weight: 400;
+section#works-container span.heading {
+  font-size: 0.9em;
+  line-height: 1.3em;
+  font-weight: 700;
 }

@@ -1,54 +1,59 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-  <meta charset="UTF-8" />
-  <title>
-    <%- title %>
-  </title>
+  <head>
+    <meta charset="UTF-8" />
+    <title>
+      <%- title %>
+    </title>
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="theme-color" content="#F5F5F5">
-  <meta name="description" content="<%- subtitle %>">
-  <link rel="canonical" href="https://parksb.github.io/work/<%- id %>.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#F5F5F5">
+    <meta name="description" content="<%- subtitle %>">
+    <link rel="canonical" href="https://parksb.github.io/work/<%- id %>.html" />
 
-  <meta property="og:title" content="<%- title %>">
-  <meta property="og:image" content="<%- thumbnail %>">
-  <meta property="og:description" content="<%- subtitle %>">
+    <meta property="og:title" content="<%- title %>">
+    <meta property="og:image" content="<%- thumbnail %>">
+    <meta property="og:description" content="<%- subtitle %>">
 
-  <meta name="twitter:title" content="<%- title %>">
-  <meta name="twitter:image" content="<%- thumbnail %>">
-  <meta name="twitter:description" content="<%- subtitle %>">
-  <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="<%- title %>">
+    <meta name="twitter:image" content="<%- thumbnail %>">
+    <meta name="twitter:description" content="<%- subtitle %>">
+    <meta name="twitter:card" content="summary_large_image">
 
-  <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon">
-  <link rel="preload" href="../styles/work.css" as="style">
-  <link rel="stylesheet" href="../styles/work.css">
+    <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon">
+    <link rel="preload" href="../styles/work.css" as="style">
+    <link rel="stylesheet" href="../styles/work.css">
 
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-X88XDLB5FS"></script>
-  <script async>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-X88XDLB5FS"></script>
+    <script async>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-X88XDLB5FS');
-  </script>
-</head>
-<body>
-  <header id="top-container" role="navigation">
+    </script>
+  </head>
+  <body>
     <%- include(process.cwd() + '/app/templates/navigation'); %>
-  </header>
-  <main id="main-container">
-    <article id="work-container">
-      <h1 id="work-title">
-        <%- title %>
-      </h1>
-      <h2 id="work-subtitle">
-        <%- subtitle %>
-      </h2>
-      <section id="work-content-container">
-        <%- content %>
-      </section>
-    </article>
-  </main>
-</body>
+    <main id="main-container">
+      <article id="work-container">
+        <div class="back-to-work-list">
+          <a href="../works.html"><span class="symbol">←</span> Works</a>
+        </div>
+        <h1 id="work-title">
+          <%- title %>
+        </h1>
+        <h2 id="work-subtitle">
+          <%- subtitle %>
+        </h2>
+        <section id="work-content-container">
+          <%- content %>
+        </section>
+        <div class="back-to-work-list">
+          <a href="../works.html"><span class="symbol">←</span> Works</a>
+        </div>
+      </article>
+    </main>
+    <%- include(process.cwd() + '/app/templates/footer'); %>
+  </body>
 </html>

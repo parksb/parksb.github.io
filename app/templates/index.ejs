@@ -1,55 +1,51 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-  <meta charset="UTF-8" />
-  <title>Simon Park</title>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Simon Park</title>
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="theme-color" content="#F5F5F5">
-  <meta name="description" content="박성범 Simon Park">
-  <link rel="canonical" href="https://parksb.github.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#F5F5F5">
+    <meta name="description" content="박성범 Simon Park">
+    <link rel="canonical" href="https://parksb.github.io/" />
 
-  <meta property="og:title" content="Simon Park">
-  <meta property="og:image" content="https://og-image-parksb.vercel.app/%F0%9F%A4%94%20**%EB%B0%95%EC%84%B1%EB%B2%94**%20Simon%20Park.png?subtitle=%E2%80%95%20parksb.github.io">
-  <meta property="og:description" content="박성범 Simon Park">
+    <meta property="og:title" content="Simon Park">
+    <meta property="og:image" content="https://og-image-parksb.vercel.app/%F0%9F%A4%94%20**%EB%B0%95%EC%84%B1%EB%B2%94**%20Simon%20Park.png?subtitle=%E2%80%95%20parksb.github.io">
+    <meta property="og:description" content="박성범 Simon Park">
 
-  <meta name="twitter:title" content="Simon Park">
-  <meta name="twitter:image" content="https://og-image-parksb.vercel.app/%F0%9F%A4%94%20**%EB%B0%95%EC%84%B1%EB%B2%94**%20Simon%20Park.png?subtitle=%E2%80%95%20parksb.github.io">
-  <meta name="twitter:description" content="박성범 Simon Park">
-  <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Simon Park">
+    <meta name="twitter:image" content="https://og-image-parksb.vercel.app/%F0%9F%A4%94%20**%EB%B0%95%EC%84%B1%EB%B2%94**%20Simon%20Park.png?subtitle=%E2%80%95%20parksb.github.io">
+    <meta name="twitter:description" content="박성범 Simon Park">
+    <meta name="twitter:card" content="summary_large_image">
 
-  <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
-  <link rel="preload" href="./styles/index.css" as="style">
-  <link rel="stylesheet" href="./styles/index.css">
+    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
+    <link rel="preload" href="./styles/index.css" as="style">
+    <link rel="stylesheet" href="./styles/index.css">
 
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-X88XDLB5FS"></script>
-  <script async>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-X88XDLB5FS"></script>
+    <script async>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-X88XDLB5FS');
-  </script>
-</head>
-<body>
-  <header id="top-container" role="navigation">
+    </script>
+  </head>
+  <body>
     <%- include(process.cwd() + '/app/templates/navigation'); %>
-  </header>
-  <main id="main-container">
-    <section id="articles-container">
+    <main id="main-container">
       <ul>
-        <% articles.reverse().map((article) => { %>
-          <li class="articles-list-item">
-            <a href="./article/<%= article.id %>.html">
-              <h2><%= article.title %></h2><br/>
-              <% if (article.subtitle) { %><h3><%= article.subtitle %></h3><% } %>
-              <time><%= article.date %></time>
-            </a>
-          </li>
-        <% }) %>
+        <li class="selected">About</li>
+        <section id="index-container" class="selected-container">
+          <p>4주 스프린트에 따라 애자일하게 사는 소프트웨어 엔지니어 <a href="/">박성범</a>입니다. 취미로 <a href="https://parksb.github.io/article/32.html">야크 털을 깎습니다.</a></p>
+          <p><a href="https://www.navercorp.com/">네이버</a> AjaxUI 개발랩에서 프론트엔드 개발자로 인턴십을 했고, <a href="https://kakaostyle.com/">카카오스타일</a> 지그재그UX그룹에서 소프트웨어 엔지니어로 일했습니다. 지금은 <a href="https://www.ajou.ac.kr/">아주대학교</a> 디지털미디어학과에서 공부하고 있습니다.</p>
+          <p>14살에 C언어를 독학하며 컴퓨터 프로그래밍을 시작했고, 2년 뒤 24시간이 지나면 글이 사라지는 SNS '하루'를 만들어 한겨레(<a href="http://www.hani.co.kr/arti/society/schooling/627624.html" target="_blank" rel="noopener">머릿속 아이디어, 포기 않고 10개월 걸려 구현</a>), 뉴시스(<a href="https://newsis.com/view/?id=NISX20140704_0013026943" target="_blank" rel="noopener">"흑역사 지운다"…휘발성 SNS 개발한 17살 동갑내기</a>), 연합뉴스(<a href="https://www.yna.co.kr/view/AKR20140612088300017" target="_blank" rel="noopener">네이버, SNS '하루' 만든 고등학생 개발자 지원</a>) 등 언론에 보도되었습니다.</p>
+          <p>연락은 <a href="mailto:parkgds@gmail.com">parkgds@gmail.com</a>으로 부탁드립니다. 메인테이닝, 컨트리뷰션 중인 오픈소스 프로젝트는 <a href="https://github.com/parksb">GitHub</a>을 참고해주세요. 그 외에 <a href="https://twitter.com/caesiumpark">Twitter</a>와 <a href="https://linkedin.com/in/parksb">LinkedIn</a>에서도 프로필을 찾을 수 있으며, PGP 공개키는 <a href="https://keybase.io/parksb">Keybase</a>를 확인해주세요. 이 사이트에 게시되는 새로운 글을 받아보려면 <a href="https://parksb.github.io/feed.xml">RSS</a>를 구독해주세요.</p>
+        </section>
+        <li><a href="works.html">Works <span class="symbol">↘</span></a></li>
+        <li><a href="articles.html">Articles <span class="symbol">↘</span></a></li>
       </ul>
-      <h2><a href="./articles.html">↘ ↘ ↘</a></h2>
-    </section>
-  </main>
-</body>
+    </main>
+    <%- include(process.cwd() + '/app/templates/footer'); %>
+  </body>
 </html>

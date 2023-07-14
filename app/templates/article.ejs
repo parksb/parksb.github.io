@@ -1,109 +1,100 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-  <meta charset="UTF-8" />
-  <title>
-    <%- article.title %>
-  </title>
+  <head>
+    <meta charset="UTF-8" />
+    <title>
+      <%- article.title %>
+    </title>
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="theme-color" content="#F5F5F5">
-  <meta name="description" content="<%- article.summary %>">
-  <link rel="canonical" href="https://parksb.github.io/article/<%- article.id %>.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#F5F5F5">
+    <meta name="description" content="<%- article.summary %>">
+    <link rel="canonical" href="https://parksb.github.io/article/<%- article.id %>.html" />
 
-  <meta property="og:title" content="<%- article.title %><% if (article.subtitle) { %>: <%- article.subtitle %> <% } %>">
-  <meta property="og:image" content="https://og-image-parksb.vercel.app/<%- article.encodedTitle %>.png?subtitle=<%- article.encodedSubtitle %>&description=<%- article.encodedDescription %>">
-  <meta property="og:description" content="<%- article.summary %>">
+    <meta property="og:title" content="<%- article.title %><% if (article.subtitle) { %>: <%- article.subtitle %> <% } %>">
+    <meta property="og:image" content="https://og-image-parksb.vercel.app/<%- article.encodedTitle %>.png?subtitle=<%- article.encodedSubtitle %>&description=<%- article.encodedDescription %>">
+    <meta property="og:description" content="<%- article.summary %>">
 
-  <meta name="twitter:title" content="<%- article.title %><% if (article.subtitle) { %>: <%- article.subtitle %> <% } %>">
-  <meta name="twitter:image" content="https://og-image-parksb.vercel.app/<%- article.encodedTitle %>.png?subtitle=<%- article.encodedSubtitle %>&description=<%- article.encodedDescription %>">
-  <meta name="twitter:description" content="<%- article.summary %>">
-  <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="<%- article.title %><% if (article.subtitle) { %>: <%- article.subtitle %> <% } %>">
+    <meta name="twitter:image" content="https://og-image-parksb.vercel.app/<%- article.encodedTitle %>.png?subtitle=<%- article.encodedSubtitle %>&description=<%- article.encodedDescription %>">
+    <meta name="twitter:description" content="<%- article.summary %>">
+    <meta name="twitter:card" content="summary_large_image">
 
-  <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon">
-  <link rel="preload" href="../styles/article.css" as="style">
-  <link rel="stylesheet" href="../styles/article.css">
+    <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon">
+    <link rel="preload" href="../styles/article.css" as="style">
+    <link rel="stylesheet" href="../styles/article.css">
 
-  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v13.0"></script>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-X88XDLB5FS"></script>
-  <script async>
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v13.0"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-X88XDLB5FS"></script>
+    <script async>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-X88XDLB5FS');
-  </script>
-</head>
-<body>
-  <header id="top-container" role="navigation">
+    </script>
+  </head>
+  <body>
     <%- include(process.cwd() + '/app/templates/navigation'); %>
-  </header>
-  <main id="main-container">
-    <article id="article-container">
-      <h1 id="article-title">
-        <%- article.title %>
-      </h1>
-      <% if (article.subtitle) { %>
+    <main id="main-container">
+      <article id="article-container">
+        <div class="back-to-article-list">
+          <a href="../articles.html"><span class="symbol">←</span> Articles</a>
+        </div>
+        <h1 id="article-title">
+          <%- article.title %>
+        </h1>
+        <% if (article.subtitle) { %>
         <h2 id="article-subtitle">
           <%- article.subtitle %>
         </h2>
-      <% } %>
-      <time id="article-date">
-        <%- article.date %>
-      </time>
-      <small id="article-history">
-        <a href="https://github.com/parksb/parksb.github.io/commits/development/_articles/<%- article.filename %>">
-          (history)
-        </a>
-      </small>
-      <section id="article-content-container">
-        <%- article.content %>
-      </section>
-      <section id="article-navigation">
-        <% if (nextArticle) { %>
+        <% } %>
+        <time id="article-date"><%- article.date %></time>
+        <small id="article-history">
+          <a href="https://github.com/parksb/parksb.github.io/commits/development/_articles/<%- article.filename %>">(history)</a>
+        </small>
+        <section id="article-content-container">
+          <%- article.content %>
+        </section>
+        <section id="article-navigation">
+          <% if (nextArticle) { %>
           <div class="article-navigation-item article-navigation-next">
             <a href="<%- nextArticle.id %>.html">
-              <div class="article-navigation-arrow article-navigation-next">＜</div>
+              <div class="article-navigation-arrow article-navigation-next symbol">＜</div>
               <div class="article-navigation-content article-navigation-next">
                 <p class="article-navigation-title"><%- nextArticle.title %></p>
                 <p class="article-navigation-subtitle"><%- nextArticle.subtitle %></p>
               </div>
             </a>
           </div>
-        <% } %>
-        <% if (prevArticle) { %>
+          <% } %>
+          <% if (prevArticle) { %>
           <div class="article-navigation-item article-navigation-prev">
             <a href="<%- prevArticle.id %>.html">
-              <div class="article-navigation-arrow article-navigation-prev">＞</div>
+              <div class="article-navigation-arrow article-navigation-prev symbol">＞</div>
               <div class="article-navigation-content article-navigation-prev">
                 <p class="article-navigation-title"><%- prevArticle.title %></p>
                 <p class="article-navigation-subtitle"><%- prevArticle.subtitle %></p>
               </div>
             </a>
           </div>
-        <% } %>
-      </section>
-      <section>
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5029429318173951" crossorigin="anonymous"></script>
-        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5029429318173951" data-ad-slot="4786354759" data-ad-format="auto" data-full-width-responsive="true"></ins>
-        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-      </section>
-      <section id="article-social-container">
-        <div id="fb-root"></div>
-        <div id="fb-like" class="fb-like" data-href="https://parksb.github.io/article/<%- article.id %>.html"
-          data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
-        <a href="https://twitter.com/share" class="twitter-share-button" data-show-count="true"></a>
-      </section>
-      <section id="article-comments">
-        <script async src="https://utteranc.es/client.js" repo="parksb/parksb.github.io-comments" issue-term="pathname" theme="github-light" crossorigin="anonymous"></script>
-      </section>
-      <section id="article-list-button-container">
-        <a href="../articles.html">
-          <div id="article-list-button">📚</div>
-        </a>
-      </section>
-    </article>
-  </main>
-</body>
+          <% } %>
+        </section>
+        <section id="article-social-container">
+          <div id="fb-root"></div>
+          <div id="fb-like" class="fb-like" data-href="https://parksb.github.io/article/<%- article.id %>.html"
+            data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+          <a href="https://twitter.com/share" class="twitter-share-button" data-show-count="true"></a>
+        </section>
+        <section id="article-comments">
+          <script async src="https://utteranc.es/client.js" repo="parksb/parksb.github.io-comments" issue-term="pathname" theme="github-light" crossorigin="anonymous"></script>
+        </section>
+        <div class="back-to-article-list">
+          <a href="../articles.html"><span class="symbol">←</span> Articles</a>
+        </div>
+      </article>
+    </main>
+    <%- include(process.cwd() + '/app/templates/footer_cc'); %>
+  </body>
 </html>
