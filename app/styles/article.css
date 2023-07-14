@@ -42,6 +42,7 @@ time, #article-history {
 #article-navigation .article-navigation-arrow {
   font-size: 0.9em;;
   width: 18px;
+  line-height: 1.7em;
 }
 
 #article-navigation .article-navigation-next {
@@ -84,8 +85,7 @@ div.back-to-article-list {
 #article-content-container h4,
 #article-content-container h5,
 #article-content-container h6 {
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 1em;
   font-weight: 700;
 }
 

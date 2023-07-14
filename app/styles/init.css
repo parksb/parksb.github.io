@@ -1,12 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;700&display=swap');
+
 @font-face {
-  font-family: 'Noto Serif KR Distilled';
-  src: local('Noto Serif KR Distilled'),
-  url('https://cdn.jsdelivr.net/gh/parksb/cdn@v2/font/NotoSerifKR/woff2/NotoSerifKR-VF-Distilled.woff2') format('woff2'),
+  font-family: 'Pretendard Regular';
+  src: local('Pretendard'),
+    url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
   font-display: swap;
 }
 
 * {
-  font-family: 'Noto Serif KR Distilled', serif;
+  font-family: 'Noto Serif KR', serif;
   margin: 0;
   padding: 0;
   word-break: keep-all;
@@ -31,11 +33,11 @@ a:hover {
 }
 
 .symbol {
-  font-family: sans-serif;
+  font-family: 'Pretendard Regular', sans-serif;
 }
 
 time {
-  font-family: monospace;
+  font-family: 'Consolas', 'Monaco', 'Ubuntu Mono', 'Andale Mono', monospace;
 }
 
 #main-container {
