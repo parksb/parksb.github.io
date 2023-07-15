@@ -2,7 +2,7 @@
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
-    <title>Simon Park</title>
+    <title>박성범 Simon Park</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -44,7 +44,7 @@
             <a href="./article/<%= article.id %>.html">
               <span class="heading"><%= article.title %><% if (article.subtitle) { %>:<% } %></span>
               <% if (article.subtitle) { %><span class="subheading"><%= article.subtitle %></span><% } %>
-              <time>(<%= article.date %>)</time>
+              <time><%= article.date %></time>
             </a>
           </li>
           <% }) %>
