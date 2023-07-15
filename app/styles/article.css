@@ -153,7 +153,7 @@ div.back-to-article-list {
 
 #article-content-container code,
 #article-content-container code span {
-  font-family: 'Fira Code', 'Consolas', 'Monaco', 'Ubuntu Mono', 'Andale Mono', monospace;
+  font-family: 'Courier', 'Consolas', 'Ubuntu Mono', monospace;
 }
 
 #article-content-container p code,
@@ -237,7 +237,7 @@ div.back-to-article-list {
 
 #article-content-container .footnotes > .footnotes-list {
   padding: 0;
-  font-size: 14px;
+  font-size: 0.9em;
   counter-reset: list;
 }
 
@@ -253,6 +253,9 @@ div.back-to-article-list {
 }
 
 #article-content-container .footnotes > .footnotes-list > .footnote-item > p {
-  font-size: 14px;
   display: inline;
+}
+
+#article-content-container .footnotes > .footnotes-list a.footnote-backref {
+  font-family: 'Pretendard VF', sans-serif;
 }
