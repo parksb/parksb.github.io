@@ -1,5 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
+
+@font-face {
+  font-family: 'Noto Serif VF KR';
+  src: local('Noto Serif KR'),
+    url('https://cdn.jsdelivr.net/gh/parksb/cdn@v3/font/NotoSerifKR/woff2/NotoSerifKR-VF-Distilled.woff2') format('woff2');
+  font-display: swap;
+}
 
 @font-face {
   font-family: 'Pretendard Regular';
@@ -9,7 +15,7 @@
 }
 
 * {
-  font-family: 'Noto Serif KR', serif;
+  font-family: 'Noto Serif VF KR', serif;
   margin: 0;
   padding: 0;
   word-break: keep-all;
