@@ -3,18 +3,18 @@
 @import 'katex.css';
 
 #article-title {
-  font-size: 1.5em;
+  font-size: 1.5rem;
   font-weight: 700;
 }
 
 #article-subtitle {
   display: inline;
-  font-size: 1.2em;
+  font-size: 1.2rem;
   font-weight: 400;
 }
 
 time, #article-history {
-  font-size: 0.8em;
+  font-size: 0.8rem;
 }
 
 #article-content-container {
@@ -36,11 +36,11 @@ time, #article-history {
 }
 
 #article-navigation .article-navigation-item {
-  margin-bottom: 1em;
+  margin-bottom: 1rem;
 }
 
 #article-navigation .article-navigation-arrow {
-  font-size: 0.9em;;
+  font-size: 0.9rem;;
   width: 18px;
   line-height: 1.7em;
 }
@@ -57,12 +57,12 @@ time, #article-history {
 
 #article-navigation .article-navigation-title {
   font-weight: 700;
-  font-size: 1em;
+  font-size: 1rem;
 }
 
 #article-navigation .article-navigation-subtitle {
   font-weight: 400;
-  font-size: 0.8em
+  font-size: 0.8rem
 }
 
 #article-navigation a:hover {
@@ -70,8 +70,8 @@ time, #article-history {
 }
 
 div.back-to-article-list {
-  font-size: 1em;
-  margin-bottom: 1em;
+  font-size: 1rem;
+  margin-bottom: 1rem;
 }
 
 #article-comments .utterances {
@@ -85,30 +85,30 @@ div.back-to-article-list {
 #article-content-container h4,
 #article-content-container h5,
 #article-content-container h6 {
-  margin-bottom: 1em;
+  margin-bottom: 1rem;
   font-weight: 700;
 }
 
 #article-content-container h2 {
-  font-size: 1.4em;
+  font-size: 1.4rem;
 }
 
 #article-content-container h3 {
-  font-size: 1.3em;
+  font-size: 1.3rem;
 }
 
 #article-content-container h4 {
-  font-size: 1.2em;
+  font-size: 1.2rem;
 }
 
 #article-content-container h5 {
-  font-size: 1.1em;
+  font-size: 1.1rem;
 }
 
 #article-content-container p {
-  font-size: 1em;
-  line-height: 1.7em;
-  margin-bottom: 1em;
+  font-size: 1rem;
+  line-height: 1.7rem;
+  margin-bottom: 1rem;
 }
 
 #article-content-container img {
@@ -118,20 +118,20 @@ div.back-to-article-list {
 
 #article-content-container img + em {
   display: block;
-  font-size: 0.8em;
-  line-height: 1.5em;
+  font-size: 0.8rem;
+  line-height: 1.5rem;
   text-align: right;
   margin-top: -5px;
 }
 
 #article-content-container ul,
 #article-content-container ol {
-  padding-left: 1em;
-  margin-bottom: 1em;
+  padding-left: 1rem;
+  margin-bottom: 1rem;
 }
 
 #article-content-container li {
-  line-height: 1.7em;
+  line-height: 1.7rem;
 }
 
 #article-content-container a {
@@ -146,9 +146,9 @@ div.back-to-article-list {
 #article-content-container pre {
   display: block;
   overflow-x: auto;
-  padding: 0 1em;
-  margin-bottom: 1em;
-  line-height: 1.1em;
+  padding: 0 1rem;
+  margin-bottom: 1rem;
+  line-height: 1.1rem;
 }
 
 #article-content-container code,
@@ -167,6 +167,7 @@ div.back-to-article-list {
 }
 
 #article-content-container table {
+  margin-bottom: 1rem;
   border-spacing: unset;
   border-collapse: collapse;
   width: 100%;
@@ -202,7 +203,7 @@ div.back-to-article-list {
   list-style-type: none;
   counter-reset: item;
   margin: 0;
-  padding-left: 1em;
+  padding-left: 1rem;
 }
 
 #article-content-container .table-of-contents ul li:before {
@@ -237,7 +238,7 @@ div.back-to-article-list {
 
 #article-content-container .footnotes > .footnotes-list {
   padding: 0;
-  font-size: 0.9em;
+  font-size: 0.9rem;
   counter-reset: list;
 }
 

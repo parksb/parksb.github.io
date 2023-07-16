@@ -2,12 +2,12 @@
 
 #work-container #work-title {
   width: auto;
-  font-size: 1.5em;
+  font-size: 1.5rem;
   font-weight: 700;
 }
 
 #work-container #work-subtitle {
-  font-size: 1.2em;
+  font-size: 1.2rem;
   word-break: keep-all;
   font-weight: 400;
 }
@@ -16,7 +16,7 @@
   display: block;
   max-width: 500px;
   width: 100%;
-  margin-bottom: 1em;
+  margin-bottom: 1rem;
   border: 1px solid black;
   height: auto;
 }
@@ -26,14 +26,14 @@
 }
 
 #work-container p {
-  font-size: 1em;
-  line-height: 1.7em;
-  margin-bottom: 1em;
+  font-size: 1rem;
+  line-height: 1.7rem;
+  margin-bottom: 1rem;
 }
 
 #work-container div.back-to-work-list {
-  font-size: 1em;
-  margin-bottom: 1em;
+  font-size: 1rem;
+  margin-bottom: 1rem;
 }
 
 #work-content-container a {

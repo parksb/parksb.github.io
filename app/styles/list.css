@@ -1,13 +1,13 @@
 #main-container > ul > li {
   list-style: none;
-  font-size: 1.3em;
-  line-height: 1.5em;
+  font-size: 1.3rem;
+  line-height: 1.5rem;
   font-weight: 700;
 }
 
 #main-container > ul > .selected-container {
-  margin-top: 1em;
-  margin-bottom: 1em;
-  font-size: 1em;
-  line-height: 1.5em;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
 }

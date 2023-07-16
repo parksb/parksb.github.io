@@ -1,19 +1,17 @@
 @font-face {
-  font-family: 'Noto Serif VF KR';
-  src: local('Noto Serif KR'),
-    url('https://cdn.jsdelivr.net/gh/parksb/cdn@v4/font/NotoSerifKR/woff2/NotoSerifKR-VF-Distilled.woff2') format('woff2');
+  font-family: 'Noto Serif VF';
+  src: url('https://cdn.jsdelivr.net/gh/parksb/cdn@v4/font/NotoSerifKR/woff2/NotoSerifKR-VF-Distilled.woff2') format('woff2');
   font-display: swap;
 }
 
 @font-face {
   font-family: 'Pretendard VF';
-  src: local('Pretendard'),
-    url('https://cdn.jsdelivr.net/gh/parksb/cdn@v4/font/Pretendard/woff2/Pretendard-VF-Distilled.woff2') format('woff2');
+  src: url('https://cdn.jsdelivr.net/gh/parksb/cdn@v4/font/Pretendard/woff2/Pretendard-VF-Distilled.woff2') format('woff2');
   font-display: swap;
 }
 
 * {
-  font-family: 'Noto Serif VF KR', serif;
+  font-family: 'Noto Serif VF', serif;
   margin: 0;
   padding: 0;
   word-break: keep-all;
@@ -44,8 +42,8 @@ a:hover {
 img.icon {
   display: inline;
   margin-right: 1px;
-  width: 0.8em;
-  height: 0.8em;
+  width: 0.8rem;
+  height: 0.8rem;
 }
 
 time {
@@ -59,16 +57,16 @@ time {
 }
 
 #top-container span.t1 {
-  font-size: 1.5em;
-  font-weight: 700;
+  font-size: 1.5rem;
+  font-weight: 800;
 }
 
 #top-container span.t2 {
-  font-size: 1em;
+  font-size: 1rem;
   font-weight: 400;
 }
 
 footer {
-  font-size: 0.8em;
+  font-size: 0.8rem;
   color: #767676;
 }

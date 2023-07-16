@@ -6,8 +6,8 @@ ul#articles-container {
 }
 
 ul#articles-container > li span.heading {
-  font-size: 1em;
-  font-weight: 700;
+  font-size: 1rem;
+  font-weight: 650;
 }
 
 ul#articles-container > li span.subheading {
@@ -15,7 +15,7 @@ ul#articles-container > li span.subheading {
 }
 
 ul#articles-container > li time {
-  font-size: 0.8em;
+  font-size: 0.8rem;
   font-weight: 400;
 }
 

@@ -23,7 +23,7 @@ section#works-container div.works-content > img {
 }
 
 section#works-container span.heading {
-  font-size: 0.9em;
-  line-height: 1.3em;
-  font-weight: 700;
+  font-size: 0.9rem;
+  line-height: 1.3rem;
+  font-weight: 650;
 }
