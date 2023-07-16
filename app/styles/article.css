@@ -148,12 +148,12 @@ div.back-to-article-list {
   overflow-x: auto;
   padding: 0 1rem;
   margin-bottom: 1rem;
-  line-height: 1.1rem;
+  line-height: 1.3rem;
 }
 
 #article-content-container code,
 #article-content-container code span {
-  font-family: 'Courier', 'Consolas', 'Ubuntu Mono', monospace;
+  font-family: 'RobotoMono VF', monospace;
 }
 
 #article-content-container p code,
