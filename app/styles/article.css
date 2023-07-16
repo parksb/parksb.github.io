@@ -218,11 +218,12 @@ div.back-to-article-list {
 
 #article-content-container section .katex * {
   font-family: 'Times New Roman', serif;
+  font-size: 1.1rem;
 }
 
 #article-content-container p .katex * {
   font-family: 'Times New Roman', serif;
-  font-size: 16px;
+  font-size: 1.1rem;
 }
 
 #article-content-container p .katex .msupsub * {
