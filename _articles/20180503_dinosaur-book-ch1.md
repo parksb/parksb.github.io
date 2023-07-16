@@ -284,7 +284,7 @@ for (int i = 0; i < 10; i++) {
 
 ## Kernel Data Structures
 
-커널 구현에는 기본적인 리스트(List), 스택(Stack), 큐(Queue), 링크드리스트(Linked list) 등의 자료구조가 사용된다. 특히 트리(Tree)는 상당히 효율적인 $`O(\log n)`$의 시간복잡도를 가질 수 있기 때문에 자주 사용된다.
+커널 구현에는 기본적인 리스트(List), 스택(Stack), 큐(Queue), 링크드리스트(Linked list) 등의 자료구조가 사용된다. 특히 트리(Tree)는 상당히 효율적인 $O(\log n)$의 시간복잡도를 가질 수 있기 때문에 자주 사용된다.
 
 ## Computing Environments
 

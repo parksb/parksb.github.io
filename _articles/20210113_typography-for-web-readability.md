@@ -103,7 +103,7 @@ html {
 
 ### 무게
 
-굵기와 농도는 폰트의 무게에 큰 영향을 준다. 폰트는 굵기가 굵을수록, 농도가 높을수록 무거워지며, 무거워질수록 위계가 높아지는 효과가 있다. 
+굵기와 농도는 폰트의 무게에 큰 영향을 준다. 폰트는 굵기가 굵을수록, 농도가 높을수록 무거워지며, 무거워질수록 위계가 높아지는 효과가 있다.
 
 폰트의 굵기를 정하는 `font-weight` 속성의 값은 `normal`, `bold`와 같이 설정할 수도 있고, 부모 요소에 상대적인 값인 `lighter`와 `bolder`를 사용할 수도 있다. 좀 더 정밀하게 굵기를 다루려면 `100`, `200`, `300`부터 `900`까지의 가중치를 직접 설정하면 된다.
 
@@ -165,7 +165,7 @@ text-rendering: geometricPrecision;
 
 `optimizeSpeed` 값은 렌더링 성능을 최적화하여 합자와 커닝을 비활성화한다. `optimizeLegibility` 값은 반대로 판독성을 최적화하며, `geometricPrecision` 값은 속도나 판독성이 아닌 정밀성을 최적화한다.[^29]
 
-대체로 합자는 연이어진 활자들과 비슷한 형태의 한 덩어리로 이뤄지지만, 완전히 다른 형태가 되는 경우도 존재한다. 가령 `>=`을 $`\geq`$ 합자로 치환하는 폰트들이 있다. 이런 합자는 가독성과 심미성을 높여주지만, 편집이 빈번히 일어나는 경우에는 방해가 될 수 있다. $`\geq`$에서 백스페이스를 눌러 한 자를 지웠을 때 `=`이 지워지고 `>`만 남을 것이라는 것을 예측할 수 없기 때문이다.
+대체로 합자는 연이어진 활자들과 비슷한 형태의 한 덩어리로 이뤄지지만, 완전히 다른 형태가 되는 경우도 존재한다. 가령 `>=`을 $\geq$ 합자로 치환하는 폰트들이 있다. 이런 합자는 가독성과 심미성을 높여주지만, 편집이 빈번히 일어나는 경우에는 방해가 될 수 있다. $\geq$에서 백스페이스를 눌러 한 자를 지웠을 때 `=`이 지워지고 `>`만 남을 것이라는 것을 예측할 수 없기 때문이다.
 
 ## 글줄사이
 
@@ -193,7 +193,7 @@ text-align: justify;
 
 ![양끝맞춤. 어간이 일정하지 않다.](/images/103454631-5c272800-4d29-11eb-834e-b0931c693f16.webp)
 
-양끝맞춤은 보편적이고 전통적인 조판 방식이다. 양끝이 균일하여 편안한 느낌을 주지만, 글줄의 글자수에 관계없이 글줄길이를 모두 똑같이 맞춰야 하기 때문에 어간이 고르지 않게 되는 문제가 있다. 특히 글자수가 적을 때 그 문제가 부각된다. 이로 인해 넓은 어간이 여러 글줄에 반복적으로 나타나면 흰강(White river) 현상이 발생한다. 
+양끝맞춤은 보편적이고 전통적인 조판 방식이다. 양끝이 균일하여 편안한 느낌을 주지만, 글줄의 글자수에 관계없이 글줄길이를 모두 똑같이 맞춰야 하기 때문에 어간이 고르지 않게 되는 문제가 있다. 특히 글자수가 적을 때 그 문제가 부각된다. 이로 인해 넓은 어간이 여러 글줄에 반복적으로 나타나면 흰강(White river) 현상이 발생한다.
 
 ![넓은 어간이 여러 글줄에 이어져 보이는 흰강현상.](/images/103651395-df07e700-4fa4-11eb-9ae9-121bf2237905.webp)
 
@@ -226,7 +226,7 @@ word-break: keep-all;
 * [임순범 외 5명, "Requirements for Hangul Text Layout and Typography : 한국어 텍스트 레이아웃 및 타이포그래피를 위한 요구사항", W3C Working Group Note, 2020.](https://www.w3.org/TR/klreq/)
 * 제임스 크레이그 외 2명, "타이포그래피 교과서", 최문경, 문지숙 역, 안그라픽스, 2010.
 
-[^00]: [이용제, "타이포그라피에서 '글자, 활자, 글씨' 쓰임새 제안", 글자씨 2(2), 한국타이포그라피학회, 2010, 492-507쪽.](http://koreantypography.org/wp-content/uploads/thesis/kst_j2_2.pdf) 
+[^00]: [이용제, "타이포그라피에서 '글자, 활자, 글씨' 쓰임새 제안", 글자씨 2(2), 한국타이포그라피학회, 2010, 492-507쪽.](http://koreantypography.org/wp-content/uploads/thesis/kst_j2_2.pdf)
 [^10]: [John Brownlee, "What’s The Difference Between A Font And A Typeface?", Fast Company, 2014.](https://www.fastcompany.com/3028971/whats-the-difference-between-a-font-and-a-typeface)
 [^13]: ["OpenType® Specification", Microsoft Docs, 2020.](https://docs.microsoft.com/en-us/typography/opentype/spec/)
 [^15]: [Jonathan Kew et al., "WOFF File Format 1.0", W3C Recommendation, 2012.](https://www.w3.org/TR/2012/REC-WOFF-20121213/)

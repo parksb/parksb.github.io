@@ -126,7 +126,7 @@ div.back-to-article-list {
 
 #article-content-container ul,
 #article-content-container ol {
-  padding-left: 1rem;
+  margin-left: 2rem;
   margin-bottom: 1rem;
 }
 
@@ -214,6 +214,10 @@ div.back-to-article-list {
 #article-content-container section {
   margin-bottom: 15px;
   overflow: auto;
+}
+
+#article-content-container .katex-display {
+  margin: 0;
 }
 
 #article-content-container section .katex * {

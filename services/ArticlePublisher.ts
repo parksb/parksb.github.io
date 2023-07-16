@@ -53,7 +53,7 @@ class ArticlePublisher {
     .use(mdInlineComment)
     .use(mdMermaid)
     .use(mdTex.use(katex), {
-      delimiters: 'gitlab',
+      delimiters: 'dollars',
     })
     .use(mdAnchor)
     .use(mdTableOfContents, {
