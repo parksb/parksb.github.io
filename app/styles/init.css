@@ -1,12 +1,12 @@
 @font-face {
   font-family: 'Noto Serif VF';
-  src: url('https://cdn.jsdelivr.net/gh/parksb/cdn@v4/font/NotoSerifKR/woff2/NotoSerifKR-VF-Distilled.woff2') format('woff2');
+  src: url('https://cdn.jsdelivr.net/gh/parksb/cdn@v5/font/NotoSerifKR/woff2/NotoSerifKR-VF-Distilled.woff2') format('woff2');
   font-display: swap;
 }
 
 @font-face {
   font-family: 'Pretendard VF';
-  src: url('https://cdn.jsdelivr.net/gh/parksb/cdn@v4/font/Pretendard/woff2/Pretendard-VF-Distilled.woff2') format('woff2');
+  src: url('https://cdn.jsdelivr.net/gh/parksb/cdn@v5/font/Pretendard/woff2/Pretendard-VF-Distilled.woff2') format('woff2');
   font-display: swap;
 }
 
