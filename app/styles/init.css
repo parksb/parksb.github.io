@@ -48,8 +48,8 @@ a:hover {
 img.icon {
   display: inline;
   margin-right: 1px;
-  width: 0.8rem;
-  height: 0.8rem;
+  max-width: 0.8rem;
+  max-height: 0.8rem;
 }
 
 time {
