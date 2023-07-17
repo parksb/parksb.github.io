@@ -234,6 +234,10 @@ div.back-to-article-list {
   font-size: 11px;
 }
 
+#article-content-container .footnotes {
+  margin-left: -1rem;
+}
+
 #article-content-container .footnotes-sep {
   margin-top: 30px;
   margin-bottom: 30px;
