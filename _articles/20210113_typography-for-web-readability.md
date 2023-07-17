@@ -19,7 +19,7 @@ date: "2021.01.13"
 
 ### 파일
 
-주로 많이 사용하는 폰트 파일 형식에는 TTF, OTF, WOFF, WOFF2가 있다. TTF(TrueType)는 전통적, 범용적으로 사용되어 온 포맷이다. OTF(OpenType)는 TTF를 확장한 포맷이기 때문에 TTF 보다 많은 정보를 담을 수 있다.[^13] 가장 큰 차이는 TTF는 2차원 베지어 곡선으로, OTF는 3차원 베지어 곡선으로 활자를 표현한다는 점이다. 그래서 일반 문서에는 TTF를, 고해상도 그래픽 작업에는 OTF를 사용하는 것이 일반적이다. WOFF(Web Open Font Format)는 웹에서 폰트를 사용하기 위해 만들어진 포맷으로, TTF, OTF 등 기존 포맷들을 압축한 것이다. 압축되어 있기 때문에 웹에서 빠르게 로드된다.[^15] WOFF2는 WOFF를 개선해 압축률을 높인 버전이다. 따라서 웹에서 폰트를 사용할 때는 WOFF2, WOFF, TTF/OTF 순으로 적용하는 것을 권장한다.
+주로 많이 사용하는 폰트 파일 형식에는 TTF, OTF, WOFF, WOFF2가 있다. TTF(TrueType)는 전통적, 범용적으로 사용되어 온 포맷이다. OTF(OpenType)는 TTF를 확장한 포맷이기 때문에 TTF 보다 많은 정보를 담을 수 있다.[^13] 가장 큰 차이는 TTF는 2차원 베지어 곡선으로, OTF는 3차원 베지어 곡선으로 활자를 표현한다는 점이다. 그래서 일반 문서에는 TTF를, 고해상도 그래픽 작업에는 OTF를 사용하는 것이 일반적이다. WOFF(Web Open Font Format)는 웹에서 폰트를 사용하기 위해 만들어진 포맷으로, TTF, OTF 등 기존 포맷들을 압축한 것이다. 압축되어 있기 때문에 웹에서 빠르게 로드된다.[^15] WOFF2는 WOFF를 개선해 압축률을 높인 버전이다. 폰트 파일의 크기가 크다면 웹 페이지를 로드할 때 병목으로 작용할 수 있으므로, 웹에서 폰트를 사용할 때는 WOFF2, WOFF, TTF/OTF 순으로 적용하는 것을 권장한다.
 
 ```css
 @font-face {
@@ -40,6 +40,10 @@ date: "2021.01.13"
 위처럼 `@font-face`를 작성하면 가장 먼저 로컬에서 'Noto Sans Regular' 적용을 시도한다. 만약 로컬에 폰트가 없어서 적용에 실패하면 웹에서 `/font/Noto-Sans-Regular.woff2`를 요청해 다운로드하고, 적용을 시도한다. WOFF2 폰트 적용도 실패하면 순서대로 WOFF, TTF 적용을 시도한다.
 
 `font-display` 속성은 폰트를 다운로드하고 사용할 때 어떻게 표시할지 결정한다. 이 값을 `swap`으로 설정하면 요청한 폰트가 로드되지 않은 경우 대체 폰트를 렌더링하고, 이후 요청한 폰트가 로드됐을 때 빠르게 교체한다.[^17]
+
+한글 폰트 파일은 영문 폰트에 비해 크기때문에 성능을 저하할 수 있다. 폰트가 모든 현대 한글을 표현하려면 초성 19자와 중성 21자, 종성 27자를 조합한 11,172자가 필요하다. ASCII 코드가 128자만으로 A부터 Z까지의 영문, 심지어 일부 특수문자까지 지원하는 것과는 상반된다. 컴퓨터에서 한글을 표현하는 문제는 1974년으로 거슬러 올라간다. 당시 정부는 한글 51자모를 ASCII 코드에 일대일 대응해 KS C 5601-1974 규격을 제정했고, 1987년에는 자주 사용되는 한글 2,350자를 추려내 KS C 5601-1987 규격을 제정했다. 한글 완성형 코드의 최신 버전은 국가기술표준원이 표준화한 KS X 1001-2004으로, 일반적으로 디자이너가 한글 폰트를 디자인할 때는 한글 11,172자를 모두 디자인하지 않고 KS X 1001-2004에 포함된 2,350자만을 디자인한다.
+
+다만 [Noto](https://fonts.google.com/noto)처럼 한글 11,172자를 모두 정의해둔 한글 폰트도 있다. 한글 뿐만 아니라 한자, 가나(仮名), 잘 사용하지 않는 특수문자까지 포함된 폰트라면 파일 크기가 매우 커질 수 있다. 이때는 원본 폰트에서 사용할 문자만을 골라내 서브셋(Subset)을 만들면 파일 크기를 줄일 수 있다. 가령 [akngs/noto-kr-vf-distilled](https://github.com/akngs/noto-kr-vf-distilled) 프로젝트는 Noto Sans에서 ASCII 코드에 포함된 문자 95자와 KS X 1001의 한글 2,350자, "KS 코드 완성형 한글의 추가 글자 제안"[^18]에서 제안된 한글 228자만을 포함한 Noto 서브셋을 가변 폰트로 제공한다.
 
 ### 패밀리
 
@@ -231,6 +235,7 @@ word-break: keep-all;
 [^13]: ["OpenType® Specification", Microsoft Docs, 2020.](https://docs.microsoft.com/en-us/typography/opentype/spec/)
 [^15]: [Jonathan Kew et al., "WOFF File Format 1.0", W3C Recommendation, 2012.](https://www.w3.org/TR/2012/REC-WOFF-20121213/)
 [^17]: ["font-display", MDN Web Docs.](https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display)
+[^18]: [노민지, 윤민구, "KS 코드 완성형 한글의 추가 글자 제안", 글자씨 7(2), 한국타이포그라피학회, 2015, 153-175쪽.](http://koreantypography.org/wp-content/uploads/2016/02/kst_12_7_2_06.pdf)
 [^20]: 원유홍 외 2명, "타이포그래피 천일야화", 안그라픽스, 2012, 87쪽.
 [^25]: [강이룬, 소원영, "multilingual.js: 다국어 웹 타이포그래피를 위한 섞어쓰기 라이브러리", 글자씨 8(2), 한국타이포그라피학회, 2016, 9-33쪽.](http://koreantypography.org/wp-content/uploads/2016/08/kst_13_8_1_01.pdf.pdf)
 [^27]: ["font-size", MDN Web Docs.](https://developer.mozilla.org/en-US/docs/Web/CSS/font-size)
