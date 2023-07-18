@@ -146,7 +146,7 @@ div.back-to-article-list {
 #article-content-container pre {
   display: block;
   overflow-x: auto;
-  padding: 0 1rem;
+  padding: 1px 1rem;
   margin-bottom: 1rem;
   line-height: 1.3rem;
 }
