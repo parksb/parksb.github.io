@@ -170,4 +170,4 @@ def quick_sort(S, a, b):
   quick_sort(S, left + 1, b)
 ```
 
-이미 정렬되어 있는 리스트를 quick sort로 정렬하는 경우 $O(n^2)$ 시간이 걸린다. 즉, worst case에서 $O(n^2)`$ 시간이 걸린다는 말이다. 재밌는 것은 average case에서도 $O(n \log n)`$ 시간이 걸리는데, 이는 quick sort라는 이름이 붙을 정도로 빠른 것은 아니다. 그럼에도 quick sort인 이유는 알고리즘의 캐시 hit ratio가 높기 때문이다. (컴퓨터 아키텍처에 관한 부분이다.) 그래서 이론적으로는 평균 $O(n \log n)$이지만 실제로는 더 빠르게 정렬된다.
+이미 정렬되어 있는 리스트를 quick sort로 정렬하는 경우 $O(n^2)$ 시간이 걸린다. 즉, worst case에서 $O(n^2)$ 시간이 걸린다는 말이다. 재밌는 것은 average case에서도 $O(n \log n)$ 시간이 걸리는데, 이는 quick sort라는 이름이 붙을 정도로 빠른 것은 아니다. 그럼에도 quick sort인 이유는 알고리즘의 캐시 hit ratio가 높기 때문이다. (컴퓨터 아키텍처에 관한 부분이다.) 그래서 이론적으로는 평균 $O(n \log n)$이지만 실제로는 더 빠르게 정렬된다.
