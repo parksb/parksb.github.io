@@ -2,5 +2,11 @@
   "ignorePatterns": [
     { "pattern": ".*&quot;" }
   ],
+  "replacementPatterns": [
+    {
+      "pattern": "^/images/",
+      "replacement": "https://parksb.github.io/images/"
+    }
+  ],
   "aliveStatusCodes": [0, 200, 206, 999]
 }
