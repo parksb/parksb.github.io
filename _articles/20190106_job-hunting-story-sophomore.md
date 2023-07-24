@@ -164,7 +164,7 @@ B회사의 입사일이 먼저 결정되어 C회사는 어쩔 수 없이 전형 
 * 권희정, 박도연님 "[Tech Interview](https://github.com/WeareSoft/tech-interview)"
 <!-- markdown-link-check-disable-next-line -->
 * 너굴너굴님 "[좋은 면접자/지원자가 되는 방법](https://repo.yona.io/doortts/blog/post/292)"
-* 원티드 "[원티드와 함께하는 개발자 커리어 터치](https://www.notion.so/parksb/8a5fb590ae204295adf8117b5f58e32e)"
+* 원티드 "[원티드와 함께하는 개발자 커리어 터치](https://doondoony.notion.site/8a5fb590ae204295adf8117b5f58e32e)"
 * 원티드 "[인사담당자가 직접 말하는, 서류 통과가 잘 되는 이력서](https://m.blog.naver.com/wantedlab/221100604211)"
 * 이동욱님 "[주니어 개발자를 위한 취업 정보](https://github.com/jojoldu/junior-recruit-scheduler)"
 * 이민석 교수님 "[자기소개서 쓰는 법](http://hl1itj.tistory.com/90)"
@@ -174,5 +174,5 @@ B회사의 입사일이 먼저 결정되어 C회사는 어쩔 수 없이 전형 
 * Douglas Crockford "[JavaScript: The Good Parts](http://shop.oreilly.com/product/9780596517748.do)"
 * H5BP "[Front-end Job Interview Questions](https://h5bp.github.io/Front-end-Developer-Interview-Questions/)"
 * Mariko Kosaka "[Inside look at modern web browser](https://developers.google.com/web/updates/2018/09/inside-browser-part1)"
-* Stoyan Stefanov "[자바스크립트 코딩 기법과 핵심 패턴](http://www.insightbook.co.kr/book/programming-insight/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-%EC%BD%94%EB%94%A9-%EA%B8%B0%EB%B2%95%EA%B3%BC-%ED%95%B5%EC%8B%AC-%ED%8C%A8%ED%84%B4)"
+* Stoyan Stefanov "[자바스크립트 코딩 기법과 핵심 패턴](https://ebook.insightbook.co.kr/book/133)"
 * 그리고 각종 공식 문서

@@ -7,7 +7,7 @@ date: "2019.11.29"
 
 내가 만나온 개발자들은 대체로 자신이 사용하는 프로그래밍 언어에 딱히 만족하지 않았는데 (극단적으로는 자바스크립트와 PHP가 있다.) 유독 러스트 개발자들은 적극적으로 러스트를 추천했다.
 
-하지만 그냥 그런 언어가 있구나 정도로 생각하고 있었다. 그런데 러스트 2018 에디션 발표 이후 근 1년간 러스트 코드를 웹어셈블리로 컴파일할 수 있다든지, [deno](https://github.com/denoland/deno)의 코어가 러스트로 작성됐다든지하는 이야기들이 뉴스피드를 가득 채웠다. 심지어 [6월 스프린트 모임](https://www.sprintseoul.org/2019-06-29/)에서 [RustPython](https://github.com/RustPython/RustPython)의 인기를 본 뒤로는 러스트가 마치 피할 수 없는 시대의 흐름처럼 느껴졌다.
+하지만 그냥 그런 언어가 있구나 정도로 생각하고 있었다. 그런데 러스트 2018 에디션 발표 이후 근 1년간 러스트 코드를 웹어셈블리로 컴파일할 수 있다든지, [deno](https://github.com/denoland/deno)의 코어가 러스트로 작성됐다든지하는 이야기들이 뉴스피드를 가득 채웠다. 심지어 스프린트 서울 6월 모임에서 [RustPython](https://github.com/RustPython/RustPython)의 인기를 본 뒤로는 러스트가 마치 피할 수 없는 시대의 흐름처럼 느껴졌다.
 
 ![러스트 비공식 마스코트 Ferris.](/images/68747470733a2f2f72757374616365616e2e6e65742f6173736574732f72757374616365616e2d666c61742d68617070792e737667.svg)
 
@@ -496,5 +496,5 @@ fn open_file() -> Result<File, io::Error> {
 [^3]: GitHub, "[The State of the Octoverse](https://octoverse.github.com/#top-languages)", 2019.
 [^4]: The Rust Programming Language, "[Production users](https://www.rust-lang.org/production/users)", rust-lang.org.
 [^5]: Rustdoc, "[Struct Vec - Capacity and reallocation](https://doc.rust-lang.org/std/vec/struct.Vec.html#capacity-and-reallocation)", doc.rust-lang.org.
-[^6]: Rob Pike, "[From Parallel to Concurrent](https://channel9.msdn.com/Events/Lang-NEXT/Lang-NEXT-2014/From-Parallel-to-Concurrent)", 2014.
+[^6]: Rob Pike, "[From Parallel to Concurrent](https://youtu.be/iTrP_EmGNmw)", 2014.
 [^7]: MDN web docs "[Compiling from Rust to WebAssembly](https://developer.mozilla.org/docs/WebAssembly/Rust_to_wasm)", 2019.

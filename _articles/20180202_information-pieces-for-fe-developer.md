@@ -33,7 +33,7 @@ FOUC를 해결하기 위해서는 head 태그 안에 CSS를 링크하고, `@impo
 
 ### ARIA(Accessible Rich Internet Applications)와 스크린리더
 
-ARIA는 접근가능한 인터넷 어플리케이션을 의미한다. 이는 웹 콘텐츠를 개발할 때 장애인을 위한 접근성 향상 방법을 정의한다. ARIA를 사용해 웹사이트여러 곳의 접근성을 향상할 수 있다. ARIA는 `<html>` 태그에 `role` 속성을 지정하는 방식으로 사용할 수 있으며, 대부분의 브라우저와 스크린리더가 ARIA를 지원하고 있다. 스크린리더는 웹사이트의 구성 요소들을 읽어주는 프로그램으로, 시각장애를 가진 사용자가 컴퓨터 화면에 무엇이 있는지 인지할 수 있게 돕는다. ([참고1](https://developer.mozilla.org/ko/docs/Web/Accessibility/ARIA)) ([참고2](http://www.bloter.net/archives/148889))
+ARIA는 접근가능한 인터넷 어플리케이션을 의미한다. 이는 웹 콘텐츠를 개발할 때 장애인을 위한 접근성 향상 방법을 정의한다. ARIA를 사용해 웹사이트여러 곳의 접근성을 향상할 수 있다. ARIA는 `<html>` 태그에 `role` 속성을 지정하는 방식으로 사용할 수 있으며, 대부분의 브라우저와 스크린리더가 ARIA를 지원하고 있다. 스크린리더는 웹사이트의 구성 요소들을 읽어주는 프로그램으로, 시각장애를 가진 사용자가 컴퓨터 화면에 무엇이 있는지 인지할 수 있게 돕는다. ([참고](https://developer.mozilla.org/ko/docs/Web/Accessibility/ARIA))
 
 ### CSS 애니메이션과 Javascript 애니메이션의 차이
 

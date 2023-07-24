@@ -9,7 +9,7 @@ date: "2019.7.31"
 
 이 블로그는 [지킬](https://jekyllrb.com/)이나 [휴고](https://gohugo.io/), [개츠비](https://www.gatsbyjs.org/)같은 정적 사이트 생성기/프레임워크를 사용하지 않았다. 처음엔 이것저것 써봤지만 커스터마이징 자유도가 낮아서 직접 블로그를 만들기로 했다. 초기에는 간단히 html로 글을 썼는데, 너무 불편해서 json 파일로 글을 쓰는 시스템을 만들었다. 이것도 장문의 글을 쓰기엔 불편해서 마크다운 파일을 html 파일로 변환하는 서비스를 개발했다. 그 다음엔 결과물로 나온 파일들을 빌드, 배포하기 위한 툴을 만들었다. 결국 [밑바닥부터 정적 사이트 생성기를 만든 셈이 됐다.](https://github.com/ParkSB/handmade-blog)
 
-이러한 작업을 [야크 털 깎기(Yak shaving)](https://projects.csail.mit.edu/gsb/old-archive/gsb-archive/gsb2000-02-11.html)라고 한다. 야크 털 깎기는 MIT AI Lab에서 박사과정을 밟던 대학원생 칼린 비에리(Carlin Vieri)가 만든 용어로, 목표한 일 하나를 위해 연관된 작업들을 하다가 결국 원래 목적을 잃고 완전히 관련없는 작업을 하게 되는 것을 말한다. [LangDev IRC 채널에서 나온 예시](http://blog.dahlia.pe.kr/articles/2009/09/11/yak-shaving)를 보면 왜 야크 털 깎기라고 하는지 이해된다.
+이러한 작업을 [야크 털 깎기(Yak shaving)](https://projects.csail.mit.edu/gsb/old-archive/gsb-archive/gsb2000-02-11.html)라고 한다. 야크 털 깎기는 MIT AI Lab에서 박사과정을 밟던 대학원생 칼린 비에리(Carlin Vieri)가 만든 용어로, 목표한 일 하나를 위해 연관된 작업들을 하다가 결국 원래 목적을 잃고 완전히 관련없는 작업을 하게 되는 것을 말한다. [LangDev IRC](https://langdev.org/)에서 언급된 예시를 보면 왜 야크 털 깎기라고 하는지 이해된다.
 
 1. 나무를 베기 위해 도끼를 구했다.
 1. 도끼날이 너무 무뎌 날을 갈기 위한 돌을 구하려 한다.
@@ -78,6 +78,6 @@ $$
 [^25]: 프레더릭 브룩스, "맨먼스 미신: 소프트웨어 공학에 관한 에세이", 강중빈 역, 인사이트, 6-7쪽, 2015.
 [^3]: KTUG, "[KTUGFaq: TeX](http://faq.ktug.org/faq/TeX)", 2009.
 [^4]: TUG, "[History of TeX](https://www.tug.org/whatis.html)", 2019.
-[^5]: 권현우 외 15명, "[TeX: 조판, 그 이상의 가능성](http://conf.ktug.org/2017/doc/KTS%EC%84%A4%EB%A6%BD10%EC%A3%BC%EB%85%84%EA%B8%B0%EB%85%90%EB%AC%B8%EC%A7%91_%EC%B5%9C%EC%A2%85%EB%B3%B8_20170213.pdf)", _KTS 설립 10주년 기념문집_, 한국텍학회, 경문사, 314쪽, 2017.
+[^5]: 권현우 외 15명, "TeX: 조판, 그 이상의 가능성", _KTS 설립 10주년 기념문집_, 한국텍학회, 경문사, 314쪽, 2017.
 [^6]: Florian Gilcher, "[Donald Knuth - The Patron Saint of Yak Shaves](https://yakshav.es/the-patron-saint-of-yakshaves/)", 2017.
 [^7]: item4, "[성공적인 Yak Shaving, 실패하는 Yak Shaving](https://item4.blog/2015-07-26/Successful-Yak-Shaving-Unsuccessful-Yak-Shaving/)", 2015.

@@ -251,7 +251,7 @@ $ git pull origin master
 * Alice는 `pull` 명령으로 원격 저장소 alice/project에서 변경 사항을 가져오려 한다.
 * 이때 병합 커밋(Merge commit)을 만들지 않고 원격 저장소 내용을 가져오고자 한다.
 
-원격 저장소와 로컬 저장소 모두 새로운 커밋을 가지고 있기 때문에 논 패스트 포워드(Non fast-forward)가 발생한다. 반대 경우인 패스트 포워드(Fast-forward)는 병합하려는 브랜치에 새로운 커밋이 없는 상황에서 발생하며, 이때는 HEAD를 최신 커밋으로 옮기는 것만으로 병합을 마칠 수 있다. 하지만 논 패스트 포워드는 별도의 병합 커밋이 필요하기 때문에 "Merge branch 'master' of https://github.com/alice/project"와 같은 메시지를 가진 커밋을 만든다.
+원격 저장소와 로컬 저장소 모두 새로운 커밋을 가지고 있기 때문에 논 패스트 포워드(Non fast-forward)가 발생한다. 반대 경우인 패스트 포워드(Fast-forward)는 병합하려는 브랜치에 새로운 커밋이 없는 상황에서 발생하며, 이때는 HEAD를 최신 커밋으로 옮기는 것만으로 병합을 마칠 수 있다. 하지만 논 패스트 포워드는 별도의 병합 커밋이 필요하기 때문에 "Merge branch 'master' of `https://github.com/alice/project`"와 같은 메시지를 가진 커밋을 만든다.
 
 혼자 작업하는 프로젝트라면 큰 상관이 없겠지만, 여러 사람이 프로젝트에 참여해 병합 커밋을 만들기 시작하면 히스토리가 지저분해진다.
 

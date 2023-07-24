@@ -8,7 +8,7 @@ thumbnail: "/images/9950C1455B214D5B27.webp"
 
 ![](/images/46553442-75598800-c918-11e8-859b-35d70b56d9de.webp)
 
-_**하루 (2013) [harooo.com](https://harooo.com/harooo/)**_
+_**하루 (2013) [harooo.com](https://harooo.com/)**_
 
 온라인 대화와 오프라인 대화의 가장 큰 차이는 무엇일까요?
 
