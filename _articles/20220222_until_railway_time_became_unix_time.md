@@ -38,6 +38,9 @@ GMT처럼 태양을 기준으로 하는 시간 체계를 통틀어 태양시(Sol
 
 ## 운영체제의 시간
 
+![회로 기판의 댈러스 반도체 RTC](/images/10679e77-3fe9-48cf-87d3-95e1b815bcf9.webp)
+*Raimond Spekking (CC BY-SA 4.0)*
+
 컴퓨터는 RTC(Real Time Clock)라는 하드웨어 장치를 이용해 시간을 측정한다. 오늘날 시간 정보가 필요한 거의 모든 전자기기에는 RTC가 들어있다. 대부분의 RTC는 수정 발진기(Quartz oscillator)를 사용하는데, 석영 결정에 전압을 걸었을 때 32.768kHz 주파수로 진동하는 것을 1초의 기준으로 삼는 원리다.[^12] 전원이 분리되어 있어서 컴퓨터가 꺼져도 RTC는 꾸준히 시간을 측정할 수 있다.
 
 운영체제 수준에서는 컴퓨터 시스템 전역에 설정된 시간을 시스템 시간(System time)이라고 한다. 리눅스에서 `timedatectl` 명령을 실행하면 시스템의 로컬 시각(Local time)과 UTC 시각, RTC 시각, 타임존 등의 정보를 볼 수 있다.
@@ -99,13 +102,15 @@ print(end - start) # 실행에 1분이 걸렸다
 
 ## 애플리케이션의 시간
 
-불특정 다수에게 서비스하는 웹 서버는 클라이언트의 접속 위치를 특정할 수 없으므로 다양한 시간대와 시간 표현 등을 고려해야 한다. 어떤 사용자는 UTC+9 시간대에서 서비스를 이용하고, 어떤 사용자는 UTC+05:45 시간대에서 이용한다. 그리고 또 어떤 사용자는 DST가 적용된 시간대에서 이용한다. 이들 모두에게 효율적으로 각자의 시간대를 사용할 수 있도록 서비스하기 위해 서버 시간대는 보통 UTC+0으로 설정한다. 따라서 서버와 클라이언트 사이에 사용하는 API도 UTC+0 시간대를 전제한다.
+불특정 다수에게 서비스하는 웹 서버는 클라이언트의 접속 위치를 특정할 수 없으므로 다양한 시간대와 시간 표현 등을 고려해야 한다. 어떤 사용자는 UTC+9 시간대에서 서비스를 이용하고, 어떤 사용자는 UTC+05:45 시간대에서 이용한다. 그리고 또 어떤 사용자는 DST가 적용된 시간대에서 이용한다. 이들 모두에게 적절한 시간 정보를 제공하기 위해서는 서버가 일관된 시간대를 사용해야 한다. 일반적으로 직관적인 계산을 위해 서버 시간대는 UTC+0으로 설정한다. 따라서 서버와 클라이언트 사이에 사용하는 API도 UTC+0 시간대를 전제한다.
 
-API를 통해 서버와 클라이언트가 시간 데이터를 주고받을 때는 주의할 필요가 있다. 연호를 사용하는 일본력은 어떻게 표현할지,[^172] [1970년 이전에 태어난 사람의 생일은 어떻게 표현할지](https://twitter.com/disjukr/status/1488051679123546112)와 같은 고민을 해야 한다. 마이크로소프트 REST API 가이드라인은 ECMAScript 언어 명세에서 정의한 `YYYY-MM-DDTHH:mm:ss.sssZ` 포맷[^171]을 사용하는 `DateLiteral` 형식이나 시간의 종류(`kind`)와 그 값(`value`)을 함께 제공할 수 있는 `StructuredDateLiteral` 형식을 제시하고 있다.[^18]
+API를 통해 서버와 클라이언트가 시간 데이터를 주고받을 때는 주의할 필요가 있다. [연호를 사용하는 일본력은 어떻게 표현할지](https://www.sungdoo.dev/programming/debugging/japanese-calendar), [1970년 이전에 태어난 사람의 생일은 어떻게 표현할지](https://twitter.com/disjukr/status/1488051679123546112) 고민해야 한다. 마이크로소프트 REST API 가이드라인은 ECMAScript 언어 명세에서 정의한 `YYYY-MM-DDTHH:mm:ss.sssZ` 포맷[^171]을 사용하는 `DateLiteral` 형식을 제안한다.
 
 ```json
 { "creationDate" : "2015-02-13T13:15Z" }
 ```
+
+또한 시간의 종류(`kind`)와 그 값(`value`)을 함께 제공할 수 있는 `StructuredDateLiteral` 형식도 함께 제시하고 있다.[^18]
 
 ```json
 [
@@ -114,7 +119,7 @@ API를 통해 서버와 클라이언트가 시간 데이터를 주고받을 때�
 ]
 ```
 
-대부분의 현대 프로그래밍 언어들은 효과적으로 시간을 다루기 위한 타입 시스템을 갖추고 있다. 코틀린의 경우 자바의 표준 라이브러리를 확장한 인터페이스를 제공한다. 자바의 시간 라이브러리는 각종 문제를 지닌 것으로 악명이 높았지만,[^19] 다행히 현재 코틀린은 자바8부터 수정된 인터페이스를 사용하고 있다. 에포크 시간의 타임스탬프를 다루는 `Instant` 클래스와 기간을 다루는 `Duration` 클래스 등이 있으며, 시간대 정보가 없는 `LocalDateTime` 클래스, 시간대 정보를 지닌 `ZonedDateTime` 클래스도 제공된다. 만약 시간대 정보가 없는 `LocalDateTime` 시각을 `Instant` 객체로 변환하고 싶다면 시간대 정보가 필요하다.
+대부분의 현대 프로그래밍 언어들은 효과적으로 시간을 다루기 위한 인터페이스를 갖추고 있다. 코틀린의 경우 자바의 표준 라이브러리를 확장한 인터페이스를 제공한다. 자바의 시간 라이브러리는 각종 문제를 지닌 것으로 악명이 높았지만,[^19] 다행히 현재 코틀린은 자바8부터 수정된 인터페이스를 사용하고 있다. 에포크 시간의 타임스탬프를 다루는 `Instant` 클래스와 기간을 다루는 `Duration` 클래스 등이 있으며, 시간대 정보가 없는 `LocalDateTime` 클래스, 시간대 정보를 지닌 `ZonedDateTime` 클래스도 제공된다. 만약 시간대 정보가 없는 `LocalDateTime` 시각을 `Instant` 객체로 변환하고 싶다면 시간대 정보가 필요하다.
 
 ```kotlin
 LocalDateTime.of(2022, 1, 1, 0, 0, 0).toInstant(ZoneOffset.of("+0900"))
@@ -154,7 +159,6 @@ UTC 시각을 KST 시각으로 바꾸기 위해 `plusHours(9)`를 적용하는 �
 [^161]: [Miroslav Lichvar, "Five different ways to handle leap seconds with NTP", Red Hat Developer, 2015.](https://developers.redhat.com/blog/2015/06/01/five-different-ways-handle-leap-seconds-ntp)
 [^17]: [이화여자대학교 사범대학 부속초등학교, "국내 타임서버 리스트", 2021.](http://time.ewha.or.kr/domestic.html)
 [^171]: [_The ECMAScript Language Specification_, "Date Time String Format", "Standard ECMA-262 5.1 Edition", 2011.](https://262.ecma-international.org/5.1/#sec-15.9.1.15)
-[^172]: [유성두, "일본의 연호 변경, 남의 일이 아닙니다", 2019.](https://www.sungdoo.dev/programming/debugging/japanese-calendar)
 [^18]: [Dave Campbell et al., "Microsoft REST API Guidelines, Guidelines for dates and times", Microsoft, 2021.](https://github.com/microsoft/api-guidelines/blob/vNext/Guidelines.md#112-guidelines-for-dates-and-times)
 [^19]: [정상혁, "Java의 날짜와 시간 API", Naver D2, 2014.](https://d2.naver.com/helloworld/645609)
 [^20]: [김동우, "자바스크립트에서 타임존 다루기 (1)", NHN Cloud Meetup, 2017.](https://meetup.toast.com/posts/125)
