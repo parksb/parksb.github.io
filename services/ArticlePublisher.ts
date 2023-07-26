@@ -165,7 +165,6 @@ class ArticlePublisher {
     });
 
     PagePublisher.publishArticles(distArticles);
-    PagePublisher.publishIndex(distArticles.slice(0, 5).reverse());
   }
 }
 

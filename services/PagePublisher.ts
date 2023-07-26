@@ -5,10 +5,24 @@ import ArticleModel from './models/ArticleModel';
 import WorkModel from './models/WorkModel';
 
 class PagePublisher {
-  public static publishIndex(articles: ArticleModel[]) {
+  public static publishPage(page?: 'index' | 'about') {
+    switch (page) {
+      case 'index':
+        PagePublisher.publishIndex();
+        break;
+      case 'about':
+        PagePublisher.publishAbout();
+        break;
+      default:
+        PagePublisher.publishIndex();
+        PagePublisher.publishAbout();
+    }
+  }
+
+  public static publishIndex() {
     const TEMPLATE: Buffer = fs.readFileSync(path.join(__dirname, '../app/templates/index.ejs'));
     const DIST_PATH: string = path.join(__dirname, '../app/public/index.html');
-    fs.writeFileSync(DIST_PATH, ejs.render(String(TEMPLATE), { articles }));
+    fs.writeFileSync(DIST_PATH, ejs.render(String(TEMPLATE)));
   }
 
   public static publishAbout() {
