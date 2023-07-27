@@ -37,16 +37,17 @@
       <ul>
         <li><a href="/">About <span class="symbol">↘</span></a></li>
         <li class="selected">Works</li>
-        <section id="works-container" class="selected-container">
+        <ul id="works-container" class="selected-container">
           <% works.reverse().map((work) => { %>
-          <a href="./work/<%= work.id %>.html">
-            <div class="works-content">
-              <img src="<%= work.thumbnail %>" />
-              <span class="heading"><%= work.title %></span>
-            </div>
-          </a>
+          <li>
+            <a href="./work/<%= work.id %>.html">
+              <span class="heading"><%= work.title %><% if (work.subtitle) { %>:<% } %></span>
+              <% if (work.subtitle) { %><span class="subheading"><%= work.subtitle %></span><% } %>
+              <img class="thumbnail" src="<%= work.thumbnail %>" />
+            </a>
+          </li>
           <% }) %>
-        </section>
+        </ul>
         <li><a href="articles.html">Articles <span class="symbol">↘</span></a></li>
       </ul>
     </main>

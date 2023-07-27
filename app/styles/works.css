@@ -1,29 +1,32 @@
 @import 'init.css';
 @import 'list.css';
 
-section#works-container {
-  max-width: 650px;
-  -webkit-columns: 120px 5;
-  -moz-columns: 120px 5;
-  columns: 150px 5;
+ul#works-container {
+  list-style: none;
 }
 
-section#works-container .works-content {
-  width: 150px;
-  display: inline-block;
-  line-height: 0;
-  margin-bottom: 15px;
-}
-
-section#works-container div.works-content > img {
-  width: 100%;
-  height: 100%;
-  border: 1px solid black;
-  margin-bottom: 3px;
-}
-
-section#works-container span.heading {
-  font-size: 0.9rem;
-  line-height: 1.3rem;
+ul#works-container > li span.heading {
+  font-size: 1rem;
   font-weight: 650;
+}
+
+ul#articles-container > li span.subheading {
+  font-weight: 400;
+}
+
+ul#works-container > li {
+  width: fit-content;
+  margin-bottom: 7px;
+}
+
+ul#works-container img.thumbnail {
+  display: none;
+  position: absolute;
+  width: 150px;
+  height: auto;
+  border: 1px solid black;
+}
+
+ul#works-container > li:hover img.thumbnail {
+  display: block;
 }
