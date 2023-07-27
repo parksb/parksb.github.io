@@ -8,8 +8,6 @@ thumbnail: "/images/46553522-af2a8e80-c918-11e8-8dce-111bb08c4fc1.webp"
 
 ![](/images/46553524-afc32500-c918-11e8-9176-6b4de15dd988.webp)
 
-_**DoiT Web Project Team (2018)**_
+**DoiT Web Project Team (2018)**
 
-아주대학교 프로그래밍 중앙동아리 DoiT의 웹 프로젝트 팀에서
-
-세미나와 프로젝트를 진행했습니다.
+아주대학교 프로그래밍 중앙동아리 DoiT의 웹 프로젝트 팀에서 세미나와 프로젝트를 진행했습니다.
