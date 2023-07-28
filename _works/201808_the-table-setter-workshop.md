@@ -1,6 +1,6 @@
 ---
 title: "과학기술로 세상을 바꾸고 싶은 사람들"
-subtitle: "The table setter & 마이소사이어티 과학기술 워크숍"
+subtitle: "The Table Setter & 마이소사이어티 과학기술 워크숍"
 thumbnail: "/images/46553536-b8b3f680-c918-11e8-8e0b-e41c0103c8de.webp"
 ---
 

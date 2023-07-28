@@ -1,5 +1,5 @@
 ---
-title: "The Table Setter 창립기념식"
+title: "The Table Setter 창립기념식 포스터"
 subtitle: "청소년과 청년 전문가의 상생을 위한 출발"
 thumbnail: "/images/46553483-902bfc80-c918-11e8-8173-17316f7389ab.webp"
 ---
