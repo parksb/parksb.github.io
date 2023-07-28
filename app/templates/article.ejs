@@ -51,10 +51,9 @@
           <%- article.subtitle %>
         </h2>
         <% } %>
-        <time id="article-date"><%- article.date %></time>
-        <small id="article-history">
-          <a href="https://github.com/parksb/parksb.github.io/commits/development/_articles/<%- article.filename %>">(history)</a>
-        </small>
+        <a href="https://github.com/parksb/parksb.github.io/commits/development/_articles/<%- article.filename %>">
+          <time id="article-date"><%- article.date %><span class="symbol">↗</span></time>
+        </a>
         <section id="article-content-container">
           <%- article.content %>
         </section>
