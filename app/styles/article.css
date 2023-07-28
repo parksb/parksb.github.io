@@ -124,10 +124,14 @@ div.back-to-article-list {
   margin-top: -5px;
 }
 
-#article-content-container ul,
-#article-content-container ol {
-  margin-left: 2rem;
+#article-content-container > ul,
+#article-content-container > ol {
   margin-bottom: 1rem;
+}
+
+#article-content-container ul,
+#article-content-container ol{
+  margin-left: 2rem;
 }
 
 #article-content-container li {
