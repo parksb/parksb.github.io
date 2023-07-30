@@ -21,15 +21,6 @@ time {
   margin-top: 30px;
 }
 
-#article-social-container {
-  margin-top: 30px;
-  font-size: 10px;
-}
-
-#article-social-container #fb-like {
-  top: 5px;
-}
-
 #article-navigation {
   margin-top: 50px;
   overflow: hidden;
