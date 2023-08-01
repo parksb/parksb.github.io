@@ -18,7 +18,7 @@ class Article extends ArticleMetaInfo {
     this.article = {
       id,
       title,
-      encodedTitle: encodeURI(`**${title}**`),
+      encodedTitle: encodeURI(title),
       subtitle,
       encodedSubtitle: subtitle ? encodeURI(subtitle) : undefined,
       encodedDescription: encodeURI(`― Simon Park ― ${date} ― parksb.github.io`),
