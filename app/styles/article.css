@@ -32,18 +32,18 @@ time {
 
 #article-navigation .article-navigation-arrow {
   font-size: 0.9rem;;
-  width: 18px;
-  line-height: 1.7em;
 }
 
 #article-navigation .article-navigation-next {
   text-align: left;
   float: left;
+  margin-right: 5px;
 }
 
 #article-navigation .article-navigation-prev {
   text-align: right;
   float: right;
+  margin-left: 5px;
 }
 
 #article-navigation .article-navigation-title {
