@@ -9,7 +9,7 @@ interface ArticleModel extends ArticleMetaInfoModel {
 
   encodedSubtitle?: string;
 
-  encodedDescription?: string;
+  encodedDate?: string;
 }
 
 export default ArticleModel;

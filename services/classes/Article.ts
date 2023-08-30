@@ -21,7 +21,7 @@ class Article extends ArticleMetaInfo {
       encodedTitle: encodeURI(title),
       subtitle,
       encodedSubtitle: subtitle ? encodeURI(subtitle) : undefined,
-      encodedDescription: encodeURI(`― Simon Park ― ${date} ― parksb.github.io`),
+      encodedDate: encodeURI(date),
       date,
       filename,
       content,
