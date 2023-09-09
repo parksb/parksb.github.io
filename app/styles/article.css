@@ -82,6 +82,8 @@ div.back-to-article-list {
 
 #article-content-container h2 {
   font-size: 1.4rem;
+  padding-bottom: 5px;
+  border-bottom: 1px black solid;
 }
 
 #article-content-container h3 {
@@ -141,9 +143,10 @@ div.back-to-article-list {
 #article-content-container pre {
   display: block;
   overflow-x: auto;
-  padding: 1px 1rem;
+  padding: 1rem;
   margin-bottom: 1rem;
   line-height: 1.3rem;
+  background-color: #f6f8fa;
 }
 
 #article-content-container code,
