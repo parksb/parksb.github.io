@@ -171,6 +171,10 @@ div.back-to-article-list {
   width: 100%;
 }
 
+#article-content-container thead {
+  background-color: #f6f8fa;
+}
+
 #article-content-container th,
 #article-content-container td {
   padding: 5px 10px 5px 10px;
