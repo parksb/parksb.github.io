@@ -109,12 +109,14 @@ div.back-to-article-list {
   height: auto;
 }
 
+#article-content-container p > img {
+  margin-bottom: -7px;
+}
+
 #article-content-container img + em {
   display: block;
   font-size: 0.8rem;
   line-height: 1.5rem;
-  text-align: right;
-  margin-top: -5px;
 }
 
 #article-content-container > ul,
