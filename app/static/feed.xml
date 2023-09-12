@@ -4,7 +4,13 @@
 <link>https://parksb.github.io/</link>
 <description>Recently published articles written by Simon Park</description>
 <language>ko-kr</language>
-<lastBuildDate>Mon, 21 Nov 2022 14:36:23 +0900</lastBuildDate>
+<lastBuildDate>Tue, 12 Sep 2023 10:19:08 +0900</lastBuildDate>
+<item>
+<title>아치 리눅스로 15년차 넷북 되살리기</title>
+<link>https://parksb.github.io/article/41.html</link>
+<description>우리집에는 2009년 구입한 넷북이 있다.Asus Eee PC 1000HE에는 인텔 아톰 N280과 DDR2 1GB 램이 탑재되어 있다. 아톰 N 시리즈는 인텔이 넷북을 위해 만든 저가, 저성능 CPU다. L1 캐시 56KB, L2 캐시 512KB가 제공되며, 클럭 속도는 1.667GHz다. 2023년 출시된 저가형 노트...</description>
+<pubDate>Fri, 1 Sep 2023 00:00:00 +0900</pubDate>
+</item>
 <item>
 <title>함수형 프로그래밍의 설득력</title>
 <link>https://parksb.github.io/article/40.html</link>
@@ -50,20 +56,14 @@
 <item>
 <title>해피 터미널 라이프</title>
 <link>https://parksb.github.io/article/33.html</link>
-<description>6년간 써온 윈도우 노트북을 포맷하고 다시 WSL 환경을 세팅했다. 포맷을 하도 오랜만에 해서 그런지 설정에 의외로 손이 많이 갔다. 모든 걸 완벽하게 자동화할 겸 세팅을 정리해보기로 했다.Git우선 git을 설치한다. 자신의 프로젝트에 git을 사용하지 않더라도 (웬만하면 써보자) 다른 프로그램을 설치할 때 필요하다.#...</description>
-<pubDate>Wed, 1 Aug 2018 00:00:00 +0900</pubDate>
+<description>2023년 7월 25일에 내용을 업데이트했습니다. 2019년 8월판은 여기에서 확인할 수 있습니다.Terminal EmulatorAlacritty는 OpenGL을 이용해 렌더링에 GPU 가속을 지원받을 수 있는 터미널 에뮬레이터다. 러스트로 작성되었으며, 높은 성능을 내세우고 있다. Alacritty의 모든 설정은 ~/....</description>
+<pubDate>Thu, 1 Aug 2019 00:00:00 +0900</pubDate>
 </item>
 <item>
 <title>하지만, 야크 털 깎기는 재미있다</title>
 <link>https://parksb.github.io/article/32.html</link>
 <description>이 블로그는 지킬이나 휴고, 개츠비같은 정적 사이트 생성기/프레임워크를 사용하지 않았다. 처음엔 이것저것 써봤지만 커스터마이징 자유도가 낮아서 직접 블로그를 만들기로 했다. 초기에는 간단히 html로 글을 썼는데, 너무 불편해서 json 파일로 글을 쓰는 시스템을 만들었다. 이것도 장문의 글을 쓰기엔 불편해서 마크다운 파...</description>
 <pubDate>Mon, 1 Jul 2019 00:00:00 +0900</pubDate>
-</item>
-<item>
-<title>👻 CPU 보안 취약점을 공격하는 아주 구체적인 원리</title>
-<link>https://parksb.github.io/article/31.html</link>
-<description>지난 5월 인텔 CPU의 새로운 보안 취약점이 보고됐다. MDS(Microarchitectural Data Sampling)라고 불리는 이 취약점은 2018년 초 보고된 멜트다운(Meltdown), 스펙터(Spectre) 취약점과 달리 CPU 내부 3개의 버퍼(Line Fill Buffers, Load Ports, Sto...</description>
-<pubDate>Sat, 1 Jun 2019 00:00:00 +0900</pubDate>
 </item>
 </channel>
 </rss>
