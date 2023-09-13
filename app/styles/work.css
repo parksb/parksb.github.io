@@ -44,3 +44,17 @@
 #work-content-container a:focus {
   text-decoration: underline;
 }
+
+#work-content-container > ul,
+#work-content-container > ol {
+  margin-bottom: 1rem;
+}
+
+#work-content-container ul,
+#work-content-container ol{
+  margin-left: 2rem;
+}
+
+#work-content-container li {
+  line-height: 1.7rem;
+}
