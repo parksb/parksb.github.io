@@ -92,6 +92,7 @@ class ArticlePublisher {
       metaInfo.getTitle(),
       metaInfo.getSubtitle(),
       metaInfo.getDate(),
+      metaInfo.getHidden(),
       htmlContent,
       filename,
     );
@@ -164,7 +165,7 @@ class ArticlePublisher {
       return article;
     });
 
-    PagePublisher.publishArticles(distArticles);
+    PagePublisher.publishArticles(distArticles.filter((article) => !article.hidden));
   }
 }
 

@@ -10,6 +10,7 @@ class Article extends ArticleMetaInfo {
     title: string,
     subtitle: string,
     date: string,
+    hidden: boolean,
     content: string,
     filename: string,
   ) {
@@ -23,6 +24,7 @@ class Article extends ArticleMetaInfo {
       encodedSubtitle: subtitle ? encodeURI(subtitle) : undefined,
       encodedDate: encodeURI(date),
       date,
+      hidden,
       filename,
       content,
       summary: `${escapeHTML(content).slice(0, SUMMARY_LENGTH)}...`,

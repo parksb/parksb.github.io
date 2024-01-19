@@ -11,6 +11,8 @@ class ArticleMetaInfo implements ArticleMetaInfoModel {
 
   filename: string;
 
+  hidden?: boolean;
+
   setProp(name: string, value: any) {
     switch (name) {
       case 'id':
@@ -22,6 +24,10 @@ class ArticleMetaInfo implements ArticleMetaInfoModel {
       case 'date':
       case 'filename':
         this[name] = value;
+        break;
+
+      case 'hidden':
+        this.hidden = Boolean(value);
         break;
 
       default:
@@ -47,6 +53,10 @@ class ArticleMetaInfo implements ArticleMetaInfoModel {
 
   getFilename(): string {
     return this.filename;
+  }
+
+  getHidden(): boolean {
+    return this.hidden || false;
   }
 }
 

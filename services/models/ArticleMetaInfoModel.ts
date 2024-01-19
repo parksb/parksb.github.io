@@ -8,6 +8,8 @@ interface ArticleMetaInfoModel {
   date: string;
 
   filename: string;
+
+  hidden?: boolean;
 }
 
 export default ArticleMetaInfoModel;
