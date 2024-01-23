@@ -16,6 +16,7 @@ import mdContainer from 'markdown-it-container';
 import mdInlineComment from 'markdown-it-inline-comments';
 import mdLazyImage from 'markdown-it-image-lazy-loading';
 import mdMermaid from 'markdown-it-mermaid';
+import mdEmbed from 'markdown-it-html5-embed';
 
 import PagePublisher from './PagePublisher';
 import ArticleMetaInfo from './classes/ArticleMetaInfo';
@@ -75,6 +76,12 @@ class ArticlePublisher {
       decoding: true,
       image_size: true,
       base_path: path.join(__dirname, '../'),
+    })
+    .use(mdEmbed, {
+      html5embed: {
+        useImageSyntax: true,
+        useLinkSyntax: true,
+      },
     });
 
   private static extractContent(text: string): string {

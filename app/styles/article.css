@@ -119,6 +119,11 @@ div.back-to-article-list {
   line-height: 1.5rem;
 }
 
+#article-content-container video {
+  max-width: 100%;
+  height: auto;
+}
+
 #article-content-container > ul,
 #article-content-container > ol {
   margin-bottom: 1rem;
