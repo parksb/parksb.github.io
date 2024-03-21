@@ -48,24 +48,26 @@ ${articleUrls.join('\n')}
 </rss>
 `;
 
-    const DESCRIPTION_LENGTH = 180;
-    const ITEM_LIMIT_COUNT = 10;
+    const DESCRIPTION_LENGTH = 256;
+    // const ITEM_LIMIT_COUNT = 10;
     const articleFiles: string[] = ArticlePublisher.getArticleMarkdownFiles();
     const articles = articleFiles.map((file) => (
       ArticlePublisher.getArticleByFilename(file).getArticle()
     ));
-    const items = articles.slice(-ITEM_LIMIT_COUNT).reverse().map((article) => {
-      const description = `${escapeHTML(article.content).slice(0, DESCRIPTION_LENGTH)}...`;
-      const pubDate = `${dayjs(article.date.replace('.', '-')).format('ddd, D MMM YYYY HH:mm:ss')} +0900`;
+    const items = articles
+      // .slice(-ITEM_LIMIT_COUNT)
+      .reverse().map((article) => {
+        const description = `${escapeHTML(article.content).slice(0, DESCRIPTION_LENGTH)}...`;
+        const pubDate = `${dayjs(article.date.replace('.', '-')).format('ddd, D MMM YYYY HH:mm:ss')} +0900`;
 
-      return `<item>
+        return `<item>
 <title>${article.title}</title>
 <link>https://parksb.github.io/article/${article.id}.html</link>
 <description>${description}</description>
 <pubDate>${pubDate}</pubDate>
 </item>
 `;
-    }).join('');
+      }).join('');
 
     const RSS_PATH: string = path.join(__dirname, '../app/static/feed.xml');
     fs.writeFileSync(RSS_PATH, `${header}${items}${footer}`);

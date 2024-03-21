@@ -4,66 +4,258 @@
 <link>https://parksb.github.io/</link>
 <description>Recently published articles written by Simon Park</description>
 <language>ko-kr</language>
-<lastBuildDate>Tue, 23 Jan 2024 13:27:06 +0900</lastBuildDate>
+<lastBuildDate>Thu, 21 Mar 2024 19:51:08 +0900</lastBuildDate>
 <item>
 <title>스마트폰을 PC의 모션 컨트롤러로 만들기</title>
 <link>https://parksb.github.io/article/42.html</link>
-<description>한 명의 사용자가 보유한 기기 수가 꾸준히 늘어남에 따라 이들을 유기적으로 결합하고자 하는 사용자 요구도 증가하고 있다. 나는 맥북과 2개의 스마트폰, 아이패드, 우분투 데스크탑을 일상적으로 사용하는데, 애플의 유니버설 컨트롤을 벗어나면 서로 다른 플랫폼의 기기를 연동하기가 쉽지 않다. 특히 모바일 기기에는 많은 센서가 ...</description>
+<description>한 명의 사용자가 보유한 기기 수가 꾸준히 늘어남에 따라 이들을 유기적으로 결합하고자 하는 사용자 요구도 증가하고 있다. 나는 맥북과 2개의 스마트폰, 아이패드, 우분투 데스크탑을 일상적으로 사용하는데, 애플의 유니버설 컨트롤을 벗어나면 서로 다른 플랫폼의 기기를 연동하기가 쉽지 않다. 특히 모바일 기기에는 많은 센서가 탑재되어 있지만, PC를 사용할 때는 이를 전혀 사용하지 못한다. 모바일 기기의 각종 센서를 하나의 모바일 기기에만 남겨두기에는 너무 값...</description>
 <pubDate>Mon, 1 Jan 2024 00:00:00 +0900</pubDate>
 </item>
 <item>
 <title>아치 리눅스로 15년차 넷북 되살리기</title>
 <link>https://parksb.github.io/article/41.html</link>
-<description>우리집에는 2009년 구입한 넷북이 있다.Asus Eee PC 1000HE에는 인텔 아톰 N280과 DDR2 1GB 램이 탑재되어 있다. 아톰 N 시리즈는 인텔이 넷북을 위해 만든 저가, 저성능 CPU다. L1 캐시 56KB, L2 캐시 512KB가 제공되며, 클럭 속도는 1.667GHz다. 2023년 출시된 저가형 노트...</description>
+<description>우리집에는 2009년 구입한 넷북이 있다.Asus Eee PC 1000HE에는 인텔 아톰 N280과 DDR2 1GB 램이 탑재되어 있다. 아톰 N 시리즈는 인텔이 넷북을 위해 만든 저가, 저성능 CPU다. L1 캐시 56KB, L2 캐시 512KB가 제공되며, 클럭 속도는 1.667GHz다. 2023년 출시된 저가형 노트북용 프로세서 인텔 코어 i3 N305에는 L1 캐시 768KB, L2 캐시 4MB가 제공되고, 속도가 3.8GHz라는 점을 생각해보면 ...</description>
 <pubDate>Fri, 1 Sep 2023 00:00:00 +0900</pubDate>
 </item>
 <item>
 <title>함수형 프로그래밍의 설득력</title>
 <link>https://parksb.github.io/article/40.html</link>
-<description>이제 함수형 프로그래밍은 확실히 주류라고 할 만하다. 이미 많은 프로그래밍 언어가 함수형 프로그래밍의 핵심 개념을 차용했고, 그린랩스와 같은 회사들이 엔터프라이즈 규모에서 함수형 프로그래밍의 성공적인 사례를 만들어내고 있다. 함수형 프로그래밍에 관해 설명하는 도서나 자료도 쉽게 찾아볼 수 있다. 최근에는 프로그래밍 입문자...</description>
+<description>이제 함수형 프로그래밍은 확실히 주류라고 할 만하다. 이미 많은 프로그래밍 언어가 함수형 프로그래밍의 핵심 개념을 차용했고, 그린랩스와 같은 회사들이 엔터프라이즈 규모에서 함수형 프로그래밍의 성공적인 사례를 만들어내고 있다. 함수형 프로그래밍에 관해 설명하는 도서나 자료도 쉽게 찾아볼 수 있다. 최근에는 프로그래밍 입문자들도 함수형 프로그래밍의 중요성을 인식하는 것 같다.그러나 여전히 함수형 프로그래밍을 진지하게 생각하는 프로그래머는 많지 않다. 이제 막...</description>
 <pubDate>Tue, 1 Nov 2022 00:00:00 +0900</pubDate>
 </item>
 <item>
 <title>철도 시간표가 유닉스 시간이 되기까지</title>
 <link>https://parksb.github.io/article/39.html</link>
-<description>컴퓨터 공학에서 시간을 다루는 것은 꽤나 고달픈 일이다. 특히 우리가 일상에서 직관적으로 이해하는 시간 체계와 일상에서 의식하지 못하는 시간 체계의 괴리로 인해 소프트웨어 엔지니어들은 고통받는다. 이 글에서는 태양시, 원자시 등 시간 체계에 대해 알아보고, 컴퓨터에서 어떻게 시간을 다루는지 설명하고자 한다.태양의 시간St...</description>
+<description>컴퓨터 공학에서 시간을 다루는 것은 꽤나 고달픈 일이다. 특히 우리가 일상에서 직관적으로 이해하는 시간 체계와 일상에서 의식하지 못하는 시간 체계의 괴리로 인해 소프트웨어 엔지니어들은 고통받는다. 이 글에서는 태양시, 원자시 등 시간 체계에 대해 알아보고, 컴퓨터에서 어떻게 시간을 다루는지 설명하고자 한다.태양의 시간Stanford University Libraries (CC0)19세기초까지만 해도 지역마다 각자의 지방 평균시(Local Mean Time...</description>
 <pubDate>Tue, 1 Feb 2022 00:00:00 +0900</pubDate>
 </item>
 <item>
 <title>🧱 Server Driven UI 설계를 통한 UI 유연화</title>
 <link>https://parksb.github.io/article/38.html</link>
-<description>웹과 달리 네이티브 모바일 앱은 빌드, 배포 후에는 수정이 불가능하다. 만약 잘못된 위치에 버튼을 배치한 채로 스토어에 앱을 배포했다면, 그리고 사용자가 잘못된 버전의 앱을 설치했다면 버튼의 위치를 수정할 방법이 없다. 유일한 방법은 사용자가 스스로 스토어에 들어가 수정된 버전의 앱으로 업데이트하는 것 뿐이다.배포 후 수...</description>
+<description>웹과 달리 네이티브 모바일 앱은 빌드, 배포 후에는 수정이 불가능하다. 만약 잘못된 위치에 버튼을 배치한 채로 스토어에 앱을 배포했다면, 그리고 사용자가 잘못된 버전의 앱을 설치했다면 버튼의 위치를 수정할 방법이 없다. 유일한 방법은 사용자가 스스로 스토어에 들어가 수정된 버전의 앱으로 업데이트하는 것 뿐이다.배포 후 수정이 불가능하다는 특성이 부딪히는 또 다른 상황은 A/B 테스팅이다. 소프트웨어를 사용하는 동안 일어나는 사용자의 행동과 경험은 화면 구...</description>
 <pubDate>Thu, 1 Jul 2021 00:00:00 +0900</pubDate>
 </item>
 <item>
 <title>읽기 쉬운 웹을 위한 타이포그래피</title>
 <link>https://parksb.github.io/article/37.html</link>
-<description>웹에서 장문의 글을 보여줄 때 보다 읽기 쉽게 디자인하기 위한 원칙을 소개하고자 한다. 전통적인 타이포그래피 규칙들을 바탕으로 웹에서 글을 어떻게 효과적으로 조판할지 소개하되, 활자 자체를 해부하지는 않는다. 이 글에서 제시하는 원칙을 무조건적으로 따르는 것보다는 상황에 따라 유연하게 적용하는 것이 좋고, 실험적인 시도를...</description>
+<description>웹에서 장문의 글을 보여줄 때 보다 읽기 쉽게 디자인하기 위한 원칙을 소개하고자 한다. 전통적인 타이포그래피 규칙들을 바탕으로 웹에서 글을 어떻게 효과적으로 조판할지 소개하되, 활자 자체를 해부하지는 않는다. 이 글에서 제시하는 원칙을 무조건적으로 따르는 것보다는 상황에 따라 유연하게 적용하는 것이 좋고, 실험적인 시도를 원한다면 안 따르는 것이 낫다.폰트먼저 폰트에 대한 용어를 정리할 필요가 있다. 타이포그래피의 많은 부분이 과거 금속 활자를 조판하던 ...</description>
 <pubDate>Fri, 1 Jan 2021 00:00:00 +0900</pubDate>
 </item>
 <item>
 <title>인터넷이 동작하는 아주 구체적인 원리</title>
 <link>https://parksb.github.io/article/36.html</link>
-<description>학교에서 노트북으로 구글(www.google.com)에 접속하는 과정을 살펴본다. 이 글에 등장하는 KT와 Google Fiber, 구글의 네트워크 구조, 노드의 IP 주소와 MAC 주소는 모두 간소화 또는 가정한 것이다. 또한 클라이언트와 서버가 패킷을 주고받는 전체 과정을 훑기 위해 프록시와 캐시는 생략했다.학교 네트...</description>
+<description>학교에서 노트북으로 구글(www.google.com)에 접속하는 과정을 살펴본다. 이 글에 등장하는 KT와 Google Fiber, 구글의 네트워크 구조, 노드의 IP 주소와 MAC 주소는 모두 간소화 또는 가정한 것이다. 또한 클라이언트와 서버가 패킷을 주고받는 전체 과정을 훑기 위해 프록시와 캐시는 생략했다.학교 네트워크에는 여러 AP(Access Point)가 있고, AP들은 스위치에 연결되어 있다. 스위치들은 게이트웨이 라우터와 연결되어 있으며, ...</description>
 <pubDate>Wed, 1 Jan 2020 00:00:00 +0900</pubDate>
 </item>
 <item>
 <title>🦀 러스트의 멋짐을 모르는 당신은 불쌍해요</title>
 <link>https://parksb.github.io/article/35.html</link>
-<description>내가 만나온 개발자들은 대체로 자신이 사용하는 프로그래밍 언어에 딱히 만족하지 않았는데 (극단적으로는 자바스크립트와 PHP가 있다.) 유독 러스트 개발자들은 적극적으로 러스트를 추천했다.하지만 그냥 그런 언어가 있구나 정도로 생각하고 있었다. 그런데 러스트 2018 에디션 발표 이후 근 1년간 러스트 코드를 웹어셈블리로 ...</description>
+<description>내가 만나온 개발자들은 대체로 자신이 사용하는 프로그래밍 언어에 딱히 만족하지 않았는데 (극단적으로는 자바스크립트와 PHP가 있다.) 유독 러스트 개발자들은 적극적으로 러스트를 추천했다.하지만 그냥 그런 언어가 있구나 정도로 생각하고 있었다. 그런데 러스트 2018 에디션 발표 이후 근 1년간 러스트 코드를 웹어셈블리로 컴파일할 수 있다든지, deno의 코어가 러스트로 작성됐다든지하는 이야기들이 뉴스피드를 가득 채웠다. 심지어 스프린트 서울 6월 모임에서...</description>
 <pubDate>Fri, 1 Nov 2019 00:00:00 +0900</pubDate>
 </item>
 <item>
 <title>🗞️ 훈련소에서 매일 뉴스 받아보기</title>
 <link>https://parksb.github.io/article/34.html</link>
-<description>훈련소에서 가장 답답한 것은 외부와의 단절이라는 말을 자주 들었다. 그래서 입대한 친구들에게 뉴스나 읽을거리를 요약해서 인터넷 편지로 보내주곤 했는데, 매일 주요 뉴스를 요약하는 것은 의외로 손이 많이 가는 일이었다. 무엇보다 인터넷 편지 발송을 지원하는 서비스인 더 캠프의 인터페이스가 너무 불편해서 사용하기 쉽지 않았다...</description>
+<description>훈련소에서 가장 답답한 것은 외부와의 단절이라는 말을 자주 들었다. 그래서 입대한 친구들에게 뉴스나 읽을거리를 요약해서 인터넷 편지로 보내주곤 했는데, 매일 주요 뉴스를 요약하는 것은 의외로 손이 많이 가는 일이었다. 무엇보다 인터넷 편지 발송을 지원하는 서비스인 더 캠프의 인터페이스가 너무 불편해서 사용하기 쉽지 않았다.그러던 중 나에게도 군사교육 소집 통지서가 왔고, 4주간의 고립은 역시 중대한 문제였다. 그렇게 입소를 앞둔 일요일, 매일 인터넷 편지...</description>
 <pubDate>Sun, 1 Sep 2019 00:00:00 +0900</pubDate>
 </item>
 <item>
 <title>해피 터미널 라이프</title>
 <link>https://parksb.github.io/article/33.html</link>
-<description>2023년 7월 25일에 내용을 업데이트했습니다. 2019년 8월판은 여기에서 확인할 수 있습니다.Terminal EmulatorAlacritty는 OpenGL을 이용해 렌더링에 GPU 가속을 지원받을 수 있는 터미널 에뮬레이터다. 러스트로 작성되었으며, 높은 성능을 내세우고 있다. Alacritty의 모든 설정은 ~/....</description>
+<description>2023년 7월 25일에 내용을 업데이트했습니다. 2019년 8월판은 여기에서 확인할 수 있습니다.Terminal EmulatorAlacritty는 OpenGL을 이용해 렌더링에 GPU 가속을 지원받을 수 있는 터미널 에뮬레이터다. 러스트로 작성되었으며, 높은 성능을 내세우고 있다. Alacritty의 모든 설정은 ~/.alacritty.toml 파일로 관리할 수 있고, 저장하면 변경 사항이 즉시 반영된다.다만 0.12.0 버전부터 한글 입력 버그가 발생...</description>
 <pubDate>Thu, 1 Aug 2019 00:00:00 +0900</pubDate>
+</item>
+<item>
+<title>하지만, 야크 털 깎기는 재미있다</title>
+<link>https://parksb.github.io/article/32.html</link>
+<description>이 블로그는 지킬이나 휴고, 개츠비같은 정적 사이트 생성기/프레임워크를 사용하지 않았다. 처음엔 이것저것 써봤지만 커스터마이징 자유도가 낮아서 직접 블로그를 만들기로 했다. 초기에는 간단히 html로 글을 썼는데, 너무 불편해서 json 파일로 글을 쓰는 시스템을 만들었다. 이것도 장문의 글을 쓰기엔 불편해서 마크다운 파일을 html 파일로 변환하는 서비스를 개발했다. 그 다음엔 결과물로 나온 파일들을 빌드, 배포하기 위한 툴을 만들었다. 결국 밑바닥부터...</description>
+<pubDate>Mon, 1 Jul 2019 00:00:00 +0900</pubDate>
+</item>
+<item>
+<title>👻 CPU 보안 취약점을 공격하는 아주 구체적인 원리</title>
+<link>https://parksb.github.io/article/31.html</link>
+<description>지난 5월 인텔 CPU의 새로운 보안 취약점이 보고됐다. MDS(Microarchitectural Data Sampling)라고 불리는 이 취약점은 2018년 초 보고된 멜트다운(Meltdown), 스펙터(Spectre) 취약점과 달리 CPU 내부 3개의 버퍼(Line Fill Buffers, Load Ports, Store Buffers)로부터 사적인 데이터를 유출할 수 있다. MDS에 대해 공부하기 전 (뒤늦게) 멜트다운과 스펙터에 대해 알아보기로 했...</description>
+<pubDate>Sat, 1 Jun 2019 00:00:00 +0900</pubDate>
+</item>
+<item>
+<title>하나의 타입에 강아지와 고양이 담기</title>
+<link>https://parksb.github.io/article/30.html</link>
+<description>여기 강아지와 고양이가 있다.data class Dog(val name: String)data class Cat(val name: String)identity 함수는 항상 파라미터를 그대로 반환하는 항등 함수다. identity(dog: Dog) 함수는 Dog 타입 인자를 받아 반환하며, identity(cat: Cat) 함수는 Cat 타입 인자를 받아 반환한다.fun identity(dog: Dog) = dogfun identity(cat: Cat) =...</description>
+<pubDate>Wed, 1 May 2019 00:00:00 +0900</pubDate>
+</item>
+<item>
+<title>💵 캐시가 동작하는 아주 구체적인 원리</title>
+<link>https://parksb.github.io/article/29.html</link>
+<description>기술의 발전으로 프로세서 속도는 빠르게 증가해온 반면, 메모리의 속도는 이를 따라가지 못했다. 프로세서가 아무리 빨라도 메모리의 처리 속도가 느리면 결과적으로 전체 시스템 속도는 느려진다. 이를 개선하기 위한 장치가 바로 캐시(Cache)다.캐시는 CPU 칩 안에 들어가는 작고 빠른 메모리다. (그리고 비싸다.) 프로세서가 매번 메인 메모리에 접근해 데이터를 받아오면 시간이 오래 걸리기 때문에 캐시에 자주 사용하는 데이터를 담아두고, 해당 데이터가 필요할...</description>
+<pubDate>Fri, 1 Mar 2019 00:00:00 +0900</pubDate>
+</item>
+<item>
+<title>Git 사용 중 자주 만나는 이슈 정리</title>
+<link>https://parksb.github.io/article/28.html</link>
+<description>깃으로 버전 관리를 하다보면 각종 이슈가 자주 발목을 잡는다. 특히 복잡한 프로젝트의 경우 그 정도가 심한데… 입사 이후 '지금까지 내가 한 건 깃이 아니구나’를 깨닫고 더 공부해 보기로 했다. 그러다보니 매번 비슷한 문제 상황을 마주하게 되는 것 같아서 케이스별로 정리해보았다.먼저 아주 간단한 예시로 주요 용어를 살펴보면:            -add-&amp;gt;      -commit-&amp;gt;     -push-&amp;gt;+-------...</description>
+<pubDate>Fri, 1 Feb 2019 00:00:00 +0900</pubDate>
+</item>
+<item>
+<title>2학년 학부생의 신입 개발자 취업기</title>
+<link>https://parksb.github.io/article/27.html</link>
+<description>“네가 군대 갈 때는 통일이 되어 있을 거란다.”초등학교 4학년 때 삼청공원에서 농구를 하고 있었다. 지나가던 스님이 갑자기 내가 군대에 갈 때는 통일이 되어 군대에 가지 않을 것이라고 말씀하셨다. 길 가던 스님이 뜬금없이 미래를 예견하는 게 너무 민속 설화스러워서 지금도 기억이 난다.대학교 2학년이 되면 대부분의 친구들이 군대에 간다. 작년까지만 해도 군대는 남의 일 같았지만, 올해 주변 친구들이 하나둘 입대하면서 내게도 운명의 순간이 다가오고 있음을 ...</description>
+<pubDate>Mon, 1 Jan 2018 00:00:00 +0900</pubDate>
+</item>
+<item>
+<title>🎅 요정을 착취하는 방치형 게임 개발한 이야기</title>
+<link>https://parksb.github.io/article/26.html</link>
+<description>Santa Inc.는 초국적 블랙 기업 '산타 주식회사’를 운영하는 방치형 게임(Idle game)이다. 산타의 목적은 오직 선물 생산을 최대로 끌어올리는 것. 산타는 직원을 고용하고, 정책을 채택하며 끝없이 선물을 생산한다.Santa Inc.를 처음 만든 건 2015년 겨울이었다. 웹 프로그래밍을 공부한 후 매년 크리스마스마다 이상한 걸 만들었는데, 이것도 그 일환이었다. 당시엔 크리스마스에 맞춰 런칭하겠다는 욕심으로 학기 중 20일만에 게임을 완성했다...</description>
+<pubDate>Sat, 1 Dec 2018 00:00:00 +0900</pubDate>
+</item>
+<item>
+<title>🤖 컴퓨터가 코드를 읽는 아주 구체적인 원리</title>
+<link>https://parksb.github.io/article/25.html</link>
+<description>지난 학기 운영체제 공부를 하면서 더 낮은 레벨은 어떻게 동작하는지 궁금해졌다. David A. Patterson과 John L. Hennessy의 Computer Organization and Design 5th Edition의 전반부를 바탕으로 MIPS instruction set에 대해 정리했다.Computer Abstractions and Technology컴퓨터 아키텍처를 공부한다는 것은 컴퓨터를 구성하는 하드웨어와 명령어가 어떻게 함께 동작하는...</description>
+<pubDate>Mon, 1 Oct 2018 00:00:00 +0900</pubDate>
+</item>
+<item>
+<title>🔐 HTTPS는 어떻게 다를까?</title>
+<link>https://parksb.github.io/article/24.html</link>
+<description>이미 HTTPS의 중요성은 널리 알려져 있다. 크롬, 파이어폭스와 같은 브라우저는 HTTP 서버에 접속할 때 경고를 띄우니 사용자 경험을 위해서라도 HTTPS는 필수라고 할 수 있다. 내가 개떡같은 코드와 함께한 하루 리뉴얼 이야기에서 그렇게 삽질한 이유이기도 하다.HTTPS를 사용하면 데이터가 암호화되고, 보안에 좋다는 것은 알았지만, HTTP 접속과 비교하며 실제로 오가는 데이터를 분석해보니 그 사실이 더욱 가깝게 다가왔다. 컴퓨터 네트워크에 대한 배...</description>
+<pubDate>Mon, 1 Oct 2018 00:00:00 +0900</pubDate>
+</item>
+<item>
+<title>🌐 Top-Down으로 접근하는 네트워크</title>
+<link>https://parksb.github.io/article/23.html</link>
+<description>James F. Kurose, Keith W. Ross의 Computer Networking: A Top-Down Approach는 잘 모르는 책이었는데 의외로 많은 학교에서 교재로 쓰이는 것 같다. 컴퓨터 네트워크 수업을 들으며 Computer Networking: A Top-Down Approach 7th Edition의 첫 챕터를 정리해보기로 했다.첫 챕터는 컴퓨터 네트워크의 전반을 둘러보는 챕터다. 언제나 그렇듯 overview 챕터가 책에서 가장...</description>
+<pubDate>Sat, 1 Sep 2018 00:00:00 +0900</pubDate>
+</item>
+<item>
+<title>📡 WSL에서 SSH 서버 열기</title>
+<link>https://parksb.github.io/article/21.html</link>
+<description>SSH(Secure Shell)는 안전하게 원격 접속을 하기 위해 사용하는 프로토콜이다. 윈도우 데스크탑에서 SSH 서버를 열면 아이패드에서 원격으로 데스크탑 쉘에 접속을 할 수 있다. WSL(Windows Subsystem for Linux)은 윈도우의 서브시스템에 리눅스를 탑재하는 기술이다. 아직 부드럽게 작동하지 않는 부분들이 조금 있지만, 마이크로소프트에서 WSL에 신경을 많이 쓰고 있기 때문에 충분히 쓸만하다.내 목적은 학교에서 아이패드로 집에 ...</description>
+<pubDate>Sat, 1 Sep 2018 00:00:00 +0900</pubDate>
+</item>
+<item>
+<title>윈도우즈에서 React Native 개발 환경 세팅하기</title>
+<link>https://parksb.github.io/article/20.html</link>
+<description>이번에 참여하게 된 프로젝트에서 리액트 네이티브를 이용하게 됐다. 리액트 네이티브는 리액트 아키텍처를 모바일에 적용한 것으로, ES6 문법과 리액트를 이용해 모바일 어플리케이션을 개발할 수 있도록 해주는 프레임워크다. 기존의 웹 프로그래밍 문법을 (거의)그대로 사용할 수 있다는 점과 안드로이드/iOS 버전을 따로 개발할 필요가 없다는 점이 매력적이다.시작에 앞서, 윈도우 이용자라면 WSL(Windows Subsystem for Linux)을 설치하는 것이...</description>
+<pubDate>Wed, 1 Aug 2018 00:00:00 +0900</pubDate>
+</item>
+<item>
+<title>🐧 윈도우에서 우분투 돌리기</title>
+<link>https://parksb.github.io/article/19.html</link>
+<description>윈도우로 개발을 하는 입장에서 터미널을 다루기란 조금 까다롭다. 리눅스나 OSX 환경에 맞춰진 프로젝트에 참여하면 명령이 다르게 동작해 삽질하고, OSX의 패키지 매니저인 Homebrew같은 것도 없어서 또 삽질을 하곤 한다.때문에 윈도우에서 우분투를 가상머신으로 돌리거나 멀티부팅을 하는 등 다양한 방법들을 시도했는데, 역시 번거롭고 불편했다. 그러던 중 WSL을 알게됐다.WSL은 Windows Subsystem for Linux의 약자로, 윈도우 서브시...</description>
+<pubDate>Fri, 1 Jun 2018 00:00:00 +0900</pubDate>
+</item>
+<item>
+<title>📊 파이썬으로 정리하는 Quick-Sort</title>
+<link>https://parksb.github.io/article/18.html</link>
+<description>quick sort는 말 그대로 빠른 정렬을 의미한다. 큰 문제를 쪼개 작은 문제로 만들어서 정복하는 divide-and-conquer 패러다임에 바탕을 두고 있어 퍼포먼스가 좋다.https://idea-instructions.com/quick-sort/기본적인 매커니즘은 그리 어렵지 않다.리스트에서 값 하나를 골라 pivot으로 정한다.pivot보다 작은 것은 pivot의 왼쪽으로 보낸다.pivot보다 큰 것은 pivot의 오른쪽으로 보낸다.pivot의...</description>
+<pubDate>Fri, 1 Jun 2018 00:00:00 +0900</pubDate>
+</item>
+<item>
+<title>Java Design Pattern: Singleton</title>
+<link>https://parksb.github.io/article/17.html</link>
+<description>Singleton 패턴은 하나만 존재해야 하는 오브젝트를 만들 때 유용한 디자인 패턴이다. 간단히 구현해보자.public class Singleton {  private static Singleton instance;  private Singleton() {}  public static Singleton getInstance() {    if (instance == null) {      instance = new Singleton();    }    r...</description>
+<pubDate>Fri, 1 Jun 2018 00:00:00 +0900</pubDate>
+</item>
+<item>
+<title>Race condition 발생시키고 Mutex lock으로 해결하기</title>
+<link>https://parksb.github.io/article/16.html</link>
+<description>race condition은 두 개 이상의 프로세스나 스레드가 하나의 데이터를 공유할 때 데이터가 동기화되지 않는 상황을 말한다. (공룡책으로 정리하는 운영체제 Ch.6에 정리했다.) 그리고 코드에서 이러한 문제가 발생할 수 있는 부분을 critical section이라고 하며, 이 문제를 해결하기 위해 한 번에 하나의 스레드만 critical section에 진입할 수 있도록 제어하는 기법을 mutex lock이라고 한다.CentOS에서 3개의 스레드를...</description>
+<pubDate>Fri, 1 Jun 2018 00:00:00 +0900</pubDate>
+</item>
+<item>
+<title>🌞 개떡같은 코드와 함께한 하루 리뉴얼 이야기</title>
+<link>https://parksb.github.io/article/15.html</link>
+<description>2개월이나 지났지만, 더 시간이 지나면 잊어버릴 것 같아서 하루 리뉴얼에 대한 이야기를 해보려 한다. 워낙 충격적이고 힘든 경험이어서 아직도 어땠는지 기억이 난다.결과적으로 더러운(…) 경험이었다. 예상치 못한 오류, 쏟아져 나오는 버그, 개떡같은 코드, 완전 뒤죽박죽이었다. 이하 내용은 약 10개월간 내가 무슨 삽질을 했는지에 관한 회고다.🔥 발단'하루’는 내가 중학교 3학년 때(2013년) 친구와 졸업작품으로 만든 SNS다. 게시글은 하루만 유지되며...</description>
+<pubDate>Fri, 1 Jun 2018 00:00:00 +0900</pubDate>
+</item>
+<item>
+<title>ES6 화살표 함수의 this에 관하여</title>
+<link>https://parksb.github.io/article/14.html</link>
+<description>동아리 웹 세미나 중 jQuery를 이용해서 요소를 클릭하면 요소의 내용이 바뀌는 예제를 시연했다.$(&amp;#x27;#el&amp;#x27;).on(&amp;#x27;click&amp;#x27;, function() {  $(this).html(&amp;#x27;clicked!&amp;#x27;);});물론 잘 된다. 그런데 개발환경을 설명하는 부분에서 npm과 babel까지 설치하고 ES6로 같은 예제를 돌렸는데 왠지 작동하지 않았다.import $...</description>
+<pubDate>Tue, 1 May 2018 00:00:00 +0900</pubDate>
+</item>
+<item>
+<title>🏕️ 오픈소스 입문을 위한 아주 구체적인 가이드</title>
+<link>https://parksb.github.io/article/13.html</link>
+<description>작년 겨울부터 오픈소스에 관심이 생겨 이곳저곳에 이슈도 올리고 풀 리퀘스트도 보내고 있다. 오픈소스 기여의 가장 큰 장점은 남의 코드를 많이 읽을 수 있다는 점과 기술 트렌드를 계속 확인할 수 있다는 점이다. 그리고 영작 실력도 미세하게 (…) 향상된 것 같다. 처음 오픈소스 활동을 시작할 때 네이버 오픈소스 가이드가 큰 도움이 됐다. 오픈소스에 대한 감은 잡히지만 생각보다 구체적인 내용을 다루진 않는다.Git이 설치되어 있지 않다면 설치하고, GitHu...</description>
+<pubDate>Tue, 1 May 2018 00:00:00 +0900</pubDate>
+</item>
+<item>
+<title>🦕 공룡책으로 정리하는 운영체제 Ch.8</title>
+<link>https://parksb.github.io/article/12.html</link>
+<description>메모리에 로드된 프로세스를 효율적으로 관리하는 방법을 다루는 챕터로, 복잡한 매커니즘과 계산이 나오기 시작해 조금 어려워지는 단계다.BackgroundCh.1 Overview에서 언급했듯 메모리는 현대 컴퓨터 시스템의 핵심이다. 프로세스는 독립적인 메모리 공간을 차지하며, 시스템은 프로세스가 자신의 영역 외에는 접근할 수 없도록 막아야 한다.Basic HardwareCPU는 레지스터를 참조하며 메모리 공간을 보호하며, 레지스터 정보는 PCB에 담겨있다. ...</description>
+<pubDate>Tue, 1 May 2018 00:00:00 +0900</pubDate>
+</item>
+<item>
+<title>🦕 공룡책으로 정리하는 운영체제 Ch.7</title>
+<link>https://parksb.github.io/article/11.html</link>
+<description>Operating System Concepts Ch.7 DeadlocksCh.6 Synchronization에서 잠시 언급했듯이 데드락은 프로세스가 리소스를 점유하고 놓아주지 않거나, 어떠한 프로세스도 리소스를 점유하지 못하는 상태가 되어 프로그램이 멈추는 현상을 말한다.System Model프로세스는 다음과 같은 흐름으로 리소스를 이용한다.Request: 리소스를 요청한다. 만약 다른 프로세스가 리소스를 사용중이라서 리소스를 받을 수 없다면 대기한다.U...</description>
+<pubDate>Tue, 1 May 2018 00:00:00 +0900</pubDate>
+</item>
+<item>
+<title>🦕 공룡책으로 정리하는 운영체제 Ch.6</title>
+<link>https://parksb.github.io/article/10.html</link>
+<description>프로세스는 동시에 실행될 수 있으며, 여러 개의 프로세스가 협력할 때는 프로세스 사이에 데이터가 동기화되지 않는 문제가 발생할 수 있다.Background만약 두 프로세스가 동시에 어떤 변수의 값을 바꾼다면 프로그래머의 의도와는 다른 결과가 나올 것이다. 이처럼 프로세스가 어떤 순서로 데이터에 접근하느냐에 따라 결과 값이 달라질 수 있는 상황을 경쟁 상태(race condition)라고 한다.The Critical-Section Problem코드상에서 경...</description>
+<pubDate>Tue, 1 May 2018 00:00:00 +0900</pubDate>
+</item>
+<item>
+<title>🦕 공룡책으로 정리하는 운영체제 Ch.5</title>
+<link>https://parksb.github.io/article/9.html</link>
+<description>운영체제가 어떤 프로세스를 프로세서에 할당할 것인가 정하는 프로세스 스케줄링(Process scheduling)에 대해 다루는 챕터다. FCFS, SJF, RR 등 다양한 프로세스 스케줄링에 대해 소개한다.Scheduling Criteria운영체제가 프로세스를 프로세서에 할당하는 것을 디스패치(Dispatch)라고 한다. (이때 프로세스 상태가 ready에서 running으로 바뀐다.) 그리고 운영체제가 레디 큐(Ready queue)에 있는 프로세스들 ...</description>
+<pubDate>Tue, 1 May 2018 00:00:00 +0900</pubDate>
+</item>
+<item>
+<title>🦕 공룡책으로 정리하는 운영체제 Ch.4</title>
+<link>https://parksb.github.io/article/8.html</link>
+<description>스레드에 대해 다루는 챕터로, 구체적인 멀티스레드 구현 방법이나 코드가 많이 나온다.Threads스레드는 프로세스의 작업 흐름을 말한다. 하나의 프로세스가 한 번에 하나의 작업만 수행하는 것은 싱글스레드(Single thread)이며, 하나의 프로세스가 동시에 여러 작업을 수행하는 것은 멀티스레드(Multi thread)라고 한다. 프로세서와 메모리가 발전하며 가능해진 기술이다. 멀티프로그래밍 시스템이니까 프로세스를 여러개 돌려도 되는데 굳이 스레드를 나...</description>
+<pubDate>Tue, 1 May 2018 00:00:00 +0900</pubDate>
+</item>
+<item>
+<title>🦕 공룡책으로 정리하는 운영체제 Ch.3</title>
+<link>https://parksb.github.io/article/7.html</link>
+<description>본격적으로 프로세스에 대해서 다루기 시작한다. Ch.1 Overview에서 나왔듯이 디스크에 있는 것은 프로그램, 메모리에 로드된 것은 프로세스라고 한다. 프로세스는 Stack, Heap, Data, Code로 나뉜다.+---------------+ max|     stack     |+-------+-------+|       |       ||       v       ||               ||       ^       ||       |  ...</description>
+<pubDate>Tue, 1 May 2018 00:00:00 +0900</pubDate>
+</item>
+<item>
+<title>🦕 공룡책으로 정리하는 운영체제 Ch.2</title>
+<link>https://parksb.github.io/article/6.html</link>
+<description>챕터1에서 다룬 시스템에 대해 보다 자세히 다루는 챕터인데, 그렇게 어렵지는 않다. 복잡한 내용이 별로 없어서 쉽게 읽을 수 있다.Operating-System Services운영체제는 사용자와 시스템에게 다양한 서비스를 제공한다.+-----------------------------------------------------------------------------------------------------------------------+| user...</description>
+<pubDate>Tue, 1 May 2018 00:00:00 +0900</pubDate>
+</item>
+<item>
+<title>🦕 공룡책으로 정리하는 운영체제 Ch.1</title>
+<link>https://parksb.github.io/article/5.html</link>
+<description>Abraham Silberschatz의 Operating System Concepts는 운영체제의 바이블로 불린다. 이번에 운영체제 수업을 들으면서 Operating System Concepts 9th Edition의 내용을 정리해보기로 했다.Ch.1은 책 전체 내용이 담겨있는 가장 중요한 챕터다. 이 부분을 제대로 정독하고 책을 읽으면 훨씬 읽기 수월하다.What Operating Systems Do운영체제(Operating System)는 컴퓨터의 하...</description>
+<pubDate>Tue, 1 May 2018 00:00:00 +0900</pubDate>
+</item>
+<item>
+<title>차이를 중심으로 살펴본 UI디자인과 UX디자인</title>
+<link>https://parksb.github.io/article/4.html</link>
+<description>UX디자인이라는 말은 유행처럼 쓰이기 시작하더니 어느 날부터 UI디자인과 비슷한 개념, 또는 UI디자인을 조금 ‘있어 보이게’ 일컫는 말처럼 쓰이게 되었다. 하지만 UX디자인에 관한 수많은 서적과 자료들, 그리고 실제로 일어나고 있는 기업의 투자를 보면 정말로 UX디자인이 UI디자인과 같은 개념이거나 실체가 없는 것이라고 판단하기는 어렵다. 아무래도 UX디자인이라는 용어가 오남용되고 있는 것이라고 추측했는데, 생각해보니 나 역시 그 둘을 확실히 구분하지 ...</description>
+<pubDate>Tue, 1 May 2018 00:00:00 +0900</pubDate>
+</item>
+<item>
+<title>프로세스간 통신을 활용해 프로그래밍하기</title>
+<link>https://parksb.github.io/article/3.html</link>
+<description>컴퓨터는 여러 개의 프로세스를 동시에 돌릴 수 있다. (사실 정확히 '동시에’는 아니다. 자세한 설명은 공룡책으로 정리하는 운영체제 Ch.1를 참고.) 그렇다면 하나의 프로그램이 여러 개의 프로세스로 메모리에 로드될 수 있을까? 당연히 된다. 두 개의 프로세스를 동시에 실행시며 하나의 목적을 달성할 수 있다. 리눅스 환경에서 parent 프로세스와 child 프로세스가 통신하는 학생 정보 관리 프로그램을 만들어보았다.프로그램 구조프로그램은 parent와 ...</description>
+<pubDate>Tue, 1 May 2018 00:00:00 +0900</pubDate>
+</item>
+<item>
+<title>♻️ 자바는 어떻게 Garbage Collection을 할까?</title>
+<link>https://parksb.github.io/article/2.html</link>
+<description>프로그램이 실행되는 내내 프로그램에서 사용하는 변수, 함수를 비롯한 각종 데이터들은 메모리에 할당되고, 해제되기를 반복한다. 이때 ‘언제, 어떤 데이터를 해제할 것인지’ 정하는 것이 중요한 문제다. C로 프로그래밍할 때는 개발자가 직접 메모리의 할당, 해제 시점을 정해준다.int *ptr = (int*)malloc(sizeof(int) * 3); // 메모리 할당for (int i = 0; i &amp;lt; 3; i++) {  ptr[i] = i;}fo...</description>
+<pubDate>Sun, 1 Apr 2018 00:00:00 +0900</pubDate>
+</item>
+<item>
+<title>ES6와 함께 JavaScript로 OOP하기</title>
+<link>https://parksb.github.io/article/1.html</link>
+<description>객체지향 프로그래밍(OOP, Object-Oriented Programming)은 절차지향 프로그래밍(Procedural Programming)과 대비되는 프로그래밍 방법론이다.절차지향 프로그래밍 방식 언어로는 대표적으로 C언어가 있다. 일반적으로 C코드는 특정 기능을 수행하는 함수들로 구성되어 있다. C 프로그래머는 프로그램의 각 기능을 구현하고, 이 기능들이 어떤 절차로 수행되는가를 중심으로 개발한다. 객체지향 프로그래밍 방식 언어는 Java가 대표적...</description>
+<pubDate>Sun, 1 Apr 2018 00:00:00 +0900</pubDate>
+</item>
+<item>
+<title>📋 프론트엔드 개발자를 위한 토막상식</title>
+<link>https://parksb.github.io/article/0.html</link>
+<description>프로젝트하면서 알게 된 것들과 코딩테스트를 통해 배운 것들, 자바스크립트&amp;amp;제이쿼리: 인터랙티브 프론트엔드 웹 개발 교과서(Jon Duckett)와 JavaScript: The Good Parts(Douglas Crockford)를 통해 공부한 것들, 그리고 Front-end Job Interview Questions에 나와있는 질문들에 대한 대답을 간략하게 정리했다.일반적인 것들헝가리안 표기법변수 이름에 데이터 타입을 접두어로 붙이는 표기법...</description>
+<pubDate>Thu, 1 Feb 2018 00:00:00 +0900</pubDate>
 </item>
 </channel>
 </rss>
