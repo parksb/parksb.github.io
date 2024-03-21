@@ -227,6 +227,7 @@ div.back-to-article-list {
 
 #article-content-container .katex-display {
   margin: 0;
+  overflow: visible;
 }
 
 #article-content-container section .katex * {
