@@ -222,12 +222,10 @@ div.back-to-article-list {
 
 #article-content-container section {
   margin-bottom: 15px;
-  overflow: auto;
 }
 
 #article-content-container .katex-display {
   margin: 0;
-  overflow: visible;
 }
 
 #article-content-container section .katex * {
