@@ -1,0 +1,233 @@
+<!doctypehtml>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <title>
+      프로세스간 통신을 활용해 프로그래밍하기
+    </title>
+
+    <meta name="viewport"content="width=device-width,initial-scale=1">
+    <meta http-equiv="X-UA-Compatible"content="ie=edge">
+    <meta name="theme-color"content="#F5F5F5">
+    <meta name="description"content="컴퓨터는 여러 개의 프로세스를 동시에 돌릴 수 있다. (사실 정확히 '동시에’는 아니다. 자세한 설명은 공룡책으로 정리하는 운영체제 Ch.1를 참고.) 그렇다면 하나의 프로그램이 여러 개의 프로세스로 메모리에 로드될 수 있을까? 당연히 된다. 두 개의 프로세스를 동시에 실행시며 하나의 목적을 달성할 수 있다. 리눅스 환경...">
+    <link rel="canonical"href="https://parksb.github.io/article/3.html">
+
+    <meta property="og:title"content="프로세스간 통신을 활용해 프로그래밍하기: 학적 관리 프로그램 만들기 ">
+    <meta property="og:image"content="https://og-image-parksb.vercel.app/api/parksb-github-io?title=%ED%94%84%EB%A1%9C%EC%84%B8%EC%8A%A4%EA%B0%84%20%ED%86%B5%EC%8B%A0%EC%9D%84%20%ED%99%9C%EC%9A%A9%ED%95%B4%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%ED%95%98%EA%B8%B0&subtitle=%ED%95%99%EC%A0%81%20%EA%B4%80%EB%A6%AC%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8%20%EB%A7%8C%EB%93%A4%EA%B8%B0&date=2018.05.01">
+    <meta property="og:description"content="컴퓨터는 여러 개의 프로세스를 동시에 돌릴 수 있다. (사실 정확히 '동시에’는 아니다. 자세한 설명은 공룡책으로 정리하는 운영체제 Ch.1를 참고.) 그렇다면 하나의 프로그램이 여러 개의 프로세스로 메모리에 로드될 수 있을까? 당연히 된다. 두 개의 프로세스를 동시에 실행시며 하나의 목적을 달성할 수 있다. 리눅스 환경...">
+
+    <meta name="twitter:title"content="프로세스간 통신을 활용해 프로그래밍하기: 학적 관리 프로그램 만들기 ">
+    <meta name="twitter:image"content="https://og-image-parksb.vercel.app/api/parksb-github-io?title=%ED%94%84%EB%A1%9C%EC%84%B8%EC%8A%A4%EA%B0%84%20%ED%86%B5%EC%8B%A0%EC%9D%84%20%ED%99%9C%EC%9A%A9%ED%95%B4%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%ED%95%98%EA%B8%B0&subtitle=%ED%95%99%EC%A0%81%20%EA%B4%80%EB%A6%AC%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8%20%EB%A7%8C%EB%93%A4%EA%B8%B0&date=2018.05.01">
+    <meta name="twitter:description"content="컴퓨터는 여러 개의 프로세스를 동시에 돌릴 수 있다. (사실 정확히 '동시에’는 아니다. 자세한 설명은 공룡책으로 정리하는 운영체제 Ch.1를 참고.) 그렇다면 하나의 프로그램이 여러 개의 프로세스로 메모리에 로드될 수 있을까? 당연히 된다. 두 개의 프로세스를 동시에 실행시며 하나의 목적을 달성할 수 있다. 리눅스 환경...">
+    <meta name="twitter:card"content="summary_large_image">
+
+    <link rel="shortcut icon"href="../assets/favicon.ico"type="image/x-icon">
+    <link rel="preload"href="../styles/article.css"as="style">
+    <link rel="stylesheet"href="../styles/article.css">
+  </head>
+  <body>
+    <header id="top-container"role="navigation">
+  <nav>
+    <a class="special-anchor"href="/">
+      <span class="t1">박성범</span>
+      <span class="t2">Simon Park</span>
+    </a>
+  </nav>
+</header>
+
+    <main id="main-container">
+      <article id="article-container">
+        <div class="back-to-article-list">
+          <a href="../articles.html"><span class="symbol">←</span> Articles</a>
+        </div>
+        <h1 id="article-title">
+          프로세스간 통신을 활용해 프로그래밍하기
+        </h1>
+        
+        <h2 id="article-subtitle">
+          학적 관리 프로그램 만들기
+        </h2>
+        
+        <a href="https://github.com/parksb/parksb.github.io/commits/development/_articles/20180501_management-program-with-ipc.md">
+          <time id="article-date">2018.05.01<span class="symbol">↗</span></time>
+        </a>
+        <section id="article-content-container">
+          <details><summary>Table of Contents</summary>
+<p><div class="table-of-contents"><ul><li><a href="#%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8-%EA%B5%AC%EC%A1%B0">프로그램 구조</a><li><a href="#child-%ED%94%84%EB%A1%9C%EC%84%B8%EC%8A%A4-%EC%83%9D%EC%84%B1">Child 프로세스 생성</a><li><a href="#%ED%8C%8C%EC%9D%B4%ED%94%84-%ED%86%B5%EC%8B%A0-%EA%B5%AC%ED%98%84">파이프 통신 구현</a></ul></div><p></p>
+</details>
+<p>컴퓨터는 여러 개의 프로세스를 동시에 돌릴 수 있다. (사실 정확히 '동시에’는 아니다. 자세한 설명은 <a href="https://parksb.github.io/article/5.html">공룡책으로 정리하는 운영체제 Ch.1</a>를 참고.) 그렇다면 하나의 프로그램이 여러 개의 프로세스로 메모리에 로드될 수 있을까? 당연히 된다. 두 개의 프로세스를 동시에 실행시며 하나의 목적을 달성할 수 있다. 리눅스 환경에서 parent 프로세스와 child 프로세스가 통신하는 학생 정보 관리 프로그램을 만들어보았다.</p>
+<h2 id="%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8-%EA%B5%AC%EC%A1%B0"tabindex="-1">프로그램 구조</h2>
+<p><img src="/images/43831555-7d8fb438-9b3f-11e8-96e0-ccfd782d089d.webp"alt=""></p>
+<p>프로그램은 parent와 child로 나뉜다. parent는 클라이언트로서 사용자에게 메뉴를 출력해주고, 값을 입력받는다. child는 서버로서 parent에게 데이터를 전송받아 student.data 파일에 데이터를 쓰거나 읽는다. 전체 실행 흐름을 도식화하면 다음 플로우 차트와 같다.</p>
+<p><img src="/images/43831554-7d0c6466-9b3f-11e8-8da3-a5c293503a5a.webp"alt=""></p>
+<p>서버와 클라이언트는 파이프(Pipe)를 통해 데이터를 주고 받는다. 파이프가 무엇인가? 말 그대로 parent와 child 사이에 관을 설치해 데이터를 주고받는 프로세스간 통신 기법을 말한다. <a href="https://parksb.github.io/article/7.html">공룡책으로 정리하는 운영체제 Ch.3</a>에 파이프에 대한 설명이 있다.</p>
+<h2 id="child-%ED%94%84%EB%A1%9C%EC%84%B8%EC%8A%A4-%EC%83%9D%EC%84%B1"tabindex="-1">Child 프로세스 생성</h2>
+<p>처음 프로그램이 실행됐을 때 <code>fork()</code> 시스템콜을 통해 child 프로세스를 만들어야 한다.</p>
+<pre class="hljs"><code><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;unistd.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;sys/wait.h&gt;</span></span>
+
+<span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">(<span class="hljs-type">int</span> argc, <span class="hljs-type">char</span>* argv[])</span> {
+  <span class="hljs-type">pid_t</span> pid = fork(); <span class="hljs-comment">// child를 생성한다.</span>
+
+  <span class="hljs-keyword">if</span> (pid &lt; <span class="hljs-number">0</span>) { <span class="hljs-comment">// 에러</span>
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;[CLIENT] Fork failed.\n&quot;</span>);
+    <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>;
+  } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (pid == <span class="hljs-number">0</span>) { <span class="hljs-comment">// Child (Server)</span>
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;[SERVER] Child created.\n&quot;</span>);
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+  } <span class="hljs-keyword">else</span> { <span class="hljs-comment">// Parent (Client)</span>
+    wait(<span class="hljs-literal">NULL</span>); <span class="hljs-comment">// child를 기다린다.</span>
+  }
+  <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}
+</code></pre>
+<pre class="hljs"><code>$ ./debug
+[SERVER] Child Created.
+</code></pre>
+<p><code>fork()</code>를 수행하면 child 프로세스가 생성된다. fork 이후 코드는 모두 parent와 child에서 동시에 실행된다. parent는 <code>wait(NULL)</code>을 통해 child의 작업이 끝날 때까지 대기한다. 이를 이용해 parent에서 사용자로부터 데이터를 입력받고 child에서 출력해보도록 하자.</p>
+<pre class="hljs"><code><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;unistd.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;sys/wait.h&gt;</span></span>
+
+<span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">(<span class="hljs-type">int</span> argc, <span class="hljs-type">char</span>* argv[])</span> {
+  <span class="hljs-type">int</span> cmd = <span class="hljs-number">0</span>;
+  <span class="hljs-type">pid_t</span> pid  = fork(); <span class="hljs-comment">// child를 생성한다.</span>
+
+  <span class="hljs-keyword">if</span> (pid &lt; <span class="hljs-number">0</span>) { <span class="hljs-comment">// 에러</span>
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;[CLIENT] Fork failed.\n&quot;</span>);
+    <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>;
+  } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (pid == <span class="hljs-number">0</span>) { <span class="hljs-comment">// Child (Server)</span>
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;[SERVER] Received %d.\n&quot;</span>, cmd);
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+  } <span class="hljs-keyword">else</span> { <span class="hljs-comment">// Parent (Client)</span>
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;[1] search [2] create\n&quot;</span>);
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;&gt; &quot;</span>);
+
+    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%d&quot;</span>, &amp;cmd);
+    wait(<span class="hljs-literal">NULL</span>); <span class="hljs-comment">// child를 기다린다.</span>
+  }
+  <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}
+</code></pre>
+<pre class="hljs"><code>$ ./debug
+[1] search [2] create
+[SERVER] Received 0.
+&gt;
+</code></pre>
+<p>안타깝지만 생각대로 동작하지 않는다. 사용자로부터 <code>cmd</code>의 값이 할당되는 부분은 parent이며, 변경된 <code>cmd</code>는 parent에만 존재한다. 따라서 동시에 실행되고 있는 child에서는 <code>cmd</code>의 값이 변경되지 않고 <code>0</code>이 출력된다. <code>cmd</code> 값을 child에게 전송하고, child가 <code>cmd</code>값을 수신할 때까지 대기하는 부분은 따로 구현해야 한다.</p>
+<h2 id="%ED%8C%8C%EC%9D%B4%ED%94%84-%ED%86%B5%EC%8B%A0-%EA%B5%AC%ED%98%84"tabindex="-1">파이프 통신 구현</h2>
+<p>child에게 <code>cmd</code> 값을 전송하려면 파이프가 필요하다. 만들어보자.</p>
+<pre class="hljs"><code><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;unistd.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;sys/wait.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;sys/types.h&gt;</span></span>
+
+<span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">(<span class="hljs-type">int</span> argc, <span class="hljs-type">char</span>* argv[])</span> {
+  <span class="hljs-type">int</span> cmd = <span class="hljs-number">0</span>;
+  <span class="hljs-type">int</span> p[<span class="hljs-number">2</span>]; <span class="hljs-comment">// p[0]: read, p[1]: write</span>
+
+  pipe(p); <span class="hljs-comment">// 파이프를 생성한다.</span>
+  <span class="hljs-type">pid_t</span> pid  = fork(); <span class="hljs-comment">// child를 생성한다.</span>
+
+  <span class="hljs-keyword">if</span> (pid &lt; <span class="hljs-number">0</span>) { <span class="hljs-comment">// 에러</span>
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;[CLIENT] Fork failed.\n&quot;</span>);
+    <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>;
+  } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (pid == <span class="hljs-number">0</span>) { <span class="hljs-comment">// Child (Server)</span>
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;[SERVER] Received %d.\n&quot;</span>, cmd);
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+  } <span class="hljs-keyword">else</span> { <span class="hljs-comment">// Parent (Client)</span>
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;[1] search [2] create\n&quot;</span>);
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;&gt; &quot;</span>);
+
+    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%d&quot;</span>, &amp;cmd);
+    wait(<span class="hljs-literal">NULL</span>); <span class="hljs-comment">// child를 기다린다.</span>
+  }
+  <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}
+</code></pre>
+<p>파이프는 단방향 통신만 되기 때문에 읽기 파이프와 쓰기 파이프 두 개가 필요하다. 이제 두 개의 파이프를 만들었으니 child에게 <code>cmd</code>를 전송해보자.</p>
+<pre class="hljs"><code><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;unistd.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;sys/wait.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;sys/types.h&gt;</span></span>
+
+<span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">(<span class="hljs-type">int</span> argc, <span class="hljs-type">char</span>* argv[])</span> {
+  <span class="hljs-type">int</span> cmd = <span class="hljs-number">0</span>;
+  <span class="hljs-type">int</span> p[<span class="hljs-number">2</span>]; <span class="hljs-comment">// p[0]: read, p[1]: write</span>
+
+  pipe(p); <span class="hljs-comment">// 파이프를 생성한다.</span>
+  <span class="hljs-type">pid_t</span> pid  = fork(); <span class="hljs-comment">// child를 생성한다.</span>
+
+  <span class="hljs-keyword">if</span> (pid &lt; <span class="hljs-number">0</span>) { <span class="hljs-comment">// 에러</span>
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;[CLIENT] Fork failed.\n&quot;</span>);
+    <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>;
+  } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (pid == <span class="hljs-number">0</span>) { <span class="hljs-comment">// Child (Server)</span>
+    read(p[<span class="hljs-number">0</span>], &amp;cmd, <span class="hljs-keyword">sizeof</span>(cmd)); <span class="hljs-comment">// 파이프로 전송된 값을 받는다.</span>
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;[SERVER] Received %d.\n&quot;</span>, cmd);
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+  } <span class="hljs-keyword">else</span> { <span class="hljs-comment">// Parent (Client)</span>
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;[1] search [2] create\n&quot;</span>);
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;&gt; &quot;</span>);
+    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%d&quot;</span>, &amp;cmd);
+
+    write(p[<span class="hljs-number">1</span>], &amp;cmd, <span class="hljs-keyword">sizeof</span>(cmd)); <span class="hljs-comment">// 파이프를 통해 값을 전송한다.</span>
+    wait(<span class="hljs-literal">NULL</span>); <span class="hljs-comment">// child를 기다린다.</span>
+  }
+  <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}
+</code></pre>
+<pre class="hljs"><code>$ ./debug
+[1] search [2] create
+&gt; 1
+[SERVER] Received 1.
+</code></pre>
+<p>child는 생선된 이후 파이프를 통해 데이터가 전달되기를 기다린다. parent는 사용자에게 <code>cmd</code> 값을 입력받고 쓰기 파이프인 <code>p[1]</code>를 통해 <code>cmd</code> 값을 전송한다. 그리고 수신을 기다리던 child는 <code>p[0]</code>을 통해 전달된 <code>cmd</code> 값을 읽어들인다.</p>
+<p>child 프로세스 생성과 파이프를 통한 두 프로세스의 통신. 핵심적인 부분은 이정도다. 사실 이후 내용은 프로세스를 다루는 것과는 너무 관련이 없어서 제외했다.</p>
+
+        </section>
+        <section id="article-navigation">
+          
+          <div class="article-navigation-item article-navigation-next">
+            <a href="4.html">
+              <div class="article-navigation-arrow article-navigation-next symbol">←</div>
+              <div class="article-navigation-content article-navigation-next">
+                <p class="article-navigation-title">차이를 중심으로 살펴본 UI디자인과 UX디자인</p>
+                <p class="article-navigation-subtitle">UI는 심미성, UX는 사용성?</p>
+              </div>
+            </a>
+          </div>
+          
+          
+          <div class="article-navigation-item article-navigation-prev">
+            <a href="2.html">
+              <div class="article-navigation-arrow article-navigation-prev symbol">→</div>
+              <div class="article-navigation-content article-navigation-prev">
+                <p class="article-navigation-title">♻️ 자바는 어떻게 Garbage Collection을 할까?</p>
+                <p class="article-navigation-subtitle">오브젝트의 일생</p>
+              </div>
+            </a>
+          </div>
+          
+        </section>
+        <section id="article-comments">
+          <script async src="https://utteranc.es/client.js"repo="parksb/parksb.github.io-comments"issue-term="pathname"theme="github-light"crossorigin="anonymous"></script>
+        </section>
+        <div class="back-to-article-list">
+          <a href="../articles.html"><span class="symbol">←</span> Articles</a>
+        </div>
+      </article>
+    </main>
+    <footer>
+  이 글은 CC BY-NC 4.0 라이선스에 따라 이용할 수 있습니다.
+</footer>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LKTJ5YFJR2"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-LKTJ5YFJR2');
+    </script>
+  
+
