@@ -3,9 +3,9 @@
 
 import MarkdownIt from 'markdown-it';
 import mdLazyImage from 'markdown-it-image-lazy-loading';
-import * as ejs from 'ejs';
-import * as fs from 'fs';
-import * as path from 'path';
+import ejs from 'ejs';
+import fs from 'fs';
+import path from 'path';
 
 import WorkMetaInfo from './classes/WorkMetaInfo';
 import Work from './classes/Work';
@@ -13,11 +13,11 @@ import WorkModel from './models/WorkModel';
 import PagePublisher from './PagePublisher';
 
 class WorkPublisher {
-  static WORK_ORIGIN_PATH: string = path.join(__dirname, '../_works');
+  static WORK_ORIGIN_PATH: string = path.resolve('_works');
 
-  static WORK_DIST_PATH: string = path.join(__dirname, '../app/public/work');
+  static WORK_DIST_PATH: string = path.resolve('app/public/work');
 
-  static WORK_TEMPLATE: Buffer = fs.readFileSync(path.join(__dirname, '../app/templates/work.ejs'));
+  static WORK_TEMPLATE: Buffer = fs.readFileSync(path.resolve('app/templates/work.ejs'));
 
   static md: MarkdownIt = new MarkdownIt({
     html: false,
@@ -30,7 +30,7 @@ class WorkPublisher {
   }).use(mdLazyImage, {
     decoding: true,
     image_size: true,
-    base_path: path.join(__dirname, '../'),
+    base_path: path.resolve('./'),
   });
 
   private static extractContent(text: string): string {

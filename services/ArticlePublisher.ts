@@ -1,13 +1,12 @@
 /* eslint-disable no-console */
 /* eslint-disable import/no-extraneous-dependencies */
 
-import * as ejs from 'ejs';
-import * as fs from 'fs';
-import * as path from 'path';
+import ejs from 'ejs';
+import fs from 'fs';
+import path from 'path';
 
 import MarkdownIt from 'markdown-it';
-import * as katex from 'katex';
-import highlightJs from 'highlight.js';
+import katex from 'katex';
 import mdFootnote from 'markdown-it-footnote';
 import mdTex from 'markdown-it-texmath';
 import mdAnchor from 'markdown-it-anchor';
@@ -15,24 +14,27 @@ import mdTableOfContents from 'markdown-it-table-of-contents';
 import mdContainer from 'markdown-it-container';
 import mdInlineComment from 'markdown-it-inline-comments';
 import mdLazyImage from 'markdown-it-image-lazy-loading';
-import mdMermaid from 'markdown-it-mermaid';
 import mdEmbed from 'markdown-it-html5-embed';
+import mdShiki from '@shikijs/markdown-it';
+// import mdMermaid from 'markdown-it-mermaid';
 
 import PagePublisher from './PagePublisher';
 import ArticleMetaInfo from './classes/ArticleMetaInfo';
 import Article from './classes/Article';
 import ArticleModel from './models/ArticleModel';
 
+const shiki = await mdShiki({ theme: 'github-light' });
+
 class ArticlePublisher {
-  static ARTICLE_ORIGIN_PATH: string = path.join(__dirname, '../_articles');
+  static ARTICLE_ORIGIN_PATH: string = path.resolve('_articles');
 
-  static ARTICLE_DIST_PATH: string = path.join(__dirname, '../app/public/article');
+  static ARTICLE_DIST_PATH: string = path.resolve('app/public/article');
 
-  static ARTICLE_TEMPLATE: Buffer = fs.readFileSync(path.join(__dirname, '../app/templates/article.ejs'));
+  static ARTICLE_TEMPLATE: Buffer = fs.readFileSync(path.resolve('app/templates/article.ejs'));
 
-  static INDEX_DIST_PATH: string = path.join(__dirname, '../app/public');
+  static INDEX_DIST_PATH: string = path.resolve('app/public');
 
-  static INDEX_TEMPLATE: Buffer = fs.readFileSync(path.join(__dirname, '../app/templates/index.ejs'));
+  static INDEX_TEMPLATE: Buffer = fs.readFileSync(path.resolve('app/templates/index.ejs'));
 
   static IGNORED_FILES: string[] = ['.DS_Store'];
 
@@ -44,15 +46,10 @@ class ArticlePublisher {
     linkify: true,
     typographer: true,
     quotes: '“”‘’',
-    highlight: (str, language) => {
-      if (language && highlightJs.getLanguage(language)) {
-        return `<pre class="hljs"><code>${highlightJs.highlight(str, { language }).value}</code></pre>`;
-      }
-      return `<pre class="hljs"><code>${ArticlePublisher.md.utils.escapeHtml(str)}</code></pre>`;
-    },
-  }).use(mdFootnote)
+  }).use(shiki)
+    .use(mdFootnote)
+    // .use(mdMermaid)
     .use(mdInlineComment)
-    .use(mdMermaid)
     .use(mdTex.use(katex), {
       delimiters: 'dollars',
     })
@@ -61,10 +58,10 @@ class ArticlePublisher {
       includeLevel: [1, 2, 3],
     })
     .use(mdContainer, 'toggle', {
-      validate(params) {
+      validate(params: string) {
         return params.trim().match(/^toggle\((.*)\)$/);
       },
-      render(tokens, idx) {
+      render(tokens: unknown, idx: number) {
         const content = tokens[idx].info.trim().match(/^toggle\((.*)\)$/);
         if (tokens[idx].nesting === 1) {
           return `<details><summary>${ArticlePublisher.md.utils.escapeHtml(content[1])}</summary>\n`;
@@ -75,7 +72,7 @@ class ArticlePublisher {
     .use(mdLazyImage, {
       decoding: true,
       image_size: true,
-      base_path: path.join(__dirname, '../'),
+      base_path: path.resolve('./'),
     })
     .use(mdEmbed, {
       html5embed: {

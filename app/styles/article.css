@@ -1,5 +1,4 @@
 @import 'init.css';
-@import 'highlight.css';
 @import 'katex.css';
 
 #article-title {
@@ -147,13 +146,13 @@ div.back-to-article-list {
   text-decoration: underline;
 }
 
-#article-content-container pre {
+#article-content-container pre.shiki {
   display: block;
   overflow-x: auto;
   padding: 1rem;
   margin-bottom: 1rem;
   line-height: 1.3rem;
-  background-color: #f6f8fa;
+  /* background-color: #f6f8fa; */
 }
 
 #article-content-container code,

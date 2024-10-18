@@ -1,6 +1,6 @@
-import * as path from 'path';
+import path from 'path';
 import dayjs from 'dayjs';
-import * as fs from 'fs';
+import fs from 'fs';
 
 import WorkPublisher from './WorkPublisher';
 import ArticlePublisher from './ArticlePublisher';
@@ -18,7 +18,7 @@ class StaticPublisher {
       ArticlePublisher.getArticleByFilename(file).getArticle()
     ));
 
-    const SITEMAP_PATH: string = path.join(__dirname, '../app/static/sitemap.xml');
+    const SITEMAP_PATH: string = path.resolve('app/static/sitemap.xml');
 
     const articleUrls = articles.map((article) => `<url><loc>https://parksb.github.io/article/${article.id}.html</loc><changefreq>daily</changefreq><priority>1.00</priority></url>`);
     const workUrls = works.map((work) => `<url><loc>https://parksb.github.io/work/${work.id}.html</loc><changefreq>daily</changefreq><priority>1.00</priority></url>`);
@@ -69,7 +69,7 @@ ${articleUrls.join('\n')}
 `;
       }).join('');
 
-    const RSS_PATH: string = path.join(__dirname, '../app/static/feed.xml');
+    const RSS_PATH: string = path.resolve('app/static/feed.xml');
     fs.writeFileSync(RSS_PATH, `${header}${items}${footer}`);
   }
 }
