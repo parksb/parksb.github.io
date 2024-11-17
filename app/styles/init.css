@@ -1,12 +1,6 @@
 @font-face {
-  font-family: 'Noto Serif VF';
-  src: url('https://cdn.jsdelivr.net/gh/parksb/cdn@master/font/NotoSerifKR/woff2/NotoSerifKR-VF-Distilled.woff2') format('woff2');
-  font-display: swap;
-}
-
-@font-face {
   font-family: 'Pretendard VF';
-  src: url('https://cdn.jsdelivr.net/gh/parksb/cdn@master/font/Pretendard/woff2/PretendardKR-VF-Distilled-Specials.woff2') format('woff2');
+  src: url('https://cdn.jsdelivr.net/gh/parksb/cdn@master/font/Pretendard/woff2/Pretendard-VF-Distilled.woff2') format('woff2');
   font-display: swap;
 }
 
@@ -17,7 +11,7 @@
 }
 
 * {
-  font-family: 'Noto Serif VF', serif;
+  font-family: 'Pretendard VF', 'Pretendard', sans-serif;
   margin: 0;
   padding: 0;
   word-break: keep-all;
@@ -42,7 +36,7 @@ a:hover {
 }
 
 .symbol {
-  font-family: 'Pretendard VF', sans-serif;
+  font-family: 'Pretendard VF', 'Pretendard', sans-serif;
 }
 
 img.icon {
