@@ -6,26 +6,26 @@
       <%- article.title %>
     </title>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="theme-color" content="#F5F5F5">
-    <meta name="description" content="<%- article.summary %>">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="theme-color" content="#F5F5F5" />
+    <meta name="description" content="<%- article.summary %>" />
     <link rel="canonical" href="https://parksb.github.io/article/<%- article.id %>.html" />
 
-    <meta property="og:title" content="<%- article.title %><% if (article.subtitle) { %>: <%- article.subtitle %> <% } %>">
-    <meta property="og:image" content="https://og-image-parksb.vercel.app/api/parksb-github-io?title=<%- article.encodedTitle %>&subtitle=<%- article.encodedSubtitle %>&date=<%- article.encodedDate %>">
-    <meta property="og:description" content="<%- article.summary %>">
+    <meta property="og:title" content="<%- article.title %><% if (article.subtitle) { %>: <%- article.subtitle %> <% } %>" />
+    <meta property="og:image" content="https://og-image-parksb.vercel.app/api/parksb-github-io?title=<%- article.encodedTitle %>&subtitle=<%- article.encodedSubtitle %>&date=<%- article.encodedDate %>" />
+    <meta property="og:description" content="<%- article.summary %>" />
 
-    <meta name="twitter:title" content="<%- article.title %><% if (article.subtitle) { %>: <%- article.subtitle %> <% } %>">
-    <meta name="twitter:image" content="https://og-image-parksb.vercel.app/api/parksb-github-io?title=<%- article.encodedTitle %>&subtitle=<%- article.encodedSubtitle %>&date=<%- article.encodedDate %>">
-    <meta name="twitter:description" content="<%- article.summary %>">
-    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="<%- article.title %><% if (article.subtitle) { %>: <%- article.subtitle %> <% } %>" />
+    <meta name="twitter:image" content="https://og-image-parksb.vercel.app/api/parksb-github-io?title=<%- article.encodedTitle %>&subtitle=<%- article.encodedSubtitle %>&date=<%- article.encodedDate %>" />
+    <meta name="twitter:description" content="<%- article.summary %>" />
+    <meta name="twitter:card" content="summary_large_image" />
 
-    <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon" />
 
-    <link rel="preload" href="https://cdn.jsdelivr.net/gh/parksb/cdn@master/font/Pretendard/woff2/Pretendard-VF-Distilled.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="https://cdn.jsdelivr.net/gh/parksb/cdn@master/font/RobotoMono/woff2/RobotoMono-VF-Distilled.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="stylesheet" href="../styles/article.css">
+    <link rel="preload" href="https://cdn.jsdelivr.net/gh/parksb/cdn@master/font/Pretendard/woff2/Pretendard-VF-Distilled.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="https://cdn.jsdelivr.net/gh/parksb/cdn@master/font/RobotoMono/woff2/RobotoMono-VF-Distilled.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="../styles/article.css" />
   </head>
   <body>
     <%- include(process.cwd() + '/app/templates/navigation'); %>
