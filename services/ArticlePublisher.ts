@@ -69,16 +69,16 @@ class ArticlePublisher {
         return '</details>\n';
       },
     })
-    .use(mdLazyImage, {
-      decoding: true,
-      image_size: true,
-      base_path: path.resolve('./'),
-    })
     .use(mdEmbed, {
       html5embed: {
         useImageSyntax: true,
         useLinkSyntax: true,
       },
+    })
+    .use(mdLazyImage, {
+      decoding: true,
+      image_size: true,
+      base_path: path.resolve('./'),
     });
 
   private static extractContent(text: string): string {
