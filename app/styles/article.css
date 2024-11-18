@@ -157,7 +157,7 @@ div.back-to-article-list {
 
 #article-content-container code,
 #article-content-container code span {
-  font-family: 'RobotoMono VF', monospace;
+  font-family: 'RobotoMono', monospace;
 }
 
 #article-content-container p code,
@@ -274,5 +274,5 @@ div.back-to-article-list {
 }
 
 #article-content-container .footnotes > .footnotes-list a.footnote-backref {
-  font-family: 'Pretendard VF', sans-serif;
+  font-family: 'Pretendard', sans-serif;
 }
