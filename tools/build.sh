@@ -58,6 +58,9 @@ echo -e "\n${GREEN}Minify css files...${WHITE}"
 cleancss --batch --batch-suffix '' $DIST/styles/*.css
 
 echo -e "\n${GREEN}Minify html files...${WHITE}"
-html-minifier --input-dir $DIST --output-dir $DIST --file-ext html --remove-comments --remove-optional-tags --remove-redundant-attributes --remove-script-type-attributes --remove-tag-whitespace --use-short-doctype --collapse-whitespace
+html-minifier --input-dir $DIST --output-dir $DIST --file-ext html --remove-comments --remove-redundant-attributes --remove-script-type-attributes --remove-tag-whitespace --collapse-whitespace
+
+echo -e "\n${GREEN}Inline css files...${WHITE}"
+npm run inline
 
 echo -e "\n${CYAN}Done!${WHITE}"

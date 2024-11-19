@@ -8,7 +8,8 @@
     "watch": "tsx ./tools/watch.ts",
     "publish": "tsx ./tools/publish.ts",
     "build": "bash ./tools/build.sh",
-    "deploy": "bash ./tools/deploy.sh"
+    "deploy": "bash ./tools/deploy.sh",
+    "inline": "tsx ./tools/inline.ts"
   },
   "type": "module",
   "repository": {
@@ -41,6 +42,7 @@
     "eslint-config-airbnb-typescript": "^17.0",
     "eslint-plugin-import": "^2.26",
     "html-minifier": "^4.0.0",
+    "juice": "^11.0.0",
     "live-server": "^1.2.0",
     "markdown-it": "^14.1",
     "markdown-it-anchor": "^8.6",

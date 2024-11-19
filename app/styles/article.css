@@ -215,11 +215,6 @@ div.back-to-article-list {
   padding-left: 1rem;
 }
 
-#article-content-container .table-of-contents ul li:before {
-  content: counters(item, ".") ". ";
-  counter-increment: item
-}
-
 #article-content-container section {
   margin-bottom: 15px;
 }
@@ -255,14 +250,16 @@ div.back-to-article-list {
 
 #article-content-container .footnotes > .footnotes-list {
   padding: 0;
-  font-size: 0.9rem;
   counter-reset: list;
 }
 
 #article-content-container .footnotes > .footnotes-list > .footnote-item {
   list-style-position: inherit;
   list-style: none;
-  margin: 2px;
+}
+
+#article-content-container .footnotes > .footnotes-list > .footnote-item > p {
+  font-size: 0.9rem;
 }
 
 #article-content-container .footnotes > .footnotes-list > .footnote-item:before {

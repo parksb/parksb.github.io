@@ -1,38 +1,20 @@
-@font-face {
-  font-family: 'Pretendard';
-  src: local('Pretendard'),
-    url('https://cdn.jsdelivr.net/gh/parksb/cdn@master/font/Pretendard/woff2/Pretendard-VF-Distilled.woff2') format('woff2');
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'RobotoMono';
-  src: local('RobotoMono'),
-    url('https://cdn.jsdelivr.net/gh/parksb/cdn@master/font/RobotoMono/woff2/RobotoMono-VF-Distilled.woff2') format('woff2');
-  font-display: swap;
-}
-
 * {
-  font-family: 'Pretendard', sans-serif;
   margin: 0;
   padding: 0;
-  word-break: keep-all;
 }
 
 body {
+  font-family: 'Pretendard', sans-serif;
   font-size: 16px;
   margin: auto;
   padding: 20px 30px 50px 30px;
+  word-break: keep-all;
 }
 
 a {
   color: #000000;
   text-decoration: none;
   cursor: pointer;
-}
-
-a:hover {
-  color: #005ccc;
 }
 
 .symbol {
