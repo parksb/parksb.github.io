@@ -17,8 +17,6 @@
   margin: 0;
   padding: 0;
   word-break: keep-all;
-  font-feature-settings: normal;
-  text-rendering: optimizeLegibility;
 }
 
 body {
