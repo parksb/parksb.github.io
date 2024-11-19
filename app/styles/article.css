@@ -10,6 +10,7 @@
   display: inline;
   font-size: 1.2rem;
   font-weight: 400;
+  margin-right: 0.4rem;
 }
 
 time {
@@ -30,7 +31,7 @@ time {
 }
 
 #article-navigation .article-navigation-arrow {
-  font-size: 0.9rem;;
+  font-size: 0.9rem;
 }
 
 #article-navigation .article-navigation-next {
