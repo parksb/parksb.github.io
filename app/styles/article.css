@@ -260,6 +260,7 @@ div.back-to-article-list {
 
 #article-content-container .footnotes > .footnotes-list > .footnote-item > p {
   font-size: 0.9rem;
+  margin-left: 0.3rem;
 }
 
 #article-content-container .footnotes > .footnotes-list > .footnote-item:before {
