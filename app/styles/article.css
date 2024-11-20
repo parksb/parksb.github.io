@@ -143,20 +143,13 @@ div.back-to-article-list {
 #article-content-container pre.shiki {
   display: block;
   overflow-x: auto;
-  padding: 1rem;
+  padding-left: 1rem;
   margin-bottom: 1rem;
   line-height: 1.3rem;
-  font-size: 0.95rem;
 }
 
-#article-content-container code,
-#article-content-container code span {
+#article-content-container code {
   font-family: 'RobotoMono', monospace;
-}
-
-#article-content-container p code,
-#article-content-container li code {
-  word-break: break-word;
 }
 
 #article-content-container blockquote {
