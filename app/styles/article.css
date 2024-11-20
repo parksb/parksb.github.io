@@ -49,15 +49,13 @@ time {
 #article-navigation .article-navigation-title {
   font-weight: 700;
   font-size: 1rem;
+  margin: 0;
 }
 
 #article-navigation .article-navigation-subtitle {
   font-weight: 400;
-  font-size: 0.8rem
-}
-
-#article-navigation a:hover {
-  color: #005ccc;
+  font-size: 0.8rem;
+  margin: 0;
 }
 
 div.back-to-article-list {
@@ -142,18 +140,13 @@ div.back-to-article-list {
   color: #005ccc;
 }
 
-#article-content-container a:hover,
-#article-content-container a:focus {
-  text-decoration: underline;
-}
-
 #article-content-container pre.shiki {
   display: block;
   overflow-x: auto;
   padding: 1rem;
   margin-bottom: 1rem;
   line-height: 1.3rem;
-  /* background-color: #f6f8fa; */
+  font-size: 0.95rem;
 }
 
 #article-content-container code,
@@ -169,6 +162,7 @@ div.back-to-article-list {
 #article-content-container blockquote {
   border-left: 3px #DFDFDF solid;
   padding-left: 15px;
+  margin: 0;
 }
 
 #article-content-container table {
@@ -195,7 +189,7 @@ div.back-to-article-list {
 
 #article-content-container details {
   display: inline;
-  margin-bottom: 25px;
+  margin-bottom: 10px;
 }
 
 #article-content-container summary {
@@ -205,7 +199,6 @@ div.back-to-article-list {
 
 #article-content-container .table-of-contents {
   font-size: 15px;
-  margin-bottom: 30px;
 }
 
 #article-content-container .table-of-contents ul {
@@ -256,11 +249,13 @@ div.back-to-article-list {
 #article-content-container .footnotes > .footnotes-list > .footnote-item {
   list-style-position: inherit;
   list-style: none;
+  line-height: 0;
 }
 
 #article-content-container .footnotes > .footnotes-list > .footnote-item > p {
   font-size: 0.9rem;
   margin-left: 0.3rem;
+  line-height: 1.4rem;
 }
 
 #article-content-container .footnotes > .footnotes-list > .footnote-item:before {

@@ -27,7 +27,3 @@ ul#works-container img.thumbnail {
   border: 1px solid black;
   left: 55px;
 }
-
-ul#works-container > li:hover img.thumbnail {
-  display: block;
-}
