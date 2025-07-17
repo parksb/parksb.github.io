@@ -228,8 +228,8 @@ div.back-to-article-list {
 }
 
 #article-content-container .footnotes-sep {
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
   border-top: 0;
   border-bottom: 1px black solid;
 }
@@ -237,6 +237,7 @@ div.back-to-article-list {
 #article-content-container .footnotes > .footnotes-list {
   padding: 0;
   counter-reset: list;
+  margin-left: 1rem;
 }
 
 #article-content-container .footnotes > .footnotes-list > .footnote-item {

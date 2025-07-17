@@ -39,7 +39,7 @@
           <% articles.reverse().map((article) => { %>
           <li>
             <a href="./article/<%= article.id %>.html">
-              <span class="heading"><%= article.title %><% if (article.subtitle) { %>:<% } %></span>
+              <span class="heading"><%= article.title %></span>
               <% if (article.subtitle) { %><span class="subheading"><%= article.subtitle %></span><% } %>
               <time><%= article.date %></time>
             </a>
