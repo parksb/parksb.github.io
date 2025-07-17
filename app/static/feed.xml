@@ -4,7 +4,13 @@
 <link>https://parksb.github.io/</link>
 <description>Recently published articles written by Simon Park</description>
 <language>ko-kr</language>
-<lastBuildDate>Thu, 21 Mar 2024 19:51:08 +0900</lastBuildDate>
+<lastBuildDate>Thu, 17 Jul 2025 19:14:11 +0900</lastBuildDate>
+<item>
+<title>웹은 왜 복잡해졌나?</title>
+<link>https://parksb.github.io/article/43.html</link>
+<description>분명 2000년대에 &amp;quot;이제는 초등학생도 홈페이지를 만들 수 있는 시대&amp;quot;를 한 번 거쳤는데, 이 낡아버린 캐치프레이즈가 무색할 정도로 오늘날 웹 개발은 정말 어려워졌다.팀 버너스 리(Tim Berners-Lee)가 첫 웹 사이트를 공개한 이후로 웹은 짧은 시간 동안 엄청난 변화와 성장을 겪었다. 초기 웹은 방대한 문서 집합이었다. 사용자가 클라이언트에서 특정 웹 문서를 선택하면 브라우저는 서버로부터 해당 문서를 받아와 화면에...</description>
+<pubDate>Tue, 1 Jul 2025 00:00:00 +0900</pubDate>
+</item>
 <item>
 <title>스마트폰을 PC의 모션 컨트롤러로 만들기</title>
 <link>https://parksb.github.io/article/42.html</link>
@@ -92,7 +98,7 @@
 <item>
 <title>Git 사용 중 자주 만나는 이슈 정리</title>
 <link>https://parksb.github.io/article/28.html</link>
-<description>깃으로 버전 관리를 하다보면 각종 이슈가 자주 발목을 잡는다. 특히 복잡한 프로젝트의 경우 그 정도가 심한데… 입사 이후 '지금까지 내가 한 건 깃이 아니구나’를 깨닫고 더 공부해 보기로 했다. 그러다보니 매번 비슷한 문제 상황을 마주하게 되는 것 같아서 케이스별로 정리해보았다.먼저 아주 간단한 예시로 주요 용어를 살펴보면:            -add-&amp;gt;      -commit-&amp;gt;     -push-&amp;gt;+-------...</description>
+<description>깃으로 버전 관리를 하다보면 각종 이슈가 자주 발목을 잡는다. 특히 복잡한 프로젝트의 경우 그 정도가 심한데… 입사 이후 '지금까지 내가 한 건 깃이 아니구나’를 깨닫고 더 공부해 보기로 했다. 그러다보니 매번 비슷한 문제 상황을 마주하게 되는 것 같아서 케이스별로 정리해보았다.먼저 아주 간단한 예시로 주요 용어를 살펴보면:            -add-&gt;      -commit-&gt;     -push-&gt;+-------------+-----...</description>
 <pubDate>Fri, 1 Feb 2019 00:00:00 +0900</pubDate>
 </item>
 <item>
@@ -170,7 +176,7 @@
 <item>
 <title>ES6 화살표 함수의 this에 관하여</title>
 <link>https://parksb.github.io/article/14.html</link>
-<description>동아리 웹 세미나 중 jQuery를 이용해서 요소를 클릭하면 요소의 내용이 바뀌는 예제를 시연했다.$(&amp;#x27;#el&amp;#x27;).on(&amp;#x27;click&amp;#x27;, function() {  $(this).html(&amp;#x27;clicked!&amp;#x27;);});물론 잘 된다. 그런데 개발환경을 설명하는 부분에서 npm과 babel까지 설치하고 ES6로 같은 예제를 돌렸는데 왠지 작동하지 않았다.import $...</description>
+<description>동아리 웹 세미나 중 jQuery를 이용해서 요소를 클릭하면 요소의 내용이 바뀌는 예제를 시연했다.$('#el').on('click', function() {  $(this).html('clicked!');});물론 잘 된다. 그런데 개발환경을 설명하는 부분에서 npm과 babel까지 설치하고 ES6로 같은 예제를 돌렸는데 왠지 작동하지 않았다.import $ from 'jquery';$('#el').on('click', () =&gt; {  $(this...</description>
 <pubDate>Tue, 1 May 2018 00:00:00 +0900</pubDate>
 </item>
 <item>
@@ -242,7 +248,7 @@
 <item>
 <title>♻️ 자바는 어떻게 Garbage Collection을 할까?</title>
 <link>https://parksb.github.io/article/2.html</link>
-<description>프로그램이 실행되는 내내 프로그램에서 사용하는 변수, 함수를 비롯한 각종 데이터들은 메모리에 할당되고, 해제되기를 반복한다. 이때 ‘언제, 어떤 데이터를 해제할 것인지’ 정하는 것이 중요한 문제다. C로 프로그래밍할 때는 개발자가 직접 메모리의 할당, 해제 시점을 정해준다.int *ptr = (int*)malloc(sizeof(int) * 3); // 메모리 할당for (int i = 0; i &amp;lt; 3; i++) {  ptr[i] = i;}fo...</description>
+<description>프로그램이 실행되는 내내 프로그램에서 사용하는 변수, 함수를 비롯한 각종 데이터들은 메모리에 할당되고, 해제되기를 반복한다. 이때 ‘언제, 어떤 데이터를 해제할 것인지’ 정하는 것이 중요한 문제다. C로 프로그래밍할 때는 개발자가 직접 메모리의 할당, 해제 시점을 정해준다.int *ptr = (int*)malloc(sizeof(int) * 3); // 메모리 할당for (int i = 0; i &amp;#x3C; 3; i++) {  ptr[i] = i;}...</description>
 <pubDate>Sun, 1 Apr 2018 00:00:00 +0900</pubDate>
 </item>
 <item>
