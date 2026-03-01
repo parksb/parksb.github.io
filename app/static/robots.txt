@@ -6,4 +6,4 @@ Disallow: /cv/
 Disallow: /storage/
 Disallow: /santa-inc/
 
-Sitemap: http://parksb.github.io/sitemap.xml
+Sitemap: https://parksb.github.io/sitemap.xml
