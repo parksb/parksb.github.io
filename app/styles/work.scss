@@ -1,0 +1,10 @@
+@use "init" as *;
+@use "article";
+
+p {
+  > img {
+    width: 100%;
+    height: auto;
+    border: 1px solid $color-black;
+  }
+}

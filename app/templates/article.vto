@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <title>{{title}}</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#F5F5F5" />
+    <meta name="description" content="{{description}}" />
+    <meta name="fediverse:creator" content="@parksb@silicon.moe" />
+
+    <link rel="canonical" href="{{url}}" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="alternate" type="application/rss+xml" title="Recently published articles" href="/feed.xml" />
+
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="{{url}}" />
+    <meta property="og:title" content="{{title}}" />
+    <meta property="og:image" content="{{thumbnail}}" />
+    <meta property="og:description" content="{{description}}" />
+
+    <meta name="twitter:title" content="{{title}}" />
+    <meta name="twitter:image" content="{{thumbnail}}" />
+    <meta name="twitter:description" content="{{description}}" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="preload" href="/fonts/Pretendard-VF-Distilled.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/RobotoMono-VF-Distilled.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css" as="style" type="text/css" crossorigin />
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/katex/dist/fonts/KaTeX_Main-Regular.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/katex/dist/fonts/KaTeX_Math-Italic.woff2" as="font" type="font/woff2" crossorigin />
+
+    {{ if date }}
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "{{title}}",
+      "datePublished": "{{date}}",
+      "author": {
+        "@type": "Person",
+        "name": "Simon Park",
+        "url": "https://parksb.github.io/"
+      },
+      "url": "{{url}}",
+      "inLanguage": "ko"
+    }
+    </script>
+    {{ /if }}
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css" />
+    <style>{{styles}}</style>
+  </head>
+  <body>
+    <header>
+      <a href="/">박성범 <span>Simon Park</span></a>
+    </header>
+    <main>
+      <article>{{content}}</article>
+      <section class="comments">
+        <script async src="https://utteranc.es/client.js" repo="parksb/parksb.github.io-comments" issue-term="pathname" theme="github-light" crossorigin="anonymous"></script>
+      </section>
+    </main>
+    <footer>이 글은 CC BY-NC 4.0 라이선스에 따라 이용할 수 있습니다.</footer>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LKTJ5YFJR2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-LKTJ5YFJR2');
+    </script>
+  </body>
+</html>

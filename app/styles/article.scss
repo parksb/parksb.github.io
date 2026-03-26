@@ -1,0 +1,247 @@
+@use "init" as *;
+
+@font-face {
+  font-family: "RobotoMono VF Distilled";
+  src:
+    url("/fonts/RobotoMono-VF-Distilled.woff2") local("RobotoMono"),
+    format("woff2");
+  font-display: swap;
+}
+
+body {
+  max-width: 800px;
+}
+
+header > a {
+  font-weight: 200;
+}
+
+main > article {
+  margin-top: 2rem;
+
+  > h1 {
+    font-weight: 800;
+    margin: -0.3rem 0 1rem 0;
+    line-height: 2.2rem;
+
+    + h2 {
+      margin-top: -0.6rem;
+    }
+
+    > time {
+      font-family: $font-mono;
+      font-size: 0.8rem;
+      font-weight: 200;
+    }
+  }
+
+  > h2 {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 200;
+    margin: 0.6rem 0.4rem 1rem 0;
+
+    > time {
+      font-family: $font-mono;
+      font-size: 0.8rem;
+    }
+  }
+
+  > h3 {
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+
+    &::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background-color: $color-black;
+    }
+  }
+
+  > h4 {
+    font-size: 1.4rem;
+    margin: 0;
+  }
+
+  > h5 {
+    font-size: 1.2rem;
+  }
+
+  > h6 {
+    font-size: 1rem;
+  }
+
+  > ul,
+  > ol {
+    margin-bottom: 1rem;
+  }
+}
+
+p {
+  line-height: 1.7rem;
+  margin-bottom: 1rem;
+
+  > img {
+    margin-bottom: -7px;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+
+  + em {
+    display: block;
+    font-size: 0.8rem;
+    line-height: 1.5rem;
+  }
+}
+
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+ul,
+ol {
+  padding-left: 2rem;
+}
+
+li {
+  line-height: 1.7rem;
+}
+
+a {
+  color: $color-link;
+}
+
+pre.shiki {
+  display: block;
+  overflow-x: auto;
+  padding-left: 1.2rem;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  line-height: 1.3rem;
+}
+
+code {
+  font-family: $font-mono;
+  font-size: 0.9rem;
+}
+
+blockquote {
+  border-left: 3px $color-border-light solid;
+  padding-left: 15px;
+  margin: 0;
+}
+
+table {
+  margin-bottom: 1rem;
+  border-spacing: unset;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+thead {
+  background-color: $color-bg-muted;
+}
+
+th,
+td {
+  padding: 5px 10px;
+  border: 1px $color-black solid;
+}
+
+sup {
+  font-size: 11px;
+  line-height: 0;
+}
+
+details {
+  display: inline;
+  margin-bottom: 10px;
+}
+
+summary {
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.table-of-contents {
+  ul {
+    list-style-type: none;
+    counter-reset: item;
+    margin: 0;
+    padding-left: 1.2rem;
+  }
+
+  > ul {
+    border-left: 1px $color-black solid;
+    margin-left: 2px;
+  }
+}
+
+section {
+  margin-bottom: 15px;
+}
+
+.footnotes {
+  margin-left: -1rem;
+
+  &-sep {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    border-top: 0;
+    border-bottom: 1px $color-black solid;
+  }
+
+  > .footnotes-list {
+    padding: 0;
+    counter-reset: list;
+    margin-left: 1.2rem;
+
+    > .footnote-item {
+      list-style-position: inherit;
+      list-style: none;
+      line-height: 0;
+
+      &::before {
+        content: "[" counter(list) "]";
+        counter-increment: list;
+        font-size: 0.8rem;
+        font-family: $font-mono;
+      }
+
+      > p {
+        font-size: 0.9rem;
+        margin-left: 0.3rem;
+        line-height: 1.4rem;
+        display: inline;
+      }
+    }
+
+    a.footnote-backref {
+      font-family: $font-body;
+      font-size: 1.2rem;
+    }
+  }
+
+  eq {
+    > .katex {
+      font-size: 1rem;
+    }
+  }
+
+  .katex-display {
+    font-size: 0.9rem;
+    overflow: auto;
+  }
+}
+
+.utterances {
+  max-width: 100%;
+  margin: 0;
+}

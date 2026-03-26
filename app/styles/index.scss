@@ -1,0 +1,160 @@
+@use "init" as *;
+
+main {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 2rem;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  font-size: 1.1rem;
+}
+
+section {
+  > h3 {
+    font-size: 1.1rem;
+    font-weight: 200;
+    margin: 0;
+    margin-bottom: 1.1rem;
+  }
+
+  > p {
+    margin: 0;
+  }
+
+  > ul > li,
+  > details > ul > li {
+    margin-bottom: 1.1rem;
+  }
+
+  // INTRO
+  &.intro {
+    grid-row: 2;
+    grid-column: 1 / 3;
+    font-size: 1.1rem;
+    line-height: 1.8rem;
+
+    > p {
+      margin-top: 1.1rem;
+
+      &:nth-child(1) {
+        margin-top: 0;
+      }
+    }
+  }
+
+  // AVATAR
+  &.avatar {
+    grid-row: 2;
+    grid-column: 3 / 4;
+    justify-self: end;
+
+    img {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      margin: 1.6rem -0.3rem 0 0;
+    }
+  }
+
+  // LINKS
+  &.links {
+    grid-row: 2;
+    grid-column: 4 / -1;
+
+    li {
+      margin-bottom: 0.4rem;
+    }
+
+    a {
+      color: $color-link-external;
+    }
+  }
+
+  // WORK EXPERIENCE and EDUCATION
+  &.career {
+    grid-column: 1 / 2;
+  }
+
+  // ARTICLES
+  &.articles {
+    grid-column: 2 / 3;
+
+    details summary {
+      cursor: pointer;
+      font-size: 1.1rem;
+      margin-bottom: 1.1rem;
+      font-weight: 200;
+    }
+  }
+
+  // PROJECTS
+  &.projects {
+    grid-column: 3 / 4;
+  }
+
+  // PRESS
+  &.press {
+    grid-column: 4 / -1;
+  }
+}
+
+.sections {
+  grid-row: 3;
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: subgrid;
+}
+
+// NARROW VIEW
+@media (max-width: 768px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+
+  .sections {
+    display: flex;
+    flex-direction: column;
+  }
+
+  section {
+    &.intro,
+    &.avatar,
+    &.links {
+      grid-row: auto;
+      grid-column: 1 / -1;
+    }
+
+    &.avatar {
+      display: none;
+    }
+
+    &.intro {
+      margin-top: 2rem;
+    }
+
+    &.articles {
+      order: 1;
+    }
+
+    &.projects {
+      order: 2;
+    }
+
+    &.career {
+      order: 3;
+    }
+
+    &.press {
+      order: 4;
+    }
+  }
+
+  .sections {
+    grid-row: auto;
+    grid-column: 1 / -1;
+  }
+}

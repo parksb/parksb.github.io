@@ -1,9 +1,0 @@
-User-agent: *
-Allow: /
-Disallow: /navigation.*.html
-Disallow: /magic-conch-shell/
-Disallow: /cv/
-Disallow: /storage/
-Disallow: /santa-inc/
-
-Sitemap: https://parksb.github.io/sitemap.xml

@@ -1,0 +1,27 @@
+{
+  "tasks": {
+    "build": "deno run -R -E -W -N app/main.ts",
+    "build:dev": "deno run -R -E -W -N --watch=app,docs app/main.ts",
+    "serve": "deno run -R -E -W -N app/serve.ts"
+  },
+  "imports": {
+    "@simpesys/core": "jsr:@simpesys/core@^0.6.1-canary.7",
+    "@hono/hono": "jsr:@hono/hono",
+    "markdown-it-image-lazy-loading": "npm:@parksb/markdown-it-image-lazy-loading@^2.0.2",
+    "vento": "https://cdn.jsdelivr.net/gh/ventojs/vento@2.2.0/mod.ts",
+    "@minify-html/deno": "jsr:@minify-html/deno@^0.18.1",
+    "sass": "npm:sass@^1.98.0"
+  },
+  "unstable": [
+    "temporal"
+  ],
+  "fmt": {
+    "exclude": [
+      "build/",
+      "images/",
+      "docs/",
+      "static/",
+      "simpesys.metadata.json"
+    ]
+  }
+}
