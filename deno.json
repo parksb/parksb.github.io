@@ -5,7 +5,7 @@
     "serve": "deno run -R -E -W -N app/serve.ts"
   },
   "imports": {
-    "@simpesys/core": "jsr:@simpesys/core@^0.6.1-canary.7",
+    "@simpesys/core": "jsr:@simpesys/core@^0.6.1-canary.8",
     "@hono/hono": "jsr:@hono/hono",
     "markdown-it-image-lazy-loading": "npm:@parksb/markdown-it-image-lazy-loading@^2.0.2",
     "vento": "https://cdn.jsdelivr.net/gh/ventojs/vento@2.2.0/mod.ts",

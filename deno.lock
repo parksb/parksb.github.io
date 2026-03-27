@@ -3,13 +3,16 @@
   "specifiers": {
     "jsr:@hono/hono@*": "4.12.8",
     "jsr:@minify-html/deno@~0.18.1": "0.18.1",
-    "jsr:@simpesys/core@~0.6.1-canary.7": "0.6.1-canary.7",
+    "jsr:@simpesys/core@~0.6.1-canary.8": "0.6.1-canary.8",
     "jsr:@std/encoding@^1.0.10": "1.0.10",
     "jsr:@std/path@^1.0.8": "1.1.4",
     "npm:@markslides/markdown-it-mermaid@~0.3.6": "0.3.7",
     "npm:@parksb/markdown-it-image-lazy-loading@^2.0.2": "2.0.2",
+    "npm:@shikijs/core@^4.0.2": "4.0.2",
+    "npm:@shikijs/engine-javascript@^4.0.2": "4.0.2",
+    "npm:@shikijs/langs@^4.0.2": "4.0.2",
     "npm:@shikijs/markdown-it@^4.0.2": "4.0.2",
-    "npm:@types/markdown-it@^14.1.2": "14.1.2",
+    "npm:@shikijs/themes@^4.0.2": "4.0.2",
     "npm:denque@^2.1.0": "2.1.0",
     "npm:es-toolkit@^1.43.0": "1.45.1",
     "npm:katex@~0.16.22": "0.16.40",
@@ -34,14 +37,15 @@
     "@minify-html/deno@0.18.1": {
       "integrity": "1af76557adea9ee1e28759f653ec5a35e9c006e2abe73b65e4944aa821711ed1"
     },
-    "@simpesys/core@0.6.1-canary.7": {
-      "integrity": "2fd698012ffe9289f65d3c98d7a97697f4b8949a65924aad94ccb190d3d9e1d0",
+    "@simpesys/core@0.6.1-canary.8": {
+      "integrity": "efa1abe77639d1128132ef3452075ea700406d332025ef7f80f4189d27ef663c",
       "dependencies": [
         "jsr:@std/encoding",
         "jsr:@std/path",
         "npm:@markslides/markdown-it-mermaid",
+        "npm:@shikijs/core",
+        "npm:@shikijs/engine-javascript",
         "npm:@shikijs/markdown-it",
-        "npm:@types/markdown-it",
         "npm:denque",
         "npm:es-toolkit",
         "npm:katex",
@@ -1362,7 +1366,7 @@
     "dependencies": [
       "jsr:@hono/hono@*",
       "jsr:@minify-html/deno@~0.18.1",
-      "jsr:@simpesys/core@~0.6.1-canary.7",
+      "jsr:@simpesys/core@~0.6.1-canary.8",
       "npm:@parksb/markdown-it-image-lazy-loading@^2.0.2",
       "npm:sass@^1.98.0"
     ]
