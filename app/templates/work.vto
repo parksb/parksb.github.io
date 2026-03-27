@@ -2,16 +2,19 @@
 <html lang="ko">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{title}}</title>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#F5F5F5" />
-    <meta name="description" content="{{description}}" />
-    <meta name="fediverse:creator" content="@parksb@silicon.moe" />
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+    <link rel="preload" href="/fonts/Pretendard-VF-Distilled.woff2" as="font" type="font/woff2" crossorigin />
 
     <link rel="canonical" href="{{url}}" />
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
     <link rel="alternate" type="application/rss+xml" title="Recently published articles" href="/feed.xml" />
+
+    <meta name="theme-color" content="#F5F5F5" />
+    <meta name="fediverse:creator" content="@parksb@silicon.moe" />
+    <meta name="description" content="{{description}}" />
 
     <meta property="og:type" content="article" />
     <meta property="og:url" content="{{url}}" />
@@ -24,7 +27,6 @@
     <meta name="twitter:description" content="{{description}}" />
     <meta name="twitter:card" content="summary_large_image" />
 
-    <link rel="preload" href="/fonts/Pretendard-VF-Distilled.woff2" as="font" type="font/woff2" crossorigin />
     <style>{{styles}}</style>
   </head>
   <body>

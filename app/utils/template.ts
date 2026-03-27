@@ -34,13 +34,16 @@ export const render = async (
     `${dirname}/../templates/${template}.vto`,
   );
 
+  const html = content(document);
+
   const result = await ventoTemplate({
     title: title(document),
-    content: content(document),
+    content: html,
     description: description(document),
     url: url(document),
     thumbnail: thumbnail(document),
     date: date(document),
+    hasKatex: html.includes('class="katex'),
     styles,
   });
 
