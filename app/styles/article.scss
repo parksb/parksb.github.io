@@ -241,7 +241,11 @@ section {
   }
 }
 
-.utterances {
-  max-width: 100%;
-  margin: 0;
+section.comments {
+  min-height: 273px;
+
+   > .utterances {
+    max-width: 100%;
+    margin: 0;
+  }
 }
