@@ -21,7 +21,8 @@
       "images/",
       "docs/",
       "static/",
-      "simpesys.metadata.json"
+      "simpesys.metadata.json",
+      "*.md"
     ]
   }
 }
