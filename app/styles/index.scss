@@ -30,6 +30,10 @@ section {
     margin: 0;
   }
 
+  > details > summary {
+    width: fit-content;
+  }
+
   > ul > li,
   > details > ul > li {
     margin-bottom: 1.1rem;
