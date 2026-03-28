@@ -12,10 +12,10 @@
 ### CONTACT
 
 - [parkgds@gmail.com](mailto:parkgds@gmail.com)
-- [GitHub](https://github.com/parksb)
-- [LinkedIn](https://www.linkedin.com/in/parksb/)
-- [Fediverse](https://social.silicon.moe/@parksb)
-- [Bluesky](https://bsky.app/profile/parksb.social.silicon.moe.ap.brid.gy)
+- [@parksb](https://github.com/parksb)
+- [in/parksb](https://www.linkedin.com/in/parksb/)
+- [@parksb@social.silicon.moe](https://social.silicon.moe/@parksb)
+- [@parksb.social.silicon.moe.ap.brid.gy](https://bsky.app/profile/parksb.social.silicon.moe.ap.brid.gy)
 <!-- /section:links -->
 
 <!-- section:sections -->
