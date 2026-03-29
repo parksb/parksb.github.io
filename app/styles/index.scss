@@ -80,6 +80,7 @@ section {
 
     a {
       color: $color-link-external;
+      word-break: break-all;
     }
 
     a::before {
