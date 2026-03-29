@@ -1,7 +1,7 @@
 <!-- section:intro -->
-박성범은 대한민국의 소프트웨어 엔지니어이다. 개인의 특출난 역량보다는 잘 설계된 시스템과 프로세스가 문제를 해결한다고 믿기에 엔지니어가 되었다. 현재는 핀테크 기업에서 웹 프론트엔드 개발자가 쉽고 빠르게 제품을 만들 수 있도록 돕는 도구를 개발하며, 사내 패키지 생태계를 견고하게 유지하기 위한 정책과 표준을 정립하는 일을 하고 있다. 이전에는 패션 커머스 기업에서 높은 가용성을 요구하는 서버를 개발하면서 캐시와 결함 감내 시스템에 많은 관심을 기울였다.
+Simon Park is a software engineer based in South Korea. He became an engineer out of a belief that well-designed systems and processes solve problems better than any one person's brilliance. He currently works at a fintech company, building tools that help frontend developers ship products quickly and easily, while establishing policies and standards to keep the internal package ecosystem robust. Previously, he worked at a fashion commerce company developing high-availability servers focused on caching and fault-tolerant systems.
 
-스스로에게 필요한 소프트웨어를 직접 만들어 사용하며, 취미로 [[article/32]]{야크 털을 깎는다.} 모질라 재단에 정기 후원하고, 일주일에 두 번 스쿼시를 하고, 잠들기 전 책을 읽는다. 읽을 책, 읽고 있는 책, 읽은 책을 [책장](https://docs.google.com/spreadsheets/d/1gq1lIyUSIiKE_4YHhc_vkIVH_LzZA4Zk9aIHFzib2yA)에 정리한다. 또한 [디지털 정원](https://pedia.parksb.xyz/)을 가꾸고 있다.
+He builds software for his own needs and [[article/32]]{shaves yaks} as a hobby. He is a regular donor to the Mozilla Foundation, plays squash twice a week, and reads before bed. He keeps a [bookshelf](https://docs.google.com/spreadsheets/d/1gq1lIyUSIiKE_4YHhc_vkIVH_LzZA4Zk9aIHFzib2yA) tracking what he has read, is reading, and wants to read. He also tends a [digital garden](https://pedia.parksb.xyz/).
 <!-- /section:intro -->
 
 <!-- section:avatar -->
