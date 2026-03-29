@@ -87,7 +87,7 @@ section {
       vertical-align: middle;
       width: 0.9rem;
       height: 0.9rem;
-      margin: 0 0.2rem 0.2rem;
+      margin: 0 0.2rem 0.2rem 0;
       display: inline-block;
     }
 
@@ -139,9 +139,32 @@ section {
     grid-column: 3 / 4;
   }
 
-  // PRESS
-  &.press {
+  // PRESS and CONTRIBUTIONS
+  &.news {
     grid-column: 4 / -1;
+
+    a {
+      color: $color-link-external;
+    }
+
+    a::before {
+      background-color: $color-link-external;
+      vertical-align: middle;
+      width: 0.9rem;
+      height: 0.9rem;
+      margin: 0 0.2rem 0.2rem 0;
+      display: inline-block;
+    }
+
+    a[href*="github.com"][href*="/issues"]::before {
+      content: "\00a0";
+      mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24'%3E%3Cpath fill='%23000' d='M12 20a8 8 0 1 0 0-16a8 8 0 0 0 0 16m0 2C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10s-4.477 10-10 10m0-8a2 2 0 1 1 0-4a2 2 0 0 1 0 4'/%3E%3C/svg%3E");
+    }
+
+    a[href*="github.com"][href*="/pull"]::before {
+      content: "\00a0";
+      mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24'%3E%3Cpath fill='%23000' d='M15 5h2a2 2 0 0 1 2 2v8.17a3.001 3.001 0 1 1-2 0V7h-2v3l-4.5-4L15 2zM5 8.83a3.001 3.001 0 1 1 2 0v6.34a3.001 3.001 0 1 1-2 0zM6 7a1 1 0 1 0 0-2a1 1 0 0 0 0 2m0 12a1 1 0 1 0 0-2a1 1 0 0 0 0 2m12 0a1 1 0 1 0 0-2a1 1 0 0 0 0 2'/%3E%3C/svg%3E");
+    }
   }
 }
 
@@ -191,7 +214,7 @@ section {
       order: 3;
     }
 
-    &.press {
+    &.news {
       order: 4;
     }
   }
