@@ -12,7 +12,7 @@ He builds software for his own needs and [[article/32]]{shaves yaks} as a hobby.
 ### CONTACT
 
 - [parkgds@gmail.com](mailto:parkgds@gmail.com)
-- [@parksb](https://github.com/parksb)
+- [parksb](https://github.com/parksb)
 - [in/parksb](https://www.linkedin.com/in/parksb/)
 - [@parksb@social.silicon.moe](https://social.silicon.moe/@parksb)
 - [@parksb.social.silicon.moe.ap.brid.gy](https://bsky.app/profile/parksb.social.silicon.moe.ap.brid.gy)
