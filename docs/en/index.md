@@ -44,130 +44,17 @@ He builds software for his own needs and [[article/32]]{shaves yaks} as a hobby.
 
 <!-- section:articles -->
 ### ARTICLES
-KO [[en/index]]{EN}
+[[../index]]{KO} EN
 
-- [[article/43]]
-  - 모던 웹의 복잡성과 하이퍼미디어 시스템
-  - Jul 2025
-- [[article/42]]
-  - 멀티 디바이스 앱을 위한 라이브러리, Zap
-  - Jan 2024
-- [[article/41]]
-  - Eee PC 1000HE 위에 올린 아치 리눅스 32
-  - Sep 2023
-- [[article/40]]
-  - 자바와 하스켈의 차이는 어디에서 비롯되는가?
-  - Nov 2022
 - [[article/39]]
-  - 시간과 컴퓨터 공학
+  - Time and computer science
   - Feb 2022
-- [[article/38]]
-  - 클라이언트 배포없이 화면 구성 변경하기
-  - Jul 2021
-- [[article/37]]
-  - 조판 원칙으로 가독성 높이기
-  - Jan 2021
-- [[article/36]]
-  - 학교에서 구글에 접속하는 과정
-  - Jan 2020
-- [[article/35]]
-  - 높은 성능과 신뢰를 확보하기 위한 언어
-  - Nov 2019
-- [[article/34]]
-  - 고립된 훈련병을 위한 종합 뉴스
-  - Sep 2019
 - [[article/32]]
-  - 밑바닥부터 만드는 즐거움
+  - The joy of building from scratch
   - Jul 2019
-- [[article/31]]
-  - 멜트다운, 스펙터 페이퍼 읽기
-  - Jun 2019
 - [[article/29]]
-  - 하드웨어로 구현한 해시 테이블
+  - A hash table implemented in hardware
   - Mar 2019
-- [[article/25]]
-  - MIPS 어셈블리어 훑어보기
-  - Oct 2018
-::: TOGGLE ARCHIVE
-- [[article/33]]
-  - Dotfiles 세팅해 광명찾기
-  - Aug 2019
-- [[article/30]]
-  - 파라미터의 다형성과 제네릭
-  - May 2019
-- [[article/28]]
-  - 코딩보다 어려운 버전 관리
-  - Feb 2019
-- [[article/26]]
-  - ES6 OOP와 타입스크립트, 그리고 제이쿼리(?)
-  - Dec 2018
-- [[article/24]]
-  - 진짜 데이터를 뜯어보았다
-  - Oct 2018
-- [[article/23]]
-  - Computer Networks and the Internet
-  - Sep 2018
-- [[article/21]]
-  - 학교에서 아이패드로 코딩하기
-  - Sep 2018
-- [[article/20]]
-  - 개발 환경 세팅만 사흘
-  - Aug 2018
-- [[article/19]]
-  - 개발을 위한 WSL 세팅
-  - Jun 2018
-- [[article/18]]
-  - Jun 2018
-- [[article/17]]
-  - Jun 2018
-- [[article/16]]
-  - Jun 2018
-- [[article/15]]
-  - 거대한 레거시를 수습한 경험
-  - Jun 2018
-- [[article/14]]
-  - May 2018
-- [[article/13]]
-  - May 2018
-- [[article/12]]
-  - Memory-Management Strategies
-  - May 2018
-- [[article/11]]
-  - Deadlocks
-  - May 2018
-- [[article/10]]
-  - Synchronization
-  - May 2018
-- [[article/9]]
-  - Process Scheduling
-  - May 2018
-- [[article/8]]
-  - Multithreaded Programming
-  - May 2018
-- [[article/7]]
-  - Process Concept
-  - May 2018
-- [[article/6]]
-  - System Structures
-  - May 2018
-- [[article/5]]
-  - Overview
-  - May 2018
-- [[article/4]]
-  - UI는 심미성, UX는 사용성?
-  - May 2018
-- [[article/3]]
-  - 학적 관리 프로그램 만들기
-  - May 2018
-- [[article/2]]
-  - 오브젝트의 일생
-  - Apr 2018
-- [[article/1]]
-  - 자바스크립트의 OOP는 진정한 OOP가 아닌가?
-  - Apr 2018
-- [[article/0]]
-  - Feb 2018
-:::
 <!-- /section:articles -->
 
 <!-- section:projects -->
@@ -191,12 +78,6 @@ KO [[en/index]]{EN}
   - A static blog generator for people who want to start a blog quickly
 - [Harooo](https://harooo.com/)
   - A social media platform where posts vanish after 24 hours, mirroring how real conversations naturally fade from memory
-- [[work/8]]
-  - 아주대학교 자치교지 편집위원회
-- [[work/7]]
-  - 아주대학교 프로그래밍 중앙동아리
-- [[work/4]]
-  - 청소년-청년전문가 교육 비영리 단체
 <!-- /section:projects -->
 
 <!-- section:news -->
@@ -232,9 +113,3 @@ KO [[en/index]]{EN}
 - [vercel/hyper#2598 Add external style sheet for the website (#2579)](https://github.com/vercel/hyper/pull/2598)
 <!-- /section:news -->
 <!-- /section:sections -->
-
-<!-- section:hidden -->
-### HIDDEN
-
-- [[en/index]]
-<!-- /section:hidden -->
