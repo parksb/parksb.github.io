@@ -1,7 +1,8 @@
 import { Document } from "@simpesys/core";
 import vento from "vento";
-import { BASE_URL, THUMBNAIL_BASE_URL } from "./consts.ts";
+import { THUMBNAIL_BASE_URL } from "./consts.ts";
 import { minify } from "@minify-html/deno";
+import { alternatesOf, homeHrefOf, localeOf, urlOf } from "./i18n.ts";
 
 const dirname = new URL(".", import.meta.url).pathname;
 
@@ -14,11 +15,11 @@ export enum Template {
 }
 
 export const mapTemplate = (document: Document): Template => {
-  if (document.filename.startsWith("article/")) {
+  if (document.filename.includes("article/")) {
     return Template.Article;
   }
 
-  if (document.filename.startsWith("work/")) {
+  if (document.filename.includes("work/")) {
     return Template.Work;
   }
 
@@ -40,11 +41,14 @@ export const render = async (
     title: title(document),
     content: html,
     description: description(document),
-    url: url(document),
+    url: urlOf(document.filename),
     thumbnail: thumbnail(document),
     date: date(document),
     hasKatex: html.includes('class="katex'),
     styles,
+    lang: localeOf(document.filename),
+    homeHref: homeHrefOf(document.filename),
+    alternates: alternatesOf(document),
   });
 
   return new TextDecoder().decode(
@@ -99,12 +103,6 @@ export const description = (document: Document) => {
     .trim();
 
   return `${plainText.slice(0, 300)}...`;
-};
-
-const url = (document: Document) => {
-  return document.filename === "index"
-    ? `${BASE_URL}/`
-    : `${BASE_URL}/${document.filename}.html`;
 };
 
 const date = (document: Document) => {

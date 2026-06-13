@@ -13,6 +13,7 @@
     "npm:@shikijs/langs@^4.0.2": "4.0.2",
     "npm:@shikijs/markdown-it@^4.0.2": "4.0.2",
     "npm:@shikijs/themes@^4.0.2": "4.0.2",
+    "npm:@types/markdown-it@^14.1.2": "14.1.2",
     "npm:denque@^2.1.0": "2.1.0",
     "npm:es-toolkit@^1.43.0": "1.45.1",
     "npm:katex@~0.16.22": "0.16.40",
@@ -28,7 +29,8 @@
     "npm:markdown-it-task-checkbox@^1.0.6": "1.0.6",
     "npm:markdown-it-texmath@1": "1.0.0",
     "npm:markdown-it@^14.1.0": "14.1.1",
-    "npm:sass@^1.98.0": "1.98.0"
+    "npm:sass@^1.98.0": "1.98.0",
+    "npm:shiki@^4.0.2": "4.0.2"
   },
   "jsr": {
     "@hono/hono@4.12.8": {
@@ -46,6 +48,7 @@
         "npm:@shikijs/core",
         "npm:@shikijs/engine-javascript",
         "npm:@shikijs/markdown-it",
+        "npm:@types/markdown-it",
         "npm:denque",
         "npm:es-toolkit",
         "npm:katex",
@@ -60,7 +63,8 @@
         "npm:markdown-it-inline-comments",
         "npm:markdown-it-table-of-contents",
         "npm:markdown-it-task-checkbox",
-        "npm:markdown-it-texmath"
+        "npm:markdown-it-texmath",
+        "npm:shiki"
       ]
     },
     "@std/encoding@1.0.10": {

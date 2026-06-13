@@ -12,7 +12,7 @@ const initStartTime = performance.now();
 const simpesys = await new Simpesys({
   docs: {
     backlinksSectionTitle: null,
-    subdocumentsSectionTitle: ["ARTICLES", "PROJECTS"],
+    subdocumentsSectionTitle: ["ARTICLES", "PROJECTS", "HIDDEN"],
     toc: {
       levels: [3, 4],
       marker: {
@@ -60,6 +60,9 @@ const renderTemplate = async (document: Document, template: Template) => {
   await Deno.mkdir(`${dirname}/../build`, { recursive: true });
   await Deno.mkdir(`${dirname}/../build/article`, { recursive: true });
   await Deno.mkdir(`${dirname}/../build/work`, { recursive: true });
+  await Deno.mkdir(`${dirname}/../build/en/article`, { recursive: true });
+  await Deno.mkdir(`${dirname}/../build/en/work`, { recursive: true });
+
   await Deno.writeTextFile(
     `${dirname}/../build/${document.filename}.html`,
     content,

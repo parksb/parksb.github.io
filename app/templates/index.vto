@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="{{ lang }}">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,7 +8,10 @@
     <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
     <link rel="preload" href="/fonts/Pretendard-VF-Distilled.woff2" as="font" type="font/woff2" crossorigin />
 
-    <link rel="canonical" href="https://parksb.github.io/" />
+    <link rel="canonical" href="{{ url }}" />
+    {{ for alt of alternates }}
+    <link rel="alternate" hreflang="{{ alt.hreflang }}" href="{{ alt.href }}" />
+    {{ /for }}
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
     <link rel="alternate" type="application/rss+xml" title="Recently published articles" href="/feed.xml" />
 
@@ -17,7 +20,7 @@
     <meta name="description" content="박성범 Simon Park" />
 
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://parksb.github.io/" />
+    <meta property="og:url" content="{{ url }}" />
     <meta property="og:title" content="Simon Park" />
     <meta property="og:image" content="https://og-image.parksb.vercel.app/api/parksb-github-io?title=%EB%B0%95%EC%84%B1%EB%B2%94%20Simon%20Park&subtitle=%E2%80%95%20parksb.github.io" />
     <meta property="og:description" content="박성범 Simon Park" />
@@ -31,7 +34,7 @@
   </head>
   <body>
     <header>
-      <a href="/">박성범 <span>Simon Park</span></a>
+      <a href="{{ homeHref }}">박성범 <span>Simon Park</span></a>
     </header>
     <main>{{content}}</main>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-LKTJ5YFJR2"></script>

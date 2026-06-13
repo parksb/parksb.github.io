@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="{{ lang }}">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -18,6 +18,9 @@
     {{ /if }}
 
     <link rel="canonical" href="{{url}}" />
+    {{ for alt of alternates }}
+    <link rel="alternate" hreflang="{{ alt.hreflang }}" href="{{ alt.href }}" />
+    {{ /for }}
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
     <link rel="alternate" type="application/rss+xml" title="Recently published articles" href="/feed.xml" />
 
@@ -49,7 +52,7 @@
         "url": "https://parksb.github.io/"
       },
       "url": "{{url}}",
-      "inLanguage": "ko"
+      "inLanguage": "{{ lang }}"
     }
     </script>
     {{ /if }}
@@ -58,7 +61,7 @@
   </head>
   <body>
     <header>
-      <a href="/">박성범 <span>Simon Park</span></a>
+      <a href="{{ homeHref }}">박성범 <span>Simon Park</span></a>
     </header>
     <main>
       <article>{{content}}</article>

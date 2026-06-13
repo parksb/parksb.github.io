@@ -1,12 +1,11 @@
 import { DocumentDict } from "@simpesys/core";
 import { BASE_URL } from "./consts.ts";
 import { description, mapTemplate, Template } from "./template.ts";
+import { DEFAULT_LOCALE, localeOf, urlOf } from "./i18n.ts";
 
 export const sitemap = (documents: DocumentDict) => {
   const urls = Object.values(documents).map((doc) => {
-    const loc = mapTemplate(doc) === Template.Index
-      ? `${BASE_URL}/`
-      : `${BASE_URL}/${doc.filename}.html`;
+    const loc = urlOf(doc.filename);
 
     const lastmod = doc.updatedAt
       ?.toZonedDateTimeISO("Asia/Seoul")
@@ -28,16 +27,17 @@ export const feed = (documents: DocumentDict) => {
   const now = Temporal.Now.zonedDateTimeISO("UTC");
 
   const items = Object.values(documents)
-    .filter((doc) => mapTemplate(doc) === Template.Article)
+    .filter((doc) =>
+      mapTemplate(doc) === Template.Article &&
+      localeOf(doc.filename) === DEFAULT_LOCALE
+    )
     .sort((a, b) => {
       const aTime = a.createdAt?.epochMilliseconds ?? 0;
       const bTime = b.createdAt?.epochMilliseconds ?? 0;
       return bTime - aTime;
     })
     .map((doc) => {
-      const link = mapTemplate(doc) === Template.Index
-        ? `${BASE_URL}/`
-        : `${BASE_URL}/${doc.filename}.html`;
+      const link = urlOf(doc.filename);
 
       const pubDate = toRFC822(
         doc.createdAt?.toZonedDateTimeISO("Asia/Seoul") ?? now,

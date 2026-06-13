@@ -188,9 +188,7 @@ template {
 // Custom Styles
 @font-face {
   font-family: "Pretendard VF Distilled";
-  src:
-    url("/fonts/Pretendard-VF-Distilled.woff2") local("Pretendard"),
-    format("woff2");
+  src: url("/fonts/Pretendard-VF-Distilled.woff2") format("woff2");
   font-display: swap;
 }
 
