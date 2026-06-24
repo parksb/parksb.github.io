@@ -6,7 +6,7 @@
 <atom:link href="https://parksb.github.io/feed.xml" rel="self" type="application/rss+xml" />
 <description>Recently published articles</description>
 <language>ko-kr</language>
-<lastBuildDate>Tue, 16 Jun 2026 14:36:58 GMT</lastBuildDate>
+<lastBuildDate>Wed, 24 Jun 2026 14:40:18 GMT</lastBuildDate>
 <item>
 <title>웹은 왜 복잡해졌나?</title>
 <link>https://parksb.github.io/article/43.html</link>
@@ -88,7 +88,7 @@
 <title>하지만, 야크 털 깎기는 재미있다</title>
 <link>https://parksb.github.io/article/32.html</link>
 <guid>https://parksb.github.io/article/32.html</guid>
-<description>KO | EN 이 블로그는 지킬이나 휴고, 개츠비같은 정적 사이트 생성기/프레임워크를 사용하지 않았다. 처음엔 이것저것 써봤지만 커스터마이징 자유도가 낮아서 직접 블로그를 만들기로 했다. 초기에는 간단히 html로 글을 썼는데, 너무 불편해서 json 파일로 글을 쓰는 시스템을 만들었다. 이것도 장문의 글을 쓰기엔 불편해서 마크다운 파일을 html 파일로 변환하는 서비스를 개발했다. 그 다음엔 결과물로 나온 파일들을 빌드, 배포하기 위한 툴을 만들었다. 결국 밑바닥부터 정적 사이트 생성기를 만든 셈이 됐다. 이러한 작업을 야크 털 ...</description>
+<description>KO | EN Alexandr frolov (CC BY-SA 4.0) 이 블로그는 지킬이나 휴고, 개츠비같은 정적 사이트 생성기/프레임워크를 사용하지 않았다. 처음엔 이것저것 써봤지만 커스터마이징 자유도가 낮아서 직접 블로그를 만들기로 했다. 초기에는 간단히 html로 글을 썼는데, 너무 불편해서 json 파일로 글을 쓰는 시스템을 만들었다. 이것도 장문의 글을 쓰기엔 불편해서 마크다운 파일을 html 파일로 변환하는 서비스를 개발했다. 그 다음엔 결과물로 나온 파일들을 빌드, 배포하기 위한 툴을 만들었다. 결국 밑바닥부터 정적 사...</description>
 <pubDate>Wed, 31 Jul 2019 09:00:00 GMT</pubDate>
 </item>
 <item>
