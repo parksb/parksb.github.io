@@ -46,6 +46,9 @@ He builds software for his own needs and [[article/32]]{shaves yaks} as a hobby.
 ### ARTICLES
 [[../index]]{KO} EN
 
+- [[article/43]]
+  - The complexity of the modern web and hypermedia systems
+  - Jul 2025
 - [[article/39]]
   - Time and computer science
   - Feb 2022

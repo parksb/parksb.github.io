@@ -8,10 +8,10 @@
   },
   "article/43": {
     "createdAt": "2025-07-17T00:00:00Z",
-    "updatedAt": "2026-03-24T13:53:42.096843994Z",
-    "contentHash": "e78b156a2cd6f75fc55e6f47d5c356621eca7a23",
-    "previousContentHash": "8658bfe1a33f00ec16830de34b81ad968c7f74a4",
-    "previousUpdatedAt": "2026-03-24T12:52:09.663263916Z"
+    "updatedAt": "2026-06-26T09:16:47.207649902Z",
+    "contentHash": "8f2fa8de0e27663a29e71984195bb92a529b0278",
+    "previousContentHash": "e78b156a2cd6f75fc55e6f47d5c356621eca7a23",
+    "previousUpdatedAt": "2026-03-24T13:53:42.096843994Z"
   },
   "article/42": {
     "createdAt": "2024-01-23T00:00:00Z",
@@ -323,10 +323,10 @@
   },
   "en/index": {
     "createdAt": "2026-06-13T11:33:10.737Z",
-    "updatedAt": "2026-06-13T12:18:06.657493896Z",
-    "contentHash": "ca026c4e779e7a5ed9214ea78e62dd519de2ea08",
-    "previousContentHash": "666bcaa5c6086d0633f64f0a80598c520ddd0247",
-    "previousUpdatedAt": "2026-06-13T12:31:35.802990967Z"
+    "updatedAt": "2026-06-26T09:42:01.279959961Z",
+    "contentHash": "bf4511c1ec252aff232bf702d3a22d902749bec6",
+    "previousContentHash": "d84b413c464932139917cdea7c9f988568a35439",
+    "previousUpdatedAt": "2026-06-26T09:41:33.810093994Z"
   },
   "en/article/39": {
     "createdAt": "2022-02-22T00:00:00Z",
@@ -348,5 +348,12 @@
     "contentHash": "30a8a1df93a71a447ebc3fdec3c2bb6fc4f46a26",
     "previousContentHash": "1b823ea86a36ce5a89c86083a93e286d1cd8f362",
     "previousUpdatedAt": "2026-06-24T14:37:53.71939502Z"
+  },
+  "en/article/43": {
+    "createdAt": "2026-06-26T09:16:36.345Z",
+    "updatedAt": "2026-06-26T09:39:24.794659912Z",
+    "contentHash": "61921da40e2ed5d8a7808e4561aefb97c47e7900",
+    "previousContentHash": "898432f7184ae06d194860ff81636c3a37945b64",
+    "previousUpdatedAt": "2026-06-26T09:34:26.390572998Z"
   }
 }
