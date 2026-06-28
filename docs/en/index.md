@@ -49,6 +49,9 @@ He builds software for his own needs and [[article/32]]{shaves yaks} as a hobby.
 - [[article/43]]
   - The complexity of the modern web and hypermedia systems
   - Jul 2025
+- [[article/42]]
+  - Zap, a library for multi-device applications
+  - Jan 2024
 - [[article/39]]
   - Time and computer science
   - Feb 2022
