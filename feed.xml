@@ -6,7 +6,7 @@
 <atom:link href="https://parksb.github.io/feed.xml" rel="self" type="application/rss+xml" />
 <description>Recently published articles</description>
 <language>ko-kr</language>
-<lastBuildDate>Fri, 26 Jun 2026 11:20:22 GMT</lastBuildDate>
+<lastBuildDate>Sun, 28 Jun 2026 01:54:22 GMT</lastBuildDate>
 <item>
 <title>웹은 왜 복잡해졌나?</title>
 <link>https://parksb.github.io/article/43.html</link>
@@ -18,7 +18,7 @@
 <title>스마트폰을 PC의 모션 컨트롤러로 만들기</title>
 <link>https://parksb.github.io/article/42.html</link>
 <guid>https://parksb.github.io/article/42.html</guid>
-<description>한 명의 사용자가 보유한 기기 수가 꾸준히 늘어남에 따라 이들을 유기적으로 결합하고자 하는 사용자 요구도 증가하고 있다. 나는 맥북과 2개의 스마트폰, 아이패드, 우분투 데스크탑을 일상적으로 사용하는데, 애플의 유니버설 컨트롤을 벗어나면 서로 다른 플랫폼의 기기를 연동하기가 쉽지 않다. 특히 모바일 기기에는 많은 센서가 탑재되어 있지만, PC를 사용할 때는 이를 전혀 사용하지 못한다. 모바일 기기의 각종 센서를 하나의 모바일 기기에만 남겨두기에는 너무 값지다. 만약 모바일 기기의 각종 센서를 다른 기기에서 사용할 수 있다면 보다 입...</description>
+<description>KO | EN 한 명의 사용자가 보유한 기기 수가 꾸준히 늘어남에 따라 이들을 유기적으로 결합하고자 하는 사용자 요구도 증가하고 있다. 나는 맥북과 2개의 스마트폰, 아이패드, 우분투 데스크탑을 일상적으로 사용하는데, 애플의 유니버설 컨트롤을 벗어나면 서로 다른 플랫폼의 기기를 연동하기가 쉽지 않다. 특히 모바일 기기에는 많은 센서가 탑재되어 있지만, PC를 사용할 때는 이를 전혀 사용하지 못한다. 모바일 기기의 각종 센서를 하나의 모바일 기기에만 남겨두기에는 너무 값지다. 만약 모바일 기기의 각종 센서를 다른 기기에서 사용할 수 ...</description>
 <pubDate>Tue, 23 Jan 2024 09:00:00 GMT</pubDate>
 </item>
 <item>
