@@ -6,7 +6,7 @@
 <atom:link href="https://parksb.github.io/feed.xml" rel="self" type="application/rss+xml" />
 <description>Recently published articles</description>
 <language>ko-kr</language>
-<lastBuildDate>Sat, 04 Jul 2026 03:05:50 GMT</lastBuildDate>
+<lastBuildDate>Sat, 04 Jul 2026 15:24:13 GMT</lastBuildDate>
 <item>
 <title>웹은 왜 복잡해졌나?</title>
 <link>https://parksb.github.io/article/43.html</link>
@@ -60,7 +60,7 @@
 <title>인터넷이 동작하는 아주 구체적인 원리</title>
 <link>https://parksb.github.io/article/36.html</link>
 <guid>https://parksb.github.io/article/36.html</guid>
-<description>학교에서 노트북으로 구글(www.google.com)에 접속하는 과정을 살펴본다. 이 글에 등장하는 KT와 Google Fiber, 구글의 네트워크 구조, 노드의 IP 주소와 MAC 주소는 모두 간소화 또는 가정한 것이다. 또한 클라이언트와 서버가 패킷을 주고받는 전체 과정을 훑기 위해 프록시와 캐시는 생략했다. 학교 네트워크에는 여러 AP(Access Point)가 있고, AP들은 스위치에 연결되어 있다. 스위치들은 게이트웨이 라우터와 연결되어 있으며, 라우터는 SK브로드밴드나 KT와 같은 ISP(Internet Service P...</description>
+<description>KO | EN 학교에서 노트북으로 구글(www.google.com)에 접속하는 과정을 살펴본다. 이 글에 등장하는 KT와 Google Fiber, 구글의 네트워크 구조, 노드의 IP 주소와 MAC 주소는 모두 간소화 또는 가정한 것이다. 또한 클라이언트와 서버가 패킷을 주고받는 전체 과정을 훑기 위해 프록시와 캐시는 생략했다. 학교 네트워크에는 여러 AP(Access Point)가 있고, AP들은 스위치에 연결되어 있다. 스위치들은 게이트웨이 라우터와 연결되어 있으며, 라우터는 SK브로드밴드나 KT와 같은 ISP(Internet S...</description>
 <pubDate>Mon, 27 Jan 2020 09:00:00 GMT</pubDate>
 </item>
 <item>
