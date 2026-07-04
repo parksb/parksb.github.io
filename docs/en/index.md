@@ -58,6 +58,9 @@ He builds software for his own needs and [[article/32]]{shaves yaks} as a hobby.
 - [[article/39]]
   - Time and computer science
   - Feb 2022
+- [[article/36]]
+  - Connecting to Google on a campus network
+  - Jan 2020
 - [[article/32]]
   - The joy of building from scratch
   - Jul 2019
