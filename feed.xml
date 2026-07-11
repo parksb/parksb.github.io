@@ -6,7 +6,7 @@
 <atom:link href="https://parksb.github.io/feed.xml" rel="self" type="application/rss+xml" />
 <description>Recently published articles</description>
 <language>ko-kr</language>
-<lastBuildDate>Sat, 04 Jul 2026 15:24:13 GMT</lastBuildDate>
+<lastBuildDate>Sat, 11 Jul 2026 06:39:25 GMT</lastBuildDate>
 <item>
 <title>웹은 왜 복잡해졌나?</title>
 <link>https://parksb.github.io/article/43.html</link>
@@ -32,7 +32,7 @@
 <title>함수형 프로그래밍의 설득력</title>
 <link>https://parksb.github.io/article/40.html</link>
 <guid>https://parksb.github.io/article/40.html</guid>
-<description>이제 함수형 프로그래밍은 확실히 주류라고 할 만하다. 이미 많은 프로그래밍 언어가 함수형 프로그래밍의 핵심 개념을 차용했고, 그린랩스와 같은 회사들이 엔터프라이즈 규모에서 함수형 프로그래밍의 성공적인 사례를 만들어내고 있다. 함수형 프로그래밍에 관해 설명하는 도서나 자료도 쉽게 찾아볼 수 있다. 최근에는 프로그래밍 입문자들도 함수형 프로그래밍의 중요성을 인식하는 것 같다. 그러나 여전히 함수형 프로그래밍을 진지하게 생각하는 프로그래머는 많지 않다. 이제 막 함수형 프로그래밍이 무엇인지 알아보기 시작한 프로그래머는 스스로를 의심하곤 ...</description>
+<description>KO | EN 이제 함수형 프로그래밍은 확실히 주류라고 할 만하다. 이미 많은 프로그래밍 언어가 함수형 프로그래밍의 핵심 개념을 차용했고, 그린랩스와 같은 회사들이 엔터프라이즈 규모에서 함수형 프로그래밍의 성공적인 사례를 만들어내고 있다. 함수형 프로그래밍에 관해 설명하는 도서나 자료도 쉽게 찾아볼 수 있다. 최근에는 프로그래밍 입문자들도 함수형 프로그래밍의 중요성을 인식하는 것 같다. 그러나 여전히 함수형 프로그래밍을 진지하게 생각하는 프로그래머는 많지 않다. 이제 막 함수형 프로그래밍이 무엇인지 알아보기 시작한 프로그래머는 스스...</description>
 <pubDate>Mon, 21 Nov 2022 09:00:00 GMT</pubDate>
 </item>
 <item>
