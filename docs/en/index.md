@@ -55,6 +55,9 @@ He builds software for his own needs and [[article/32]]{shaves yaks} as a hobby.
 - [[article/41]]
   - Arch Linux 32 on an Eee PC 1000HE
   - Sep 2023
+- [[article/40]]
+  - Where does the difference between Java and Haskell come from?
+  - Nov 2022
 - [[article/39]]
   - Time and computer science
   - Feb 2022
