@@ -85,10 +85,10 @@
   },
   "article/31": {
     "createdAt": "2019-06-02T00:00:00Z",
-    "updatedAt": "2026-03-24T13:53:42.100470947Z",
-    "contentHash": "b5e6291bf88a03ff586393fed016e9fc93f4cd55",
-    "previousContentHash": "c842fe92575b74f5195837580b3222df58e7f501",
-    "previousUpdatedAt": "2026-03-24T12:52:09.668503906Z"
+    "updatedAt": "2026-07-23T14:43:34.454704102Z",
+    "contentHash": "fd86ce275cf9cead6d7b48e32beef8b158af455d",
+    "previousContentHash": "b5e6291bf88a03ff586393fed016e9fc93f4cd55",
+    "previousUpdatedAt": "2026-03-24T13:53:42.100470947Z"
   },
   "article/29": {
     "createdAt": "2019-03-30T00:00:00Z",
@@ -323,10 +323,10 @@
   },
   "en/index": {
     "createdAt": "2026-06-13T11:33:10.737Z",
-    "updatedAt": "2026-07-11T06:20:09.082504883Z",
-    "contentHash": "f852e52ddea6f86590d3cdfd93545d6fd97629b2",
-    "previousContentHash": "e13f7cccd87e3b726bba27cf98d3453314adab39",
-    "previousUpdatedAt": "2026-07-04T15:02:45.693810059Z"
+    "updatedAt": "2026-07-23T14:43:34.470106934Z",
+    "contentHash": "96f74a7098095b5dae684180bce8375ed7279ef7",
+    "previousContentHash": "f852e52ddea6f86590d3cdfd93545d6fd97629b2",
+    "previousUpdatedAt": "2026-07-11T06:20:09.082504883Z"
   },
   "en/article/39": {
     "createdAt": "2022-02-22T00:00:00Z",
@@ -372,10 +372,10 @@
   },
   "en/article/36": {
     "createdAt": "2026-07-04T14:48:58.112Z",
-    "updatedAt": "2026-07-11T06:20:09.084729004Z",
-    "contentHash": "bb299b428d0c51cb4b8062d0830b7448ebcc5bac",
-    "previousContentHash": "f85b6d5832e373abab59040f3edd5915b7d35b98",
-    "previousUpdatedAt": "2026-07-04T15:22:45.243423096Z"
+    "updatedAt": "2026-07-23T14:43:34.472416016Z",
+    "contentHash": "de91970d8b6cec35807d9f5dbbde86e2f6224714",
+    "previousContentHash": "bb299b428d0c51cb4b8062d0830b7448ebcc5bac",
+    "previousUpdatedAt": "2026-07-11T06:20:09.084729004Z"
   },
   "en/article/40": {
     "createdAt": "2026-07-11T06:20:00.804Z",
@@ -383,5 +383,12 @@
     "contentHash": "4724a02205754c0e6bd7ec3a705527d59db0c72e",
     "previousContentHash": "b40bdfefcd66a5191a7aaa0db427bc6c8a245982",
     "previousUpdatedAt": "2026-07-11T06:26:57.430426025Z"
+  },
+  "en/article/31": {
+    "createdAt": "2026-07-23T14:43:16.179Z",
+    "updatedAt": "2026-07-23T15:00:20.848258057Z",
+    "contentHash": "717d2288d81ac89373c90fce00d69dd8afe9948c",
+    "previousContentHash": "c54bc153e892cc43aedc21dd190fdec19abc65c0",
+    "previousUpdatedAt": "2026-07-23T14:44:15.299648926Z"
   }
 }

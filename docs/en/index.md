@@ -67,6 +67,9 @@ He builds software for his own needs and [[article/32]]{shaves yaks} as a hobby.
 - [[article/32]]
   - The joy of building from scratch
   - Jul 2019
+- [[article/31]]
+  - Reading the Meltdown and Spectre papers
+  - Jun 2019
 - [[article/29]]
   - A hash table implemented in hardware
   - Mar 2019
