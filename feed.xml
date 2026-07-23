@@ -6,7 +6,7 @@
 <atom:link href="https://parksb.github.io/feed.xml" rel="self" type="application/rss+xml" />
 <description>Recently published articles</description>
 <language>ko-kr</language>
-<lastBuildDate>Thu, 23 Jul 2026 14:37:25 GMT</lastBuildDate>
+<lastBuildDate>Thu, 23 Jul 2026 15:09:02 GMT</lastBuildDate>
 <item>
 <title>웹은 왜 복잡해졌나?</title>
 <link>https://parksb.github.io/article/43.html</link>
@@ -95,7 +95,7 @@
 <title>CPU 보안 취약점을 공격하는 아주 구체적인 원리</title>
 <link>https://parksb.github.io/article/31.html</link>
 <guid>https://parksb.github.io/article/31.html</guid>
-<description>지난 5월 인텔 CPU의 새로운 보안 취약점이 보고됐다. MDS(Microarchitectural Data Sampling)라고 불리는 이 취약점은 2018년 초 보고된 멜트다운(Meltdown), 스펙터(Spectre) 취약점과 달리 CPU 내부 3개의 버퍼(Line Fill Buffers, Load Ports, Store Buffers)로부터 사적인 데이터를 유출할 수 있다. MDS에 대해 공부하기 전 (뒤늦게) 멜트다운과 스펙터에 대해 알아보기로 했다. Meltdown 멜트다운은 인텔 프로세서에서 발견된 취약점이다. 공격자는 ...</description>
+<description>KO | EN 지난 5월 인텔 CPU의 새로운 보안 취약점이 보고됐다. MDS(Microarchitectural Data Sampling)라고 불리는 이 취약점은 2018년 초 보고된 멜트다운(Meltdown), 스펙터(Spectre) 취약점과 달리 CPU 내부 3개의 버퍼(Line Fill Buffers, Load Ports, Store Buffers)로부터 사적인 데이터를 유출할 수 있다. MDS에 대해 공부하기 전 (뒤늦게) 멜트다운과 스펙터에 대해 알아보기로 했다. Meltdown 멜트다운은 인텔 프로세서에서 발견된 취약점이...</description>
 <pubDate>Sun, 02 Jun 2019 09:00:00 GMT</pubDate>
 </item>
 <item>
