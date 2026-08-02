@@ -6,7 +6,7 @@
 <atom:link href="https://parksb.github.io/feed.xml" rel="self" type="application/rss+xml" />
 <description>Recently published articles</description>
 <language>ko-kr</language>
-<lastBuildDate>Tue, 28 Jul 2026 14:06:01 GMT</lastBuildDate>
+<lastBuildDate>Sun, 02 Aug 2026 04:39:45 GMT</lastBuildDate>
 <item>
 <title>웹은 왜 복잡해졌나?</title>
 <link>https://parksb.github.io/article/43.html</link>
@@ -130,7 +130,7 @@
 <title>컴퓨터가 코드를 읽는 아주 구체적인 원리</title>
 <link>https://parksb.github.io/article/25.html</link>
 <guid>https://parksb.github.io/article/25.html</guid>
-<description>지난 학기 운영체제 공부를 하면서 더 낮은 레벨은 어떻게 동작하는지 궁금해졌다. David A. Patterson과 John L. Hennessy의 Computer Organization and Design 5th Edition의 전반부를 바탕으로 MIPS instruction set에 대해 정리했다. Computer Abstractions and Technology 컴퓨터 아키텍처를 공부한다는 것은 컴퓨터를 구성하는 하드웨어와 명령어가 어떻게 함께 동작하는지 알아보는 것이다. 하드웨어를 다루기는 하지만 회로에 대한 부분을 자세히 ...</description>
+<description>KO | EN 지난 학기 운영체제 공부를 하면서 더 낮은 레벨은 어떻게 동작하는지 궁금해졌다. David A. Patterson과 John L. Hennessy의 Computer Organization and Design 5th Edition의 전반부를 바탕으로 MIPS instruction set에 대해 정리했다. Computer Abstractions and Technology 컴퓨터 아키텍처를 공부한다는 것은 컴퓨터를 구성하는 하드웨어와 명령어가 어떻게 함께 동작하는지 알아보는 것이다. 하드웨어를 다루기는 하지만 회로에 대한 ...</description>
 <pubDate>Tue, 16 Oct 2018 09:00:00 GMT</pubDate>
 </item>
 <item>
