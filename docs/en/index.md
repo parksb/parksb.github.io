@@ -73,6 +73,9 @@ He builds software for his own needs and [[article/32]]{shaves yaks} as a hobby.
 - [[article/29]]
   - A hash table implemented in hardware
   - Mar 2019
+- [[article/25]]
+  - A walkthrough of MIPS assembly
+  - Oct 2018
 <!-- /section:articles -->
 
 <!-- section:projects -->
