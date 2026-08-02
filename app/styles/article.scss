@@ -158,6 +158,14 @@ sup {
   line-height: 0;
 }
 
+.katex {
+  font-size: 1.1rem;
+}
+
+.katex-display {
+  overflow: auto;
+}
+
 details {
   display: inline;
   margin-bottom: 10px;
