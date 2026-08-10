@@ -46,6 +46,8 @@ He builds software for his own needs and [[article/32]]{shaves yaks} as a hobby.
 ### ARTICLES
 KO [[en/index]]{EN}
 
+- [모노리포 희망편, 절망의 리포가 희망의 리포로 부활하기까지 걸린 1년](https://toss.tech/article/52209)
+  - Aug 2026
 - [[article/43]]
   - 모던 웹의 복잡성과 하이퍼미디어 시스템
   - Jul 2025
