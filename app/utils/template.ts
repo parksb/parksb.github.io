@@ -1,7 +1,7 @@
 import { Document } from "@simpesys/core";
 import vento from "vento";
 import { THUMBNAIL_BASE_URL } from "./consts.ts";
-import { minify } from "@minify-html/deno";
+import { minifyHtml } from "./minify.ts";
 import { alternatesOf, homeHrefOf, localeOf, urlOf } from "./i18n.ts";
 
 const dirname = new URL(".", import.meta.url).pathname;
@@ -51,12 +51,7 @@ export const render = async (
     alternates: alternatesOf(document),
   });
 
-  return new TextDecoder().decode(
-    minify(new TextEncoder().encode(result.content), {
-      minify_css: true,
-      minify_js: true,
-    }),
-  );
+  return minifyHtml(result.content);
 };
 
 const title = (document: Document) => {

@@ -50,18 +50,21 @@ logger.success(
   }ms`,
 );
 
-const compileStyles = (template: Template): string =>
-  sass.compile(`${dirname}/styles/${template}.scss`).css;
+const stylesCache = new Map<Template, string>();
+const compileStyles = (template: Template): string => {
+  let styles = stylesCache.get(template);
+
+  if (styles === undefined) {
+    styles = sass.compile(`${dirname}/styles/${template}.scss`).css;
+    stylesCache.set(template, styles);
+  }
+
+  return styles;
+};
 
 const renderTemplate = async (document: Document, template: Template) => {
   const styles = compileStyles(template);
   const content = await render(document, template, styles);
-
-  await Deno.mkdir(`${dirname}/../build`, { recursive: true });
-  await Deno.mkdir(`${dirname}/../build/article`, { recursive: true });
-  await Deno.mkdir(`${dirname}/../build/work`, { recursive: true });
-  await Deno.mkdir(`${dirname}/../build/en/article`, { recursive: true });
-  await Deno.mkdir(`${dirname}/../build/en/work`, { recursive: true });
 
   await Deno.writeTextFile(
     `${dirname}/../build/${document.filename}.html`,
@@ -112,6 +115,12 @@ const copyStaticFiles = async (
 
 const main = async () => {
   const documents = simpesys.getDocuments();
+
+  await Promise.all(
+    ["", "article", "work", "en/article", "en/work"].map((directory) =>
+      Deno.mkdir(`${dirname}/../build/${directory}`, { recursive: true })
+    ),
+  );
 
   await Promise.all([
     copyStaticFiles(),
