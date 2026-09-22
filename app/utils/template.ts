@@ -7,6 +7,7 @@ import { alternatesOf, homeHrefOf, localeOf, urlOf } from "./i18n.ts";
 const dirname = new URL(".", import.meta.url).pathname;
 
 const ventoEnv = vento();
+const STYLE_PLACEHOLDER = "<style data-template-styles></style>";
 
 export enum Template {
   Index = "index",
@@ -29,7 +30,7 @@ export const mapTemplate = (document: Document): Template => {
 export const render = async (
   document: Document,
   template: Template,
-  styles: string,
+  styleTag: string,
 ) => {
   const ventoTemplate = await ventoEnv.load(
     `${dirname}/../templates/${template}.vto`,
@@ -45,13 +46,17 @@ export const render = async (
     thumbnail: thumbnail(document),
     date: date(document),
     hasKatex: html.includes('class="katex'),
-    styles,
     lang: localeOf(document.filename),
     homeHref: homeHrefOf(document.filename),
     alternates: alternatesOf(document),
   });
 
-  return minifyHtml(result.content);
+  const minified = minifyHtml(result.content);
+  if (!minified.includes(STYLE_PLACEHOLDER)) {
+    throw new Error(`Missing template styles placeholder in ${template}.vto`);
+  }
+
+  return minified.replace(STYLE_PLACEHOLDER, () => styleTag);
 };
 
 const title = (document: Document) => {

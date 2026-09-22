@@ -4,6 +4,7 @@ import * as sass from "sass";
 import { feed, sitemap } from "./utils/metadata.ts";
 import { mapTemplate, render, Template } from "./utils/template.ts";
 import { logger } from "./utils/logger.ts";
+import { minifyHtml } from "./utils/minify.ts";
 
 const dirname = new URL(".", import.meta.url).pathname;
 
@@ -55,7 +56,8 @@ const compileStyles = (template: Template): string => {
   let styles = stylesCache.get(template);
 
   if (styles === undefined) {
-    styles = sass.compile(`${dirname}/styles/${template}.scss`).css;
+    const css = sass.compile(`${dirname}/styles/${template}.scss`).css;
+    styles = minifyHtml(`<style>${css}</style>`);
     stylesCache.set(template, styles);
   }
 
@@ -63,8 +65,8 @@ const compileStyles = (template: Template): string => {
 };
 
 const renderTemplate = async (document: Document, template: Template) => {
-  const styles = compileStyles(template);
-  const content = await render(document, template, styles);
+  const styleTag = compileStyles(template);
+  const content = await render(document, template, styleTag);
 
   await Deno.writeTextFile(
     `${dirname}/../build/${document.filename}.html`,
