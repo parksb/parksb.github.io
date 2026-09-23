@@ -1,4 +1,9 @@
-import { type Document, type DocumentDict, Simpesys } from "@simpesys/core";
+import {
+  type Cache,
+  type Document,
+  type DocumentDict,
+  Simpesys,
+} from "@simpesys/core";
 import mdLazyImage from "markdown-it-image-lazy-loading";
 import * as sass from "sass";
 import { feed, sitemap } from "./utils/metadata.ts";
@@ -10,6 +15,15 @@ const dirname = new URL(".", import.meta.url).pathname;
 
 logger.info("init system...");
 const initStartTime = performance.now();
+
+const cachePath = ".simpesys.cache.json";
+let cache: Cache | undefined;
+
+try {
+  const content = await Deno.readTextFile(cachePath);
+  cache = JSON.parse(content);
+} catch { /* do notihing */ }
+
 const simpesys = await new Simpesys({
   docs: {
     backlinksSectionTitle: null,
@@ -42,7 +56,15 @@ const simpesys = await new Simpesys({
     renderInternalLink: (key: string, label?: string) =>
       `<a href="/${key}.html">${label ?? key}</a>`,
   },
-}).init({ syncMetadata: true });
+}).init({ syncMetadata: true, cache: { version: "v1", previous: cache } });
+
+try {
+  const content = JSON.stringify(simpesys.getCache());
+  await Deno.writeTextFile(cachePath, content);
+} catch (error) {
+  logger.warn(`failed to write cache file: ${error}`);
+}
+
 logger.success(
   `loaded ${Object.keys(simpesys.getDocuments()).length} documents in ${
     (

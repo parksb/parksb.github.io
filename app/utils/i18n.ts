@@ -24,8 +24,7 @@ const baseKey = (key: string): string =>
 const localeKey = (base: string, locale: Locale): string =>
   `${prefixOf(locale)}${base}`;
 
-const pathOf = (key: string): string =>
-  key === "index" ? "/" : `/${key}.html`;
+const pathOf = (key: string): string => key === "index" ? "/" : `/${key}.html`;
 
 export const urlOf = (key: string): string => `${BASE_URL}${pathOf(key)}`;
 

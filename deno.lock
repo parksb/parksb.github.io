@@ -2,15 +2,14 @@
   "version": "5",
   "specifiers": {
     "jsr:@hono/hono@*": "4.12.8",
-    "jsr:@simpesys/core@~0.6.1-canary.9": "0.6.1-canary.9",
-    "jsr:@std/encoding@^1.0.10": "1.0.10",
-    "jsr:@std/path@^1.0.8": "1.1.4",
+    "jsr:@simpesys/core@0.6.1": "0.6.1",
+    "jsr:@std/encoding@^1.0.10": "1.0.11",
+    "jsr:@std/path@^1.0.8": "1.1.6",
     "npm:@markslides/markdown-it-mermaid@~0.3.6": "0.3.7",
     "npm:@minify-html/wasm@~0.18.1": "0.18.1",
     "npm:@parksb/markdown-it-image-lazy-loading@^2.0.2": "2.0.2",
     "npm:@shikijs/core@^4.4.3": "4.4.3",
     "npm:@shikijs/engine-oniguruma@^4.4.3": "4.4.3",
-    "npm:@shikijs/langs@^4.0.2": "4.4.3",
     "npm:@shikijs/langs@^4.4.3": "4.4.3",
     "npm:@shikijs/markdown-it@^4.4.3": "4.4.3",
     "npm:@shikijs/themes@^4.0.2": "4.4.3",
@@ -38,14 +37,15 @@
     "@hono/hono@4.12.8": {
       "integrity": "1997fde8abf28e84d821c9c867229be020e268d4749397aec071305bf54db297"
     },
-    "@simpesys/core@0.6.1-canary.9": {
-      "integrity": "d073979960d10edc7b338d2362f5b559b73011992b032098a0a2785fbec806b7",
+    "@simpesys/core@0.6.1": {
+      "integrity": "dfc4f772ead69ab40c08499d5e65961e46a438d35495fe5f8cd450a42610d447",
       "dependencies": [
         "jsr:@std/encoding",
         "jsr:@std/path",
         "npm:@markslides/markdown-it-mermaid",
         "npm:@shikijs/core",
         "npm:@shikijs/engine-oniguruma",
+        "npm:@shikijs/langs",
         "npm:@shikijs/markdown-it",
         "npm:@types/markdown-it",
         "npm:denque",
@@ -66,11 +66,11 @@
         "npm:shiki"
       ]
     },
-    "@std/encoding@1.0.10": {
-      "integrity": "8783c6384a2d13abd5e9e87a7ae0520a30e9f56aeeaa3bdf910a3eaaf5c811a1"
+    "@std/encoding@1.0.11": {
+      "integrity": "e7cef2f0b3153bccc17431e7c864a1de03a4b6d9647389c43e08aaa775d37385"
     },
-    "@std/path@1.1.4": {
-      "integrity": "1d2d43f39efb1b42f0b1882a25486647cb851481862dc7313390b2bb044314b5"
+    "@std/path@1.1.6": {
+      "integrity": "c68485c2a4dfbb5ae3cc74fae4e8c4e5d874cf8a8ed12927917235c758b46cbe"
     }
   },
   "npm": {
@@ -1279,7 +1279,7 @@
   "workspace": {
     "dependencies": [
       "jsr:@hono/hono@*",
-      "jsr:@simpesys/core@~0.6.1-canary.9",
+      "jsr:@simpesys/core@0.6.1",
       "npm:@minify-html/wasm@~0.18.1",
       "npm:@parksb/markdown-it-image-lazy-loading@^2.0.2",
       "npm:sass@^1.98.0"
