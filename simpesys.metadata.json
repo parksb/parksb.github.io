@@ -1,10 +1,10 @@
 {
   "index": {
     "createdAt": "2026-03-21T09:15:57.354Z",
-    "updatedAt": "2026-08-10T14:50:52.401008057Z",
-    "contentHash": "22c969049f419f07c162d51ff0d77e6b3721ed6a",
-    "previousContentHash": "2aaf434ecaefc8414efff14668b273f9032480e9",
-    "previousUpdatedAt": "2026-06-13T11:36:39.666371094Z"
+    "updatedAt": "2026-09-27T02:25:52.126084961Z",
+    "contentHash": "cf5cd88ef470a15b7b46b05b340fed3e73fa177b",
+    "previousContentHash": "59f2b798c9d4a684df59dde2324db758849033b6",
+    "previousUpdatedAt": "2026-09-25T10:58:17.893548096Z"
   },
   "article/43": {
     "createdAt": "2025-07-17T00:00:00Z",
@@ -397,5 +397,12 @@
     "contentHash": "44cc68c4d553ba9b9f359c1b02353c8d1478957d",
     "previousContentHash": "6f336e7dad8cd192e6fe2204f66f38bebaa5e05d",
     "previousUpdatedAt": "2026-08-02T03:41:13.525333984Z"
+  },
+  "article/44": {
+    "createdAt": "2026-09-25T10:57:30.222Z",
+    "updatedAt": "2026-09-27T02:27:54.027343018Z",
+    "contentHash": "e64101bc639d919c50a1f5c15811a447645c0215",
+    "previousContentHash": "417a1437553be23ee64c270fe9a7a34bfa8d585c",
+    "previousUpdatedAt": "2026-09-27T02:25:54.803729004Z"
   }
 }
