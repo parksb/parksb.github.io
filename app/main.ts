@@ -5,6 +5,7 @@ import {
   Simpesys,
 } from "@simpesys/core";
 import mdLazyImage from "markdown-it-image-lazy-loading";
+import type { RenderRule } from "markdown-it/renderer";
 import * as sass from "sass";
 import { feed, sitemap } from "./utils/metadata.ts";
 import { mapTemplate, render, Template } from "./utils/template.ts";
@@ -44,6 +45,34 @@ const simpesys = await new Simpesys({
       );
     },
     configureMarkdownConverter: (md) => {
+      const renderFootnoteOpen = md.renderer.rules.footnote_open!;
+      const renderFootnoteAnchorName = md.renderer.rules.footnote_anchor_name!;
+
+      const renderLinkedFootnote: RenderRule = (
+        tokens,
+        idx,
+        options,
+        env,
+        renderer,
+      ) => {
+        const number = tokens[idx].meta.id + 1;
+        const id = renderFootnoteAnchorName(
+          tokens,
+          idx,
+          options,
+          env,
+          renderer,
+        );
+
+        return renderFootnoteOpen(tokens, idx, options, env, renderer) +
+          `<a href="#fnref${
+            md.utils.escapeHtml(id)
+          }" class="footnote-backref">[${number}]</a>`;
+      };
+
+      md.renderer.rules.footnote_anchor = () => "";
+      md.renderer.rules.footnote_open = renderLinkedFootnote;
+
       md.use(mdLazyImage, {
         decoding: true,
         image_size: true,
@@ -56,7 +85,7 @@ const simpesys = await new Simpesys({
     renderInternalLink: (key: string, label?: string) =>
       `<a href="/${key}.html">${label ?? key}</a>`,
   },
-}).init({ syncMetadata: true, cache: { version: "v1", previous: cache } });
+}).init({ syncMetadata: true, cache: { version: "v2", previous: cache } });
 
 try {
   const content = JSON.stringify(simpesys.getCache());

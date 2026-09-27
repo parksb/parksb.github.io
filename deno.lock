@@ -1282,6 +1282,7 @@
       "jsr:@simpesys/core@0.6.1",
       "npm:@minify-html/wasm@~0.18.1",
       "npm:@parksb/markdown-it-image-lazy-loading@^2.0.2",
+      "npm:@types/markdown-it@^14.1.2",
       "npm:sass@^1.98.0"
     ]
   }

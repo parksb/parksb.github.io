@@ -5,6 +5,7 @@
     "serve": "deno run -R -E -W -N app/serve.ts"
   },
   "imports": {
+    "markdown-it/renderer": "npm:@types/markdown-it@^14.1.2/lib/renderer.d.mts",
     "@simpesys/core": "jsr:@simpesys/core@0.6.1",
     "@hono/hono": "jsr:@hono/hono",
     "markdown-it-image-lazy-loading": "npm:@parksb/markdown-it-image-lazy-loading@^2.0.2",
