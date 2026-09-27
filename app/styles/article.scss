@@ -76,6 +76,22 @@ main > article {
   > ol {
     margin-bottom: 1rem;
   }
+
+  > p:first-of-type {
+    a::before {
+      background-color: $color-link-external;
+      vertical-align: middle;
+      width: 0.9rem;
+      height: 0.9rem;
+      margin: 0 0.3rem 0.2rem 0;
+      display: inline-block;
+    }
+
+    a[href*="ycombinator.com"]::before {
+      content: "\00a0";
+      mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M0 24V0h24v24H0zM6.951 5.896l4.112 7.708v5.064h1.583v-4.972l4.148-7.799h-1.749l-2.457 4.875c-.372.745-.688 1.434-.688 1.434s-.297-.708-.651-1.434L8.831 5.896h-1.88z'/%3E%3C/svg%3E");
+    }
+  }
 }
 
 p {
