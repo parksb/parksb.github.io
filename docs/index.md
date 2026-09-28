@@ -48,7 +48,7 @@ KO [[en/index]]{EN}
 
 - [[article/44]]
   - 개인의 탁월함에 기대지 않는 프로세스
-  - Oct 2026
+  - Sep 2026
 - [모노리포 희망편, 절망의 리포가 희망의 리포로 부활하기까지 걸린 1년](https://toss.tech/article/52209)
   - Aug 2026
 - [[article/43]]

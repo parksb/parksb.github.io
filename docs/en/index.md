@@ -47,7 +47,7 @@ He builds software for his own needs and [[article/32]]{shaves yaks} as a hobby.
 [[../index]]{KO} EN
 
 - [[article/44]]
-  - A process that does not depend on individual excellence
+  - A process that does not depend on individual brilliance
   - Sep 2026
 - [[article/43]]
   - The complexity of the modern web and hypermedia systems
