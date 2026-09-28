@@ -46,6 +46,9 @@ He builds software for his own needs and [[article/32]]{shaves yaks} as a hobby.
 ### ARTICLES
 [[../index]]{KO} EN
 
+- [[article/44]]
+  - A process that does not depend on individual excellence
+  - Sep 2026
 - [[article/43]]
   - The complexity of the modern web and hypermedia systems
   - Jul 2025

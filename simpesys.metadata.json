@@ -1,10 +1,10 @@
 {
   "index": {
     "createdAt": "2026-03-21T09:15:57.354Z",
-    "updatedAt": "2026-09-27T02:25:52.126084961Z",
-    "contentHash": "cf5cd88ef470a15b7b46b05b340fed3e73fa177b",
-    "previousContentHash": "59f2b798c9d4a684df59dde2324db758849033b6",
-    "previousUpdatedAt": "2026-09-25T10:58:17.893548096Z"
+    "updatedAt": "2026-09-28T14:45:54.959095947Z",
+    "contentHash": "f0540427292c3339457ad3c25b869f34ecb1bb2b",
+    "previousContentHash": "cf5cd88ef470a15b7b46b05b340fed3e73fa177b",
+    "previousUpdatedAt": "2026-09-27T02:25:52.126084961Z"
   },
   "article/43": {
     "createdAt": "2025-07-17T00:00:00Z",
@@ -323,10 +323,10 @@
   },
   "en/index": {
     "createdAt": "2026-06-13T11:33:10.737Z",
-    "updatedAt": "2026-08-02T03:16:54.458298096Z",
-    "contentHash": "81c3a0dc67c3622f183d003013d25152e7f80bac",
-    "previousContentHash": "96f74a7098095b5dae684180bce8375ed7279ef7",
-    "previousUpdatedAt": "2026-07-23T14:43:34.470106934Z"
+    "updatedAt": "2026-09-28T14:40:00.767850098Z",
+    "contentHash": "bc3bbbc8c28c997107a9020a3eec1d1df63c4176",
+    "previousContentHash": "e61d9b35f050c9187eb05166003c5251bdfb8fc6",
+    "previousUpdatedAt": "2026-09-28T14:39:44.075827881Z"
   },
   "en/article/39": {
     "createdAt": "2022-02-22T00:00:00Z",
@@ -400,9 +400,16 @@
   },
   "article/44": {
     "createdAt": "2026-09-25T10:57:30.222Z",
-    "updatedAt": "2026-09-28T14:33:54.591702881Z",
-    "contentHash": "2ff47fc929bb5d3a0d4dd0a57e056b4bb55c4a5d",
-    "previousContentHash": "5de9fe877588b68d7b3d9717a1707ff936759c30",
-    "previousUpdatedAt": "2026-09-28T14:33:49.513927002Z"
+    "updatedAt": "2026-09-28T14:41:07.451676025Z",
+    "contentHash": "8fd297d5fabe550b7953d398db76fb6352fc01fc",
+    "previousContentHash": "0df98ba13ba3986918c7c00467dde948679fe6df",
+    "previousUpdatedAt": "2026-09-28T14:40:47.240281006Z"
+  },
+  "en/article/44": {
+    "createdAt": "2026-09-28T14:39:14.446Z",
+    "updatedAt": "2026-09-28T14:45:32.912850098Z",
+    "contentHash": "e85b342337560b7b504a8295a6f70fcbf57515ea",
+    "previousContentHash": "8cafb580a46d9eccc232d117a12eecdcac5bfa53",
+    "previousUpdatedAt": "2026-09-28T14:44:34.653843994Z"
   }
 }
