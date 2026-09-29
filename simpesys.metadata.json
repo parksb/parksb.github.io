@@ -400,14 +400,16 @@
   },
   "article/44": {
     "createdAt": "2026-09-28T14:54:25.36664502Z",
-    "updatedAt": "2026-09-28T14:54:25.36664502Z",
-    "contentHash": "4ea146a3713bc9462e2c9cfb7b3dc6fcd7624578"
+    "updatedAt": "2026-09-29T11:38:18.626287109Z",
+    "contentHash": "c06abc50e4c956e62e35dbc88a9f00d327d6c4bc",
+    "previousContentHash": "4ea146a3713bc9462e2c9cfb7b3dc6fcd7624578",
+    "previousUpdatedAt": "2026-09-28T14:54:25.36664502Z"
   },
   "en/article/44": {
     "createdAt": "2026-09-28T14:54:09.968323975Z",
-    "updatedAt": "2026-09-28T15:01:21.145793945Z",
-    "contentHash": "f04d0e5b44f591ece8e3468b3bf7b627c635dcae",
-    "previousContentHash": "c180bf4a4da95dd59a593f1323c5671845400e71",
-    "previousUpdatedAt": "2026-09-28T14:54:09.968323975Z"
+    "updatedAt": "2026-09-29T11:40:42.873840088Z",
+    "contentHash": "e628ef63a3168c3c7f27226364ae14e4bea30ead",
+    "previousContentHash": "7102a61a9db04fbee2391b11cea1e518707d619d",
+    "previousUpdatedAt": "2026-09-28T15:29:50.776621094Z"
   }
 }
