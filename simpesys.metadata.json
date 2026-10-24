@@ -1,10 +1,10 @@
 {
   "index": {
     "createdAt": "2026-03-21T09:15:57.354Z",
-    "updatedAt": "2026-09-28T15:01:21.124978027Z",
-    "contentHash": "7626cf295fa242951c3048da630e90ba10c68b97",
-    "previousContentHash": "f0540427292c3339457ad3c25b869f34ecb1bb2b",
-    "previousUpdatedAt": "2026-09-28T14:45:54.959095947Z"
+    "updatedAt": "2026-10-24T16:22:58.03852002Z",
+    "contentHash": "12f526a34ee7cc5ab49047ce0b662fce40882200",
+    "previousContentHash": "7626cf295fa242951c3048da630e90ba10c68b97",
+    "previousUpdatedAt": "2026-09-28T15:01:21.124978027Z"
   },
   "article/43": {
     "createdAt": "2025-07-17T00:00:00Z",
@@ -323,10 +323,10 @@
   },
   "en/index": {
     "createdAt": "2026-06-13T11:33:10.737Z",
-    "updatedAt": "2026-09-28T15:01:47.076454102Z",
-    "contentHash": "6f9496cb1559454ef353aa1d4ccaa7eb1b5a112b",
-    "previousContentHash": "bc3bbbc8c28c997107a9020a3eec1d1df63c4176",
-    "previousUpdatedAt": "2026-09-28T14:40:00.767850098Z"
+    "updatedAt": "2026-10-24T16:22:58.057423096Z",
+    "contentHash": "7de72798725a834a935c9ebf3284ee5a06222e39",
+    "previousContentHash": "6f9496cb1559454ef353aa1d4ccaa7eb1b5a112b",
+    "previousUpdatedAt": "2026-09-28T15:01:47.076454102Z"
   },
   "en/article/39": {
     "createdAt": "2022-02-22T00:00:00Z",
@@ -400,16 +400,16 @@
   },
   "article/44": {
     "createdAt": "2026-09-28T14:54:25.36664502Z",
-    "updatedAt": "2026-09-29T11:38:18.626287109Z",
-    "contentHash": "c06abc50e4c956e62e35dbc88a9f00d327d6c4bc",
-    "previousContentHash": "4ea146a3713bc9462e2c9cfb7b3dc6fcd7624578",
-    "previousUpdatedAt": "2026-09-28T14:54:25.36664502Z"
+    "updatedAt": "2026-10-24T16:22:58.040599121Z",
+    "contentHash": "c3d7dd1aada65914e362c2a1079eb39db7601ca8",
+    "previousContentHash": "c06abc50e4c956e62e35dbc88a9f00d327d6c4bc",
+    "previousUpdatedAt": "2026-09-29T11:38:18.626287109Z"
   },
   "en/article/44": {
     "createdAt": "2026-09-28T14:54:09.968323975Z",
-    "updatedAt": "2026-09-29T11:40:42.873840088Z",
-    "contentHash": "e628ef63a3168c3c7f27226364ae14e4bea30ead",
-    "previousContentHash": "7102a61a9db04fbee2391b11cea1e518707d619d",
-    "previousUpdatedAt": "2026-09-28T15:29:50.776621094Z"
+    "updatedAt": "2026-10-24T16:22:58.057810059Z",
+    "contentHash": "e2c4a118e8f4c2d090557eef092e36b0870f0de8",
+    "previousContentHash": "e628ef63a3168c3c7f27226364ae14e4bea30ead",
+    "previousUpdatedAt": "2026-09-29T11:40:42.873840088Z"
   }
 }

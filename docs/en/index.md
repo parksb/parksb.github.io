@@ -28,7 +28,7 @@ He builds software for his own needs and [[article/32]]{shaves yaks} as a hobby.
   - Frontend Platform Engineer
 - Jan 2019 --- Jul 2022
   - Kakaostyle Corp., Seoul
-  - Content & Discovery Division
+  - Discovery & Content Division
   - Backend Engineer
 - Jul 2015 --- Aug 2015
   - NAVER Corp., Seongnam
